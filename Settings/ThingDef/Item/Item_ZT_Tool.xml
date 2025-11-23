@@ -1,0 +1,1401 @@
+<ThingDefs><List>
+	<ThingDef Type="Item" Name="ToolBase" Parent="ItemBase">
+	
+	
+	<ThingName></ThingName>
+	
+	<MaxStack>1</MaxStack>
+	<TexPath></TexPath>
+	<Desc>Desc.</Desc>
+	<SelectAble>1</SelectAble>
+	<VisualAble>1</VisualAble>
+
+	<Beauty>2</Beauty>
+	<Rate>1</Rate>
+	
+	<Flammability>
+		<Flammability>0</Flammability>
+		<FlameSpawnThingDef></FlameSpawnThingDef>
+		<FlameSpawnChance>0</FlameSpawnChance>
+		<BurningPoint>150</BurningPoint>
+	</Flammability>
+	
+	<Item  Lable="Tool">
+		<NotFengshuiItem>0</NotFengshuiItem>
+		<FuelMultiplier>1</FuelMultiplier>
+		<!-- 
+		<BeMade>
+			<WorkToMake>1</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<Condition>
+					<Skills>
+						<Skill name = "sss" level="1"/>
+					</Skills>
+					<Researchs>
+						<Research name = "sss" level="1"/>
+					</Researchs>
+			</Condition>
+			<StuffCategories>
+				<Stuff name = "Metallic"/>
+			</StuffCategories>
+			<CostStuffCount>5</CostStuffCount>
+			<CostItems>
+				<Item name = "wheat" count = "1"/>
+			</CostItems>
+		</BeMade> 
+		
+		-->
+		<BeMaterial>
+			<NamePrefix></NamePrefix>
+			<CostMultiplier>1</CostMultiplier>
+			
+			<SharpDamageMultiplier>1</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1</BluntDamageMultiplier>
+			<LingDamageMultiplier>1</LingDamageMultiplier>
+			<AttackSpeedWhenBeMain>1.2</AttackSpeedWhenBeMain>
+			
+			<SharpDefenceMultiplier>1</SharpDefenceMultiplier>
+			<BluntDefenceMultiplier>1</BluntDefenceMultiplier>
+			<LingDefenceMultiplier>1</LingDefenceMultiplier>
+			<ColdInsulationMultiplier>1</ColdInsulationMultiplier>
+			<HeatInsulationMultiplier>1</HeatInsulationMultiplier>
+			
+			<MaxHitPointsPerNum>6</MaxHitPointsPerNum>
+			<LingNumberRate>0.3</LingNumberRate>
+			
+			<FlammabilityWhenBeMain>0.2</FlammabilityWhenBeMain>
+			<BeautyWhenBeMain>0</BeautyWhenBeMain>
+			<ElementPowerWhenBeMain>1</ElementPowerWhenBeMain>
+			
+			<WorktoMakeRate>1</WorktoMakeRate>
+			<WorktoBuildRate>1</WorktoBuildRate>
+		</BeMaterial>
+		<Rot>
+			<RotSpeed>0</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>0</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>
+	</Item>
+	<Ling>
+		<AddionLing>0</AddionLing>
+		<AddionRadius>1</AddionRadius>
+		<AddionFailing>0</AddionFailing>
+		<AddionFailRadius>0</AddionFailRadius>
+		
+		<Attenuation>0.03</Attenuation>
+		<Absorption>0.4</Absorption>
+		<Accommodate>1</Accommodate>
+	</Ling>
+	
+	<Element>
+		<Kind>None</Kind>
+		<Value>1</Value>         
+		<Radius>2</Radius>
+		<Failing>1</Failing>
+		<FailRadius>1</FailRadius>
+	</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="ZT_HSZD" Parent="ToolBase">
+	
+	<ThingName>护生之道</ThingName>
+	<TexPath>Spr\Object\WP\ZTHSZD.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\ZTHSZD.png</FabaoTexPath>	
+	<ModPath>Spr\Object\WP\ZTHSZD.FBX</ModPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Shui</ElementKind>
+	<Desc>开天之初先天之气所孕育，催动此物虽无法杀生却可调动万物生机消耗自身灵力可以将弥留之际之人还阳，一人一生只可一次。。（装备物品可增强百分五十护盾强度）by御尊</Desc>
+	<Item>
+			<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="22000"/>
+					<SalePrice Value="3260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="22000" />
+					<SalePrice Value="3260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="22000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>护生之道</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>ZTHSZD</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "ZT_BHZ" count = "6"/>
+					<Item name = "ZT_BHW" count = "36"/>
+					<Item name = "Item_ShuiEssence" count = "10"/>
+					<Item name = "Item_SSXSY" count = "26"/>
+					<Item name = "Item_Water" count = "1600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<ToolModifier>ZTHSZD</ToolModifier>
+			
+			
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			   <Condition eventid = "BrokenNeck" des = "携带宝物度过金属性的天劫" needcount = "3" lParam = "God2" eParam = "Jin" />
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过木属性的天劫" needcount = "3" lParam = "God2" eParam = "Mu" />
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过水属性的天劫" needcount = "3" lParam = "God2" eParam = "Shui" />
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过火属性的天劫" needcount = "3" lParam = "God2" eParam = "Huo" />
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过土属性的天劫" needcount = "3" lParam = "God2" eParam = "Tu" />
+				<Condition eventid = "UseNpcJing" des = "携带宝物消耗20W精元" needcount = "200000" />
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="Sync_AddFlag" sParam1="FLAG_ITEM_RESURRECTION" nParam1 = "1" Desc="以破碎为代价，抵挡一次死亡并恢复所有伤害。" />
+				 <Ability Kind="Sync_AddEquptData" sParam1="NpcFight_FabaoMaxLingAddP" fParam2="0.3" nParam1="1" Desc="从根本上提高自身法宝灵气加成30%。"/>
+				  <Ability Kind="CantAttack" Desc="环绕周身不会主动进攻，专注防御。"/>
+			</SpecialAbility>
+		</Fabao>
+	</Item>
+	</ThingDef>	
+	
+	<ThingDef Type="Item" Name="ZT_TZY" Parent="ToolBase">
+	
+	<ThingName>天之印</ThingName>
+	<TexPath>Spr\Object\WP\ZTTDY.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\ZTTDY.png</FabaoTexPath>	
+	<ModPath>Spr\Object\WP\ZTTZY.FBX</ModPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Jin</ElementKind>
+	<Desc>天地初开，天界本源凝聚而成，隐于天界，持之为天界之主。。（装备物品可增强降低三十点阵法符荷）by飐偑</Desc>
+	<Item>
+	<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="22000"/>
+					<SalePrice Value="3260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="22000" />
+					<SalePrice Value="3260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="22000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>天之印</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>ZTTZY</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_JTBYB" count = "66"/>
+					<Item name = "Item_JTCYW" count = "66"/>
+					<Item name = "Item_YYSY" count = "66"/>
+					<Item name = "Item_WSXSY" count = "26"/>
+					<Item name = "Item_XianDaoShenNian" count = "1"/>
+					<Item name = "Item_Water" count = "1600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<ToolModifier>ZTTZY</ToolModifier>
+			
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			  <Condition eventid = "Other" des = "连续吸收7天的北斗星光" needday = "21" continuity = "21"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="AtkRateDamageAddp" fParam1="1" fParam2="0.1" nParam1="1" nParam2="1" Desc="攻击敌方本体时额外造成目标当前灵气10%的附加伤害。"/>
+			</SpecialAbility>
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FabaoActiveBeiDou()</UseLua>
+	</Item>
+	
+	</ThingDef>	
+	
+	<ThingDef Type="Item" Name="ZT_DZY" Parent="ToolBase">
+	
+	<ThingName>地之玺</ThingName>
+	<TexPath>Spr\Object\WP\ZTTDY.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\ZTTDY.png</FabaoTexPath>	
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Tu</ElementKind>
+	<Desc>天地初开，幽冥本源凝聚而成，藏于幽冥，持之为幽冥之主。。（装备物品可增强百分五十术法强度）by飐偑</Desc>
+	<Item>
+	<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="22000"/>
+					<SalePrice Value="3260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="22000" />
+					<SalePrice Value="3260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="22000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>地之玺</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>ZTDZY</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_ZYSY" count = "66"/>
+					<Item name = "Item_JTBLSY" count = "66"/>
+					<Item name = "Item_ZYW" count = "66"/>
+					<Item name = "Item_TSXSY" count = "26"/>
+					<Item name = "Item_XianDaoXieNian" count = "1"/>
+					<Item name = "Item_Water" count = "1600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<ToolModifier>ZTDZY</ToolModifier>
+			
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			  <Condition eventid = "Other" des = "吸收36次永夜的气息" needcount = "36"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="AtkRateDamageAddp" fParam1="1" fParam2="0.1" nParam1="1" nParam2="1" Desc="攻击敌方本体时额外造成目标当前灵气10%的附加伤害。"/>
+			</SpecialAbility>
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FabaoActiveWeather({'PermanentNight'})</UseLua>
+		<ModPath>Spr\Object\WP\ZTTZY.FBX</ModPath>
+	</Item>
+	</ThingDef>	
+	
+	<ThingDef Type="Item" Name="ZT_YMZD" Parent="ToolBase">
+	
+	<ThingName>幽冥镇地</ThingName>
+	<TexPath>Spr\Object\WP\ZTYMZD.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\ZTYMZD.png</FabaoTexPath>	
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Tu</ElementKind>
+	<Desc>宇宙洪荒初开时，承天道之旨，由地铸造而成。与玄黄开天是同生。。（装备物品可增强心境值）by清弦</Desc>
+	<Item>
+	<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="22000"/>
+					<SalePrice Value="3260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="22000" />
+					<SalePrice Value="3260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="22000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>幽冥镇地</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>ZTYMZD</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_XHJC" count = "6"/>
+					<Item name = "Item_XHEQ" count = "66"/>
+					<Item name = "Item_LWHJ" count = "6"/>
+					<Item name = "Item_WSXXY" count = "26"/>
+					<Item name = "Item_BossZhuLong_Eye" count = "4"/>
+					<Item name = "Item_Water" count = "1600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<ToolModifier>ZTYMZD</ToolModifier>
+			
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			  <Condition eventid = "Other" des = "吸收36次永夜的气息" needcount = "36"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			      <Ability Kind="AtkRateDamageAddp" fParam1="1" fParam2="4" nParam1="2" Desc="与法宝拼斗时，造成5倍伤害。"/>
+			</SpecialAbility>
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FabaoActiveWeather({'PermanentNight'})</UseLua>
+		<ModPath>Spr\Object\WP\ZTYMZD.FBX</ModPath>
+	</Item>
+	</ThingDef>	
+	
+	<ThingDef Type="Item" Name="ZT_FHJ" Parent="ToolBase">
+	
+	<ThingName>凤凰劫</ThingName>
+	<TexPath>Spr\Object\WP\ZTFHJ.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\ZTFHJ.png</FabaoTexPath>	
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Huo</ElementKind>
+	<Desc>上古之琴，已没有人记得它的过往，琴上是时间的流逝，这一世古琴认华云飞为主。。（装备物品可提高魅力与心境值）by清弦</Desc>
+	<Item>
+	<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="22000"/>
+					<SalePrice Value="3260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="22000" />
+					<SalePrice Value="3260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="22000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>凤凰劫</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>ZTFHJ</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_HXCJ" count = "1"/>
+					<Item name = "Item_Mint" count = "306"/>
+					<Item name = "Item_BossFeng_WeiYu" count = "9"/>
+					<Item name = "Item_BossLong_Jing" count = "13"/>
+					<Item name = "Item_HSXSY" count = "15"/>
+					<Item name = "Item_Water" count = "1600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<ToolModifier>ZTFHJ</ToolModifier>
+		</Equip>
+		<ModPath>Spr\Object\WP\ZTFHJ.FBX</ModPath>
+		<Fabao>
+		    <ActiveCondition>
+			  <Condition eventid = "Other" des = "吸收36次永夜的气息" needcount = "36"/>
+			  <Condition eventid = "KillCount" des = "携带胚胎击杀36个元神生灵" needcount = "36" lParam = "God"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			       <Ability Kind="HitAddRecovery" fParam1="0.6"  Desc="造成伤害的60%会补充为法宝自身的灵气。"/>
+			</SpecialAbility>
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FabaoActiveWeather({'PermanentNight'})</UseLua>
+	</Item>
+	</ThingDef>	
+	
+	<ThingDef Type="Item" Name="ZT_LGSF" Parent="ToolBase">
+	<ThingName>乱古神符</ThingName>
+	<TexPath>Spr\Object\WP\LGSF.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\LGSF.png</FabaoTexPath>	
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Huo</ElementKind>
+	<Desc>乱古大帝，精通时间之道，佩戴此符，可逆转时间替死一次，佩戴者更能降低大量的天谴值。</Desc>
+	<Item>
+	<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="32000"/>
+					<SalePrice Value="3260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="32000" />
+					<SalePrice Value="3260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="32000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>神符</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>LGSF</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<li name="Item_ThunderAir" count="3"/>
+					<Item name = "Item_WSXXY" count = "3"/>
+					<Item name = "Item_WSXSY" count = "9"/>
+					<Item name = "Item_WSXY" count = "18"/>
+					<Item name = "Item_DLYJ" count = "100"/>
+					<Item name = "Item_Water" count = "1200"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<ToolModifier>LGSF</ToolModifier>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			  <Condition eventid = "KillCount" des = "携带胚胎击杀36个元神生灵" needcount = "36"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			       <Ability Kind="Sync_AddFlag" sParam1="FLAG_ITEM_RESURRECTION" nParam1 = "1" Desc="以破碎为代价，抵挡一次死亡并恢复所有伤害。" />
+			</SpecialAbility>
+		</Fabao>
+	</Item>
+	</ThingDef>	
+	
+	<ThingDef Type="Item" Name="ZT_JMDB" Parent="ToolBase">
+	<ThingName>九秘伪</ThingName>
+	<TexPath>Spr\Object\DJ\ZT_JMDB.png</TexPath>
+	<FabaoTexPath>Spr\Object\DJ\ZT_JMDB.png</FabaoTexPath>	
+	<MaxStack>9</MaxStack>
+	<Rate>1</Rate>
+	<ElementKind>None</ElementKind>
+	<Desc>一本盗版的九秘。</Desc>
+	<Item>
+	<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="1"/>
+					<SalePrice Value="33" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="1" />
+					<SalePrice Value="33" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="1" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>神符</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>PhysicalLables_XiongFeng_HuoYu</li>
+		</PhysicalLables>
+		
+		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<ToolModifier>JMDB</ToolModifier>
+		</Equip>
+		
+	</Item>
+	</ThingDef>	
+	
+	<ThingDef Type="Item" Name="Item_YS1" Parent="MaterialBase">
+		<ThingName>源石</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>Spr\Object\Y\YS.PNG</TexPath>
+		<Desc>里面包含着无比强大的灵力波动，不知道是什么惊人的存在，还是实用的源亦或是神源。</Desc>	
+		<Beauty>1</Beauty>	
+		<Rate>12</Rate>
+		<ElementKind>None</ElementKind>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+
+			
+		<Item Lable="Other">
+				<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>10</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="1500"/>
+					<SalePrice Value="200" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="1500" />
+					<SalePrice Value="300" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="100" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>				
+			<FabaoSuffix>白眼石,非洲石,坑石</FabaoSuffix>	
+		<BeMade>
+			<WorkToMake>3000</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+		
+			<StuffCategories>
+				<Stuff name = "WoodBlock"/>
+				<Stuff name = "RockBlock"/>
+				<Stuff name = "MetalBlock"/>
+				<Stuff name = "Wood"/>
+				<Stuff name = "Rock"/>
+				<Stuff name = "Metal"/>
+				<Stuff name = "Tool"/>
+				<Stuff name = "Spell"/>
+				<Stuff name = "Food"/>
+				<Stuff name = "Dan"/>
+				<Stuff name = "Weapon"/>
+			</StuffCategories>
+			<CostStuffCount>100</CostStuffCount>
+		</BeMade> 
+			
+			
+		<BeMaterial>
+			<CostMultiplier>1</CostMultiplier>
+		</BeMaterial>
+		
+		</Item>
+		<StoryBnts>
+			<li Name="切开" Desc="尝试切开这块源石" Story="Story_Item_YS1" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_YS2" Parent="MaterialBase">
+		<ThingName>源石2</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>Spr\Object\Y\YS.PNG</TexPath>
+		<Desc>专门用石匣来换。</Desc>	
+		<Beauty>1</Beauty>	
+		<Rate>12</Rate>
+		<ElementKind>None</ElementKind>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+
+			
+		<Item Lable="Other">	
+				<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>10</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="1500"/>
+					<SalePrice Value="100" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="1500" />
+					<SalePrice Value="100" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="100" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>		
+			<FabaoSuffix>白眼石,非洲石,坑石</FabaoSuffix>	
+		<BeMade>
+			<WorkToMake>3000</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_StoneBox2" count = "1"/>
+					<Item name = "Item_Water" count = "100"/>
+			</CostItems>		
+		</BeMade> 
+
+		<BeMaterial>
+			<CostMultiplier>1</CostMultiplier>
+		</BeMaterial>
+		
+		</Item>
+		<StoryBnts>
+			<li Name="切开" Desc="尝试切开这块源石" Story="Story_Item_YS1" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_STYH" Parent="MaterialBase">
+		<ThingName>圣体遗骸</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>Spr\Object\DJ\STYH.PNG</TexPath>
+		<Desc>也不知道过去多少年了。这具尸体依然不坏，盘坐宝藏堆中,虽然没有神辉绕体。但却却比所有宝物更吸引人。</Desc>	
+		<Beauty>1</Beauty>	
+		<Rate>20</Rate>
+		<ElementKind>None</ElementKind>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+
+			
+		<Item Lable="Other">	
+			<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="9000"/>
+					<SalePrice Value="5000" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="9000" />
+					<SalePrice Value="5000" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="9000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>		
+		
+			<FabaoSuffix>尸骸,圣骸</FabaoSuffix>	
+			<PhysicalLables>
+				<li>PhysicalLables_None</li>	
+				<li>PhysicalLables_None</li>
+				<li>PhysicalLables_None</li>
+				<li>PhysicalLables_None</li>
+				<li>PhysicalLables_None</li>
+				<li>PhysicalLables_None</li>
+			</PhysicalLables>
+			
+		</Item>
+		<StoryBnts>
+			<li Name="体悟" Desc="尝试与这具圣体遗骸产生联系" Appoint="2" Story="STYH" Cost="5" Icon="Spr\Object\DJ\STYH.PNG"/>
+		</StoryBnts>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_YS3" Parent="MaterialBase">
+		<ThingName>石胎</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>Spr\Object\Y\YS2.PNG</TexPath>
+		<Desc>张家村获得的石胎，据说是源天师留下的，里面说不定有源天师传承。</Desc>	
+		<Beauty>1</Beauty>	
+		<Rate>12</Rate>
+		<ElementKind>None</ElementKind>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>
+
+			
+		<Item Lable="Other">
+				<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="3000"/>
+					<SalePrice Value="1260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="3000" />
+					<SalePrice Value="1260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="4000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>		
+			<FabaoSuffix>白眼石,非洲石,坑石</FabaoSuffix>	
+		
+		
+		</Item>
+		<StoryBnts>
+			<li Name="切开" Desc="尝试切开这块石胎" Story="Story_Item_YS2" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+	</ThingDef>
+	
+	
+	<ThingDef Type="Item" Name="Item_PTZ" Parent="MaterialBase">
+		<ThingName>菩提子</ThingName>
+		<MaxStack>1</MaxStack>
+		<TexPath>Spr\Object\TOOL\PTZ.PNG</TexPath>
+		<Desc>叶凡于火星上的大雷音寺获得。带着可以提高修炼速度和领悟概率</Desc>	
+		<Beauty>99</Beauty>	
+		<Rate>12</Rate>
+		<ElementKind>None</ElementKind>
+		<Flammability>
+			<Flammability>0</Flammability>
+		</Flammability>		
+		<Item Lable="Other">
+				<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="5000"/>
+					<SalePrice Value="3260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="5000" />
+					<SalePrice Value="3260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="8000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>		
+			<FabaoSuffix>菩提,血菩提,灵提子</FabaoSuffix>	
+			<Equip>
+			<ToolModifier>ZT_PTZ</ToolModifier>
+			</Equip>
+		</Item>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_YDX" Parent="MaterialBase">
+		<ThingName>妖帝心</ThingName>
+		<TexPath>Spr\Object\DJ\YDX.PNG</TexPath>
+		<Desc>东荒最后一代大帝的心，噗通。噗通.</Desc>
+		<MaxHitPoints>50000</MaxHitPoints>
+		<Rate>20</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>1</MaxStack>
+		<ElementKind>Mu</ElementKind>
+		<Item>
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="122000"/>
+					<SalePrice Value="113260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="122000" />
+					<SalePrice Value="113260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="122000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>妖帝心</FabaoSuffix>
+			<PhysicalLables>
+				<li>YDX</li>	
+			</PhysicalLables>
+			<Elixir>
+				<ZhuJi>25000</ZhuJi>
+				<Modifier>Dan_YDX</Modifier>
+				<Ling>5000000</Ling>
+			</Elixir>
+			
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>-90</Nutrition>
+				<FunAddion>-100</FunAddion>
+				<PracticeNutrition>9999</PracticeNutrition>
+			</Food>
+		</Item>
+		<Ling>
+		<AddionLing>90</AddionLing>    聚灵除以十
+		<AddionRadius>3</AddionRadius>  聚灵范围
+		<AddionFailing>0.8</AddionFailing>
+		<AddionFailRadius>3</AddionFailRadius>
+		
+		<Attenuation>0.06</Attenuation>
+		<Absorption>0.8</Absorption>
+		<Accommodate>5000</Accommodate>
+	</Ling>
+		<Element>
+			<Kind>Mu</Kind>
+			<Value>12</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="ZT_BHZ" Parent="MaterialBase">
+		<ThingName>避寒玉</ThingName>
+		<TexPath>Spr\Object\DJ\QHYP.PNG</TexPath>
+		<Desc>可以抵御零下千度的极寒.</Desc>
+		<MaxHitPoints>10000</MaxHitPoints>
+		<Rate>6</Rate>
+		<Beauty>12</Beauty>
+		<MaxStack>99</MaxStack>
+		<ElementKind>Huo</ElementKind>
+		<Item>
+			<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="2000"/>
+					<SalePrice Value="1260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="2000" />
+					<SalePrice Value="1260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="2000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>避寒玉</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Shui</li>	
+				<li>PhysicalLables_Shui</li>
+				<li>PhysicalLables_Shui</li>
+			</PhysicalLables>
+			
+			<BeMade>
+			<WorkToMake>3000</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+		
+			<CostItems>
+					<Item name = "Item_YYSY" count = "9"/>
+					<Item name = "Item_SilverRock" count = "99"/>
+					<Item name = "Item_ZYW" count = "6"/>
+				</CostItems>
+			<CostStuffCount>100</CostStuffCount>
+		</BeMade>
+			<Equip>
+			<ToolModifier>ZT_BHZ</ToolModifier>
+		</Equip>
+		</Item>
+		
+		<Element>
+			<Kind>Huo</Kind>
+			<Value>8</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="ZT_BHW" Parent="MaterialBase">
+		<ThingName>避火真丹</ThingName>
+		<TexPath>Spr\Object\DJ\BHZ.PNG</TexPath>
+		<Desc>可以抵御七千五百度的高温.</Desc>
+		<MaxHitPoints>10000</MaxHitPoints>
+		<Rate>6</Rate>
+		<Beauty>12</Beauty>
+		<MaxStack>99</MaxStack>
+		<ElementKind>Shui</ElementKind>
+		<Item>
+			<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="1000"/>
+					<SalePrice Value="260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="1000" />
+					<SalePrice Value="260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="1000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>避寒珠</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Shui</li>	
+				<li>PhysicalLables_Shui</li>
+				<li>PhysicalLables_Shui</li>
+			</PhysicalLables>
+			
+			<BeMade>
+			<WorkToMake>3000</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+		
+			<CostItems>
+					<Item name = "Item_Dan_BHW1" count = "9"/>
+					<Item name = "Item_Dan_BHW2" count = "6"/>
+					<Item name = "Item_Dan_BHW3" count = "3"/>
+				</CostItems>
+			<CostStuffCount>100</CostStuffCount>
+		</BeMade> 
+			<Equip>
+			<ToolModifier>ZT_BHW</ToolModifier>
+		</Equip>
+		</Item>
+		
+		<Element>
+			<Kind>Shui</Kind>
+			<Value>8</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	
+	<ThingDef Type="Item" Name="Item_LQ" Parent="MaterialBase">
+		<ThingName>龙气</ThingName>
+		<TexPath>Spr\Object\DJ\LQ.PNG</TexPath>
+		<Desc>蕴藏与山川之间，也常蕴含与源石之中，装备可提高佩戴者法宝百分五十属性加成.</Desc>
+		<MaxHitPoints>10000</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>12</Beauty>
+		<MaxStack>99</MaxStack>
+		<ElementKind>Jin</ElementKind>
+		<Item>
+				<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>5</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="2500"/>
+					<SalePrice Value="600" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="2500" />
+					<SalePrice Value="600" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="2500" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>		
+			<FabaoSuffix>龙气</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Jin</li>	
+				<li>Liquid</li>
+				<li>LowDensity2</li>
+			</PhysicalLables>
+			
+			
+			
+			
+			<Equip>
+			<ToolModifier>ZT_LQ</ToolModifier>
+		</Equip>
+		</Item>
+		
+		<Element>
+			<Kind>Jin</Kind>
+			<Value>8</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+		<ThingDef Type="Item" Name="Item_LZ" Parent="MaterialBase">
+		<ThingName>龙珠</ThingName>
+		<TexPath>Spr\Object\DJ\LZ.PNG</TexPath>
+		<Desc>青龙不死药所衔之物，其中蕴含真龙之息，佩戴可提高内门自然回复率与心境，炼化后提高，提高十点护盾值和减低百分十护盾强度加值.</Desc>
+		<MaxHitPoints>10000</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>12</Beauty>
+		<MaxStack>99</MaxStack>
+		<ElementKind>Mu</ElementKind>
+		<Item>
+			<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="17000"/>
+					<SalePrice Value="4260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="17000" />
+					<SalePrice Value="4260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="17000" />
+					<SalePrice Value="0" />
+				</li>
+				</Prices>
+			<FabaoSuffix>龙气</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Mu</li>	
+				<li>Liquid</li>
+				<li>LowDensity2</li>
+			</PhysicalLables>
+			<Equip>
+			<ToolModifier>ZT_LZ</ToolModifier>
+		</Equip>
+		</Item>
+		<StoryBnts>
+			<li Name="炼化" Desc="尝试吸纳龙珠之息" Appoint="2" Story="ZT_LZ" Cost="5" Icon="Spr\Object\DJ\LZ.PNG"/>
+		</StoryBnts>
+		<Element>
+			<Kind>Mu</Kind>
+			<Value>8</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	
+		<ThingDef Type="Item" Name="Item_SFND" Parent="MaterialBase">
+		<ThingName>神凤内丹</ThingName>
+		<TexPath>Spr\Object\DJ\SFND.PNG</TexPath>
+		<Desc>神凰药内蕴神丹，不死药修行吸纳的核心之物，佩戴可提高术法威力与心境，炼化后提高百分百术法威力百分二十术法吟唱时间和术法消耗.</Desc>
+		<MaxHitPoints>10000</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>12</Beauty>
+		<MaxStack>99</MaxStack>
+		<ElementKind>Huo</ElementKind>
+		<Item>
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="17000"/>
+					<SalePrice Value="4260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="17000" />
+					<SalePrice Value="4260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="17000" />
+					<SalePrice Value="0" />
+				</li>
+				</Prices>
+			<FabaoSuffix>内丹</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Huo</li>	
+				<li>Liquid</li>
+				<li>LowDensity2</li>
+			</PhysicalLables>
+			<Equip>
+			<ToolModifier>ZT_SF</ToolModifier>
+		</Equip>
+		</Item>
+		<StoryBnts>
+			<li Name="炼化" Desc="尝试吸纳神凤内丹" Appoint="2" Story="ZT_SFND" Cost="5" Icon="Spr\Object\DJ\SFND.PNG"/>
+		</StoryBnts>
+		<Element>
+			<Kind>Huo</Kind>
+			<Value>8</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+		<ThingDef Type="Item" Name="Item_HLND" Parent="MaterialBase">
+		<ThingName>黄龙内丹</ThingName>
+		<TexPath>Spr\Object\DJ\HLND.PNG</TexPath>
+		<Desc>黄龙药内蕴神丹，不死药修行吸纳的核心之物，佩戴可提高阵法负荷与心境，炼化后提高一千炉鼎值，减低百分十修炼速度.</Desc>
+		<MaxHitPoints>10000</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>12</Beauty>
+		<MaxStack>99</MaxStack>
+		<ElementKind>Tu</ElementKind>
+		<Item>
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="17000"/>
+					<SalePrice Value="4260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="17000" />
+					<SalePrice Value="4260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="17000" />
+					<SalePrice Value="0" />
+				</li>
+				</Prices>
+			<FabaoSuffix>内丹</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Tu</li>	
+				<li>Liquid</li>
+				<li>LowDensity2</li>
+			</PhysicalLables>
+			<Equip>
+			<ToolModifier>ZT_HL</ToolModifier>
+		</Equip>
+		</Item>
+		<StoryBnts>
+			<li Name="炼化" Desc="尝试吸纳内丹" Appoint="2" Story="ZT_HLND" Cost="5" Icon="Spr\Object\DJ\HLND.PNG"/>
+		</StoryBnts>
+		<Element>
+			<Kind>Tu</Kind>
+			<Value>8</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Item_XWND" Parent="MaterialBase">
+		<ThingName>玄武内丹</ThingName>
+		<TexPath>Spr\Object\DJ\XWND.PNG</TexPath>
+		<Desc>玄武药内蕴神丹，不死药修行吸纳的核心之物，佩戴可提高百分五十回灵与心境，炼化后提高百分百回灵效率，减低法宝回灵速度百分十.</Desc>
+		<MaxHitPoints>10000</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>12</Beauty>
+		<MaxStack>99</MaxStack>
+		<ElementKind>Shui</ElementKind>
+		<Item>
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="17000"/>
+					<SalePrice Value="4260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="17000" />
+					<SalePrice Value="4260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="17000" />
+					<SalePrice Value="0" />
+				</li>
+				</Prices>
+			<FabaoSuffix>内丹</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Shui</li>	
+				<li>Liquid</li>
+				<li>LowDensity2</li>
+			</PhysicalLables>
+			<Equip>
+			<ToolModifier>ZT_XW</ToolModifier>
+		</Equip>
+		</Item>
+		<StoryBnts>
+			<li Name="炼化" Desc="尝试吸纳内丹" Appoint="2" Story="ZT_XWND" Cost="5" Icon="Spr\Object\DJ\XWND.PNG"/>
+		</StoryBnts>
+		<Element>
+			<Kind>Shui</Kind>
+			<Value>8</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Item_BHND" Parent="MaterialBase">
+		<ThingName>白虎内丹</ThingName>
+		<TexPath>Spr\Object\DJ\BHND.PNG</TexPath>
+		<Desc>白虎药内蕴神丹，不死药修行吸纳的核心之物，佩戴可提高百分百法宝威力与心境，炼化后提高百分一百法宝回灵倍率，提高百分十法宝攻击间隔.</Desc>
+		<MaxHitPoints>10000</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>12</Beauty>
+		<MaxStack>99</MaxStack>
+		<ElementKind>Jin</ElementKind>
+		<Item>
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="17000"/>
+					<SalePrice Value="4260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="17000" />
+					<SalePrice Value="4260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="17000" />
+					<SalePrice Value="0" />
+				</li>
+				</Prices>
+			<FabaoSuffix>内丹</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Jin</li>	
+				<li>Liquid</li>
+				<li>LowDensity2</li>
+			</PhysicalLables>
+			<Equip>
+			<ToolModifier>ZT_BH</ToolModifier>
+		</Equip>
+		</Item>
+		<StoryBnts>
+			<li Name="炼化" Desc="尝试吸纳内丹" Appoint="2" Story="ZT_BHND" Cost="5" Icon="Spr\Object\DJ\BHND.PNG"/>
+		</StoryBnts>
+		<Element>
+			<Kind>Jin</Kind>
+			<Value>8</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+		<ThingDef Type="Item" Name="Item_ZTF" Parent="MaterialBase">
+		<ThingName>遮天符</ThingName>
+		<TexPath>Spr\Object\DJ\ZTL.PNG</TexPath>
+		<Desc>遮天符，拍卖行身份认证.增加佩戴者心境与魅力</Desc>
+		<MaxHitPoints>10000</MaxHitPoints>
+		<Rate>12</Rate>
+		<Beauty>12</Beauty>
+		<MaxStack>99</MaxStack>
+		<ElementKind>Jin</ElementKind>
+		<Item>
+			<FabaoSuffix>符</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_None</li>	
+				<li>LowDensity2</li>
+			</PhysicalLables>
+			
+			
+			
+			
+			<Equip>
+			<ToolModifier>ZT_ZTF</ToolModifier>
+		</Equip>
+		</Item>
+		<Element>
+			<Kind>None</Kind>
+			<Value>8</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_yyzt" Parent="MaterialBase">
+		<ThingName>一页</ThingName>
+		<TexPath>Spr\Object\DJ\yyzt.PNG</TexPath>
+		<Desc>参悟可习得一页遮天，用于解锁新地点的秘籍.</Desc>
+		<MaxHitPoints>10000</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>12</Beauty>
+		<MaxStack>99</MaxStack>
+		<ElementKind>None</ElementKind>
+		<Item>
+			
+			<PhysicalLables>
+				<li>PhysicalLables_None</li>	
+
+			</PhysicalLables>
+			<BeMade>
+			<WorkToMake>1</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+		
+			<CostItems>
+
+					<Item name = "Item_Water" count = "1"/>
+					
+				</CostItems>
+			
+		</BeMade> 
+
+		</Item>
+		<StoryBnts>
+			<li Name="参悟" Desc="尝试参悟该秘籍" Story="ZT_DD" Cost="1" Icon="Spr\Object\DJ\yyzt.PNG"/>
+		</StoryBnts>
+		<Element>
+			<Kind>None</Kind>
+			<Value>8</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_SJL" Parent="MaterialBase">
+		<ThingName>世家录</ThingName>
+		<TexPath>Spr\Object\DJ\SJL.PNG</TexPath>
+		<Desc>参悟可选择一个以一个世家进行开局。.</Desc>
+		<MaxHitPoints>10000</MaxHitPoints>
+		<Rate>20</Rate>
+		<Beauty>12</Beauty>
+		<MaxStack>99</MaxStack>
+		<ElementKind>None</ElementKind>
+		<Item>
+				<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="20000"/>
+					<SalePrice Value="10000" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="20000" />
+					<SalePrice Value="10000" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="20000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>	
+			<PhysicalLables>
+				<li>PhysicalLables_None</li>	
+
+			</PhysicalLables>
+		</Item>
+		<StoryBnts>
+			<li Name="参悟" Desc="尝试参悟该秘籍" Story="ZT_HGSJ" Cost="1" Icon="Spr\Object\DJ\SJL.PNG"/>
+		</StoryBnts>
+		<Element>
+			<Kind>None</Kind>
+			<Value>8</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_TZW" Parent="MaterialBase">
+		<ThingName>体质丸</ThingName>
+		<TexPath>Spr\Object\DJ\TZW.PNG</TexPath>
+		<Desc>用无数进化液而制造的特殊体质，其实力能大致与圣体等体质相抗衡。</Desc>
+		<MaxHitPoints>10000</MaxHitPoints>
+		<Rate>20</Rate>
+		<Beauty>12</Beauty>
+		<MaxStack>1</MaxStack>
+		<ElementKind>None</ElementKind>
+		<Item>
+			<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="30000"/>
+					<SalePrice Value="1000" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="30000" />
+					<SalePrice Value="1000" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="40000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>	
+			<PhysicalLables>
+				<li>PhysicalLables_None</li>	
+
+			</PhysicalLables>
+		</Item>
+		<StoryBnts>
+			<li Name="吸收" Desc="尝试吸收体质丸" Appoint="1" Story="ZT_TZW" Cost="5" Icon="Spr\Object\DJ\TZW.PNG"/>
+		</StoryBnts>
+		<Element>
+			<Kind>None</Kind>
+			<Value>8</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+</List></ThingDefs>

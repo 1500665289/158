@@ -1,0 +1,692 @@
+<ThingDefs><List>
+	<ThingDef Type="Item" Name="FengShuiItemBase" Parent="ItemBase">
+	
+	<ThingName></ThingName>
+	<Desc>Desc.</Desc>
+	<TexPath></TexPath>
+	
+	<Rate>1</Rate>
+	<MaxStack>1</MaxStack>
+	<SelectAble>1</SelectAble>
+	<VisualAble>1</VisualAble>
+
+	<Beauty>15</Beauty>
+	
+	<Flammability>
+		<Flammability>-1</Flammability>
+		<FlameSpawnThingDef></FlameSpawnThingDef>
+		<FlameSpawnChance>0</FlameSpawnChance>
+		<BurningPoint>999</BurningPoint>
+	</Flammability>
+	
+	<Item  Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<NotRandom>1</NotRandom>
+		<FabaoSuffix></FabaoSuffix>
+		<PhysicalLables>
+			<li>Gravel</li>
+		</PhysicalLables>
+		<Rot>
+			<RotSpeed>0</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>0</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>
+	</Item>
+	<Ling>
+		<AddionLing>50</AddionLing>
+		<AddionRadius>4</AddionRadius>
+		<AddionFailing>0.75</AddionFailing>
+		<AddionFailRadius>1</AddionFailRadius>
+		
+		<Attenuation>0.03</Attenuation>
+		<Absorption>0.4</Absorption>
+		<Accommodate>1</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>None</Kind>
+		<Value>0</Value>         
+		<Radius>0</Radius>
+		<Failing>0</Failing>
+		<FailRadius>0</FailRadius>
+	</Element>
+	</ThingDef>
+	
+	
+	<ThingDef Type="Item" Name="FengShuiItem_FS1" Parent="FengShuiItemBase">
+	
+	<ThingName>朱雀印</ThingName>
+	<Desc>印刻朱雀之型，有镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX4.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>Huo</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>印</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>Hard2</li>
+			<li>PhysicalLables_Huo</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+				<Item name = "Item_BossFeng_HuoYu" count = "5"/>
+				<Item name = "Item_BossFeng_Gu" count = "2"/>
+				<Item name = "Item_BossFeng_HuoYu" count = "5"/>
+				<Item name = "Item_DLYJ" count = "15"/>
+				<Item name = "Item_XZ" count = "15"/>
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>Huo</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_17</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="FengShuiItem_FS2" Parent="FengShuiItemBase">
+	
+	<ThingName>黑武士印</ThingName>
+	<Desc>曾在仙魔大战中，受魔修伤害而被变为石像的古修，后石像通灵，则又有了镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX5.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>Tu</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>印</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>Hard2</li>
+			<li>PhysicalLables_Tu</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+				<Item name = "Item_XianDaoXieNian" count = "1"/>
+				<Item name = "Item_XianDaoShenNian" count = "1"/>
+				<Item name = "Item_JTBYB" count = "15"/>
+				<Item name = "Item_JTCYW" count = "15"/>
+				<Item name = "Item_YYSY" count = "15"/>
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>Tu</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_18</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+	
+	
+	<ThingDef Type="Item" Name="FengShuiItem_FS3" Parent="FengShuiItemBase">
+	
+	<ThingName>仙玉石</ThingName>
+	<Desc>传说与东海之滨的仙人，成仙后其遗褪转化而成，有镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX6.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>Tu</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>仙玉石</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>HighDensity1</li>
+			<li>PhysicalLables_Tu</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+		
+				<Item name = "Item_XianDaoShenNian" count = "2"/>
+				<Item name = "Item_JTBLSY" count = "15"/>
+				<Item name = "Item_ST" count = "15"/>
+				<Item name = "Item_YYSY" count = "15"/>
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>Tu</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_19</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="FengShuiItem_FS4" Parent="FengShuiItemBase">
+	
+	<ThingName>喵芯石刻</ThingName>
+	<Desc>喵星人大帝，万喵万遗留下来的石刻，有镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX8.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>None</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>喵芯</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>Smooth21</li>
+			<li>PhysicalLables_None</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+		
+				<Item name = "Item_MagicHerb" count = "100"/>
+				<Item name = "Item_ZYW" count = "15"/>
+				<Item name = "Item_ST" count = "15"/>
+				<Item name = "Item_WSTJ" count = "15"/>
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>None</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_20</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="FengShuiItem_FS5" Parent="FengShuiItemBase">
+	
+	<ThingName>紫月仙阙</ThingName>
+	<Desc>用大量紫荆神铜制造的仙韵之作，有镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX9.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>None</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>仙阙</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>Smooth21</li>
+			<li>PhysicalLables_None</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+		
+				<Item name = "Item_ZJST" count = "30"/>
+				<Item name = "Item_ZYW" count = "15"/>
+				<Item name = "Item_ZYSY" count = "15"/>
+				<Item name = "Item_WSTJ" count = "15"/>
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>None</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_21</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="FengShuiItem_FS6" Parent="FengShuiItemBase">
+	
+	<ThingName>麒麟印纹</ThingName>
+	<Desc>瑞兽，性情温和，传说能活两千年。古人认为，麒麟出没处，必有祥瑞，有镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX10.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>None</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>麒麟印</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>Smooth21</li>
+			<li>PhysicalLables_None</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+		
+				<Item name = "Item_JTCYW" count = "15"/>
+				<Item name = "Item_ZYW" count = "15"/>
+				<Item name = "Item_HSXY" count = "5"/>
+				<Item name = "Item_YZBYB" count = "15"/>
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>None</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_22</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+	<ThingDef Type="Item" Name="FengShuiItem_FS7" Parent="FengShuiItemBase">
+	
+	<ThingName>弥勒佛相</ThingName>
+	<Desc>贤劫千佛中第五尊佛，常被称为"当来下生弥勒尊佛"，有镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX11.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>None</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>佛相</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>Smooth21</li>
+			<li>PhysicalLables_None</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+		
+				<Item name = "Item_WSSS" count = "15"/>
+				<Item name = "Item_ST" count = "15"/>
+				<Item name = "Item_WSXY" count = "2"/>
+				<Item name = "Item_JTBYB" count = "15"/>
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>None</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_23</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+	<ThingDef Type="Item" Name="FengShuiItem_FS8" Parent="FengShuiItemBase">
+	
+	<ThingName>锦鲤之约</ThingName>
+	<Desc>"水中活宝石"、"会游泳的艺术品"的美称也因其易于生存而被看做吉祥物，有镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX12.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>Shui</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>锦鲤</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>Smooth21</li>
+			<li>PhysicalLables_None</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+		
+				<Item name = "Item_SHQ" count = "5"/>
+				<Item name = "Item_ST" count = "15"/>
+				<Item name = "Item_WSSS" count = "50"/>
+				
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>Shui</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_24</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+	<ThingDef Type="Item" Name="FengShuiItem_FS9" Parent="FengShuiItemBase">
+	
+	<ThingName>守门神狮</ThingName>
+	<Desc>中国传统文化中常见的辟邪物品，以石材为原材料雕塑成狮子的形象，具有艺术价值和观赏价值的雕塑品。有镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX13.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>Tu</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>神狮</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>Smooth21</li>
+			<li>PhysicalLables_Tu</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+		
+				<Item name = "Item_YZBYB" count = "30"/>
+				<Item name = "Item_ST" count = "30"/>
+				<Item name = "Item_WSTJ" count = "30"/>
+				
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>Tu</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_25</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+	<ThingDef Type="Item" Name="FengShuiItem_FS10" Parent="FengShuiItemBase">
+	
+	<ThingName>丰收角鹿</ThingName>
+	<Desc>鹿，处处山林中有之。马身羊尾，头侧而长，高脚而行速。有镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX14.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>Mu</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>角鹿</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>Smooth21</li>
+			<li>PhysicalLables_Mu</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+		
+				<Item name = "Item_JadeBlock" count = "200"/>
+				<Item name = "Item_ST" count = "10"/>
+				<Item name = "Item_WSTJ" count = "10"/>
+				
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>Mu</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_26</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+	<ThingDef Type="Item" Name="FengShuiItem_FS11" Parent="FengShuiItemBase">
+	
+	<ThingName>绿木山痕</ThingName>
+	<Desc>行此山，有治疗之妙。有镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX15.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>Mu</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>绿木</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>Smooth21</li>
+			<li>PhysicalLables_Mu</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+		
+				<Item name = "Item_Wood" count = "600"/>
+				<Item name = "Item_HardWood" count = "60"/>
+				<Item name = "Item_ParasolWood" count = "30"/>
+				
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>Mu</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_27</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+	<ThingDef Type="Item" Name="FengShuiItem_FS12" Parent="FengShuiItemBase">
+	
+	<ThingName>金銮神炉</ThingName>
+	<Desc>有此炉，炼丹不过是自动化加工。有镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX16.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>Huo</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>神炉</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>Smooth21</li>
+			<li>PhysicalLables_Huo</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+		
+				<Item name = "Item_CopperRock" count = "100"/>
+				<Item name = "Item_DarksteelRock" count = "30"/>
+				<Item name = "Item_ST" count = "30"/>
+				
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>Huo</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_28</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+	<ThingDef Type="Item" Name="FengShuiItem_FS13" Parent="FengShuiItemBase">
+	
+	<ThingName>牛篱耕吙</ThingName>
+	<Desc>雕刻神牛犁田之像。有镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX17.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>Tu</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>耕吙</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>Smooth21</li>
+			<li>PhysicalLables_Tu</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+		
+				<Item name = "Item_Wood" count = "500"/>
+				<Item name = "Item_StoneEssence" count = "120"/>
+				<Item name = "Item_ST" count = "30"/>
+				
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>Tu</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_29</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+	<ThingDef Type="Item" Name="FengShuiItem_FS14" Parent="FengShuiItemBase">
+	
+	<ThingName>残破古鼎</ThingName>
+	<Desc>万年前大战中破碎的仙鼎，但似乎还有些神韵在其中。有镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX19.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>Jin</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>古鼎</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>Smooth21</li>
+			<li>PhysicalLables_Jin</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+		
+				<Item name = "Item_WSTJ" count = "60"/>
+				<Item name = "Item_ZYW" count = "60"/>
+				<Item name = "Item_ST" count = "30"/>
+				
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>Jin</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_30</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+	<ThingDef Type="Item" Name="FengShuiItem_FS15" Parent="FengShuiItemBase">
+	
+	<ThingName>九鬃马石刻</ThingName>
+	<Desc>马，武也。其字象头、髦、尾、足之形。牡马曰骘。有镇压风水之妙用。</Desc>
+	<TexPath>Spr\Building\ZS\SX18.png</TexPath>
+	<TexScale>0.8</TexScale>
+	<Rate>15</Rate>
+	<ElementKind>Tu</ElementKind>
+	
+	<Item Lable="Other">
+		<FuelMultiplier>1</FuelMultiplier>
+		<FabaoSuffix>九鬃马</FabaoSuffix>
+		<PhysicalLables>
+			<li>Heavy2</li>
+			<li>Smooth21</li>
+			<li>PhysicalLables_Tu</li>
+		</PhysicalLables>
+		<BeMade>
+			<CostItems>
+		
+				<Item name = "Item_ZYW" count = "20"/>
+				<Item name = "Item_YYSY" count = "20"/>
+				<Item name = "Item_ST" count = "10"/>
+				
+			</CostItems>
+		</BeMade>
+		<Fengshui>
+			<AddV>30</AddV>
+			<ElementKind>Tu</ElementKind>
+			<ElementPower>0</ElementPower>
+			<RoomKind>None</RoomKind>
+			<RoomLevel>0</RoomLevel>
+			<Localtion>None</Localtion>
+			<Modifiers>
+				<li>SP_FSZhenWu_31</li>
+			</Modifiers>
+			<Specials>
+				<li>20000</li>
+			</Specials>
+		</Fengshui>			
+	</Item>
+	</ThingDef>
+</List></ThingDefs>

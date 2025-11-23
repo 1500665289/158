@@ -1,0 +1,496 @@
+<Esotericas><List>
+	
+	<!-- ==========================技能1========================== -->
+	
+	<Esoterica Name="Gong_DJ_A1">
+		<DisplayName>道经</DisplayName>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_DJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>14</Difficulty>
+		<Desc>道,可道也,非恒道也。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n加根骨\n加神识\n加参悟值领悟系数\n习得神通：苦海波涛[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_1A</Modifier>
+		<Magics>
+			<li>KHBT</li>
+		</Magics>
+	</Esoterica>
+	<Esoterica Name="Gong_DJ_A1_1">
+		<DisplayName>道经</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_DJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>5</Difficulty>
+		<Desc>名,可名也,非恒名也</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n加五维属性\n加个人灵气\n加个人回灵[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_1A_1</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_DJ_A1_2">
+		<DisplayName>道经</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_DJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>5</Difficulty>
+		<Desc>“有”，名万物之母。 故，常“无”，欲以观其妙；常“有”，欲以观其徼。此两者，同出而异名，同谓之玄。玄之又玄，众妙之门。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]    三重天    \n加潜力\n加法宝回灵倍率\n加心境[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_1A_2</Modifier>
+	</Esoterica>
+	
+	
+	<!-- ==========================技能2========================== -->
+	
+	<Esoterica Name="Gong_DJ_A2">
+		<DisplayName>德经</DisplayName>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_DJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>14</Difficulty>
+		<Desc>天下皆知美之为美，斯恶已。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n加五维属性\n加炉鼎值\n习得神通：风水凝练[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_2A</Modifier>
+		<Magics>
+			<li>FengshuiItemCreate</li>
+		</Magics>
+	</Esoterica>
+	<Esoterica Name="Gong_DJ_A2_1">
+		<DisplayName>德经</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_ZDJ_DJ\ZT_DJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>5</Difficulty>
+		<Desc>皆知善之为善，斯不善已。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n降低天谴值\n加个人灵气\n加个人回灵[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_2A_1</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_DJ_A2_2">
+		<DisplayName>德经</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_DJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>5</Difficulty>
+		<Desc>故有无相生，难易相成，长短相较，高下相倾，高音相和，前后相随。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]    三重天    \n加潜力\n加领悟悟性\n加心境[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_2A_2</Modifier>
+	</Esoterica>
+	
+	
+	<!-- ==========================技能3========================== -->
+	
+	<Esoterica Name="Gong_DJ_B1">
+		<DisplayName>以本为精</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_DJ\YBWJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>11</Difficulty>
+		<Desc>以内心的感受为重，观视本心。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n提高心境基础值\n降低术法冷却\n提高术法伤害[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_1B</Modifier>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_DJ_B1_1">
+		<DisplayName>以物为粗</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_DJ\YBWJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>11</Difficulty>
+		<Desc>身外之物又岂能让人费心。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n提升心境稳定程度\n降低饮气需求\n降低术法消耗[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_1B_1</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_DJ_B1_2">
+		<DisplayName>以有积为不足</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_DJ\YBWJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>11</Difficulty>
+		<Desc>身外之物又岂能让人费心。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n习得神通：周天神算\n习得神通：造山术\n习得神通：灵犀咒[/color][/size]</EffectDesc>
+		<Magics>
+			<li>LingXiZhou</li>
+			<li>BuildMine</li>
+			<li>Prophesy</li>
+		</Magics>
+	</Esoterica>
+	
+	<!-- ==========================技能4========================== -->
+	
+	<Esoterica Name="Gong_DJ_B2">
+		<DisplayName>道常有</DisplayName>
+		<Icon>Spr\Object\JN\ZT_DJ\DCY.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>12</Difficulty>
+		<Desc>何为道，三千大道在人间。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>None</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n加炉鼎值\n加机缘\n加法宝回灵倍率[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_2B</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_DJ_B2_1">
+		<DisplayName>道常无</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_DJ\DCW.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>4</Difficulty>
+		<Desc>道为何，处处有道却无道。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n加领悟悟性\n加阵法规模\n加阵法负荷[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_2B_1</Modifier>
+	</Esoterica>
+	
+	<!-- ==========================技能5========================== -->
+	
+	<Esoterica Name="Gong_DJ_B3">
+		<DisplayName>处无为之事</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_DJ\WW.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>8</Difficulty>
+		<Desc>问心无愧，自在于世。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n减低修行速度\n加炼丹成功率\n加炼器成功率\n加炼丹速度\n加炼器速度\n习得秘术：无为[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_3B</Modifier>
+		<Skills>
+			<li>ZT_DJ_WW</li>
+		</Skills>
+	</Esoterica>
+	<Esoterica Name="Gong_DJ_B3_1">
+		<DisplayName>行不言之教</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_DJ\WW.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>4</Difficulty>
+		<Desc>身则为道，道无需言。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n减低修行速度\n加炼丹产量\n加炼丹等级\n加炼器品阶\n加炼器等级\n习得秘术：不言[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_3B_1</Modifier>
+		<Skills>
+			<li>ZT_DJ_BY</li>
+		</Skills>
+	</Esoterica>
+	
+	<!-- ==========================技能5========================== -->
+	
+	<Esoterica Name="Gong_DJ_C1">
+		<DisplayName>守一</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_DJ\SY.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>10</Difficulty>
+		<Desc>抱源守一，觅得根本。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n加阵法技能等级\n加阵法技能上限\n习得阵法：若干 [/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_1C</Modifier>
+		<ZhenNodes>
+			<li>bamen_0</li>
+			<li>bamen_1</li>
+			<li>bamen_2</li>
+			<li>bamen_3</li>
+			<li>bamen_4</li>
+			<li>bamen_5</li>
+			<li>bamen_6</li>
+			<li>bamen_7</li>
+			<li>wushan_0</li>
+			<li>wushan_1</li>
+			<li>wushan_2</li>
+			<li>wushan_3</li>
+			<li>wushan_4</li>
+			<li>ZhenNode_Lv0_1_1</li>
+			<li>ZhenNode_Lv0_2_1</li>
+			<li>ZhenNode_Lv0_2_2</li>
+			<li>ZhenNode_Lv0_2_3</li>
+			<li>ZhenNode_Lv0_3_1</li>
+			<li>ZhenNode_Lv0_3_2</li>
+			<li>ZhenNode_Lv0_3_3</li>
+			<li>ZhenNode_Lv0_3_4</li>
+		</ZhenNodes>
+	</Esoterica>
+	<Esoterica Name="Gong_DJ_C1_1">
+		<DisplayName>心齐</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_DJ\SY.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>20</Difficulty>
+		<Desc>心齐则道正，根本唯一。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n习得阵法：若干一级阵法 [/color][/size]</EffectDesc>
+		<ZhenNodes>
+			<li>ZhenMainNode_Lv1_3_2</li>
+			<li>ZhenMainNode_Lv1_3_3</li>
+			<li>ZhenMainNode_Lv1_3_4</li>
+			<li>ZhenMainNode_Lv1_3_5</li>
+			<li>ZhenMainNode_Lv1_3_6</li>
+			<li>ZhenMainNode_Lv1_3_7</li>
+			<li>ZhenMainNode_Lv1_3_8</li>
+			<li>ZhenMainNode_Lv1_3_9</li>
+			<li>ZhenMainNode_Lv1_3_10</li>
+			<li>ZhenMainNode_Lv1_3_11</li>
+			<li>ZhenMainNode_Lv1_3_12</li>
+			<li>ZhenMainNode_Lv1_3_13</li>
+			<li>ZhenMainNode_Lv1_3_14</li>
+			<li>ZhenMainNode_Lv1_3_15</li>
+			<li>ZhenMainNode_Lv1_3_16</li>
+			<li>ZhenMainNode_Lv1_4_1</li>
+			<li>ZhenMainNode_Lv1_4_2</li>
+			<li>ZhenMainNode_Lv1_4_3</li>
+			<li>ZhenMainNode_Lv1_4_4</li>
+			<li>ZhenMainNode_Lv1_4_5</li>
+			<li>ZhenMainNode_Lv1_4_6</li>
+			<li>ZhenMainNode_Lv1_4_7</li>
+			<li>ZhenMainNode_Lv1_4_8</li>
+			<li>ZhenMainNode_Lv1_4_9</li>
+			<li>ZhenMainNode_Lv1_4_10</li>
+			<li>ZhenMainNode_Lv1_4_11</li>
+			<li>ZhenMainNode_Lv1_4_12</li>
+		</ZhenNodes>
+	</Esoterica>
+	<Esoterica Name="Gong_DJ_C1_2">
+		<DisplayName>坐忘</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_DJ\SY.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>30</Difficulty>
+		<Desc>心齐则道正，根本唯一。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n突破阵法之极限 [/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_1C_2</Modifier>
+	</Esoterica>
+	<!-- ==========================分割线========================== -->
+	
+	<Esoterica Name="Gong_DJ_SJ_C2_YQ">
+		<DisplayName>天清</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_TG.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>12</Difficulty>
+		<Desc>三清指"三才"为天格、人格、地格。所谓三才，即天才、人才、地才</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n习得  秘术：\n天格[/color][/size]</EffectDesc>
+		<Skills>
+			<li>TDJ_SJ_SQ_TQ</li>
+		</Skills>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_DJ_SJ_C1_YQ_1">
+		<DisplayName>地格</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_DG.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>9</Difficulty>
+		<Desc>三清指"三才"为天格、人格、地格。所谓三才，即天才、人才、地才</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n习得  秘术：\n地清[/color][/size]</EffectDesc>
+		<Skills>
+			<li>TDJ_SJ_SQ_DQ</li>
+		</Skills>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_DJ_SJ_C1_YQ_2">
+		<DisplayName>人才</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_Rc.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>9</Difficulty>
+		<Desc>三清指"三才"为天格、人格、地格。所谓三才，即天才、人才、地才</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]n习得  秘术：\n人才[/color][/size]</EffectDesc>
+		<Skills>
+			<li>TDJ_SJ_SQ_Rc</li>
+		</Skills>
+	</Esoterica>
+	
+		
+	<Esoterica Name="Gong_DJ_C3">
+		<DisplayName>专气致柔</DisplayName>
+		<Icon>Spr\Object\JN\ZT_DJ\ZQZR.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>9</Difficulty>
+		<Desc>如同婴儿一般，无虑无邪、专心致志</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>None</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    \n加修炼速度\n加炉鼎值\n加个人回灵[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_3C</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_DJ_C3_1">
+		<DisplayName>涤除玄鉴</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_TJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>15</Difficulty>
+		<Desc>内心居于清净之地观察时间万物。</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]   \n加法术威力\n加法术冷却时间\n加突破概率[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_3C_1</Modifier>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_DJ_HL_D1">
+		<DisplayName>人法地</DisplayName>
+		<Icon>Spr\Object\JN\ZT_DJ\RFD.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>20</Difficulty>
+		<Desc>人受大地的恩泽，行为应效法大地。</Desc>
+		<GLevel>God</GLevel>
+		<Element>None</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    法地    \n加灵气恢复速度\n加灵气最大值\n加炉鼎值极限[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_HL_1D</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_DJ_HL_D1_1">
+		<DisplayName>地法天</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_DJ\RFD.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>13</Difficulty>
+		<Desc>地受天的覆盖，因此大地时刻效法天的法则运行。</Desc>
+		<GLevel>God</GLevel>
+		<Element>Jin</Element>
+		<EffectDesc>[size=10][color=#D06508]    法天    \n降低天谴值\n减低道行\n加三道元神分神[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_HL_1D_1</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_DJ_HL_D1_2">
+		<DisplayName>天法道</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_DJ\RFD.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>13</Difficulty>
+		<Desc>道是天的皈依，所以天效法道而周流不息。</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>Jin</Element>
+		<EffectDesc>[size=10][color=#D06508]    法道    \n加法宝数量1\n加法宝灵力最大值\n习得  秘术：\n道韵自然[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_HL_1D_2</Modifier>
+		<Skills>
+			<li>DJ_DYZR</li>
+		</Skills>
+		<GodSoulCount>30</GodSoulCount>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_DJ_HL_D2">
+		<DisplayName>名道金书</DisplayName>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_DJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>6</Difficulty>
+		<Desc>一尊鼎，两个耳，三只足。道生一，一生二，二生三，三生万物，万物负阴而抱阳</Desc>
+		<GLevel>God</GLevel>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    器胚    \n加炼器成功率\n加炼器速度\n加神器成功率[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_HL_2D</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_DJ_HL_D2_1">
+		<DisplayName>名道金书</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_DJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>14</Difficulty>
+		<Desc>一叶金书斩仙三！</Desc>
+		<GLevel>God2</GLevel>
+		<EffectDesc>[size=10][color=#D06508]    鼎成    \n炼器品质加成\n炼成神器概率\n习得 极道帝兵：名道金书[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_HL_2D_1</Modifier>
+		<Fabaos>
+			<li>ZT_DJ_MDJS</li>
+		</Fabaos>
+	</Esoterica>
+	
+	
+	<Esoterica Name="Gong_DJ_HL_YY">
+		<DisplayName>负阴抱阳</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_DJ\YY.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>20</Difficulty>
+		<Desc>一叶金书斩仙三！</Desc>
+		<GLevel>God</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n习得  秘术：\n负阴抱阳[/color][/size]</EffectDesc>
+		<Skills>
+			<li>ZT_DJ_YY</li>
+		</Skills>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_DJ_XT_F1">
+		<DisplayName>大音希声</DisplayName>
+		<Icon>Spr\Object\JN\ZT_DJ\DYXS.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>20</Difficulty>
+		<Desc>最大的声音是无声。</Desc>
+		<GLevel>God2</GLevel>
+		<Element>None</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n加法宝灵气恢复速度\n加灵气最大值\n加炉鼎[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_XT_1F</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_DJ_XT_F1_1">
+		<DisplayName>大象无形</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_DJ\DYXS.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>10</Difficulty>
+		<Desc>最大的形象是没有形迹。</Desc>
+		<GLevel>God2</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n加护盾强度\n加护盾系数\n加灵力最大值[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_XT_1F_1</Modifier>
+	</Esoterica>
+	
+	
+	<Esoterica Name="Gong_DJ_WEBZ">
+		<DisplayName>为而不争</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_DJ\WEBZ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>45</Difficulty>
+		<Desc>道有为，而不争。</Desc>
+		<GLevel>God2</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n习得  秘术：\n不争[/color][/size]</EffectDesc>
+		<Skills>
+			<li>ZT_BZ</li>
+		</Skills>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_DJ_XT_ZD">
+		<DisplayName>红尘仙</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_ZD.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>100</Difficulty>
+		<Desc>红尘成仙，证道世间。</Desc>
+		<GLevel>God2</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n加寿元和加回灵倍率\n加三十道元神分神\n加炉鼎\n加神器成功率\n加术法威力和加法宝威力[/color][/size]</EffectDesc>
+		<Modifier>Gong_DJ_XT_DZ</Modifier>
+		<GodSoulCount>30</GodSoulCount>
+	</Esoterica>
+	
+	
+	
+	
+</List></Esotericas>

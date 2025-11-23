@@ -1,0 +1,349 @@
+<Stories><List>
+	<Story Name="DPZZ"  Parent="BaseFillingStory">
+		<DisplayName>圣体打破诅咒。</DisplayName>
+		<Desc>圣城的化龙池中，在白衣神王姜太虚复生以后和风族联手要一同打破圣体的诅咒。</Desc>
+
+		<Selections>
+			<li>
+				<Display>前去围观，就看看。</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 6
+				]]>
+				</Condition>
+				<OKResult>
+				<![CDATA[	
+				if world:GetWorldFlag(570) == 0 then
+					me:AddMsg("[NAME]虽然有这个实力，但不想参战，[NAME]觉得自己有自己的故事，没必要参与这些，想到此处，[NAME]的护盾强度得到了百分四十的提高。");
+					me:ModifierProperty("NpcFight_ShieldConversionRateAddP",0.4);
+				else
+					me:AddMsg("[NAME]虽然有这个实力，但不想参战，[NAME]觉得自己有自己的故事，没必要参与这些。");
+					]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]实力不足根本没有资格观战。");
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>帮助圣体。（有灭门风险）</Display> 
+				<OKResult>
+				<![CDATA[
+				if me:GetGLevel() <= 9 then
+					me:AddMsg("[NAME]实力说不上很强，不过也好歹帮助圣体在一边喊了几声666，没想到不单单被神王赏赐，也被一些不怀好意之人盯上了");
+					me:AddEnemy(24,0)me:AddEnemy(22,0)
+					if me:GetSkillLevel("FightSkill") >= 20 and me:GetSkillLevel("Zhen") >= 20 then
+						me:DropAwardItem("Item_HSXSY",15);
+						me:DropAwardItem("Item_Dan_FiveBaseFromLife",10);
+						me:DropAwardItem("Item_HSXXY",1);
+						me:DropAwardItem("Item_Dan_ReBorn",2);
+						me:DropAwardItem("Item_YanDaoGuo",2);
+						me:DropAwardItem("Item_XianDaoShenNian",2);
+						if me:GetSkillLevel("Fabao") >= 20 and me:GetSkillLevel("Fight") >= 20 then
+							me:DropAwardItem("Item_TSXSY",15);
+							me:DropAwardItem("Item_WDCY",6);
+							me:DropAwardItem("Item_TSXXY",2);
+							me:DropAwardItem("Item_QieDaoGuo",2);
+							me:DropAwardItem("Item_ThunderAir",4);
+							me:DropAwardItem("Item_QieDaoGuo",2);
+							me:DropAwardItem("Item_MiBao_WWMQD",1);
+							if me:GetSkillLevel("Barrier") >= 20 and me:GetSkillLevel("Qi") >= 20 then
+								me:DropAwardItem("Item_MSXSY",10);
+								me:DropAwardItem("Item_ThunderAir",6);
+								me:DropAwardItem("Item_SSXXY",2);
+								me:DropAwardItem("Item_BenYuan_Jin",2);
+								me:DropAwardItem("Item_XianDaoXieNian",2);
+								me:DropAwardItem("Item_BenYuan_Mu",2);
+							else
+							me:AddMsg("[NAME]护盾等级和气感太弱没能在助威中贡献更多，因此受到的奖励也少了一点。");
+								me:DropAwardItem("Item_SSXSY",6);
+								me:DropAwardItem("Item_WDCY",1);
+							end
+						else
+							me:AddMsg("[NAME]御器能力和战斗等级不够强，因此受到的奖励也少了一点。");	
+								me:DropAwardItem("Item_JSXSY",6);
+								me:DropAwardItem("Item_WDCY",1);
+							end
+					else
+						me:AddMsg("[NAME]术法技能和阵法能力不够强，因此受到的奖励也少了一点。");
+								me:DropAwardItem("Item_MSXSY",6);
+								me:DropAwardItem("Item_WDCY",1);
+					end
+					if me:GetLuck() <= 6 then
+						me:AddDamgeFromCache(story.DamageCache,6,6);
+					elseif me:GetLuck() <= 8 then
+						me:AddDamgeFromCache(story.DamageCache,4,4);
+					elseif me:GetLuck() <= 10 then
+						me:AddDamgeFromCache(story.DamageCache,4,0.5);
+					end
+				elseif me:GetGLevel() >= 11 then
+					me:AddMsg("[NAME]实力在当世以及算王者了，所以帮助一个小小圣体不足挂齿，但是各大圣地却觉得掉了面子");
+					me:AddEnemy(24,0)me:AddEnemy(22,0)me:AddEnemy(22,0)
+					if me:GetSkillLevel("FightSkill") >= 20 and me:GetSkillLevel("Zhen") >= 20 then
+						me:DropAwardItem("Item_HSXSY",20);
+						me:DropAwardItem("Item_Dan_FiveBaseFromLife",15);
+						me:DropAwardItem("Item_HSXXY",2);
+						me:DropAwardItem("Item_Dan_ReBorn",3);
+						me:DropAwardItem("Item_YanDaoGuo",3);
+						me:DropAwardItem("Item_XianDaoShenNian",3);
+						if me:GetSkillLevel("Fabao") >= 20 and me:GetSkillLevel("Fight") >= 20 then
+							me:DropAwardItem("Item_TSXSY",20);
+							me:DropAwardItem("Item_WDCY",8);
+							me:DropAwardItem("Item_TSXXY",3);
+							me:DropAwardItem("Item_QieDaoGuo",3);
+							me:DropAwardItem("Item_ThunderAir",6);
+							me:DropAwardItem("Item_QieDaoGuo",3);
+							me:DropAwardItem("Item_MiBao_WWMQD",1);
+							if me:GetSkillLevel("Barrier") >= 20 and me:GetSkillLevel("Qi") >= 20 then
+								me:DropAwardItem("Item_MSXSY",15);
+								me:DropAwardItem("Item_ThunderAir",8);
+								me:DropAwardItem("Item_SSXXY",3);
+								me:DropAwardItem("Item_BenYuan_Jin",3);
+								me:DropAwardItem("Item_XianDaoXieNian",3);
+								me:DropAwardItem("Item_BenYuan_Mu",3);
+							else
+							me:AddMsg("[NAME]护盾等级和气感太弱没能在助威中贡献更多，因此受到的奖励也少了一点。");
+								me:DropAwardItem("Item_SSXSY",6);
+								me:DropAwardItem("Item_WDCY",1);
+							end
+						else
+							me:AddMsg("[NAME]御器能力和战斗等级不够强，因此受到的奖励也少了一点。");	
+								me:DropAwardItem("Item_JSXSY",6);
+								me:DropAwardItem("Item_WDCY",1);
+							end
+					else
+						me:AddMsg("[NAME]术法技能和阵法能力不够强，因此受到的奖励也少了一点。");
+							me:DropAwardItem("Item_WSXSY",6);
+							me:DropAwardItem("Item_EarthEssence",8);
+							me:DropAwardItem("Item_EarthEssence_1",6);
+					end
+				end
+				]]>
+				</OKResult>
+				<NOResult>
+				<![CDATA[	
+				me:AddMsg("[NAME]实力一般，虽然有心但却力不足，虽然受到了一些门派后续的追杀但也有所收获。");
+						me:DropAwardItem("Item_WSXY",5);
+						me:DropAwardItem("Item_Hemostatics",10);
+						me:DropAwardItem("Item_SmallCycle",10);
+						me:DropAwardItem("Item_EarthEssence_1",1);
+						me:DropAwardItem("Item_EarthEssence1",1);
+				me:AddEnemy(22,0.5)me:AddDamgeFromCache(story.DamageCache,9,6);
+				]]>
+				</NOResult>
+			</li>
+			<li>
+				<Display>不让圣体如愿（有灭门风险，自己看着办吧）</Display> 
+				
+				<OKResult>
+				<![CDATA[
+				if me:GetGLevel() <= 9 then
+				me:AddMsg("[NAME]实力一般还想阻止圣体的打破诅咒，结果自然是迎来了圣体和神王的进攻。");
+						me:DropAwardItem("Item_WSXSY",20);me:DropAwardItem("Item_JSXSY",20);me:DropAwardItem("Item_MSXSY",20);me:DropAwardItem("Item_SSXSY",20);me:DropAwardItem("Item_HSXSY",20);me:DropAwardItem("Item_TSXSY",20);
+						me:DropAwardItem("Item_Hemostatics",60);me:DropAwardItem("Item_WDCY",10);me:DropAwardItem("Item_XianDaoXieNian",10);me:DropAwardItem("Item_XianDaoShenNian",10);
+						me:DropAwardItem("Item_SmallCycle",60);
+						me:DropAwardItem("Item_XianBone",2);
+						me:DropAwardItem("Item_EarthEssence_1",9);
+						me:DropAwardItem("Item_EarthEssence1",9);
+						GameMain:GetMod("SC"):SWFS1();GameMain:GetMod("SC"):ST1();
+				else
+						me:AddMsg("[NAME]实力还行，但也没能阻止圣体的打破诅咒，结果自然是迎来了圣体和神王的进攻。");
+						me:DropAwardItem("Item_WSXSY",20);me:DropAwardItem("Item_JSXSY",20);me:DropAwardItem("Item_MSXSY",20);me:DropAwardItem("Item_SSXSY",20);me:DropAwardItem("Item_HSXSY",20);me:DropAwardItem("Item_TSXSY",20);
+						me:DropAwardItem("Item_Hemostatics",60);me:DropAwardItem("Item_WDCY",10);me:DropAwardItem("Item_XianDaoXieNian",10);me:DropAwardItem("Item_XianDaoShenNian",10);
+						me:DropAwardItem("Item_SmallCycle",60);me:DropAwardItem("HUO_QCSH",6);me:DropAwardItem("HUO_WSSH",12);me:DropAwardItem("Item_MiBao_XKJ",1);me:DropAwardItem("ZT_HMYYJ",6);
+						me:DropAwardItem("Item_XianBone",2);
+						me:DropAwardItem("Item_EarthEssence_1",9);
+						me:DropAwardItem("Item_EarthEssence1",9);
+					GameMain:GetMod("SC"):SWFS();GameMain:GetMod("SC"):ST();
+				end
+				]]>
+				</OKResult>
+			</li>
+			
+			<li>
+				<Display>离开此地</Display> 
+				<OKResult>
+					me:AddMsg(XT("[NAME]路过圣城，不过没命赌石，身体又不行，吃又吃不起，还能咋办，走咯。"));
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+
+	<Story Name="HLCYY"  Parent="BaseFillingStory">
+		<DisplayName>神王归来。</DisplayName>
+		<Desc>圣城的化龙池中，白衣神王四千年前无敌于世，奈何世间不许英雄见白头。不少人心有所谋。</Desc>
+		
+		<Selections>
+			<li>
+				<Display>前去围观，就看看。</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 6
+				]]>
+				</Condition>
+				<OKResult>
+				<![CDATA[	
+				if world:GetWorldFlag(569) == 0 then
+					me:AddMsg("[NAME]虽然有这个实力，但不想参战，[NAME]觉得自己有自己的故事，没必要参与这些，想到此处，[NAME]的术法消耗得到了百分四十的降低。");
+					me:ModifierProperty("NpcFight_SpellLingCostAddP",-0.4);
+				else
+					me:AddMsg("[NAME]虽然有这个实力，但不想参战，[NAME]觉得自己有自己的故事，没必要参与这些。");
+					]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]实力不足根本没有资格观战。");
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>帮助神王抵御众敌。（做好和中州双子王战斗的准备，实力随触发修行者境界而提升）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 6
+				]]>
+				</Condition>
+				<OKResult>
+				<![CDATA[
+				if me:GetGLevel() <= 9 then
+					me:AddMsg("[NAME]实力说不上很强，但是也堪堪也在夹缝中为神王献上了一份力。直接获得奖励，当然你得有命享受");
+					me:AddEnemy(24,0)me:AddEnemy(30,0)me:AddEnemy(22,0)GameMain:GetMod("SC"):SCHLC1();
+					if me:GetSkillLevel("FightSkill") >= 20 and me:GetSkillLevel("Zhen") >= 20 then
+						me:DropAwardItem("Item_WSXSY",10);
+						me:DropAwardItem("Item_EarthEssence",20);
+						me:DropAwardItem("Item_JSXXY",2);
+						me:DropAwardItem("Item_XianBone",2);
+						me:DropAwardItem("Item_EarthEssence_1",20);
+						me:DropAwardItem("Item_YanDaoGuo",2);
+						if me:GetSkillLevel("Fabao") >= 20 and me:GetSkillLevel("Fight") >= 20 then
+							me:DropAwardItem("Item_JSXSY",10);
+							me:DropAwardItem("HUO_WSSH",6);
+							me:DropAwardItem("Item_MSXXY",2);
+							me:DropAwardItem("Item_XianDaoShenNian",2);
+							me:DropAwardItem("Item_LQ",10);
+							me:DropAwardItem("Item_QieDaoGuo",2);
+							if me:GetSkillLevel("Barrier") >= 20 and me:GetSkillLevel("Qi") >= 20 then
+								me:DropAwardItem("Item_MSXSY",10);
+								me:DropAwardItem("HUO_WSSH",6);
+								me:DropAwardItem("Item_SSXXY",2);
+								me:DropAwardItem("Item_XianDaoXieNian",2);
+								me:DropAwardItem("Item_WDCY",6);
+								me:DropAwardItem("Item_BenYuan_Huo",2);
+							else
+							me:AddMsg("[NAME]护盾等级和气感太弱没能在战斗中贡献更多，因此受到的奖励也少了一点。");
+								me:DropAwardItem("Item_MSXSY",4);
+								me:DropAwardItem("HUO_WSSH",2);
+								me:DropAwardItem("Item_WDCY",2);
+							end
+						else
+							me:AddMsg("[NAME]御器能力和战斗等级不够强，因此受到的奖励也少了一点。");	
+								me:DropAwardItem("Item_JSXSY",4);
+								me:DropAwardItem("HUO_WSSH",2);
+								me:DropAwardItem("Item_LQ",4);
+							end
+					else
+						me:AddMsg("[NAME]术法技能和阵法能力不够强，因此受到的奖励也少了一点。");
+							me:DropAwardItem("Item_WSXSY",4);
+							me:DropAwardItem("Item_EarthEssence",6);
+							me:DropAwardItem("Item_EarthEssence_1",4);
+					end
+					if me:GetLuck() <= 6 then
+						me:AddDamgeFromCache(story.DamageCache,6,6);
+					elseif me:GetLuck() <= 8 then
+						me:AddDamgeFromCache(story.DamageCache,4,4);
+					elseif me:GetLuck() <= 10 then
+						me:AddDamgeFromCache(story.DamageCache,4,0.5);
+					end
+				elseif me:GetGLevel() >= 11 then
+					me:AddMsg("[NAME]实力在当世已经算王者了，所以帮助神王不过举手之劳。但是总有些圣地大教觉得丢了颜面要找回场子");
+					me:AddEnemy(24,0)me:AddEnemy(22,0)GameMain:GetMod("SC"):SCHLC();
+					if me:GetSkillLevel("FightSkill") >= 20 and me:GetSkillLevel("Zhen") >= 20 then
+						me:DropAwardItem("Item_WSXSY",15);
+						me:DropAwardItem("Item_EarthEssence",30);
+						me:DropAwardItem("Item_JSXXY",3);
+						me:DropAwardItem("Item_XianBone",3);
+						me:DropAwardItem("Item_EarthEssence_1",30);
+						me:DropAwardItem("Item_YanDaoGuo",3);
+						if me:GetSkillLevel("Fabao") >= 20 and me:GetSkillLevel("Fight") >= 20 then
+							me:DropAwardItem("Item_JSXSY",15);
+							me:DropAwardItem("HUO_WSSH",8);
+							me:DropAwardItem("Item_MSXXY",3);
+							me:DropAwardItem("Item_XianDaoShenNian",3);
+							me:DropAwardItem("Item_LQ",15);
+							me:DropAwardItem("Item_QieDaoGuo",3);
+							if me:GetSkillLevel("Barrier") >= 20 and me:GetSkillLevel("Qi") >= 20 then
+								me:DropAwardItem("Item_MSXSY",15);
+								me:DropAwardItem("HUO_WSSH",8);
+								me:DropAwardItem("Item_SSXXY",3);
+								me:DropAwardItem("Item_XianDaoXieNian",3);
+								me:DropAwardItem("Item_WDCY",8);
+								me:DropAwardItem("Item_BenYuan_Huo",3);
+							else
+							me:AddMsg("[NAME]护盾等级和气感太弱没能在战斗中贡献更多，因此受到的奖励也少了一点。");
+								me:DropAwardItem("Item_MSXSY",6);
+								me:DropAwardItem("HUO_WSSH",3);
+								me:DropAwardItem("Item_WDCY",3);
+							end
+						else
+							me:AddMsg("[NAME]御器能力和战斗等级不够强，因此受到的奖励也少了一点。");	
+								me:DropAwardItem("Item_JSXSY",6);
+								me:DropAwardItem("HUO_WSSH",3);
+								me:DropAwardItem("Item_LQ",6);
+							end
+					else
+						me:AddMsg("[NAME]术法技能和阵法能力不够强，因此受到的奖励也少了一点。");
+							me:DropAwardItem("Item_WSXSY",6);
+							me:DropAwardItem("Item_EarthEssence",8);
+							me:DropAwardItem("Item_EarthEssence_1",6);
+					end
+				end
+				]]>
+				</OKResult>
+				<NOResult>
+				<![CDATA[	
+				me:AddMsg("[NAME]实力一般，虽然有心但却力不足，虽然受到了一些门派后续的追杀但也有所收获。");
+						me:DropAwardItem("Item_WSXY",10);
+						me:DropAwardItem("Item_Hemostatics",30);
+						me:DropAwardItem("Item_SmallCycle",30);
+						me:DropAwardItem("Item_XianBone",1);
+						me:DropAwardItem("Item_EarthEssence_1",3);
+						me:DropAwardItem("Item_EarthEssence1",3);
+				me:AddEnemy(22,0.5)me:AddDamgeFromCache(story.DamageCache,9,6);
+				]]>
+				</NOResult>
+			</li>
+			<li>
+				<Display>阻止神王复生！（非常强，随时可能灭门，当然危机伴随着好处选了就给你，有没有命就看你自己了）</Display> 
+				<OKResult>
+				<![CDATA[
+				if me:GetGLevel() <= 9 then
+				me:AddMsg("[NAME]实力一般但还是决定要刺杀神王，太可怕了，可惜没能等到神王坐化，等来了神王的怒火。");
+						me:DropAwardItem("Item_WSXSY",20);me:DropAwardItem("Item_JSXSY",20);me:DropAwardItem("Item_MSXSY",20);me:DropAwardItem("Item_SSXSY",20);me:DropAwardItem("Item_HSXSY",20);me:DropAwardItem("Item_TSXSY",20);
+						me:DropAwardItem("Item_Hemostatics",60);me:DropAwardItem("Item_WDCY",10);me:DropAwardItem("Item_XianDaoXieNian",10);me:DropAwardItem("Item_XianDaoShenNian",10);
+						me:DropAwardItem("Item_SmallCycle",60);
+						me:DropAwardItem("Item_XianBone",2);
+						me:DropAwardItem("Item_EarthEssence_1",9);
+						me:DropAwardItem("Item_EarthEssence1",9);
+						GameMain:GetMod("SC"):SWFS1();
+				else
+						me:AddMsg("[NAME]实力还行，不过也没能及时杀死神王，那么就接受神王的怒火吧。");
+						me:DropAwardItem("Item_WSXSY",20);me:DropAwardItem("Item_JSXSY",20);me:DropAwardItem("Item_MSXSY",20);me:DropAwardItem("Item_SSXSY",20);me:DropAwardItem("Item_HSXSY",20);me:DropAwardItem("Item_TSXSY",20);
+						me:DropAwardItem("Item_Hemostatics",60);me:DropAwardItem("Item_WDCY",10);me:DropAwardItem("Item_XianDaoXieNian",10);me:DropAwardItem("Item_XianDaoShenNian",10);
+						me:DropAwardItem("Item_SmallCycle",60);me:DropAwardItem("HUO_QCSH",6);me:DropAwardItem("HUO_WSSH",12);me:DropAwardItem("Item_MiBao_XKJ",1);me:DropAwardItem("ZT_HMYYJ",6);
+						me:DropAwardItem("Item_XianBone",2);
+						me:DropAwardItem("Item_EarthEssence_1",9);
+						me:DropAwardItem("Item_EarthEssence1",9);
+					GameMain:GetMod("SC"):SWFS();
+				end
+				
+				]]>
+				</OKResult>
+			</li>
+			
+			<li>
+				<Display>离开此地</Display> 
+				<OKResult>
+					me:AddMsg(XT("[NAME]觉得自己实力还不够算了，远离是非之地。"));
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+</List></Stories>

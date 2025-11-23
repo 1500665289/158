@@ -1,0 +1,1670 @@
+<Stories><List>
+	
+	<Story Name="JLBD1"  Parent="BaseFillingStory">
+		<DisplayName>荒古禁</DisplayName>
+		<Desc>九龙拉棺，拉着叶凡一行人终于到达了目的地，当众人还在喜悦之中时，感受到了荒古的可怖之处，寿元不断流失，众人九死一生走出了荒古禁地，叶凡和庞博被赶来的灵墟洞天带走。</Desc>
+		<Selections>
+			<li>
+				<Display>我要去围观</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]来到了现场观看了一场撕逼大赛，以及各洞天对荒古废体的评价。");
+					me:DropAwardItem("Item_Dan_BCY",3);
+					me:DropAwardItem("Item_SHQ",1);
+					me:DropAwardItem("Item_SG",1);
+					story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>少见多怪，不看！</Display> 
+			</li>
+		</Selections>
+	</Story>
+	
+	
+	
+	
+	<Story Name="LXDT"  Parent="BaseFillingStory">
+		<DisplayName>灵墟洞天发药的日子</DisplayName>
+		<Desc>灵墟洞天不过是个福地，哦不，洞天，所以一年也就送你四瓶百草液，不过我大方点，一次两瓶。</Desc>
+		<Selections>
+			<li>
+				<Display>感谢作者，感谢灵墟洞天。</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]兴冲冲地收下了灵墟洞天发放的福利。");
+					me:DropAwardItem("Item_Dan_BCY",2);story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>不，我不想。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得灵墟福地太差了，不屑。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="LXDT1"  Parent="BaseFillingStory">
+		<DisplayName>灵墟洞天。</DisplayName>
+		<Desc>灵墟洞天虽然小，不过什么鸟都有，自然也就有人会抢百草液了。</Desc>
+		<Selections>
+			<li>
+				<Display>小别致挺东西的，交出百草液。（反打劫，需要一定实力）</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]见来者如此嚣张无度，却没一点实力，三两下便将对方打趴，不过遮天有个定律就是打了小的，老的就去打你家了。");
+					me:DropAwardItem("Item_Dan_BCY",8);GameMain:GetMod("XG"):LXDT1();story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>惹不起。。赶紧走人，不过对方似乎不想放过你，就想抢你的东西（来了一拨强盗，肆无忌惮，打不过就抢东西跑。）</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]实力不足。打不过，只能灰溜溜跑路了。并带着大部队尾随而来。");
+				GameMain:GetMod("XG"):LXDT2();story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>不，我不想。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得灵墟福地太差了，不屑。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="JJQS"  Parent="BaseFillingStory">
+		<DisplayName>姜家骑士。</DisplayName>
+		<Desc>叶凡相遇姜婷与她的爷爷，在这过程中，正好遇到姜家来人，由于叶凡身怀怡宝，受到姜家姜逸晨派出的骑士追杀。</Desc>
+		<Selections>
+			<li>
+				<Display>帮助叶凡，反杀骑士。（面对一般的道宫境修士）</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]看到叶凡受到姜家骑士的追击。心有灵感，冥冥之中想帮助一下叶凡，于是将姜家骑士引到门派。");
+					me:DropAwardItem("Item_SG",2);me:DropAwardItem("Item_SHQ",2);GameMain:GetMod("XG"):LXDT4();story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>帮助骑士，追杀叶凡（面对炼气期的圣体。）</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]觉得骑士太强了，为什么不杀了叶凡呢？");
+				GameMain:GetMod("XG"):LXDT3();me:DropAwardItem("Item_PTZ",1);story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>小朋友才选择，两个我都杀！（同时面对骑士和叶凡的进攻。）</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]自信心膨胀，两个都想杀。");
+				GameMain:GetMod("XG"):LXDT5();me:DropAwardItem("Item_SG",2);me:DropAwardItem("Item_SHQ",2);me:DropAwardItem("Item_PTZ",1);story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>不，我不想。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]想了想，和我没啥关系啊，不参与了。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+	
+	
+	
+	<Story Name="ZT_HGJD_1"  Parent="BaseFillingStory">
+		<DisplayName>重返禁地</DisplayName>
+		<Desc>[NAME]在[PLACE]听闻，各大圣地和荒古世家打算进入荒古为寿元无多的长老前辈寻得良药。</Desc>
+		<Selections>
+			<li>
+				<Display>跟在各大圣地身后，混水摸鱼。（生死有命，富贵在天，最好有实力再混）</Display>
+				<OKResult>
+				<![CDATA[	
+				local nR = me:RandomInt(1, 41); 
+				if nR <= 10 then
+					me:AddMsg("[NAME]跟在各大圣地的身后，缓缓跟进，但是太过小心反而失了先机，消耗了五百年的寿元，却只收获了大量的五色神石。");
+					me:DropAwardItem("Item_WSSS",200);me:ModifierProperty("MaxAge",-500);
+				elseif nR <= 15 then
+					me:AddMsg("[NAME]在禁地看到一个批头散发的老人，疯疯癫癫，不停地呢喃着“死了。。。都死了”“曲终人散，。。”。");
+					me:ModifierProperty("MaxAge",-500);
+						if me:GetSchoolRank() < 0 then
+						me:AddMsg("[NAME]跟在各大圣地之后，本就小心翼翼地有些心烦意乱，听到这疯老人的话语，觉得晦气，于是便和疯老人动起了手。");
+						GameMain:GetMod("XG"):LFZ();
+						else
+					 me:AddMsg("[NAME]看着疯老人如此这般，心生怜悯，不由得想要上前为疯老人拭去泪水，疯老人顿时一步迈出，缩地成寸，向天边行去，[NAME]半天没回过神来，待回过神后居然提高了百分百的法宝击退抗性！。");
+					me:ModifierProperty("NpcFight_FabaoRepelResistanceAddV",1);
+						end
+				elseif nR <= 20 then
+					me:AddMsg("[NAME]跟着各大圣地人员，大约前行了200米处，绕过几株直径足有二十几米的古树，发现了一具雪白的骸骨，笔直站在那里。");
+					me:ModifierProperty("MaxAge",-500);
+						if me:CheckItemEquptCount("Item_SHQ") == 1 or me:CheckItemEquptCount("Item_SHQ") == 1 or me:GetGLevel() >= 9 then
+						me:AddMsg("[NAME]向前看去，霎时间一股强大的妖异之力发出，[NAME]凭借自身实力（或带圣果圣泉）而躲过了一劫，转而吸收了剩下的气息，获得了百分百的术法威力的提升。");
+						me:ModifierProperty("NpcFight_SpellPowerAddP",1);
+						else
+					 me:AddMsg("[NAME]根本扛不住骸骨所散发的强大威能，受到了严重的伤害。");
+						me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("妖力侵噬"));
+						me:AddDamage("Fabao_Tear","RightHand",1,XT("妖力侵噬"));
+						me:AddDamage("Mu_Corrosion","Spine",1,XT("妖力侵噬"));
+						me:AddDamage("Tu_BrainClose","Brain",1,XT("妖力侵噬"));
+						end
+				elseif nR <= 25 then
+					me:AddMsg("荒古禁地发生莫名变化，数千白骨挣扎爬出，[NAME]和各大圣地一起偶遇了六名六千年前的人。");
+					me:ModifierProperty("MaxAge",-600);
+						if me:CheckItemEquptCount("Item_WSSS") == 1 then
+						me:AddMsg("[NAME]被天璇圣女盯上了，这个六千年前东荒便号称东荒第一圣女的女子，世人皆以为她仅仅存在于画像之上，没想到她居然在荒古禁地，变成了荒奴。[NAME]被盯得一整发毛，苦海中的五色神石发出了炫彩的光芒，天璇圣女感应到了什么，便往后退去了。[NAME]总算是逃过了一劫，不过也因祸得福，荒的气息居然使[NAME]提高了百分百的护盾值。");
+						me:ModifierProperty("NpcFight_ShieldConversionRateAddP",1);
+						else
+					 me:AddMsg("[NAME]被天璇圣女盯得发毛，浑身战栗，不知道是做贼心虚还是其他原因，居然逃跑了,这一跑反而激起了六位仙女的怒火，一路追踪[NAME]。");
+						GameMain:GetMod("XG"):Lqnq();
+						end
+				elseif nR <= 30 then
+					me:AddMsg("[NAME]虽然跟着圣地在走，但也没有想傻子一样跟着，半路上发现了自己的机缘，在另一座神山之下，发现了道道金光，居然是无价的帝经古字。");
+					me:ModifierProperty("MaxAge",-600);
+						if me:CheckItemEquptCount("Item_PTZ") == 1 then
+						me:AddMsg("[NAME]手握菩提子，心有神印。渐渐领悟了几个古字的奥秘。[NAME]获得了百分百的法宝威力加成。");
+						me:ModifierProperty("NpcFight_FabaoPowerAddP",1);
+						else
+					 me:AddMsg("[NAME]空有古字，但是机缘不够，没有所悟，所幸还收获了二十灵晶");
+						me:DropAwardItem("Item_LingCrystal",20);
+						end
+				elseif nR <= 40 then
+					me:AddMsg("[NAME]在荒古禁地中，自由地寻找机缘，但是似乎根本就没有找到什么好东西，仅仅是加快了生命的流逝罢了。");
+					me.npcObj.PropertyMgr:AddAge(500);
+				end
+				story:FinishSecret();
+				]]>
+				</OKResult>
+				
+			</li>
+			<li>
+				<Display>挑战荒主。（大帝级别）。</Display>
+				<OKResult>	
+					me:AddMsg("[NAME]站在荒古禁地的入口，看了一眼脚边充满石苔的碑文，定神运气，大吼一声“你过来啊”，只听到荒古禁地深处的无上存在开始暴动，[NAME]匆忙跑回门派。");
+					GameMain:GetMod("XG"):HZ();
+				</OKResult>
+				
+			</li>
+			<li>
+				<Display>算了，走吧咱们还年轻，何必呢。</Display>
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]仰头长啸，所以有什么用呢，该走还得走。");
+				]]>
+				</OKResult>
+			</li>
+			
+		</Selections>
+	</Story>
+	
+	
+	<Story Name="GRCBQW"  Parent="BaseFillingStory">
+		<DisplayName>古人诚不欺我。</DisplayName>
+		<Desc>叶凡在紫阳洞天避难之时，遇上了旧相识，韩长老。</Desc>
+		<Selections>
+			<li>
+				<Display>帮助叶凡，击败韩长老。（面对有点实力的四极境修士）</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]远远看到，叶凡被韩长老抓去炼药了，决心帮叶凡一把。");
+					me:DropAwardItem("Item_BasePracticeDrug",2);
+					me:DropAwardItem("Item_Dan_JingYuan2",6);
+					me:DropAwardItem("Item_Dan_PracticeRate",4);
+					me:DropAwardItem("Item_Dan_Ling2",4);
+					me:DropAwardItem("Item_Dan_PracticeSpeed",5);
+					me:DropAwardItem("Item_Dan_Happiness",6);
+					GameMain:GetMod("XG"):LXDT6();story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>今日便让炼药成真。（面对强大一些的韩长老。）</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]实力不足。打不过，只能灰溜溜跑路了。并带着大部队尾随而来。");
+				GameMain:GetMod("XG"):LXDT7();me:DropAwardItem("Item_PTZ",1);me:DropAwardItem("Item_MiBao_WWMQD",1);story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>不，我不想。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得圣体炼药应该味道不错，不过实力不足，下次看看");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="ZT_QTXD"  Parent="BaseFillingStory">
+		<DisplayName>青铜仙殿</DisplayName>
+		<Desc>青铜仙殿，是人造还是神设？这一切的秘密都要[NAME]自己去发掘。\n（敢问来者，是否有仙？）</Desc>
+		<Kind>Story</Kind>
+		<Selections>
+			<li>
+				<Display>自然有仙，不然修道为何？不然来此又为何？</Display>
+				<Tip>成仙。。。难！难！难！</Tip>
+				<OKResult>
+				<![CDATA[
+				if me:GetGLevel() >= 6 and me:GetIntelligence() >= 9 then
+					if me:GetPhysique() >= 9 and me:GetLuck() >= 9 then
+						me:AddMsg("[NAME]在青铜仙殿的威压之下，也毫不畏惧，凭借着过人的悟性，居然领悟了一丝成仙的真意。减低了30点道行并获得三道分神。");me:DivideGodSoul(true,3);me:ModifierProperty("AbilityLvAddV",-30);me:AddPracticeResource("Stage", 5000);story:FinishSecret();
+					else
+						me:AddMsg("[NAME]卑微地在仙殿中寻找成仙的可能，但无济于事，[NAME]在仙殿中茫然无措，最终运气还好找到了一个出口，逃离了此地。");me:AddPracticeResource("Stage", -10000);story:FinishSecret();
+					end
+				else
+					me:AddMsg("修道之人，当行逆天之事，寻成仙之路？不如行己之路。");
+					
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>无仙如何？有仙又如何？待我踏破万古之道，压塌世间一起敌，我就是!仙！</Display>
+				<Tip>成仙。。。难！难！难！</Tip>
+				<OKResult>
+				<![CDATA[
+				if me:GetGLevel() >= 9 and me:GetPerception() >= 9 then
+					if me:GetPhysique() >= 9 and me:GetLuck() >= 9 and me:GetCharisma()>=9 then
+						me:AddMsg("[NAME]在青铜仙殿的威压之下，丝毫无感，运转法力，就要破开这个铜殿，却在这时[NAME]似有所感，在仙殿中感悟天地，并发现了一个微弱的亮光，居然是前贤天璇杨易真还有各大圣地前贤的尸首，不断前行，[NAME]寻得了出路。");me:DivideGodSoul(true,6);me:ModifierProperty("AbilityLvAddV",-90);me:AddPracticeResource("Stage", 10000);story:FinishSecret();
+					else
+						me:AddMsg("[NAME]运起神通，但是却被仙殿残留万古的威势所镇压，受到了极重的伤害，但所幸活了下来。");me:AddPracticeResource("Stage", -30000);me:AddDamgeFromCache(story.DamageCache,6,world:RandomFloat(0.5,1),XT("法术轰击"));story:FinishSecret();
+					end
+				else
+					me:AddMsg("能力不足就止步于殿前观望观望吧，不然进去也不过是为青铜仙殿徒增肥料。");
+				end
+				]]>
+
+				</OKResult>
+			</li>
+			<li>
+				<Display>斜90度角仰望天空，而后慢慢离开</Display>
+				<OKResult>
+				<![CDATA[	
+				me:AddMsg("[NAME]想了想，决定还是不冒险了，就此离去。");
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+	<Story Name="JJHFF"  Parent="BaseFillingStory">
+		<DisplayName>圣体惊神体。</DisplayName>
+		<Desc>叶凡独自一人从太玄门逃出后，偶遇了孔雀王和姬紫月，在孔雀王的试探下侥幸不死，但孔雀王却没打算放过两人，正要走时赶上了南宫正人族大能的到来，叶凡与姬紫月借机逃跑，谁知逃跑途中，居然还遇到了姬家某一系的追捕以及不知名黑衣人的袭杀。</Desc>
+		<Selections>
+			<li>
+				<Display>面对麻衣人。（面对四个有点实力的四极境修士）</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]远远看到，叶凡被一群麻衣人围住，虽然剧本上叶凡死不了，不过帮帮未来的天帝也不错。");
+					me:DropAwardItem("Item_WSXY",2);
+					me:DropAwardItem("Item_JSXY",2);
+					me:DropAwardItem("Item_MSXY",2);
+					me:DropAwardItem("Item_SSXY",2);
+					me:DropAwardItem("Item_HSXY",2);
+					me:DropAwardItem("Item_TSXY",2);
+					GameMain:GetMod("XG"):JJHFF();story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>麻衣人，叶凡，姬紫月，都是我的！（面对一群敌人。）</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]企图一网打尽，为他的选择我先祈祷。[NAME]并带着大部队尾随而来。");
+				GameMain:GetMod("XG"):JJHFF2();me:DropAwardItem("Item_DJHJ",1);me:DropAwardItem("Item_MiBao_WWMQD",1);story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>不，我不想。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得和我无关啊，我对圣体什么的没感觉的。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="KQWDF"  Parent="BaseFillingStory">
+		<DisplayName>孔雀王洞府</DisplayName>
+		<Desc>叶凡救下小月亮，但是却被姬家恩将仇报，一路追杀至南域一座小城之上，叶凡被追的恼火与城上威胁姬家，欲要鱼死网破，一出口便名扬南域。孔雀王真巧在场，听了叶凡一番话大为赞赏，便就下了叶凡，带其回到了洞府，但屋漏偏逢连夜雨。。。</Desc>
+		<Selections>
+			<li>
+				<Display>各大圣主与传人齐至！（面对三个圣主，三个圣地传人）</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]远远看到，叶凡被一群麻衣人围住，虽然剧本上叶凡死不了，不过帮帮未来的天帝也不错。");
+					me:DropAwardItem("Item_WSXXY",2);
+					me:DropAwardItem("Item_JSXXY",2);
+					me:DropAwardItem("Item_MSXXY",2);
+					me:DropAwardItem("Item_SSXXY",2);
+					me:DropAwardItem("Item_HSXXY",2);
+					me:DropAwardItem("Item_TSXXY",2);
+					me:DropAwardItem("Item_WSXSY",5);
+					me:DropAwardItem("Item_JSXSY",5);
+					me:DropAwardItem("Item_MSXSY",5);
+					me:DropAwardItem("Item_SSXSY",5);
+					me:DropAwardItem("Item_HSXSY",5);
+					me:DropAwardItem("Item_TSXSY",5);
+					me:DropAwardItem("Item_DJHJ",1);me:DropAwardItem("Item_HXCJ",1);me:DropAwardItem("Item_LWHJ",1);me:DropAwardItem("Item_YHQJ",1);
+				me:DropAwardItem("Item_SHZJ",1);me:DropAwardItem("Item_YHLJ",1);me:DropAwardItem("Item_XLLJ",1);me:DropAwardItem("Item_XHEQ",1);
+					GameMain:GetMod("XG"):KQWDF();story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>圣主什么的算了吧，打打圣地传人！（面对一群敌人。）</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]企图一网打尽，为他的选择我先祈祷。[NAME]并带着大部队尾随而来。");
+				GameMain:GetMod("XG"):KQWDF2();me:DropAwardItem("Item_DJHJ",1);me:DropAwardItem("Item_HXCJ",1);me:DropAwardItem("Item_LWHJ",1);me:DropAwardItem("Item_YHQJ",1);
+				me:DropAwardItem("Item_SHZJ",1);me:DropAwardItem("Item_YHLJ",1);me:DropAwardItem("Item_XLLJ",1);me:DropAwardItem("Item_XHEQ",1);story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>不，我不想。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得这里肯定发生了什么惊心动魄之事，老远都感觉到天地灵气的狂暴。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="HFLR"  Parent="BaseFillingStory">
+		<DisplayName>火域修行</DisplayName>
+		<Desc>叶凡被各大圣地传人一路追踪，逃至火域，凭借圣体之躯，进入了第四层，被姬家人暗害，直接传送到了紫气东来一隅，险些被烧死，所幸身具菩提子，万火不侵。</Desc>
+		<Selections>
+			<li>
+				<Display>火域来人（姬家宿老来到火域炼器，这是个好机会？）（大量材料，需要菩提子或最低耐受1700高温，最优则是）</Display> 
+				<OKResult><![CDATA[	
+				if me:CheckItemEquptCount("Item_PTZ") == 1 or me:GetProperty("ToleranceTMax") >= 1700 then
+				me:AddMsg("[NAME]身具菩提子在火域中来去自如，这日发现第四层火域中居然有姬家宿老来炼器，于是打起了坏主意。");
+					if me:GetGLevel() >= 11 then
+					me:AddMsg("[NAME]实力强劲，一巴掌便把宿老打到在地，抢走了大量的法宝和材料。");
+					me:DropAwardItem("Item_XZ",36);me:DropAwardItem("Item_YYSY",36);me:DropAwardItem("Item_DLYJ",36);me:DropAwardItem("Item_ZJST",36);me:DropAwardItem("Item_ST",36);
+					me:DropAwardItem("Item_ZYW",36);me:DropAwardItem("Item_ZYSY",36);me:DropAwardItem("Item_JTCYW",36);me:DropRandomItem("FightFabao", 12,12);story:FinishSecret();
+					elseif me:GetGLevel() >= 9 and me:CheckItemEquptCount("Item_PTZ") == 1 then
+					me:AddMsg("[NAME]与姬家宿老大战了三百回合，虽是受了点轻伤，但也是获得了些许收获。");
+					me:DropAwardItem("Item_XZ",36);me:DropAwardItem("Item_YYSY",36);me:DropAwardItem("Item_DLYJ",36);me:DropAwardItem("Item_ZJST",36);me:DropAwardItem("Item_ST",36);story:FinishSecret();
+					me:DropAwardItem("Item_ZYW",36);me:DropAwardItem("Item_ZYSY",36);me:DropAwardItem("Item_JTCYW",36);me:DropRandomItem("FightFabao", 12,12);me:AddDamgeFromCache(story.DamageCache,9,0.3);
+					elseif me:GetGLevel() >= 6 and me:CheckItemEquptCount("Item_PTZ") == 1 and me:CheckItemEquptCount("Item_WCSH") >= 1 then
+					me:AddMsg("[NAME]实力低微，在战斗中受了重伤，险而又险，还好带着五色神火，烧死了宿老。");
+					me:DropAwardItem("Item_XZ",36);me:DropAwardItem("Item_YYSY",36);me:DropAwardItem("Item_DLYJ",36);me:DropAwardItem("Item_ZJST",36);me:DropAwardItem("Item_ST",36);story:FinishSecret();
+					me:DropAwardItem("Item_ZYW",36);me:DropAwardItem("Item_ZYSY",36);me:DropAwardItem("Item_JTCYW",36);me:DropRandomItem("FightFabao", 12,12);me:AddDamgeFromCache(story.DamageCache,9,0.3);
+					else
+					me:AddMsg("[NAME]实力差不说，菩提子也没带，什么都没有被打的半死，最终看在门派的份上留了半条小命");
+					me:AddDamgeFromCache(story.DamageCache,12,1);
+					end
+				else
+					me:AddMsg("[NAME]根本抵御不住火域的火，更别说什么机会了。gg了");
+					me:AddDamgeFromCache(story.DamageCache,12,1);
+				end
+					
+					
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>第八层火域（第八层七彩神火中，似有打铁声）（大量材料，需要带一颗菩提子或最高耐温6500度）</Display> 
+				<OKResult><![CDATA[	
+				if me:CheckItemEquptCount("Item_PTZ") == 1 or me:GetProperty("ToleranceTMax") >= 6500 then
+				····me:AddMsg("[NAME]身具菩提子在火域中来去自如，这日发现第八层火域中的火鸦道人，没想到火鸦居然能够在六千度的高温中活动自如，话说我好像也可以。。。");
+					if me:GetGLevel() >= 11 then
+					me:AddMsg("[NAME]与火鸦道人实力相仿，两人坐下来聊了会天，[NAME]似乎有所悟，手抖了一下想顺下来一根羽毛，气的乌鸦道人差点动杀意。");
+					me:DropRandomItem("Esoterica");me:DropRandomItem("Esoterica");me:DropRandomItem("Esoterica");me:DropRandomItem("Esoterica");me:DropRandomItem("FightFabao", 12,12);story:FinishSecret();
+					elseif me:GetGLevel() >= 9 then
+					me:AddMsg("[NAME]实力稍微差了点，不过火鸦道人许久没见到有陌生人能够到这一层火域，见你还有些悟性，便送了你一些材料和秘籍。");
+					me:DropAwardItem("Item_XZ",46);me:DropAwardItem("Item_YYSY",46);me:DropAwardItem("Item_DLYJ",46);me:DropAwardItem("Item_ZJST",46);me:DropAwardItem("Item_ST",46);
+					me:DropAwardItem("Item_ZYW",46);me:DropAwardItem("Item_ZYSY",46);me:DropAwardItem("Item_JTCYW",46);me:DropRandomItem("FightFabao", 12,12);me:DropRandomItem("Esoterica");story:FinishSecret();
+	
+					else
+					me:AddMsg("[NAME]实力太差，居然还企图靠近火鸦道人打铁处，被烧半死。");
+					me:AddDamgeFromCache(story.DamageCache,12,1);
+					end
+				else
+					me:AddMsg("[NAME]根本抵御不住火域的火，更别说什么机遇了。gg了");
+					me:AddDamgeFromCache(story.DamageCache,12,1);
+				end
+					
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>不，我不想。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得和我无关啊，我不想搅浑水。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="YX"  Parent="BaseFillingStory">
+		<DisplayName>掀翻圣女</DisplayName>
+		<Desc>叶凡自太玄门偷渡后，在各大圣地的矿区带了一段时间，而后被人准备再次横渡直达北域，被姚曦发现行踪，于是。</Desc>
+		<Selections>
+			<li>
+				<Display>掀翻就对了</Display> 
+				<OKResult><![CDATA[	
+				if me:GetGLevel() >= 6 and me:GetPerception() >= 9 and me:GetSkillLevel("Barrier") >= 27 then
+				me:AddMsg("她丰臀滚圆，蛮腰纤细，双峰傲然，缜项秀美，玉容绝世，此刻摇动玉体，轻盈后退，莲姿动人，笑的分外柔媚。[NAME]恨的牙根痒痒，估测了一下距离，确实有些远，这个摇光圣女太谨慎了。\n就在这一刻，他集中精神，眉心金色的小湖震动，神识刹那化形而出，向前攻去。\n“啊！你”摇光圣女出惊叫，绝色容颜显出痛苦之色，摇摇欲坠。\n[NAME]快向前冲去，强大的神识攻击不止，风驰电毕，刹那来到了近前，虎跃而上，将摇光圣女扑倒在芳草地上。\n可是，摇光圣女也仅仅最初惊叫了一声，并没有精神萎靡，她的眉心也神光绽放，璀璨无比。\n这一刻，她刷的一声睁开了双眸，望向[NAME]，同时那柔软的玉休中传出恐怖的神力波动。此刻，她虽然没有被伤到识海，但却无法分心，[NAME]的神识力量太恐怖了，几乎将她压制。\n[NAME]感觉快接不住这具妙休了，柔软的仙躯有汪洋般的神力在波动，即将将他掀飞。\n他神识攻击不断，眉心那汪金色的小潮，像是一轮太阳一般耀眼，同时采取攻心术，一口向下咬去。沁人心脾的馨香传来，他咬住了摇光圣女的耳朵，死不撒口。“你！！！！”\n果然，摇光圣女羞怒交加，眉心射出的神华一阵荡漾，[NAME]则猛力催动神识之力攻击。");
+					me:TriggerStory("YX1");
+				else
+				me:AddMsg("[NAME]实力不足，还想掀翻圣女？癞蛤蟆想吃圣女肉？");
+				me:AddDamgeFromCache(story.DamageCache,12,1);
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>围观围观就好。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]放弃了掀翻圣女的打算，就看看戏吧。");
+					
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="YX1"  Parent="BaseFillingStory">
+		<DisplayName>圣女在身下</DisplayName>
+		
+		<Selections>
+			<li>
+				<Display>继续掀翻</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("瑶光圣女发出一声尖叫，被雪白的牙齿咬住，不仅仅疼痛，更让她感觉羞愤，神识顿时不稳，眉心的光华有些暗淡。[NAME]神识如剑，化成金色光束，斩向瑶光圣女的识海，同时用力压制这具肉身，避免被其震飞。\n“刷”\n瑶光圣女双眉间，浮现出一个菱形印记，如仙葩破水而出，射出一道道瑞彩，挡住了金色的光束。这让[NAME]心中一动，瑶光圣女的神识如此强大，实在超出了他的预料，比他也差不了多少。\n他集中神念，催动识海之力，金色的小湖，汩汩涌动，不断有金色的力量淌出，如水波一般，在虚空中凝聚成剑，冲向那个菱形印记。\n两人肢体纠缠，可以感受到彼此的温度。下方，瑶光圣女如暖玉，柔软而修长的仙躯，不断有霞光绽放，数次险些将[NAME]掀飞出去。\n[NAME]在神识源力上占据优势，瑶光圣女尽管强大，也无法与他比肩。那汪金色的小湖深邃如渊，不断向外流淌精神力，起初如涓涓细流，而后如长河滔滔。\n瑶光圣女脸色发白，绝美的容颜上写满了吃惊，她额头的菱形印记在慢慢变淡，渐渐被压制。");
+				me:TriggerStory("YX2");
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>围观围观就好。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]放弃了掀翻圣女的打算。");
+					
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="YX2"  Parent="BaseFillingStory">
+		<DisplayName>圣女在身下</DisplayName>
+		
+		<Selections>
+			<li>
+				<Display>攻破神识（秘宝挑战）</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("是的，真正的瑶光圣女在与[NAME]争斗，其道宫千匕形出的神祗并无神念主导，故此只静静立在那里。“斩！”\n瑶光圣女轻叱，铤而走险，强行分出一缕神念，入主那尊神祗。在这一刻，[NAME]的神识如火焰般嫩烧了起来，向前汹涌澎湃，直接让那枚菱形印记暗淡了下去。短短的一瞬间，他迫到了瑶光圣女识海“大门”前，就要攻入”\n同一时间，那尊神祗黑发飞扬，银色甲胄生辉，绝色容颜一下子生动了起来，双眸中溢出点点灵气。不过，行动依然有些呆板，肌体潜能没有完全复苏。”锵”\n她拔出悬在小蛮腰下的神剑，持在手中，如一汪秋水一般明亮，她高高举起，如降临凡尘的女神，似要斩妖除魔，流转出圣洁的光辉。“哧”这尊神祗挥剑而下，重重的劈向[NAME]，想要将之腰斩。与此同时，[NAME]的神识终于攻入瑶光圣女的识海，投进去点点光华。\n两个人都很决绝，瑶光圣女想斩碎他的肉身，抹杀其形体，从而将之击毙。[NAME]则想击溃她的识海，破灭她的神识，粉碎她的灵魂，从而诛灭。“锵”那把如华光四射的神剑，发出刺骨的寒意劈斩了下来。\n[NAME]灵觉敏锐，抱着瑶先圣女快速滚动，那一剑直接将芳草地劈出一道十米深的大裂缝。可以想见这一剑的可怕，如果斩在其躯体上，后果不堪设想.\n他用力咬住瑶光圣女的晶莹的耳朵，不肯松嘴，两人纠缠着翻滚出去十几米远。\n唯一值得庆幸的是，这尊神祗行动迟缓，只有一绫神识入主，并不能发挥出完全的神力。“啊……”瑶光圣女发出惊叫，识侮被攻破，金色的光束如河流一般长驱直入。\n[NAME]催动最强的精神力，想要粉碎瑶光圣女的灵识，让外奈那尊神祗成为无根之花。\n就在这时瑶光圣女的神识苏醒了！！！");
+				GameMain:GetMod("XG"):YXYG();me:DropAwardItem("Item_MiBao_YG",1);
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>继续掀翻。（没奖励，就回顾剧情）</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("是的，真正的瑶光圣女在与[NAME]争斗，其道宫千匕形出的神祗并无神念主导，故此只静静立在那里。“斩！”\n瑶光圣女轻叱，铤而走险，强行分出一缕神念，入主那尊神祗。在这一刻，[NAME]的神识如火焰般嫩烧了起来，向前汹涌澎湃，直接让那枚菱形印记暗淡了下去。短短的一瞬间，他迫到了瑶光圣女识海“大门”前，就要攻入”\n同一时间，那尊神祗黑发飞扬，银色甲胄生辉，绝色容颜一下子生动了起来，双眸中溢出点点灵气。不过，行动依然有些呆板，肌体潜能没有完全复苏。”锵”\n她拔出悬在小蛮腰下的神剑，持在手中，如一汪秋水一般明亮，她高高举起，如降临凡尘的女神，似要斩妖除魔，流转出圣洁的光辉。“哧”这尊神祗挥剑而下，重重的劈向[NAME]，想要将之腰斩。与此同时，[NAME]的神识终于攻入瑶光圣女的识海，投进去点点光华。\n两个人都很决绝，瑶光圣女想斩碎他的肉身，抹杀其形体，从而将之击毙。[NAME]则想击溃她的识海，破灭她的神识，粉碎她的灵魂，从而诛灭。“锵”那把如华光四射的神剑，发出刺骨的寒意劈斩了下来。\n[NAME]灵觉敏锐，抱着瑶先圣女快速滚动，那一剑直接将芳草地劈出一道十米深的大裂缝。可以想见这一剑的可怕，如果斩在其躯体上，后果不堪设想.\n他用力咬住瑶光圣女的晶莹的耳朵，不肯松嘴，两人纠缠着翻滚出去十几米远。\n唯一值得庆幸的是，这尊神祗行动迟缓，只有一绫神识入主，并不能发挥出完全的神力。“啊……”瑶光圣女发出惊叫，识侮被攻破，金色的光束如河流一般长驱直入。\n[NAME]催动最强的精神力，想要粉碎瑶光圣女的灵识，让外奈那尊神祗成为无根之花。[NAME]停在远空，没有立刻退走，突然大笑了起来，道：“我明白了，那座月宫只能上下沉浮，定住附近的区域，你无法将它祭出，怪不得你要将我引到那里。”\n“纵然如此，你又能如何？”姚曦冷笑，看起来从容而冷静，\n道：“我神识入主月宫，你根本无法奈何我。”“确实如此。”[NAME]点了点头，而后大笑道：“我将你的神识堵在这里，我分化一缕神识去与你拜天地，我看你还能不能冷静。”\n“你……”摇光圣女难以保持平静了。“我去也。”[NAME]长笑，分出一绫神念，如飞而去，道：“去入洞房！”\n那缕神念重归眉心，他的肉身一下子恢复了知觉，此刻他还在咬着那只秀气而美丽的耳朵，如兰似麝的香气扑鼻而来。“哧”不远处，那尊神祗再次持剑劈来。[NAME]快速跃起，揽着摇光圣女后退，那尊神祗行动迟缓，但也有很大的威胁。\n此时，他将摇光圣女的神识堵在眉心中，令她的神念无法冲出，眼下这具柔软的仙躯虽然神力澎湃，但却难以对他造成威胁了。“摇光圣女，你若不出来，我们现在就要入洞房了。”[NAME]大笑。他的神力虽然被封了，但是肉身依然很强横，奔行如风，后方的那尊神祗追之不上。“砰”[NAME]猛力挥出一拳，击在怀中的肉身上，但却未能打碎。\n姚曦的眉心神光大盛，她拼尽力气冲击，不想被围里面，她真的怕[NAME]“胡来”\n神念虽然不能完全冲出，但是她感受到了外面的一切，少许神识之力注入肌体，她立刻惊叫：“你在做什么？“为你丈量……”叶兄长笑。“混蛋！”[NAME]怀抱摇光圣女，极速奔行，后面的那尊神祗行动缓慢，很快就被摆脱了。\n他的一只手臂，环绕在姚曦的小蛮腰上，感受到了那种纤柔，另一只手胡乱移动，口中揶揄道：“看你肌体轻盈，修长曼妙，想不到有些地方却如此丰满……”“你……”摇光圣女险些气昏过去。“该丰满的地方丰满，该修长的地方修长，真是让人不得不赞叹，若是将你丢在人群中，我想很多男人会为你疯狂……\n[NAME]咬住她的一只耳垂，道：“想对付我，自己要做好付出代价的准备。”");
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+	<Story Name="CZS"  Parent="BaseFillingStory">
+		<DisplayName>九龙拱卫一珠</DisplayName>
+		
+		<Selections>
+			<li>
+				<Display>神王姜太虚</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]独自前行，不紧不慢，注意观察周围的一切，不过岩壁上不再有刻图，方才的一切都已完结。起初，[NAME]并没有在意，但走出去数百丈后，他觉得越来越冰寒刺骨了，此地阴气极重，像是北风卷雪吹在身上。[NAME]迈步前进，走出不远，他忽然在紫『色』的石壁上看到了一行字。\n“神王姜太虚误入魔山，决定一窥究竟！”\n[NAME]相当的震惊，一个东荒神王竟然来过此地，走了进去！\n“他姓姜，多半是荒古世家姜家的人……”\n这十几个字，笔力雄浑，蕴含有一种道境，让人觉得有神祗的气息在流转，仿佛一尊神王矗立眼前。");
+				if me:GetDaoHang() > 100 and me:CheckItemEquptCount("Item_PTZ") == 1 then
+					
+					me:AddMsg("[NAME]感到那种魔性的召唤力量，又强盛了一些，[NAME]快速向回奔跑。\n“不用逃，你暂时是安全的……”突兀的声音在[NAME]耳畔响起，让他心中震惊。\n“你……是谁？”\n那个声音来自另一个方向，不是紫山深处的魔『性』力量，非常虚弱，似乎随时会断气。\n“说话，你是谁？”[NAME]追问。\n“神王……姜太虚。”虚弱的声音，微不可闻，根本不连贯。\n但是，这五个字听在[NAME]耳中，却如天雷一般震耳。\n一个大成的神王……他还活着！\n“教你一式，看你悟性如何……”东荒神王的声音越来越虚弱了。\n[NAME]静心凝神，足足站了两个时辰。突然间，岩壁现一个干枯的身影。是的，通过粗糙的岩石，映出一个影子，勾勒出清晰的轮廓，其骨头根根可见，比骷髅好不了多少。\n满头长发比躯体还要长，拖在骨瘦如柴的身体背后，他仅摆了一个奇怪的姿势，而后便仰头栽倒了下去。[NAME]心中吃惊，对方透壁映影，并不是真身，但却让他感受到了一股道境。与此同时，一段非常简短的口诀，传入他的心中，艰涩与深奥无比。岩壁中的干枯身影，早已消失不见，那里一片粗糙与不平。\n[NAME]退后数十丈远，手握菩提子，默默体会这个奇怪的姿势，而后认真参悟与修行.不过片刻间，[NAME]的心神便彻底被吸引住了，这是一种极其恐怖的攻击法门，威力奇大。不限于拳指，不限于腿法，全身处处皆可攻击，每寸肌肤都可以爆发出可怕的力量。");
+					me:DropEsoteric("ZT_JZM_D");story:FinishSecret();
+				else
+					me:AddMsg("[NAME]悟性实在太差了，差点没把神王气死。。。。");
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>无始经</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]独自前行，不紧不慢，注意观察周围的一切，不过岩壁上不再有刻图，方才的一切都已完结。起初，[NAME]并没有在意，但走出去数百丈后，他觉得越来越冰寒刺骨了，此地阴气极重，像是北风卷雪吹在身上。");
+				me:TriggerStory("ZT_G_WSJ");story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>离开此地</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]仔细地思索了片刻，觉得此地风水过盛，虽有好东西，但必不是我等能吃得消的。");
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="JCXPW"  Parent="BaseFillingStory">
+		<DisplayName>云泽州</DisplayName>
+		<Desc>叶凡当着曲州年轻修士的面，击杀摇光与姬家八名真传弟子，这则消息像是长了翅膀，飞快传了出去，惹出不小的风波。</Desc>
+		<Selections>
+			<li>
+				<Display>干翻鸡翅小鹏王</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("“不要和我动手，不然你死无全尸！”金翅小鹏王身材高大，眼中露出疯狂的杀意，居高临下，俯视着[NAME]。");
+				me:DropAwardItem("Item_MiBao_DHJ",1);GameMain:GetMod("XG"):YSJC1();story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>圣体遗骸</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("悠悠扬扬的青铜大钟，沉沉浮浮的古朴大鼎，灿灿生辉的黄金神塔，第九重宝殿一片绚烂。\n各种稀世的宝贝在闪烁，一看就不是凡物。很多都是大人物亲手炼成的兵器。流转出恐怖的波动。熠熠生辉。\n可是所有这些都难以吸引[NAME]。他眼中只有那个干巴巴的尸体,两者之间有莫名的气机相互吸引。");
+				me:DropAwardItem("Item_STYH",1);
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>离开此地</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]仔细地思索了片刻，觉得此地风水过盛，虽有好东西，但必不是我等能吃得消的。");
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+	<Story Name="ZT_ZJC1"  Parent="BaseFillingStory">
+		<DisplayName>张家村石胎</DisplayName>
+		<Desc>源天师一脉遗留下来的后代，除了后代还给村子里的人留下了不少特殊的石胎</Desc>
+		<Selections>
+			<li>
+				<Display>进村洗劫（获得更多石胎,真仙难度）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 6
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:RandomInt(1, 5) == 2 then
+						me:AddMsg("[NAME]的运气不大好，一进村居然就遇到了赤龙老道。。。。赤龙老道打算买下这些石胎的。一场大战不可避免");
+						GameMain:GetMod("XG"):CLLD();
+						me:DropAwardItem("Item_WSXY",2);
+						me:DropAwardItem("Item_JSXY",2);
+						me:DropAwardItem("Item_MSXY",2);
+						me:DropAwardItem("Item_SSXY",2);
+						me:DropAwardItem("Item_HSXY",2);
+						me:DropAwardItem("Item_TSXY",2);
+						me:DropAwardItem("Item_YS3",30);
+						me:AddSchoolScore(1,500);
+						story:FinishSecret();
+				else
+				me:AddMsg("[NAME]来到了张家村，仗着自己有几分本身横行霸道。打伤村民，抢走了石胎。这群可怜的孤寡老人，让周遭的人都看不下去了，于是有一些热心人士来到了[NAME]门派。");
+						me:DropAwardItem("Item_WSXY",1);
+						me:DropAwardItem("Item_JSXY",1);
+						me:DropAwardItem("Item_MSXY",1);
+						me:DropAwardItem("Item_SSXY",1);
+						me:DropAwardItem("Item_HSXY",1);
+						me:DropAwardItem("Item_TSXY",1);
+						me:DropAwardItem("Item_YS3",30);
+						me:AddSchoolScore(1,-500);
+						
+						story:FinishSecret();me:AddEnemy(24,0.5)
+					end
+				]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]的实力这么差，不知道他哪来的自信，被人打残丢茅坑里了。");
+				me:AddSchoolScore(1,-500);me:AddDamage("Destroy", "RightEye", 1, XT("暴打"));me:AddDamage("Destroy","LeftEye", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","LeftScapula", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","RightScapula", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","LeftThighbone", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","RightThighbone", 1, XT("暴打"))
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>进村看看（获得石胎）</Display> 
+				
+				<OKResult><![CDATA[	
+						me:AddMsg("[NAME]来到了村子里，找到了源天师的遗孤，了解了情况以后，拿着石胎便离去了。");
+						me:DropAwardItem("Item_WSXY",1);
+						me:DropAwardItem("Item_JSXY",1);
+						me:DropAwardItem("Item_MSXY",1);
+						me:DropAwardItem("Item_SSXY",1);
+						me:DropAwardItem("Item_HSXY",1);
+						me:DropAwardItem("Item_TSXY",1);
+						me:AddSchoolScore(1,250);
+						me:DropAwardItem("Item_YS3",15);
+						story:FinishSecret();
+				
+				]]>
+				</OKResult>
+				
+			</li>
+			<li>
+				<Display>小破村，没兴趣。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得一个小村庄而已，不稀罕。");
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="DDLQ"  Parent="BaseFillingStory">
+		<DisplayName>大帝陵寝</DisplayName>
+		<Desc>大峡谷中，大墓如渊。它只露出一角城门，究竟有多么宏伟与浩大，目前还不能推测，大量阴兵阴马向外冲来，杀之不尽。\n几大圣地的杰出弟子早已深入，诸多大教与其他大势力的门徒紧随其后，斩杀阴兵，强行入关。\n“咚”、“咚”、“咚”……战鼓如雷，在地宫深处响起，阴兵如黑色的潮水，不断汹涌而出，不少修士死于非命。</Desc>
+		<Selections>
+			<li>
+				<Display>凭实力进入地宫(面对所有圣地传人4000000万金丹修为。)</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("宏伟而空旷的大殿中央，有一座悬浮的神台，通体呈漆黑色，但它却射出一道道瑞彩，垂落而下，非常的神秘。\n最让人心动的是，神台上垂挂着一张兽皮古卷，看起来非常普通，但一下子让所有人都激动了起来。");
+				
+				me:DropAwardItem("Item_HDS",20);
+				me:DropAwardItem("Item_DJHJ",5);me:DropAwardItem("Item_HXCJ",5);me:DropAwardItem("Item_LWHJ",5);me:DropAwardItem("Item_YHQJ",5);
+				me:DropAwardItem("Item_SHZJ",5);me:DropAwardItem("Item_YHLJ",5);me:DropAwardItem("Item_XLLJ",5);me:DropAwardItem("Item_XHEQ",5);
+				GameMain:GetMod("XG"):DDLQ();me:AddSchoolScore(1,10000);
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>准备齐全进入地宫（携带万物母气鼎）</Display> 
+				<OKResult><![CDATA[	
+				me:AddMsg("悠悠扬扬的青铜大钟，沉沉浮浮的古朴大鼎，灿灿生辉的黄金神塔，第九重宝殿一片绚烂。\n各种稀世的宝贝在闪烁，一看就不是凡物。很多都是大人物亲手炼成的兵器。流转出恐怖的波动。熠熠生辉。\n可是所有这些都难以吸引[NAME]。他眼中只有那个干巴巴的尸体,两者之间有莫名的气机相互吸引。");
+				if me:CheckItemEquptCount ("Item_PTZ") == 1 then
+				if me:GetGLevel() >= 11 then
+				me:DropAwardItem("Item_HDS",10);me:AddSchoolScore(1,5000);me:AddEnemy(36,0.5)
+				elseif me:GetGLevel >= 9 then
+				me:DropAwardItem("Item_HDS",5);me:AddSchoolScore(1,2500);me:AddEnemy(26,0.5)
+				else 
+				me:DropAwardItem("Item_HDS",1);me:AddSchoolScore(1,1500);me:AddEnemy(18,0.5)
+				end
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>离开此地</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]仔细地思索了片刻，觉得此地风水过盛，虽有好东西，但必不是我等能吃得消的。");
+					
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="XJGZ"  Parent="BaseFillingStory">
+		<DisplayName>洗劫各州</DisplayName>
+		<Desc>自从上次，洗劫了一波张家村的流寇后，[NAME]便开始了一发不可收拾的想抢劫流寇了，不过各大洲，也得到了小道消息。</Desc>
+		<Selections>
+			<li>
+				<Display>洗劫安州流寇</Display> 
+				<OKResult><![CDATA[	
+				if world:GetWorldFlag(1000) + 100 < world.DayCount then
+				me:AddMsg("[NAME]来到了安州，按顺序洗劫了大小流寇收获颇丰，但也被人寻到了门派");
+				world:SetWorldFlag(1000,world.DayCount);
+				me:DropAwardItem("Item_WSXY",25);
+				me:DropAwardItem("Item_JSXY",25);me:DropAwardItem("Item_MSXY",25);me:DropAwardItem("Item_SSXY",25);me:DropAwardItem("Item_HSXY",25);me:DropAwardItem("Item_TSXY",25);
+				me:DropAwardItem("Item_WSXSY",5);
+				me:DropAwardItem("Item_JSXSY",5);me:DropAwardItem("Item_MSXSY",5);me:DropAwardItem("Item_SSXSY",5);me:DropAwardItem("Item_HSXSY",5);me:DropAwardItem("Item_TSXSY",5);
+				GameMain:GetMod("XG"):XJGZ();me:AddSchoolScore(1,10000);me:AddEnemy(36,0)
+				story:FinishSecret();
+				else
+				me:AddMsg("[NAME]来到了安州，按顺序洗劫了大小流寇，但是对方已经穷的确实没东西了。");
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>洗劫曲州</Display> 
+				<OKResult><![CDATA[	
+				if world:GetWorldFlag(1001) + 100 < world.DayCount then
+				me:AddMsg("[NAME]来到了曲州，按顺序洗劫了大小流寇收获颇丰，但也被人寻到了门派");
+				world:SetWorldFlag(1001,world.DayCount);
+				me:DropAwardItem("Item_WSXY",25);
+				me:DropAwardItem("Item_JSXY",25);me:DropAwardItem("Item_MSXY",25);me:DropAwardItem("Item_SSXY",25);me:DropAwardItem("Item_HSXY",25);me:DropAwardItem("Item_TSXY",25);
+				me:DropAwardItem("Item_WSXSY",5);
+				me:DropAwardItem("Item_JSXSY",5);me:DropAwardItem("Item_MSXSY",5);me:DropAwardItem("Item_SSXSY",5);me:DropAwardItem("Item_HSXSY",5);me:DropAwardItem("Item_TSXSY",5);
+				GameMain:GetMod("XG"):XJGZ();me:AddSchoolScore(1,10000);me:AddEnemy(36,0)
+				story:FinishSecret();
+				else
+				me:AddMsg("[NAME]来到了安州，按顺序洗劫了大小流寇，但是对方已经穷的确实没东西了。");
+				end
+				]]>
+				</OKResult>
+			</li>
+			
+			<li>
+				<Display>离开此地</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]仔细地思索了片刻，好东西，必然带风险。算了且等我有实力。");
+					
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="WLC"  Parent="BaseFillingStory">
+		<DisplayName>万龙巢</DisplayName>
+		<Desc>叶凡虽然在神王，和各方势力的帮助下，进入了四极秘境，但天道无情，叶凡仍然是受了道伤。。</Desc>
+		<Selections>
+			<li>
+				<Display>青龙不死药</Display> 
+				<OKResult><![CDATA[	
+				if world:GetWorldFlag(1100) + 500 < world.DayCount then
+				me:AddMsg("[NAME]来到了万龙巢，成功获得了试验品灵植");
+				world:SetWorldFlag(1000,world.DayCount);
+				me:DropAwardItem("Item_ZLBSY",1);
+				story:FinishSecret();
+				else
+				me:AddMsg("[NAME]天地神药，五百天一株，下次再来吧。");
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>黄龙不死药</Display> 
+				<OKResult><![CDATA[	
+				if world:GetWorldFlag(1102) + 500 < world.DayCount then
+				me:AddMsg("[NAME]来到了万龙巢，成功获得了试验品灵植");
+				world:SetWorldFlag(1102,world.DayCount);
+				me:DropAwardItem("Item_BSHLY",1);
+				story:FinishSecret();
+				else
+				me:AddMsg("[NAME]天地神药，五百天一株，下次再来吧。");
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>玄武不死药</Display> 
+				<OKResult><![CDATA[	
+				if world:GetWorldFlag(1101) + 500 < world.DayCount then
+				me:AddMsg("[NAME]来到了万龙巢，成功获得了试验品灵植");
+				world:SetWorldFlag(1101,world.DayCount);
+				me:DropAwardItem("Item_BSXWY",1);
+				story:FinishSecret();
+				else
+				me:AddMsg("[NAME]天地神药，五百天一株，下次再来吧。");
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>白虎不死药</Display> 
+				<OKResult><![CDATA[	
+				if world:GetWorldFlag(1103) + 500 < world.DayCount then
+				me:AddMsg("[NAME]来到了万龙巢，成功获得了试验品灵植");
+				world:SetWorldFlag(1103,world.DayCount);
+				me:DropAwardItem("Item_BSBHY",1);
+				story:FinishSecret();
+				else
+				me:AddMsg("[NAME]天地神药，五百天一株，下次再来吧。");
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>朱雀不死药</Display> 
+				<OKResult><![CDATA[	
+				if world:GetWorldFlag(1104) + 500 < world.DayCount then
+				me:AddMsg("[NAME]来到了万龙巢，成功获得了试验品灵植");
+				world:SetWorldFlag(1104,world.DayCount);
+				me:DropAwardItem("Item_BSSHY",1);
+				story:FinishSecret();
+				else
+				me:AddMsg("[NAME]天地神药，五百天一株，下次再来吧。");
+				end
+				]]>
+				</OKResult>
+			</li>
+			
+			<li>
+				<Display>离开此地</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]仔细地思索了片刻，好东西，必然带风险。算了且等我有实力。");
+					
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="Story_YDF"  Parent="BaseFillingStory">
+		<DisplayName>妖帝坟</DisplayName>
+		<Desc>妖帝坟设有两处，一阳一阴，抱守太极，力量源泉心脏葬于阳墓，真正的冰冷尸身在于阴墓。</Desc>
+		<Selections>
+			<li>
+				<Display>阳墓出世，早早便吸引了众多大能围观。</Display> 
+				<OKResult><![CDATA[	
+					me:TriggerStory("YM1");
+
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>阴墓被段德和叶凡所发现。</Display> 
+				<OKResult><![CDATA[	
+					me:TriggerStory("YF1");
+
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>不，我不想。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得自己不是爱管闲事的人，所以就走了。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="YM1"  Parent="BaseFillingStory">
+		<DisplayName>妖帝阳墓</DisplayName>
+		<Desc>沸腾的岩浆，红的异常妖艳，不断向外涌出，如鲜红的血水一般，那座光灿灿的古殿缓缓升起，渐渐要脱离火山口。</Desc>
+		<Selections>
+			<li>
+				<Display>妖帝坟外围。（解锁道经，携带菩提子可获得秘宝）</Display> 
+				<OKResult><![CDATA[	
+				if world:IsGongUnLocked("Gong_DJ") == false then
+					me:AddMsg("[NAME]独自一人在外围徘徊，混乱中居然获得了道经。");
+					me:UnLockGong("Gong_DJ");me:DropAwardItem("Item_Dan_TreeEXP", 1);
+				else
+				    if me:CheckItemEquptCount("Item_PTZ") == 1 and world:GetWorldFlag(445) == 0 then
+						me:AddMsg("[NAME]在获得道经后进行了短暂的参悟，居然获得了名道金书。");
+						world:SetWorldFlag(445,1);me:DropAwardItem("Item_MiBao_MDJS",1);
+						end
+				end	
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>大胆向前走。（金丹期一下方能进行剧情）</Display> 
+				<OKResult><![CDATA[	
+				if me:GetGLevel() <= 3 then
+						me:AddMsg("[NAME]在混战之中，完全插不上手，只能缩在角落等待大战的结束。");
+				elseif me:GetGLevel() <= 6 and me:GetLuck() >= 7 then
+						me:AddMsg("[NAME]在混战之中，逍遥自得，一边抗衡着身边的修行者，一边伺机等待妖帝坟的完全打开，随着时间流逝，各大圣地也闻讯而来，[NAME]于乱战之中，有些测测不安，无奈之下带着几个法宝便跑了。");
+						me:DropRandomItem("FightFabao", 4, 9);me:AddDamgeFromCache(story.DamageCache,2,3);me:TriggerStory("YM2");
+				elseif me:GetGLevel() >= 9 then
+						me:AddMsg("[NAME]凭借着自身不俗的实力，在外围如入无人之境，获得了不少的法宝。");
+						me:DropRandomItem("FightFabao", 4, 9);me:DropRandomItem("FightFabao", 4, 9);me:DropRandomItem("FightFabao", 4, 9);me:TriggerStory("YM2");
+				end	
+							
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>不，我不想。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得太危险了，何必呢。。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="YM2"  Parent="BaseFillingStory">
+		<DisplayName>妖帝心</DisplayName>
+		<Desc>宏伟的古殿不断摇颤，几名大妖、灵墟的长老与掌门正在激烈地交锋。</Desc>
+		<Selections>
+			<li>
+				<Display>各大长老激战之处。（金丹以下方能进行剧情）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 9
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if  me:GetGLevel() >= 9 and me:GetPhysique() >= 9 and world:GetWorldFlag(446) == 0 then
+						me:AddMsg("[NAME]凭借高深的修为，力抗众人，哪怕是圣地来着也不是[NAME]的对手，在妖帝陵的水晶棺冲出的刹那[NAME]冲上前去抢夺而走，虽然受到了不轻的伤，以及其他圣地的眼红！。");
+						world:SetWorldFlag(446,1);me:DropAwardItem("Item_YDX",1);me:AddDamgeFromCache(story.DamageCache,4,4);Map:AddEnemyAtSide("Human",CS.XiaWorld.g_emThingDir.None,math.random(64),CS.XiaWorld.g_emNpcRichLable.Richest);
+						story:FinishSecret();
+					end	
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>不，我不想。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得太危险了，何必呢。。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="YF1"  Parent="BaseFillingStory">
+		<DisplayName>妖帝阴坟</DisplayName>
+		<Desc>叶凡被段德回头来寻绿铜块，叶凡谎称将绿铜丢入深谭之中。</Desc>
+		<Selections>
+			<li>
+				<Display>潜入深谭。（要求不能超出金丹期，最后一层要求携带妖帝心与避寒玉，且耐寒千度一下。）</Display> 
+				<OKResult><![CDATA[	
+				if me:GetGLevel() <= 3 then
+					me:AddMsg("[NAME]一个猛子扎入深谭之中，emmm这不是找死吗。");
+					me:AddDamgeFromCache(story.DamageCache,9,12);
+				elseif me:GetGLevel() <= 6 and me:GetProperty("ToleranceTMin") >= -150 then
+						me:AddMsg("[NAME]热了热身之后，准备齐全，运起护体法身，潜入深谭，但还是没能耐住深谭的极寒，只在谭中获得了些许法宝。");
+						me:DropRandomItem("FightFabao", 4, 9);me:DropRandomItem("FightFabao", 4, 9);me:AddDamgeFromCache(story.DamageCache,6,9);
+				elseif me:GetGLevel() <= 6 and me:GetProperty("ToleranceTMin") >= -300 then
+						me:AddMsg("[NAME]这次真的准备很齐全了，自以为能够一口气到谭底，不过他明显想多了，还引了一波妖兽攻家。。太惨了。");
+						me:DropRandomItem("FightFabao", 4, 9);me:AddDamgeFromCache(story.DamageCache,4,6);me:AddManyYaoShou(nil,6,6,1);story:FinishSecret();
+				elseif me:GetGLevel() <= 9 and me:GetProperty("ToleranceTMin") >= -600 then
+						me:AddMsg("[NAME]凭着高深的境界，和强大的体质到了接近谭底五百米处时，感受到了前方似乎更加地冷。。算了，正要回头时，捡到了一些源！还不亏。");
+						me:DropAwardItem("Item_WSXSY",6);
+						me:DropAwardItem("Item_JSXSY",6);
+						me:DropAwardItem("Item_MSXSY",6);
+						me:DropAwardItem("Item_SSXSY",6);
+						me:DropAwardItem("Item_HSXSY",6);
+						me:DropAwardItem("Item_TSXSY",6);
+						story:FinishSecret();
+				elseif me:GetGLevel() <= 9 and me:CheckItemEquptCount("Item_BHZ") == 1 and me:CheckItemEquptCount("Item_YDX") == 1 and me:GetProperty("ToleranceTMin") >= -1000 then
+						me:AddMsg("[NAME]凭借着避水珠潜入了谭底最深处，却发现居然是一道无比凌厉的杀阵，[NAME]打算退去，但不小心触动了机关，[NAME]看到机关触发后掉落出的一本秘籍，急忙拿了秘籍便冲出去深谭。");
+						me:DropEsoteric("MJ_YDX");me:AddManyYaoShou(nil,9,9,1);story:FinishSecret();
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>不，我不想。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得太危险了，何必呢。。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="TXM"  Parent="BaseFillingStory">
+		<DisplayName>太玄门</DisplayName>
+		<Desc>太玄门经年不朽，虽比不上各大荒古圣地，但也是东荒一隅的超级大势力。适合炼气期弟子前往。</Desc>
+		<Selections>
+			<li>
+				<Display>太玄主峰。星峰。</Display> 
+				<OKResult><![CDATA[	
+					me:TriggerStory("XF");
+
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>太玄门，拙峰。</Display> 
+				<OKResult><![CDATA[	
+					me:TriggerStory("ZF");
+
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>太玄门，其他峰。</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() <= 9
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetProperty("NpcFight_SneakValue") <= 3 and me:GetGLevel() <= 3 then
+					me:AddMsg("[NAME]趁着人多眼杂，改变自身的样貌，投入太玄门的其中一座仙山，获得了一本秘籍,不过跑路之前被人发现，追逐中受了点伤。");
+					me:DropRandomItem("Esoterica");me:AddDamgeFromCache(story.DamageCache,3,4);story:FinishSecret();
+				elseif me:GetProperty("NpcFight_SneakValue") <= 6 and me:GetGLevel() <= 6 then
+					me:AddMsg("[NAME]趁着人多眼杂，改变自身的样貌，投入太玄门的其中一座仙山，获得了一本秘籍,不过跑路之前被人发现，追逐中受了点轻伤。");
+					me:DropRandomItem("Esoterica");me:AddDamgeFromCache(story.DamageCache,3,2);story:FinishSecret();
+				elseif me:GetProperty("NpcFight_SneakValue") <= 9 and me:GetGLevel() <= 9 and me:GetSkillLevel("Fabao") >= 20 and world:GetWorldFlag(467) == 0 then
+					me:AddMsg("[NAME]凭借自身不俗的御器能力，拜入了太玄门一座排名第五的仙峰，获得了重剑诀。");
+					world:SetWorldFlag(467,1);me:DropEsoteric("MJ_ZJJ");story:FinishSecret();
+				elseif me:GetSkillLevel("FightSkill") >= 20 and me:GetGLevel() <= 9 and world:GetWorldFlag(468) == 0 then
+					me:AddMsg("[NAME]凭借自身不俗的术法能力，拜入了太玄门一座排名第四的仙峰，获得了炎灭真典。");
+					world:SetWorldFlag(468,1);me:DropEsoteric("MJ_YMZD");story:FinishSecret();
+				elseif me:GetSkillLevel("Barrier") >= 20 and me:GetGLevel() <= 9 and world:GetWorldFlag(469) == 0 then
+					me:AddMsg("[NAME]凭借自身超强的护盾技巧，拜入了太玄门一座排名第三的仙峰，获得了金刚要典。");
+					world:SetWorldFlag(469,1);me:DropEsoteric("MJ_JGYD");story:FinishSecret();
+					end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>不，我不想。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得自己不是爱管闲事的人，所以就走了。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="XF"  Parent="BaseFillingStory">
+		<DisplayName>星峰</DisplayName>
+		<Desc>太玄门一百零八仙山之一，其中以星峰为第一主峰。</Desc>
+		<Selections>
+			<li>
+				<Display>拜入星峰。</Display> 
+				
+				<OKResult><![CDATA[	
+				if me:GetProperty("AbilityLvAddV") <= 30 and me:GetGLevel() <= 3 then
+					me:AddMsg("[NAME]来到了太玄峰，誓要拜入星峰，但是奈何道行不足，境界太低，没人稀罕。");
+					me:TriggerStory("XF");
+				elseif me:GetProperty("AbilityLvAddV") <= 60 and me:GetGLevel() <= 6 then
+					me:AddMsg("[NAME]凭着一手三脚猫的功力混进了太玄门，企图获得其传承，但只获得了一本秘籍，还被人发现，暴打一顿逐出星峰。");
+					me:DropRandomItem("Esoterica");me:AddDamgeFromCache(story.DamageCache,3,2);story:FinishSecret();
+				elseif me:GetProperty("AbilityLvAddV") <= 150 then
+					me:AddMsg("[NAME]的道行马马虎虎，所以在企图染指传承是，因为一个意外，看到了天上长老与一神秘女子的神秘故事，而被追杀。");
+					Map:AddEnemyAtSide("Human",CS.XiaWorld.g_emThingDir.None,math.random(19),CS.XiaWorld.g_emNpcRichLable.Richest);story:FinishSecret();
+				elseif me:GetIntelligence() >= 8 and me:GetGLevel() >= 9 and world:GetWorldFlag(448) == 0 then
+					me:AddMsg("[NAME]的悟性非凡，在众人之中脱颖而出，拜入了太玄门星峰，获得了星淬秘籍。");
+					world:SetWorldFlag(466,1);me:DropEsoteric("MJ_XC");story:FinishSecret();
+				
+					end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>垃圾太玄门，不拜。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得星峰什么的，还是算了吧。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+	<Story Name="ZF"  Parent="BaseFillingStory">
+		<DisplayName>拙峰</DisplayName>
+		<Desc>太玄门一百零八仙山之一，其中以星峰为第一主峰。</Desc>
+		<Selections>
+			<li>
+				<Display>踏天梯。</Display> 
+				
+				<OKResult><![CDATA[	
+				me:TriggerStory("TT");
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>李若愚。（结丹期以上能进行剧情）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 6
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetPerception() >= 8 and world:GetWorldFlag(447) == 0 then
+					me:AddMsg("[NAME]向李若愚躬身一拜（你不如拜群主手动滑稽）之见老人身材枯瘦，显得有些虚弱，也对着[NAME]点点头。");
+					me:AddMsg("李若愚对[NAME]说，你看拙峰，山如其名，无瑰丽景致。无雄伟气势，无灵秀仙根，没有任何出奇之处，你确定要拜入拙峰吗？");
+					me:AddMsg("[NAME]坚定地说，老前辈，晚辈拜入拙峰非一日之思，从小便心生向往。，。。。略去万字浮夸。");
+					me:AddMsg("很好，且看你是否能悟到拙峰的秘宝！。");
+					world:SetWorldFlag(447,1);me:DropEsoteric("MJ_ZG");story:FinishSecret();
+					end
+
+				]]>
+				</OKResult>
+			</li>
+			
+			<li>
+				<Display>算了，不过是个拙峰罢了。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得没啥好东西可以拿了，还是算了吧。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="TT"  Parent="BaseFillingStory">
+		<DisplayName>天梯</DisplayName>
+		<Desc>太玄门拙峰的上古流传下来的传承，如若能够踏上第七阶已是天人之姿，如若能够走到头，也许能够在现太玄门的无上秘籍。</Desc>
+		<Selections>
+			<li>
+				<Display>一阶天梯。</Display> 
+				
+				<OKResult><![CDATA[	
+				me:TriggerStory("TT_1");
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>二阶天梯。</Display> 
+				
+				<OKResult><![CDATA[	
+				me:TriggerStory("TT_2");
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>三阶天梯。</Display> 
+				
+				<OKResult><![CDATA[	
+				me:TriggerStory("TT_3");
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>四阶天梯。</Display> 
+				
+				<OKResult><![CDATA[	
+				me:TriggerStory("TT_4");
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>五阶天梯。</Display> 
+				
+				<OKResult><![CDATA[	
+				me:TriggerStory("TT_5");
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>六阶天梯。</Display> 
+				
+				<OKResult><![CDATA[	
+				me:TriggerStory("TT_6");
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>七阶天梯。</Display> 
+				
+				<OKResult><![CDATA[	
+				me:TriggerStory("TT_7");
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>八阶天梯。</Display> 
+				
+				<OKResult><![CDATA[	
+				me:TriggerStory("TT_8");
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>九阶天梯。</Display> 
+				
+				<OKResult><![CDATA[	
+				me:TriggerStory("TT_9");
+				]]>
+				</OKResult>
+			</li>
+			
+			<li>
+				<Display>垃圾太玄门，不拜。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得拙峰什么的，不过如此。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="TT_1"  Parent="BaseFillingStory">
+		<DisplayName>天梯</DisplayName>
+		
+		<Selections>
+			<li>
+				<Display>一阶天梯。（悟性高于6，只能获得一次，慎重）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() <= 3
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetIntelligence() >= 6 and world:GetWorldFlag(466) == 0 then
+					me:AddMsg("[NAME]迈上了第一阶天梯，得到了拙峰的第一阶认可，获得了二十点根本灵力的加成。");
+					world:SetWorldFlag(448,1);me:ModifierProperty("_SPECIAL_NOADD_NpcLingMaxValue",20);me:TriggerStory("TT");
+					end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>垃圾太玄门，不拜。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得拙峰什么的，不过如此。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="TT_2"  Parent="BaseFillingStory">
+		<DisplayName>天梯</DisplayName>
+		
+		<Selections>
+			<li>
+				<Display>二阶天梯。（悟性高于8，一次获取）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() <= 3
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetIntelligence() >= 8 and world:GetWorldFlag(449) == 0 then
+					me:AddMsg("[NAME]的悟性还可以，迈上了第二阶天梯，获得了15000点修炼经验。");
+					world:SetWorldFlag(449,1);world:GetSelectThing().PropertyMgr.Practice:AddPractice("15000");me:TriggerStory("TT");
+					end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>垃圾太玄门，不拜。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得拙峰什么的，不过如此。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="TT_3"  Parent="BaseFillingStory">
+		<DisplayName>天梯</DisplayName>
+		
+		<Selections>
+			<li>
+				<Display>三阶天梯。（感知大于6）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() <= 3
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetPerception() >= 6 and world:GetWorldFlag(450) == 0 then
+						me:AddMsg("[NAME]迈上了第三节天梯，一道玄奇的光芒冲入体内，[NAME]修行潜力被激发，提高了五十的修行速度。");
+						world:SetWorldFlag(450,1);me:ModifierProperty("DeepPracticeSpeedSpecialCoefficient",50);me:TriggerStory("TT");
+					end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>垃圾太玄门，不拜。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得拙峰什么的，不过如此。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+		
+	<Story Name="TT_4"  Parent="BaseFillingStory">
+		<DisplayName>天梯</DisplayName>
+		
+		<Selections>
+			<li>
+				<Display>四阶天梯。（感知大于9）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() <= 3
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetPerception() >= 9 and world:GetWorldFlag(451) == 0 then
+					me:AddMsg("[NAME]登上了第四阶天梯，感知到了一些大道的轨迹，但还是有些难以琢磨，提升了百分五十护盾系数。");
+					world:SetWorldFlag(451,1);me:ModifierProperty("NpcFight_ShieldConversionRateAddP",0.5);me:TriggerStory("TT");
+					end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>垃圾太玄门，不拜。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得拙峰什么的，不过如此。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+		
+	<Story Name="TT_5"  Parent="BaseFillingStory">
+		<DisplayName>天梯</DisplayName>
+		
+		<Selections>
+			<li>
+				<Display>五阶天梯。（御器等级大于20）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() <= 6
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetSkillLevel("Fabao") >= 20 and world:GetWorldFlag(452) == 0 then
+						me:AddMsg("[NAME]登上了第五阶天梯，一股先天的御器法门涌上心头，可惜无法保存，但提高了[NAME]百分五十的法宝威力。");
+						world:SetWorldFlag(452,1);me:ModifierProperty("NpcFight_FabaoPowerAddP",0.5);me:TriggerStory("TT");
+					end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>垃圾太玄门，不拜。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得拙峰什么的，不过如此。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="TT_6"  Parent="BaseFillingStory">
+		<DisplayName>天梯</DisplayName>
+		
+		<Selections>
+			<li>
+				<Display>六阶天梯。（术法技能大于20）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() <= 6
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetSkillLevel("FightSkill") >= 20 and world:GetWorldFlag(453) == 0 then
+						me:AddMsg("[NAME]登上了第六阶天梯，一股爆裂的法术要诀浮现在[NAME]心头，[NAME]的术法威力得到百分五十提升。");
+						world:SetWorldFlag(453,1);me:ModifierProperty("NpcFight_SpellPowerAddP",0.5);me:TriggerStory("TT");
+					end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>垃圾太玄门，不拜。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得拙峰什么的，不过如此。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="TT_7"  Parent="BaseFillingStory">
+		<DisplayName>天梯</DisplayName>
+		
+		<Selections>
+			<li>
+				<Display>七阶天梯。（炼丹技能大于20）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() <= 6
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetSkillLevel("Medicine") >= 20 and world:GetWorldFlag(454) == 0 then
+						me:AddMsg("[NAME]登上了第七阶天梯，一道道绿光笼罩在[NAME]头上，[NAME]幡然醒悟，提高了百分五十的灵力恢复。");
+						world:SetWorldFlag(454,1);me:ModifierProperty("LingAbsorbSpeed",0.5);me:TriggerStory("TT");
+					end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>垃圾太玄门，不拜。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得拙峰什么的，不过如此。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+		
+	<Story Name="TT_8"  Parent="BaseFillingStory">
+		<DisplayName>天梯</DisplayName>
+		
+		<Selections>
+			<li>
+				<Display>八阶天梯。（炼器技能大于20）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() <= 6
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetSkillLevel("Manual") >= 20 and world:GetWorldFlag(455) == 0 then
+						me:AddMsg("[NAME]登上了第八阶天梯，望着双手，因为炼器或者干别的而结满的老茧，突然有所感悟。");
+						world:SetWorldFlag(455,1);me:ModifierProperty("FabaoMake_TwelveRateChance",0.5);me:TriggerStory("TT");
+					end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>垃圾太玄门，不拜。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得拙峰什么的，不过如此。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="TT_9"  Parent="BaseFillingStory">
+		<DisplayName>天梯</DisplayName>
+		
+		<Selections>
+			<li>
+				<Display>九阶天梯。（悟性大于9，且携带菩提子）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 9
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetIntelligence() >= 9 and world:GetWorldFlag(456) == 0 and me:CheckItemEquptCount("Item_PTZ") == 1 then
+						me:AddMsg("[NAME]登上了第九阶天梯，凭借着菩提子的神奇功效，慢慢地感受到了拙峰内蕴的真正法门。");
+						world:SetWorldFlag(456,1);me:DropEsoteric("ZT_JZM_J");story:FinishSecret();
+					end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>垃圾太玄门，不拜。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得拙峰什么的，不过如此。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="ZT_ZJC"  Parent="BaseFillingStory">
+		<DisplayName>张家村</DisplayName>
+		<Desc>源天师一脉遗留下来的后代，周遭有不少的流寇，似乎可以打劫打劫、</Desc>
+		<Selections>
+			<li>
+				<Display>洗劫流寇。（结丹期以上）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 6
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetIntelligence() >= 11 and me:GetDaoHang() >= 600 then
+						me:AddMsg("[NAME]凭借自身强大的修为洗劫了四方流寇，不给这些小贼一点机会。");
+						me:DropAwardItem("Item_WSXY",3);
+						me:DropAwardItem("Item_JSXY",3);
+						me:DropAwardItem("Item_MSXY",3);
+						me:DropAwardItem("Item_SSXY",3);
+						me:DropAwardItem("Item_HSXY",3);
+						me:DropAwardItem("Item_TSXY",3);me:AddSchoolScore(1,250);
+						story:FinishSecret();
+				elseif me:GetIntelligence() >= 9 and me:GetDaoHang() >= 300 then
+				me:AddMsg("[NAME]偷鸡成了，不过还蚀把米，没打过流寇还引来了一大波流寇");
+						me:DropAwardItem("Item_WSXY",3);
+						me:DropAwardItem("Item_JSXY",3);
+						me:DropAwardItem("Item_MSXY",3);
+						me:DropAwardItem("Item_SSXY",3);
+						me:DropAwardItem("Item_HSXY",3);
+						me:DropAwardItem("Item_TSXY",3);me:AddSchoolScore(1,150);
+						story:FinishSecret();me:AddEnemy(24,0.5)
+				elseif me:GetIntelligence() >= 6 and me:GetDaoHang() >= 100 then
+					me:AddMsg("[NAME]没偷到鸡成还蚀把米，没打过流寇，被打半死，还引来了一大波流寇");
+					me:AddDamage("Destroy", "RightEye", 1, XT("暴打"));me:AddDamage("Destroy","LeftEye", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","LeftScapula", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","RightScapula", 1, XT("暴打"));
+						me:DropAwardItem("Item_WSXY",3);
+						me:DropAwardItem("Item_JSXY",3);
+						me:DropAwardItem("Item_MSXY",3);
+						me:DropAwardItem("Item_SSXY",3);
+						me:DropAwardItem("Item_HSXY",3);
+						me:DropAwardItem("Item_TSXY",3);me:AddSchoolScore(1,100);
+						story:FinishSecret();me:AddEnemy(24,0.5)
+					end
+				]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]的实力这么差，不知道他哪来的自信，被人打残丢茅坑里了。");
+				me:AddSchoolScore(1,-500);me:AddDamage("Destroy", "RightEye", 1, XT("暴打"));me:AddDamage("Destroy","LeftEye", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","LeftScapula", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","RightScapula", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","LeftThighbone", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","RightThighbone", 1, XT("暴打"))
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>扶持流寇。（金丹期以上）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 9
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetIntelligence() >= 11 and me:GetSchoolScore(3) >= 36000 then
+						me:AddMsg("[NAME]凭借自己的恶名和强大的实力，带着周边的流寇四处洗劫，收获颇丰，但也导致正派人士的愤怒！。");
+						me:DropAwardItem("Item_WSXY",6);
+						me:DropAwardItem("Item_JSXY",6);
+						me:DropAwardItem("Item_MSXY",6);
+						me:DropAwardItem("Item_SSXY",6);
+						me:DropAwardItem("Item_HSXY",6);
+						me:DropAwardItem("Item_TSXY",6);me:AddSchoolScore(1,-250);me:AddEnemy(30,0)
+						story:FinishSecret();
+				elseif me:GetIntelligence() >= 9 and me:GetSchoolScore(3) >= 24000 then
+				me:AddMsg("[NAME]可真是个带恶人啊，抢劫流寇就算了，还扶持流寇，周围的门派已经看不下去了。");
+						me:DropAwardItem("Item_WSXY",3);
+						me:DropAwardItem("Item_JSXY",3);
+						me:DropAwardItem("Item_MSXY",3);
+						me:DropAwardItem("Item_SSXY",3);
+						me:DropAwardItem("Item_HSXY",3);
+						me:DropAwardItem("Item_TSXY",3);me:AddSchoolScore(1,-150);me:AddEnemy(20,0)
+						story:FinishSecret();me:AddEnemy(24,0.5)
+				elseif me:GetIntelligence() >= 6 and me:GetSchoolScore(3) >= 12000 then
+					me:AddMsg("[NAME]这个恶人太菜了，扶持起来的流寇也是菜鸡，所以没有捞到太多好处还被人暴打一顿。被追杀到了门派门口。");
+					me:AddDamage("Destroy", "RightEye", 1, XT("暴打"));me:AddDamage("Destroy","LeftEye", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","LeftScapula", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","RightScapula", 1, XT("暴打"));
+						me:DropAwardItem("Item_WSXY",1);
+						me:DropAwardItem("Item_JSXY",1);
+						me:DropAwardItem("Item_MSXY",1);
+						me:DropAwardItem("Item_SSXY",1);
+						me:DropAwardItem("Item_HSXY",1);
+						me:DropAwardItem("Item_TSXY",1);me:AddSchoolScore(1,-100);
+						story:FinishSecret();me:AddEnemy(16,0.5)
+					end
+				]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]的实力差就算了，明明是个光明正派还要来当25仔。");
+				me:AddSchoolScore(1,-500);me:AddDamage("Destroy", "RightEye", 1, XT("暴打"));me:AddDamage("Destroy","LeftEye", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","LeftScapula", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","RightScapula", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","LeftThighbone", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","RightThighbone", 1, XT("暴打"))
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>小破村，没兴趣。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得一个小村庄而已，不稀罕。");
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="ZT_ZJC1"  Parent="BaseFillingStory">
+		<DisplayName>张家村石胎</DisplayName>
+		<Desc>源天师一脉遗留下来的后代，除了后代还给村子里的人留下了不少特殊的石胎</Desc>
+		<Selections>
+			<li>
+				<Display>进村洗劫（获得更多石胎,真仙难度）</Display> 
+				<Condition>
+				<![CDATA[	
+				me:GetGLevel() >= 6
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:RandomInt(1, 5) == 2 then
+						me:AddMsg("[NAME]的运气不大好，一进村居然就遇到了赤龙老道。。。。赤龙老道打算买下这些石胎的。一场大战不可避免");
+						GameMain:GetMod("XG"):CLLD();
+						me:DropAwardItem("Item_WSXY",2);
+						me:DropAwardItem("Item_JSXY",2);
+						me:DropAwardItem("Item_MSXY",2);
+						me:DropAwardItem("Item_SSXY",2);
+						me:DropAwardItem("Item_HSXY",2);
+						me:DropAwardItem("Item_TSXY",2);
+						me:DropAwardItem("Item_YS3",30);
+						me:AddSchoolScore(1,500);
+						story:FinishSecret();
+				else
+				me:AddMsg("[NAME]来到了张家村，仗着自己有几分本身横行霸道。打伤村民，抢走了石胎。这群可怜的孤寡老人，让周遭的人都看不下去了，于是有一些热心人士来到了[NAME]门派。");
+						me:DropAwardItem("Item_WSXY",1);
+						me:DropAwardItem("Item_JSXY",1);
+						me:DropAwardItem("Item_MSXY",1);
+						me:DropAwardItem("Item_SSXY",1);
+						me:DropAwardItem("Item_HSXY",1);
+						me:DropAwardItem("Item_TSXY",1);
+						me:DropAwardItem("Item_YS3",30);
+						me:AddSchoolScore(1,-500);
+						
+						story:FinishSecret();me:AddEnemy(24,0.5)
+					end
+				]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]的实力这么差，不知道他哪来的自信，被人打残丢茅坑里了。");
+				me:AddSchoolScore(1,-500);me:AddDamage("Destroy", "RightEye", 1, XT("暴打"));me:AddDamage("Destroy","LeftEye", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","LeftScapula", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","RightScapula", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","LeftThighbone", 1, XT("暴打"));me:AddDamage("Fabao_CutOff","RightThighbone", 1, XT("暴打"))
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>进村看看（获得石胎）</Display> 
+				
+				<OKResult><![CDATA[	
+						me:AddMsg("[NAME]来到了村子里，找到了源天师的遗孤，了解了情况以后，拿着石胎便离去了。");
+						me:DropAwardItem("Item_WSXY",1);
+						me:DropAwardItem("Item_JSXY",1);
+						me:DropAwardItem("Item_MSXY",1);
+						me:DropAwardItem("Item_SSXY",1);
+						me:DropAwardItem("Item_HSXY",1);
+						me:DropAwardItem("Item_TSXY",1);
+						me:AddSchoolScore(1,250);
+						me:DropAwardItem("Item_YS3",15);
+						story:FinishSecret();
+				
+				]]>
+				</OKResult>
+				
+			</li>
+			<li>
+				<Display>小破村，没兴趣。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得一个小村庄而已，不稀罕。");
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+	
+</List></Stories>

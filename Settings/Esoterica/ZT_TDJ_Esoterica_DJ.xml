@@ -1,0 +1,474 @@
+<Esotericas><List>
+	
+	<!-- ==========================技能1========================== -->
+	
+	<Esoterica Name="Gong_TDJ_LH_A1">
+		<DisplayName>道经轮海篇</DisplayName>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_DJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>14</Difficulty>
+		<Desc>道,可道也,非恒道也。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n加根骨\n加神识\n加潜力\n习得神通：灵息诀[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_LH_1A</Modifier>
+		<Magics>
+			<li>AbsorbLing_Aoe</li>
+		</Magics>
+	</Esoterica>
+	<Esoterica Name="Gong_TDJ_LH_A1_1">
+		<DisplayName>道经轮海篇</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_DJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>8</Difficulty>
+		<Desc>名,可名也,非恒名也</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n加五维属性\n加个人灵气\n加个人回灵[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_LH_1A_1</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_TDJ_LH_A1_2">
+		<DisplayName>道经轮海篇</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_DJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>8</Difficulty>
+		<Desc>“有”，名万物之母。 故，常“无”，欲以观其妙；常“有”，欲以观其徼。此两者，同出而异名，同谓之玄。玄之又玄，众妙之门。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]    三重天    \n加潜力\n加法宝回灵倍率\n加心境[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_LH_1A_2</Modifier>
+	</Esoterica>
+	
+	
+	<!-- ==========================技能2========================== -->
+	
+	<Esoterica Name="Gong_TDJ_LH_A2_XKDSY">
+		<DisplayName>虚空大手印</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_DJ_XKDSY.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>5</Difficulty>
+		<Desc>于虚空之中，迅速凝结一个巨大的手印。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n加神识\n习得  秘术：\n虚空大手印（每次使用驱散目标5000灵力值）[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_LH_2A_XKDSY</Modifier>
+		<Skills>
+			<li>TDJ_DJ_XKDSY</li>
+		</Skills>
+	</Esoterica>
+	
+	<!-- ==========================技能3========================== -->
+	
+	<Esoterica Name="Gong_TDJ_LH_A3">
+		<DisplayName>苦海</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\JSKH.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>11</Difficulty>
+		<Desc>圣体独有的苦海异象，比一般人更加磅礴。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n提升灵气最大值\n提高寿命\n提高灵气恢复速度[/color][/size][/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_LH_3A</Modifier>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_TDJ_LH_A3_1">
+		<DisplayName>苦海</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\JSKH.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>11</Difficulty>
+		<Desc>圣体独有的苦海异象，比一般人更加磅礴。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n大幅提升灵气最大值\n提高寿命\n大幅提高灵气恢复速度[/color][/size][/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_LH_3A_1</Modifier>
+	</Esoterica>
+	
+	<!-- ==========================技能4========================== -->
+	
+	<Esoterica Name="Gong_TDJ_LH_B1">
+		<DisplayName>西皇经道宫卷</DisplayName>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_XHJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>12</Difficulty>
+		<Desc>西皇，西方天神也。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>Mu</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n加炉鼎值\n加机缘\n加参悟值领悟系数[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_LH_1B</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_TDJ_LH_B1_1">
+		<DisplayName>西皇经道宫卷</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_XHJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>4</Difficulty>
+		<Desc>又西三百五十里，曰西皇之山</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>Mu</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n加法宝威力\n加法宝灵力最大值\n加个人回灵[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_LH_1B_1</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_TDJ_LH_B1_2">
+		<DisplayName>西皇经道宫卷</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_XHJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>4</Difficulty>
+		<Desc>五行神藏，勾天设体，引动精气神，布散到全身，外达于皮毛，吐纳天地本源，蕴含勃勃生机。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>Mu</Element>
+		<EffectDesc>[size=10][color=#D06508]    三重天    \n加灵力上限\n降低术法消耗\n加木属性护盾[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_LH_1B_2</Modifier>
+	</Esoterica>
+	
+	<!-- ==========================技能5========================== -->
+	
+	<Esoterica Name="Gong_TDJ_DG_B1">
+		<DisplayName>源天书</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_YTS.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>8</Difficulty>
+		<Desc>纳天地灵气，造化之术。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>Tu</Element>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n加炼丹速度\n加炼丹成功率\n习得神通：风水鉴定\n习得神通：祈天经\n习得神通：风月幻境[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_DG_1B</Modifier>
+		<Magics>
+			<li>AbsorbGong_2</li>
+			<li>FengshuiItemOpen</li>
+			<li>PrayForSun</li>
+			<li>PrayForRainstorm</li>
+			<li>PrayForFohn</li>
+			<li>PrayForDustStorm</li>
+			<li>PrayForMiasma</li>
+			<li>PrayForLightningStorm</li>
+		</Magics>
+	</Esoterica>
+	<Esoterica Name="Gong_TDJ_DG_B2">
+		<DisplayName>源天书</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_XHJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>4</Difficulty>
+		<Desc>纳天地灵气，造化之术。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>Tu</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n加天谴值\n加炼丹产量\n加炼丹等级\n习得两个算命神通\n习得神通：移山造海\n习得神通：炼制灵晶\n习得三种淬炼神通[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_DG_2B</Modifier>
+		<Magics>
+			<li>Prophesy</li>
+			<li>Prophesy_MapStory</li>
+			<li>BuildMine</li>
+			<li>BuildLand</li>
+			<li>BuildSea</li>
+			<li>TianMoWu</li>
+			<li>LingCrystalMake</li>
+			<li>SoulCrystalYouPowerUp</li>
+			<li>SoulCrystalLingPowerUp</li>
+			<li>MakeSoulCrystal</li>
+		</Magics>
+	</Esoterica>
+	
+	<!-- ==========================技能5========================== -->
+	
+	<Esoterica Name="Gong_TDJ_LH_B3_SDSS">
+		<DisplayName>杀道圣术</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_DJ_SDSS.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>15</Difficulty>
+		<Desc>古天庭杀手组织根据九字秘创立的杀人术。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n降低法宝攻击间隔\n加法宝击退距离抗性 \n习得  秘术：\n杀道圣术[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_LH_3B_SDSS</Modifier>
+		<Skills>
+			<li>TDJ_DJ_SDSS</li>
+		</Skills>
+	</Esoterica>
+	
+	<!-- ==========================分割线========================== -->
+	
+	<Esoterica Name="Gong_TDJ_SJ_C1">
+		<DisplayName>恒宇经四极卷</DisplayName>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_HY.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>24</Difficulty>
+		<Desc>恒宇神炉百炼化虚空</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>Huo</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n加五维属性\n法宝数量\n加法宝威力[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_SJ_1C</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_TDJ_SJ_C1_1">
+		<DisplayName>恒宇经四极卷</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_HY.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>16</Difficulty>
+		<Desc>压踏万古道不同</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n术法等级上限15级\n加炼器等级上限十级\n加炼器速度[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_SJ_1C_1</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_TDJ_SJ_C1_2">
+		<DisplayName>恒宇经四极卷</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_HY.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>16</Difficulty>
+		<Desc>若问大道何处是，恒宇炉转破苍穹</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]    三重天    \n加潜力\n降低术法消耗\n加炼器等级十级[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_SJ_1C_2</Modifier>
+	</Esoterica>
+	
+	
+	<Esoterica Name="Gong_TDJ_SJ_C2_YQ">
+		<DisplayName>天清</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_TG.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>22</Difficulty>
+		<Desc>三清指"三才"为天格、人格、地格。所谓三才，即天才、人才、地才</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n习得  秘术：\n天格[/color][/size]</EffectDesc>
+		<Skills>
+			<li>TDJ_SJ_SQ_TQ</li>
+		</Skills>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_TDJ_SJ_C1_YQ_1">
+		<DisplayName>地格</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_DG.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>12</Difficulty>
+		<Desc>三清指"三才"为天格、人格、地格。所谓三才，即天才、人才、地才</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n习得  秘术：\n地清[/color][/size]</EffectDesc>
+		<Skills>
+			<li>TDJ_SJ_SQ_DQ</li>
+		</Skills>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_TDJ_SJ_C1_YQ_2">
+		<DisplayName>人才</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_Rc.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>12</Difficulty>
+		<Desc>三清指"三才"为天格、人格、地格。所谓三才，即天才、人才、地才</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]n习得  秘术：\n人才[/color][/size]</EffectDesc>
+		<Skills>
+			<li>TDJ_SJ_SQ_Rc</li>
+		</Skills>
+	</Esoterica>
+	
+		
+	<Esoterica Name="Gong_TDJ_SJ_C3">
+		<DisplayName>太极圣术</DisplayName>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_TJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>7</Difficulty>
+		<Desc>以斗战圣法演化太极，聚阳灵焚天地</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>None</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    聚阳    \n加五维属性\n加个人灵气\n加个人回灵[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_SJ_3C</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_TDJ_SJ_C3_1">
+		<DisplayName>太极圣术</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_TJ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>15</Difficulty>
+		<Desc>以斗战圣法演化太极，化阴炉养己身</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]    化阴   \n加法术威力\n加法术冷却时间\n加护盾等级上限十级[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_SJ_3C_1</Modifier>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_TDJ_HL_D1">
+		<DisplayName>太皇经化龙篇</DisplayName>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_HDLQ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>20</Difficulty>
+		<Desc>太皇经为大夏皇朝老祖，太皇所作，是无上攻伐之术。</Desc>
+		<GLevel>God</GLevel>
+		<Element>Jin</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    纳灵蕴龙    \n加法宝威力\n加法宝灵力上限\n加御器技能等级上限[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_HL_1D</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_TDJ_HL_D1_1">
+		<DisplayName>太皇经化龙篇</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_HDLQ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>10</Difficulty>
+		<Desc>太皇经为大夏皇朝老祖，太皇所作，是无上攻伐之术。</Desc>
+		<GLevel>God</GLevel>
+		<Element>Jin</Element>
+		<EffectDesc>[size=10][color=#D06508]    灵气拟龙    \n加寿元\n加法宝灵力恢复\n加法宝威力[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_HL_1D_1</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_TDJ_HL_D1_2">
+		<DisplayName>太皇经化龙篇</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_HDLQ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>9</Difficulty>
+		<Desc>太皇经为大夏皇朝老祖，太皇所作，是无上攻伐之术。</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>Jin</Element>
+		<EffectDesc>[size=10][color=#D06508]    皇道龙气    \n加法宝威力\n加法宝击退抗性\n习得  秘术：\n皇道龙气[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_HL_1D_2</Modifier>
+		<Skills>
+			<li>TDJ_HL_HDLQ</li>
+		</Skills>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_TDJ_HL_D2">
+		<DisplayName>一器破万法</DisplayName>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_TQ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>6</Difficulty>
+		<Desc>一尊鼎，两个耳，三只足。道生一，一生二，二生三，三生万物，万物负阴而抱阳</Desc>
+		<GLevel>God</GLevel>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    器胚    \n加炼器成功率\n加炼器速度\n加神器成功率[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_HL_2D</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_TDJ_HL_D2_1">
+		<DisplayName>一器破万法</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_TQ.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>14</Difficulty>
+		<Desc>一尊鼎，两个耳，三只足。道生一，一生二，二生三，三生万物，万物负阴而抱阳</Desc>
+		<GLevel>God2</GLevel>
+		<EffectDesc>[size=10][color=#D06508]    鼎成    \n炼器品质加成\n炼成神器概率\n习得 极道帝兵：万物母气鼎[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_HL_2D_1</Modifier>
+		<Fabaos>
+			<li>TDJ_WWMQD</li>
+		</Fabaos>
+	</Esoterica>
+	
+	
+	<Esoterica Name="Gong_TDJ_HL_ld">
+		<DisplayName>六道轮回拳</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\TDJ_HL_ld.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>20</Difficulty>
+		<Desc>世间众生因造作善不善诸业而有业报，此业报有六个去处分别为:天人道、人道、畜牲道、阿修罗道、饿鬼道、地狱道。</Desc>
+		<GLevel>God</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n习得  秘术：\n六道轮回拳[/color][/size]</EffectDesc>
+		<Skills>
+			<li>TDJ_HL_ld</li>
+		</Skills>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_TDJ_XT_F1">
+		<DisplayName>太阳真经</DisplayName>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_TY1.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>20</Difficulty>
+		<Desc>太阴太阳，孰弱孰强，阴阳并济方得证果。</Desc>
+		<GLevel>God2</GLevel>
+		<Element>Huo</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n加灵气恢复速度\n加灵气最大值\n加炉鼎[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_XT_1F</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_TDJ_XT_F1_1">
+		<DisplayName>太阳真经</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_TY1.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>10</Difficulty>
+		<Desc>太阴太阳，孰弱孰强，阴阳并济方得证果。。</Desc>
+		<GLevel>God2</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n加火属性伤害减免\n加炉鼎值\n加法宝威力[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_XT_1F_1</Modifier>
+	</Esoterica>
+	
+	
+	<Esoterica Name="Gong_TDJ_XT_F2">
+		<DisplayName>太阴真经</DisplayName>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_TY2.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>20</Difficulty>
+		<Desc>太阴太阳，孰弱孰强，阴阳并济方得证果。</Desc>
+		<GLevel>God2</GLevel>
+		<Element>Shui</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n加灵气恢复速度\n加灵气最大值\n加炉鼎[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_XT_2F</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_TDJ_XT_F2_1">
+		<DisplayName>太阴真经</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_TY2.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>10</Difficulty>
+		<Desc>太阴太阳，孰弱孰强，阴阳并济方得证果。。</Desc>
+		<GLevel>God2</GLevel>
+		<Element>Shui</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n加水属性伤害减免\n加炉鼎值\n加法术威力[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_XT_2F_1</Modifier>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_TDJ_TDQ">
+		<DisplayName>天帝拳</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_TG.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>45</Difficulty>
+		<Desc>拳势强至霸，要通天彻地，逆转伐仙之力，乃古天庭最可怕的拳法</Desc>
+		<GLevel>God2</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n习得  秘术：\n天帝拳[/color][/size]</EffectDesc>
+		<Skills>
+			<li>TDJ_HL_TDQ</li>
+		</Skills>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_TDJ_XT_ZD">
+		<DisplayName>红尘仙</DisplayName>
+		<Hide>2</Hide>
+		<Icon>Spr\Object\JN\ZT_TDJ_DJ\ZT_TDJ_ZD.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>100</Difficulty>
+		<Desc>拳势至强至霸，要通天彻地，逆转伐仙之力，乃古天庭最可怕的拳法</Desc>
+		<GLevel>God2</GLevel>
+		<Element>None</Element>
+		<EffectDesc>[size=10][color=#D06508]\n加寿元和加回灵倍率\n加三十道元神分神\n加炉鼎\n加神器成功率\n加术法威力和加法宝威力[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_XT_DZ</Modifier>
+		<GodSoulCount>30</GodSoulCount>
+	</Esoterica>
+	
+	
+	
+	
+</List></Esotericas>

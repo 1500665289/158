@@ -1,0 +1,17 @@
+<Defs><List>
+	<Def Name="Price_YC" Parent="Price_Base">
+		<Tag>School</Tag>
+		<Tag2>YC</Tag2>
+
+		<FabaoSpecial>
+			<li>
+				<Q Min="0" Max="13.5" />
+				<Rate Min="1" Max="12" />
+				<oitemname>Item_WSXY</oitemname>
+				<ostuffname>Item_SXXSY</ostuffname>
+				<BuyPrice Value="6400" />
+				<SalePrice Value="3000" />
+			</li>
+		</FabaoSpecial>
+	</Def>
+</List></Defs>

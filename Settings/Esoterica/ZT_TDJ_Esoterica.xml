@@ -1,0 +1,418 @@
+<Esotericas><List>
+	
+	<!-- ==========================技能1========================== -->
+	
+	<Esoterica Name="Gong_HYJ_LH_A1">
+		<DisplayName>炼化虚空</DisplayName>
+		<Icon>Spr\Object\JN\ZT_HYJ\LHXK.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>15</Difficulty>
+		<Desc>炼化世间一切敌，神炉一出，何人可争锋。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>Huo</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n提高阵法符荷量\n加根骨\n习得神通：炼化虚空[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_LH_1A</Modifier>
+		<Magics>
+			<li>LHXK</li>
+		</Magics>
+	</Esoterica>
+	<Esoterica Name="Gong_HYJ_LH_A1_1">
+		<DisplayName>炼化虚空</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\LHXK.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>9</Difficulty>
+		<Desc>炼化世间一切敌，神炉一出，何人可争锋。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n加五维属性\n加个人灵气\n加个人回灵[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_LH_1A_1</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_HYJ_LH_A1_2">
+		<DisplayName>炼化虚空</DisplayName>
+		 <Desc>炼化世间一切敌，神炉一出，何人可争锋</Desc>
+		<Icon>Spr\Object\JN\ZT_HYJ\LHXK.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>9</Difficulty>
+		<GLevel>Qi</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]    三重天    \n加潜力\n加根本灵力\n加心境[/color][/size]</EffectDesc>
+		<Modifier>Gong_TDJ_LH_1A_2</Modifier>
+	</Esoterica>
+	
+	
+	<!-- ==========================技能2========================== -->
+	
+	<Esoterica Name="Gong_HYJ_DRXW">
+		<DisplayName>堕日凶威</DisplayName>
+		<Icon>Spr\Object\JN\ZT_HYJ\DRXW.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>13</Difficulty>
+		<Desc>恒宇大帝与堕日岭为了炼制出自己的极道帝兵，杀的整个禁区哗声。</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]\n加术法伤害\n提高术法等级上限\n习得  秘术：\n堕日凶威[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_DRXW</Modifier>
+		<Skills>
+			<li>HYJ_DRXW</li>
+		</Skills>
+	</Esoterica>
+	
+	<!-- ==========================技能3========================== -->
+	
+	<Esoterica Name="Gong_HYJ_LH_A3">
+		<DisplayName>离火神炉</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\LHSL.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>11</Difficulty>
+		<Desc>未成帝前，用离火神炉杀遍天下</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]\n提升炼器技能等级上限\n提高神器炼成率\n提高炼器速度[/color][/size][/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_LH_3A</Modifier>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_HYJ_LH_A3_1">
+		<DisplayName>离火神炉</DisplayName>
+		<Icon>Spr\Object\JN\ZT_HYJ\LHSL.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>11</Difficulty>
+		<Desc>未成帝前，用离火神炉杀遍天下</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]\n大幅提升灵气最大值\n提高术法冷却\n提高法宝抗击退能力[/color][/size][/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_LH_3A_1</Modifier>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_HYJ_LH_A3_2">
+		<DisplayName>离火神炉</DisplayName>
+		<Icon>Spr\Object\JN\ZT_HYJ\LHSL.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>11</Difficulty>
+		<Desc>未成帝前，用离火神炉杀遍天下</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]\n大幅提升灵气最大值\n习得秘宝 离火神炉\n提高法宝回灵倍率[/color][/size][/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_LH_3A_2</Modifier>
+		<Fabaos>
+			<li>HYJ_LHSL</li>
+		</Fabaos>
+	</Esoterica>
+	
+	<!-- ==========================技能4========================== -->
+	
+	<Esoterica Name="Gong_HYJ_LH_B1">
+		<DisplayName>地皇</DisplayName>
+		<Icon>Spr\Object\JN\ZT_HYJ\DH.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>15</Difficulty>
+		<Desc>恒宇大帝曾化身神农，有"药祖"、"五谷先帝"、"神农大帝"、"地皇"等称谓。华夏太古三皇之一</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>Huo</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n加炉鼎值\n加机缘\n习得神通 尝百草[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_LH_1B</Modifier>
+		<Magics>
+			<li>DH</li>
+		</Magics>
+	</Esoterica>
+	<Esoterica Name="Gong_HYJ_LH_B1_1">
+		<DisplayName>地皇</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\DH.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>13</Difficulty>
+		<Desc>恒宇大帝曾化身神农，有"药祖"、"五谷先帝"、"神农大帝"、"地皇"等称谓。华夏太古三皇之一</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n加丹药产量\n加丹药炼制速度\n习得神农秘法[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_LH_1B_1</Modifier>
+		<Magics>
+			<li>SNZZ</li>
+		</Magics>
+	</Esoterica>
+	
+	<!-- ==========================技能5========================== -->
+	
+	<Esoterica Name="Gong_HYJ_DG_B1">
+		<DisplayName>铲草兴锄</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\CCXG.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>16</Difficulty>
+		<Desc>神农尝百草，日遇七十毒。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>Tu</Element>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n加个人灵气上限\n习得秘术 百草丸\n习得神通：藤蔓神识\n习得神通：祈天法\n习得神通：天霖诀[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_DG_1B</Modifier>
+		<Magics>
+			<li>HYAbsorbGong_6</li>
+			<li>AbsorbGong_8</li>
+			<li>PrayForSun</li>
+			<li>PrayForRainstorm</li>
+			<li>PrayForFohn</li>
+			<li>PrayForDustStorm</li>
+			<li>PrayForMiasma</li>
+			<li>PlantGrowUp_Gong1</li>
+		</Magics>
+		<Skills>
+			<li>HYJ_BCW</li>
+		</Skills>
+	</Esoterica>
+	<Esoterica Name="Gong_HYJ_DG_B2">
+		<DisplayName>铲草兴锄</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\CCXG.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>12</Difficulty>
+		<Desc>神农尝百草，日遇七十毒。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>Tu</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n加术法威力\n减低术法吟唱时间\n习得神通：铲草兴锄\n习得神通：炼制灵晶[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_DG_2B</Modifier>
+		<Magics>
+			<li>BuildLingWater</li>
+			<li>BuildLing</li>
+			<li>CCXG1</li>
+			<li>BuildLand</li>
+			<li>BuildSea</li>
+			<li>BuildFertileSoil</li>
+			<li>LingCrystalMake</li>
+			
+		</Magics>
+	</Esoterica>
+	
+	<!-- ==========================技能5========================== -->
+	
+	<Esoterica Name="Gong_HYJ_LH_B3_SDSS">
+		<DisplayName>赤炼金丹</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\DGSW.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>15</Difficulty>
+		<Desc>道宫凝练出五道神丸，可分别提升不同属性百分百，持续一天时间。</Desc>
+		<GLevel>Dan1</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]\n加法宝回灵速度\n加法宝击退距离 \n习得丹方：道宫神丸[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_LH_3B_SDSS</Modifier>
+		<Dans>
+			<li>Dan_XZSZ</li>
+			<li>Dan_FZSZ</li>
+			<li>Dan_PZSZ</li>
+			<li>Dan_SZSZ</li>
+			<li>Dan_GZSZ</li>
+			</Dans>
+	</Esoterica>
+	
+	<!-- ==========================分割线========================== -->
+	
+	<Esoterica Name="Gong_HYJ_SJ_C1">
+		<DisplayName>恒宇经四极卷</DisplayName>
+		<Icon>Spr\Object\JN\ZT_HYJ\ZT_TDJ_HY.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>15</Difficulty>
+		<Desc>恒宇神炉百炼化虚空</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>Huo</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n加五维属性\n法宝数量\n加法术威力[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_SJ_1C</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_HYJ_SJ_C1_1">
+		<DisplayName>恒宇经四极卷</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\ZT_TDJ_HY.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>12</Difficulty>
+		<Desc>压踏万古道不同</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n炼器速度\n加炼器等级上限十级\n加术法等级上限15[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_SJ_1C_1</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_HYJ_SJ_C1_2">
+		<DisplayName>恒宇经四极卷</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\ZT_TDJ_HY.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>8</Difficulty>
+		<Desc>若问大道何处是，恒宇炉转破苍穹</Desc>
+		<GLevel>Qi</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]    三重天    \n加潜力\n加炉鼎值\n加炼器等级十级[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_SJ_1C_2</Modifier>
+	</Esoterica>
+	
+	
+	<Esoterica Name="Gong_HYJ_SJ_C2_YQ">
+		<DisplayName>天炎压界</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\TYB.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>13</Difficulty>
+		<Desc>信手拈来天之火，化为道则之火，焚塌世间</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]\n习得  秘术：\n炎炎火域[/color][/size]</EffectDesc>
+		<Skills>
+			<li>HYJ_YYHY</li>
+		</Skills>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_HYJ_SJ_C1_YQ_1">
+		<DisplayName>天炎压界</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\TYB.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>13</Difficulty>
+		<Desc>信手拈来天之火，化为道则之火，焚塌世间</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]\n习得  秘术：\n焰炎阎宴[/color][/size]</EffectDesc>
+		<Skills>
+			<li>HYJ_YYYY</li>
+		</Skills>
+	</Esoterica>
+	
+		
+	<Esoterica Name="Gong_HYJ_SJ_C3">
+		<DisplayName>炎焚九地</DisplayName>
+		<Icon>Spr\Object\JN\ZT_HYJ\FYJD.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>25</Difficulty>
+		<Desc>恒宇大帝，代表了人族的极道境界，恒宇大帝，修为傲视古今，整片东荒莫敢不从。</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>Huo</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]        \n提高术法技能等级上限10级\n减少术法消耗百分五十\n加减低术法吟唱时间百分五十[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_SJ_3C</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_HYJ_SJ_C3_1">
+		<DisplayName>炎焚九地</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\FYJD.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>15</Difficulty>
+		<Desc>恒宇大帝，代表了人族的极道境界，恒宇大帝，修为傲视古今，整片东荒莫敢不从。</Desc>
+		<GLevel>Dan2</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]       \n提高术法技能等级10级\n减少术法消耗百分五十\n加减低术法吟唱时间百分五十[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_SJ_3C_1</Modifier>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_HYJ_HL_D1">
+		<DisplayName>炎帝</DisplayName>
+		<Icon>Spr\Object\JN\ZT_HYJ\YD.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>15</Difficulty>
+		<Desc>炎帝，是中国上古时期姜姓部落的首领尊称。</Desc>
+		<GLevel>God</GLevel>
+		<Element>Huo</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]       \n加术法等级上限12级\n降低术法消耗\n加个人灵气上限[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_HL_1D</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_HYJ_HL_D1_1">
+		<DisplayName>炎帝</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\YD.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>11</Difficulty>
+		<Desc>号神农氏，又号魁隗氏、连山氏、列山氏，别号朱襄。</Desc>
+		<GLevel>God</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]        \n降低天谴值\n加炉鼎值\n加法宝数量[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_HL_1D_1</Modifier>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_HYJ_HL_D2">
+		<DisplayName>恒宇神炉</DisplayName>
+		<Icon>Spr\Object\JN\ZT_HYJ\HYSL.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>18</Difficulty>
+		<Desc>恒宇大帝进入太初禁区利用堕日岭地势炼制太阳神炉，功成后与追击出的无上强者大战多日，打出神漠，终将其杀死。</Desc>
+		<GLevel>God</GLevel>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    器胚    \n提高术法威力\n加炼器速度\n加神器成功率[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_HL_2D</Modifier>
+	</Esoterica>
+	<Esoterica Name="Gong_HYJ_HL_D2_1">
+		<DisplayName>恒宇神炉</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\HYSL.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>10</Difficulty>
+		<Desc>恒宇大帝进入太初禁区利用堕日岭地势炼制太阳神炉，功成后与追击出的无上强者大战多日，打出神漠，终将其杀死。</Desc>
+		<GLevel>God2</GLevel>
+		<EffectDesc>[size=10][color=#D06508]    炉开    \n炼器品质加成\n炼成神器概率\n习得 极道帝兵：恒宇神炉[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_HL_2D_1</Modifier>
+		<Fabaos>
+			<li>HYJ_HYSL</li>
+		</Fabaos>
+	</Esoterica>
+	
+	
+	<Esoterica Name="Gong_HYJ_HL_ld">
+		<DisplayName>恒宇真火</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\HYZH.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>20</Difficulty>
+		<Desc>恒宇大帝，在与无上强者的生死决战中悟出的无上技能。</Desc>
+		<GLevel>God</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]\n习得 秘术：\n万界焚仙[/color][/size]</EffectDesc>
+		<Skills>
+			<li>HYJ_WJFX</li>
+		</Skills>
+	</Esoterica>
+	
+	<Esoterica Name="Gong_HYJ_XT_F1">
+		<DisplayName>九阳悬天</DisplayName>
+		<Icon>Spr\Object\JN\ZT_HYJ\JYXT.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>15</Difficulty>
+		<Desc>恒宇大帝曾与敌手战至天地裂变，将太阳打成了九份。</Desc>
+		<GLevel>God2</GLevel>
+		<Element>Huo</Element>
+		<Type>Gong</Type>
+		<EffectDesc>[size=10][color=#D06508]    一重天    \n加灵气恢复速度\n加术法等级上限\n习得秘术 九阳耀界[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_XT_1F</Modifier>
+		<Skills>
+			<li>HYJ_JYYR</li>
+		</Skills>
+	</Esoterica>
+	<Esoterica Name="Gong_HYJ_XT_F1_1">
+		<DisplayName>九阳悬天</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\JYXT.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>20</Difficulty>
+		<Desc>恒宇大帝曾与敌手战至天地裂变，将太阳打成了九份。</Desc>
+		<GLevel>God2</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]    二重天    \n加木属性伤害减免\n加炉鼎值\n降低术法冷却时间[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_XT_1F_1</Modifier>
+	</Esoterica>
+	
+	
+	<Esoterica Name="Gong_HYJ_XT_ZD">
+		<DisplayName>红尘仙</DisplayName>
+		 
+		<Icon>Spr\Object\JN\ZT_HYJ\ZT_TDJ_ZD.png</Icon>
+		<StarLevel>2</StarLevel>
+		<Difficulty>200</Difficulty>
+		<Desc>吾一人证道，则万事皆可燃。天地万物不过一把火。</Desc>
+		<GLevel>God2</GLevel>
+		<Element>Huo</Element>
+		<EffectDesc>[size=10][color=#D06508]\n加寿元和加回灵倍率\n加三十道元神分神\n加炉鼎\n加神器成功率\n加术法威力和加法宝威力[/color][/size]</EffectDesc>
+		<Modifier>Gong_HYJ_XT_DZ</Modifier>
+		<GodSoulCount>30</GodSoulCount>
+	</Esoterica>
+	
+	
+	
+	
+</List></Esotericas>

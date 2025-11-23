@@ -1,0 +1,69 @@
+﻿<Stories><List>
+		
+	<Story Name="ZT_WSST"  Parent="BaseFillingStory">
+		<DisplayName>五色祭坛</DisplayName>
+		<Desc>[NAME]在[PLACE]听闻，在荒古禁地不远处的五色祭坛，散发着神秘的光芒。似乎有什么东西要出现了。</Desc>
+		<Selections>
+			<li>
+				<Display>五色祭坛，说不清道不明，是宇宙修行者的驿站，还是帝尊在大宇宙布下的阵眼，难言，不可言。</Display>
+				<Condition>
+				<![CDATA[	
+				me:RandomInt(1,3) >= 2
+				]]>
+				</Condition>
+				<Tip>运气好可能灭门。</Tip>
+				<OKResult>
+			<![CDATA[	
+				story:RemoveBindItem();
+				local nR = me:RandomInt(1, 45); 
+				local nN = me:RandomInt(1,3);
+				local nt = me:RandomInt(1,4);
+				local nD = me:RandomFloat(0.2,1);
+				local nG = me:GetGLevel(1,12)
+				local tIL = {"Wood","Rock","Metal","Weapon"};
+				if nR <= 5 then
+					me:AddMsg(XT("[NAME]靠近五色祭坛坛，东扣扣西摸摸，我去，，，被[NAME]扒下了一大块的五色神石。死定了你、"));me:DropAwardItem("Item_WSSS",30);me:AddManyYaoShou(nil,nG*2,3,-1,"Item_PTZ");
+				elseif nR <= 16 then
+					me:AddMsg(XT("[NAME]接近五色祭坛，天空飘来几个人。"));
+					me:AddJoiners(nN,nt,nD,10,10,10,10,10);
+					me:AddJoiners(nN,nR,nD,10,10,10,10,10);
+				elseif nR <= 21 then
+					me:AddMsg(XT("[NAME]在祭坛中发现了一些法宝。"));me:DropRandomItem("FightFabao", 4, 12);
+				
+				elseif nR <= 24 then
+					me:AddMsg(XT("[NAME]在祭坛边上发现一只脑袋不停选择的斯文眼镜狗，难道这就是地球的特殊产物？果然是世界之大无奇不有，一阵叩拜，[NAME]寻得一件镇物。"));me:DropRandomItem(tIL[world:RandomInt(1,#tIL+1)], 7, 11, true);
+				elseif nR <= 28 then
+					me:AddMsg(XT("[NAME]看到祭坛前居然有一个神秘石匣，打开后，竟然在其中发现一门神通。"));me:DropEsotericFromCache(story.ItemCache2, 1);
+				elseif nR <= 32 then
+					me:AddMsg(XT("[NAME]走到祭坛前，虔诚的破坏了祭坛前的一个古旧石匣，竟然在其中发现一本秘籍。"));me:DropRandomItem("Esoterica",1);
+				elseif nR <= 37 then
+					 me:AddMsg(XT("[NAME]在祭坛前祷告时，心不在焉地，总感觉跪着的地下有东西，心念转动，说干就干，开始挖土，居然被[NAME]找到了不少神铁。"));
+					 me:DropAwardItem("Item_WSTJ",6); me:DropAwardItem("Item_ZYW",6); me:DropAwardItem("Item_JTBYB",6); me:DropAwardItem("Item_DLYJ",6); me:DropAwardItem("Item_XZ",6); 
+				elseif nR <= 40 then
+					 me:AddMsg(XT("[NAME]在祭坛前祷告时，心不在焉地，总感觉跪着的地下有东西，心念转动，说干就干，开始挖土，居然被[NAME]找到了不少神铁。"));
+					 me:DropAwardItem("Item_YYSY",6); me:DropAwardItem("Item_ZJST",6); me:DropAwardItem("Item_ST",6); me:DropAwardItem("Item_JTCYW",6); me:DropAwardItem("Item_YZBYB",6);
+				elseif nR <= 45 then
+						me:AddMsg(XT("[NAME]在祭坛前祷告时，竟然在其中发现一门神通。"));me:DropEsotericFromCache(story.ItemCache2, 1);
+				
+				end
+				]]>		
+				</OKResult>
+				<NOResult>
+				<![CDATA[	
+
+				me:AddMsg("[NAME]没能找到五色祭坛，确实被祭坛暗中吸取了百分25的法宝威能作为了献祭。");
+				me:ModifierProperty("NpcFight_FabaoPowerAddP",-0.25);story:FinishSecret()
+				]]>
+				</NOResult>
+			</li>
+			<li>
+				<Display>算了，五色祭坛惹不起。</Display>
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]仰头长啸，所以有什么用呢，该走还得走。");
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+</List></Stories>

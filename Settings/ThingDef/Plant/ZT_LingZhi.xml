@@ -1,0 +1,539 @@
+<ThingDefs><List>
+	<ThingDef Type="Plant" Name="LingZhiBase" Parent="TreeBase">
+	<ThingName></ThingName>
+	<Desc></Desc>
+	
+	<Rate>12</Rate>
+	<SelectAble>1</SelectAble>
+	<CastShadow>0</CastShadow>
+	<Beauty>25</Beauty>
+	<UseHitPoints>1</UseHitPoints>
+	<MaxHitPoints>9000</MaxHitPoints>
+	<BlockLight>1</BlockLight>
+	<ColliderKind>Across</ColliderKind>
+	<Collider>
+		<!--(0Empty 1Base) 2EmptyCenter 4EmptyWorkspace-->
+		<Data>
+		[1,1,1],
+		[1,3,1],
+		[1,1,1],
+		</Data>
+	</Collider>
+	<Flammability>
+		<Flammability>-10</Flammability>
+		<FlameSpawnThingDef></FlameSpawnThingDef>
+		<FlameSpawnChance>0</FlameSpawnChance>
+		<BurningPoint>9999</BurningPoint>
+	</Flammability>
+	
+	<Plant Kind="HighPlant">
+		
+		<WildClusterSizeRangemin>0</WildClusterSizeRangemin>
+		<WildClusterSizeRangemax>0</WildClusterSizeRangemax>
+		<WildClusterRadius>0</WildClusterRadius>
+		
+		<WitherAble>0</WitherAble>
+		<!-- 
+		<HarvestDays>1120</HarvestDays>
+		<GrowDays>560</GrowDays> -->
+		
+		<GrowDays>112</GrowDays>
+		
+		<RestBegin>0</RestBegin>
+		<RestEnd>0</RestEnd>
+		
+		<VisualSizeMin>0.2</VisualSizeMin>
+		<VisualSizeMax>1</VisualSizeMax>		
+		
+		<TempMin>-120</TempMin>
+		<TempMax>200</TempMax>
+		<FertilityMin>1.6</FertilityMin>
+		<FertilityMax>3</FertilityMax>
+		<LingMin>200</LingMin>
+		<LingMax>2000</LingMax>
+		<GrowGlowMin>20</GrowGlowMin>
+		<GrowGlowMax>140</GrowGlowMax>	
+		
+		<BaseLingCost>0.004</BaseLingCost>
+		<YunYangInterval>0</YunYangInterval>
+		<LingShaSpeedCoefficient>0.2</LingShaSpeedCoefficient>
+	</Plant>
+	
+	<Harvest>
+		<HarvestWork>50</HarvestWork> 
+		<DropWork>300</DropWork>   	
+		<HarvestValueMin>1</HarvestValueMin>  
+		<LogValueMin>0</LogValueMin>
+		<HarvestFailable>0</HarvestFailable>  
+	</Harvest>
+	
+	<Fertility>
+		<Value>1</Value>
+		<Radius>5</Radius>
+		<FailRadius>1</FailRadius>
+		<Failing>0.9</Failing>
+		<SkipSelf>1</SkipSelf>
+	</Fertility>
+	
+	<Ling>
+		<AddionLing>80</AddionLing>
+		<AddionRadius>5</AddionRadius>
+		<AddionFailing>0.9</AddionFailing>
+		<AddionFailRadius>1</AddionFailRadius>
+		<SkipSelf>2</SkipSelf>
+		
+		<Attenuation>0.5</Attenuation>
+		<Absorption>0.5</Absorption>
+		<Accommodate>400</Accommodate>
+	</Ling>
+	</ThingDef>
+
+	<ThingDef Type="Plant" Name="ZTLingZhi_ZLBSY" Parent="LingZhiBase">
+	<ThingName>青龙不死药</ThingName>
+	<Desc>金色的果实宛如小龙一般，口中衔着一颗龙珠，整个果实还具有自主意识，遇到陌生人靠近可以从树体上挣脱溜掉。</Desc>
+	<TexPath>Spr\Object\Plant\001.PNG</TexPath>
+	<Scale>3</Scale>
+	<ElementKind>Mu</ElementKind>
+	<Plant> 
+		<TexLing>
+			<GrowTex1>Spr\Object\Plant\001.PNG</GrowTex1>
+		</TexLing>
+		<SnowRenderData>
+			<x>2.8</x>
+			<y>2.8</y>
+			<z>2</z>
+		</SnowRenderData>
+		
+		
+		<HarvestDays>280</HarvestDays>
+		<LingMin>49</LingMin>
+		<LingMax>5500</LingMax>
+		<TempMin>200</TempMin>
+		<TempMax>9999</TempMax>
+		<ElementRange>
+			<ElementKind>Mu</ElementKind>
+			<Min>1</Min>
+			<Max>2</Max>
+		</ElementRange>	
+
+		<LingShaSpeed>-0.002</LingShaSpeed>
+		<LingZhiR>5</LingZhiR>
+		<JiaoGanModifierGT0>Modifier_LingZhi_GT0_Mu</JiaoGanModifierGT0>
+		<JiaoGanModifierLT0>Modifier_LingZhi_LT0_Mu</JiaoGanModifierLT0> 
+	</Plant>
+	
+	<Light>
+		<Value>360</Value>
+		<Failing>0.8</Failing>
+		<FailRadius>1</FailRadius>
+		<Radius>3</Radius>
+		<Color>DAA520</Color>
+	</Light>
+	
+	<Harvest>
+		<HarvestTag>
+			<li>Cut</li>
+			<li>StandCollection</li>
+		</HarvestTag>
+
+		<HarvestItems>
+			<li>
+				<ThingDef>Item_MuEssence</ThingDef>
+				<Count>4</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_MSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_LZ</ThingDef>
+				<Count>1</Count>
+				<Rate>0.15</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_LQ</ThingDef>
+				<Count>1</Count>
+				<Rate>0.25</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_ZLJX</ThingDef>
+				<Count>1</Count>
+				<Rate>0.1</Rate>
+			</li>
+		</HarvestItems>
+		
+		<DropItems>
+			<li>
+				<ThingDef>Item_Wood</ThingDef>
+				<Count>1</Count>
+			</li>
+		</DropItems>  
+	</Harvest>
+</ThingDef>
+
+	<ThingDef Type="Plant" Name="ZTLingZhi_BSSHY" Parent="LingZhiBase">
+	<ThingName>不死神凰树</ThingName>
+	<Desc>朱雀是中国古代神话中的天之四灵之一，源于远古星宿崇拜，是代表炎帝与南方七宿的南方之神，于八卦为离，于五行主火，象征四象中的老阳，四季中的夏季。</Desc>
+	<TexPath>Spr\Object\Plant\BSSHY.PNG</TexPath>
+	<Scale>2</Scale>
+	<ElementKind>Huo</ElementKind>
+	<Plant> 
+		<TexLing>
+			<GrowTex1>Spr\Object\Plant\BSSHY.PNG</GrowTex1>
+		</TexLing>
+		<SnowRenderData>
+			<x>2.8</x>
+			<y>2.8</y>
+			<z>2</z>
+		</SnowRenderData>
+		
+		
+		<HarvestDays>280</HarvestDays>
+		<LingMin>49</LingMin>
+		<LingMax>5500</LingMax>
+		<TempMin>200</TempMin>
+		<TempMax>9999</TempMax>
+		<ElementRange>
+			<ElementKind>Huo</ElementKind>
+			<Min>1</Min>
+			<Max>2</Max>
+		</ElementRange>	
+
+		<LingShaSpeed>-0.002</LingShaSpeed>
+		<LingZhiR>5</LingZhiR>
+		<JiaoGanModifierGT0>Modifier_LingZhi_GT0_Huo</JiaoGanModifierGT0>
+		<JiaoGanModifierLT0>Modifier_LingZhi_LT0_Huo</JiaoGanModifierLT0> 
+	</Plant>
+	
+	
+	<Heat>
+		<Value>500</Value>
+		<RoomValue>600</RoomValue>
+		<Radius>5</Radius>
+		<FailRadius>1</FailRadius>
+		<Failing>0.9</Failing>
+		<SkipSelf>1</SkipSelf>
+	</Heat>
+	
+	<Light>
+		<Value>360</Value>
+		<Failing>0.8</Failing>
+		<FailRadius>1</FailRadius>
+		<Radius>3</Radius>
+		<Color>DAA520</Color>
+	</Light>
+	
+	<Harvest>
+		<HarvestTag>
+			<li>Cut</li>
+			<li>StandCollection</li>
+		</HarvestTag>
+
+		<HarvestItems>
+			<li>
+				<ThingDef>Item_HuoEssence</ThingDef>
+				<Count>4</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_HSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_SFND</ThingDef>
+				<Count>1</Count>
+				<Rate>0.15</Rate>
+			</li>
+			
+			<li>
+				<ThingDef>Item_SHJX</ThingDef>
+				<Count>1</Count>
+				<Rate>0.1</Rate>
+			</li>
+		</HarvestItems>
+		
+		<DropItems>
+			<li>
+				<ThingDef>Item_Wood</ThingDef>
+				<Count>1</Count>
+			</li>
+		</DropItems>  
+	</Harvest>
+</ThingDef>
+
+
+	<ThingDef Type="Plant" Name="ZTLingZhi_BSHLY" Parent="LingZhiBase">
+	<ThingName>不死黄龙树</ThingName>
+	<Desc>中央，土也，其帝黄帝，其佐后土，执绳而制四方。其神为镇星，其兽黄龙，其音宫，其日戊己。</Desc>
+	<TexPath>Spr\Object\Plant\BSHLY.PNG</TexPath>
+	<Scale>2</Scale>
+	<ElementKind>Tu</ElementKind>
+	<Plant> 
+		<TexLing>
+			<GrowTex1>Spr\Object\Plant\BSHLY.PNG</GrowTex1>
+		</TexLing>
+		<SnowRenderData>
+			<x>2.8</x>
+			<y>2.8</y>
+			<z>2</z>
+		</SnowRenderData>
+		
+		
+		<HarvestDays>280</HarvestDays>
+		<LingMin>49</LingMin>
+		<LingMax>5500</LingMax>
+		<TempMin>200</TempMin>
+		<TempMax>9999</TempMax>
+		<ElementRange>
+			<ElementKind>Tu</ElementKind>
+			<Min>1</Min>
+			<Max>2</Max>
+		</ElementRange>	
+
+		<LingShaSpeed>-0.002</LingShaSpeed>
+		<LingZhiR>5</LingZhiR>
+		<JiaoGanModifierGT0>Modifier_LingZhi_GT0_Tu</JiaoGanModifierGT0>
+		<JiaoGanModifierLT0>Modifier_LingZhi_LT0_Tu</JiaoGanModifierLT0> 
+	</Plant>
+	
+	
+	<Heat>
+		<Value>500</Value>
+		<RoomValue>600</RoomValue>
+		<Radius>5</Radius>
+		<FailRadius>1</FailRadius>
+		<Failing>0.9</Failing>
+		<SkipSelf>1</SkipSelf>
+	</Heat>
+	
+	<Light>
+		<Value>360</Value>
+		<Failing>0.8</Failing>
+		<FailRadius>1</FailRadius>
+		<Radius>3</Radius>
+		<Color>DAA520</Color>
+	</Light>
+	
+	<Harvest>
+		<HarvestTag>
+			<li>Cut</li>
+			<li>StandCollection</li>
+		</HarvestTag>
+
+		<HarvestItems>
+			<li>
+				<ThingDef>Item_TuEssence</ThingDef>
+				<Count>4</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_TSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_HLND</ThingDef>
+				<Count>1</Count>
+				<Rate>0.15</Rate>
+			</li>
+			
+			<li>
+				<ThingDef>Item_HLJX</ThingDef>
+				<Count>1</Count>
+				<Rate>0.1</Rate>
+			</li>
+		</HarvestItems>
+		
+		<DropItems>
+			<li>
+				<ThingDef>Item_Wood</ThingDef>
+				<Count>1</Count>
+			</li>
+		</DropItems>  
+	</Harvest>
+</ThingDef>
+
+<ThingDef Type="Plant" Name="ZTLingZhi_BSXWY" Parent="LingZhiBase">
+	<ThingName>不死玄武树</ThingName>
+	<Desc>玄武由天下二十八星宿变成的:斗、牛、女、虚、危、室、壁。而古时候的人对玄武它的解释有以下的数种，'玄武'即龟。"。</Desc>
+	<TexPath>Spr\Object\Plant\BSXWY.PNG</TexPath>
+	<Scale>2</Scale>
+	<ElementKind>Shui</ElementKind>
+	<Plant> 
+		<TexLing>
+			<GrowTex1>Spr\Object\Plant\BSXWY.PNG</GrowTex1>
+		</TexLing>
+		<SnowRenderData>
+			<x>2.8</x>
+			<y>2.8</y>
+			<z>2</z>
+		</SnowRenderData>
+		
+		
+		<HarvestDays>280</HarvestDays>
+		<LingMin>49</LingMin>
+		<LingMax>5500</LingMax>
+		<TempMin>200</TempMin>
+		<TempMax>9999</TempMax>
+		<ElementRange>
+			<ElementKind>Shui</ElementKind>
+			<Min>1</Min>
+			<Max>2</Max>
+		</ElementRange>	
+
+		<LingShaSpeed>-0.002</LingShaSpeed>
+		<LingZhiR>5</LingZhiR>
+		<JiaoGanModifierGT0>Modifier_LingZhi_GT0_Shui</JiaoGanModifierGT0>
+		<JiaoGanModifierLT0>Modifier_LingZhi_LT0_Shui</JiaoGanModifierLT0> 
+	</Plant>
+	
+	
+	<Heat>
+		<Value>500</Value>
+		<RoomValue>600</RoomValue>
+		<Radius>5</Radius>
+		<FailRadius>1</FailRadius>
+		<Failing>0.9</Failing>
+		<SkipSelf>1</SkipSelf>
+	</Heat>
+	
+	<Light>
+		<Value>360</Value>
+		<Failing>0.8</Failing>
+		<FailRadius>1</FailRadius>
+		<Radius>3</Radius>
+		<Color>DAA520</Color>
+	</Light>
+	
+	<Harvest>
+		<HarvestTag>
+			<li>Cut</li>
+			<li>StandCollection</li>
+		</HarvestTag>
+
+		<HarvestItems>
+			<li>
+				<ThingDef>Item_ShuiEssence</ThingDef>
+				<Count>4</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_SSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_XWND</ThingDef>
+				<Count>1</Count>
+				<Rate>0.15</Rate>
+			</li>
+			
+			<li>
+				<ThingDef>Item_XWJX</ThingDef>
+				<Count>1</Count>
+				<Rate>0.1</Rate>
+			</li>
+		</HarvestItems>
+		
+		<DropItems>
+			<li>
+				<ThingDef>Item_Wood</ThingDef>
+				<Count>1</Count>
+			</li>
+		</DropItems>  
+	</Harvest>
+</ThingDef>
+<ThingDef Type="Plant" Name="ZTLingZhi_BSBHY" Parent="LingZhiBase">
+	<ThingName>不死白虎药</ThingName>
+	<Desc>王者仁而不害，则白虎见。白虎者，仁兽也。虎而白色，缟身如雪，无杂毛，啸则风兴。昔召公化行陕西之国，白虎应焉。</Desc>
+	<TexPath>Spr\Object\Plant\BSBHY.PNG</TexPath>
+	<Scale>2</Scale>
+	<ElementKind>Jin</ElementKind>
+	<Plant> 
+		<TexLing>
+			<GrowTex1>Spr\Object\Plant\BSBHY.PNG</GrowTex1>
+		</TexLing>
+		<SnowRenderData>
+			<x>2.8</x>
+			<y>2.8</y>
+			<z>2</z>
+		</SnowRenderData>
+		
+		
+		<HarvestDays>280</HarvestDays>
+		<LingMin>49</LingMin>
+		<LingMax>5500</LingMax>
+		<TempMin>200</TempMin>
+		<TempMax>9999</TempMax>
+		<ElementRange>
+			<ElementKind>Jin</ElementKind>
+			<Min>1</Min>
+			<Max>2</Max>
+		</ElementRange>	
+
+		<LingShaSpeed>-0.002</LingShaSpeed>
+		<LingZhiR>5</LingZhiR>
+		<JiaoGanModifierGT0>Modifier_LingZhi_GT0_Jin</JiaoGanModifierGT0>
+		<JiaoGanModifierLT0>Modifier_LingZhi_LT0_Jin</JiaoGanModifierLT0> 
+	</Plant>
+	
+	
+	<Heat>
+		<Value>500</Value>
+		<RoomValue>600</RoomValue>
+		<Radius>5</Radius>
+		<FailRadius>1</FailRadius>
+		<Failing>0.9</Failing>
+		<SkipSelf>1</SkipSelf>
+	</Heat>
+	
+	<Light>
+		<Value>360</Value>
+		<Failing>0.8</Failing>
+		<FailRadius>1</FailRadius>
+		<Radius>3</Radius>
+		<Color>DAA520</Color>
+	</Light>
+	
+	<Harvest>
+		<HarvestTag>
+			<li>Cut</li>
+			<li>StandCollection</li>
+		</HarvestTag>
+
+		<HarvestItems>
+			<li>
+				<ThingDef>Item_JinEssence</ThingDef>
+				<Count>4</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_JSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_BHND</ThingDef>
+				<Count>1</Count>
+				<Rate>0.15</Rate>
+			</li>
+			
+			<li>
+				<ThingDef>Item_BHJX</ThingDef>
+				<Count>1</Count>
+				<Rate>0.1</Rate>
+			</li>
+		</HarvestItems>
+		
+		<DropItems>
+			<li>
+				<ThingDef>Item_Wood</ThingDef>
+				<Count>1</Count>
+			</li>
+		</DropItems>  
+	</Harvest>
+</ThingDef>
+</List></ThingDefs>

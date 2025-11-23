@@ -1,0 +1,1007 @@
+﻿<Stories><List>
+	<Story Name="WDBSS"  Parent="BaseFillingStory">
+		<DisplayName>是否开始悟道？</DisplayName>
+		<Desc>结丹期前消耗寿命较少，并而仅仅是突破瓶颈，结丹期时可在悟道中瞬间结丹，但所在位置靈氣會影響金丹品質，同时将扣除一定寿元，结丹期后每提高一个境界所要消耗寿元递增</Desc>
+		<Selections>
+			<li>
+				<Display>天之道补不足而损有余。</Display>
+				<OKResult>
+				<![CDATA[	
+				
+				local nR = me:GetGLevel(1,12) 
+				if nR >= 12 then 
+						me.npcObj.PropertyMgr:AddAge(1000);me:AddMsg(string.format(XT("[NAME]的修为已经进无可进了被古茶树白白吸收寿元，苍老了%s年。"),tostring(1000))); me:NeckBroken();
+				elseif nR >= 9 then
+						me.npcObj.PropertyMgr:AddAge(1500);me:AddMsg(string.format(XT("[NAME]被不死树吸收了精气，苍老了%s年。"),tostring(1500))); me:NeckBroken();
+				elseif nR >= 7 then
+						me.npcObj.PropertyMgr:AddAge(1000);me:AddMsg(string.format(XT("[NAME]被不死树吸收了精气，苍老了%s年。"),tostring(1000))); me:NeckBroken();
+				elseif nR >= 6 then
+					me.npcObj.PropertyMgr:AddAge(200);me:AddMsg(string.format(XT("[NAME]被不死树吸收了精气，苍老了%s年。"),tostring(200)));me:AddSchoolScore(1,500);me:ModifierProperty("GodPenaltyAddV",50);me:ModifierProperty("AbilityLvAddV",100);GameMain:GetMod("IZDCA"):Hension()
+				elseif nR >= 1 then
+					me.npcObj.PropertyMgr:AddAge(10);me:AddMsg(string.format(XT("[NAME]突破了瓶颈但也，苍老了%s年。"),tostring(10))); me:NeckBroken();
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>离去</Display>
+				<OKResult></OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+	
+	<Story Name="Story_Item_Dan_PTMY"  Parent="BaseFillingStory">
+		<DisplayName>吸收秘药</DisplayName>
+		<Desc>瑶池独产的修复仙路的秘药，炼化后即可生效。</Desc>
+		<Selections>
+			
+			<li>
+				<Display>重铸仙路</Display> 
+				<DisplayCondition><![CDATA[	
+				me.npcObj:CheckSpecialFlag(CS.XiaWorld.g_emNpcSpecailFlag.FLAG_PRACTICEDIE) == 1
+				story:RemoveBindItem();
+				]]>
+				</DisplayCondition>
+				<OKResult>
+				me:AddMsg("[NAME]成功修复了仙路，又可以修仙啦。");
+				me.npcObj.PropertyMgr:RemoveModifier("SysPracticeDie");
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="Story_Item_XY">
+		<DisplayName>炼化仙源</DisplayName>
+		<Desc>炼化仙源必须修习同系功法到最高境界才有可能成功。道行越高，炼化成功的可能性越高。然而此举有干天和，一旦失败将身受重创，增加天谴。是否要炼化仙源？</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>来吧，反正都是要死的。（化龙期以上，并且属性相同）</Display>
+				<OKResult>
+				<![CDATA[	
+				local itemobj = story:GetBindThing()
+				local nE = 0
+				if itemobj.ElementKind == g_emElementKind.None then
+					nE = 0
+				elseif itemobj.ElementKind == g_emElementKind.Jin then
+					nE = 1
+				elseif itemobj.ElementKind == g_emElementKind.Mu then
+					nE = 2
+				elseif itemobj.ElementKind == g_emElementKind.Shui then
+					nE = 3
+				elseif itemobj.ElementKind == g_emElementKind.Huo then
+					nE = 4
+				elseif itemobj.ElementKind == g_emElementKind.Tu then
+					nE = 5
+				else
+					nE = 6
+				end
+				if nE == me:GetGElementKind() then
+					if me:GetGLevel() >= 11 then
+						local nR = world:RandomInt(150,300)
+						if nR <=  me:GetDaoHang() then
+							me:AddMsg(XT("[NAME]尝试炼化仙源，也许是机缘所致，竟然又惊又险的完成了炼化。"));
+							local nC = me:GetFlag(99);
+							me:SetFlag(99,nC + 1);
+							local nV = math.floor(math.max(0,(1-nC * 0.1)) * me:RandomInt(100,150))
+							me:ModifierProperty("AbilityLvAddV",-nV);
+							if nC <= 2 then
+								me:AddMsg(XT("[NAME]因此得以窥视部分天道，大有所获。"));me:AddMsg(string.format(XT("[NAME]的道行降低了%s点。"), tostring(nV)));
+							elseif nC <= 4 then
+								me:AddMsg(XT("[NAME]因此得以窥视部分天道，不过因数次参悟，收效已微。"));me:AddMsg(string.format(XT("[NAME]的道行降低了。%s点。"), tostring(nV)));
+							elseif nC <= 6 then
+								me:AddMsg(XT("[NAME]因此得以窥视部分天道，不过因多次参悟，收效已微忽其微。"));me:AddMsg(string.format(XT("[NAME]的道行降低了。%s点。"), tostring(nV)));
+							elseif nC <= 7 then
+								me:AddMsg(XT("[NAME]多次窥视天道，渐渐有所心得，终于借此机缘，分化了三条元神分神。"));me:DivideGodSoul(true,3);
+							elseif nC <= 11 then
+								me:AddMsg(XT("[NAME]多次窥视天道，渐渐有所心得，终于借此机缘，身与道合，减低了些许天劫强度。"));me:ModifierProperty("GodPenaltyAddV",-15);
+							else
+								me:AddMsg(XT("[NAME]因此得以窥视部分天道，不过因太多次参悟，已完全没有感悟了。"));
+							end
+						else
+							me:AddMsg(XT("[NAME]尝试炼化仙源，然而最终还是因道行不够，而没能驾驭其中蕴含的天道气息。"));me:AddMsg(XT("虽然只是一丝气息的泄露，但天道瞬间反噬，[NAME]亦身受重伤……"));me:AddDamage("Damage_TianDaoBenYuan1", "Brain", me:RandomFloat(0, 0.75), XT("天道爆发"));me:ModifierProperty("GodPenaltyAddV",me:RandomInt(10,30));
+						end
+					else
+						me:AddMsg(XT("以[NAME]的境界远远不能驾驭此等蕴含天道之息的神物，[NAME]刚刚开始炼化，天道本源便剧烈的爆发开，将[NAME]灵识撕的粉碎。[NAME]瞬间殒命。"));me:AddDamage("Damage_TianDaoBenYuan2", "Brain", 1, XT("天道爆发"));
+					end
+				else
+					me:AddMsg(XT("[NAME]所修功法与这块仙源完全不匹配，[NAME]刚刚开始炼化，仙源便剧烈的爆发开，将[NAME]灵识撕的粉碎。[NAME]瞬间殒命。"));me:AddDamage("Damage_TianDaoBenYuan2", "Brain", 1, XT("天道爆发"));
+				end
+				story:FinishSecret();
+				]]>	
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃</Display>
+				<OKResult>	
+				me:AddMsg(XT("[NAME]还是决定放弃炼化这块仙源了。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="Story_Item_XY1">
+		<DisplayName>恢复灵力</DisplayName>
+		<Desc>炼化仙源直接恢复所有灵力，副作用是50年的寿命</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>吸收仙源。</Display>
+				<OKResult>
+				<![CDATA[	
+				me:AddMsg(XT("[NAME]成功吸收了仙源，并恢复了全部的灵气。并衰老了50岁。"));
+				me.npcObj.PropertyMgr:AddAge(50);
+				me:AddPracticeResource("Ling",99999999999)
+				story:RemoveBindItem();
+				]]>	
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃</Display>
+				<OKResult>	
+				me:AddMsg(XT("[NAME]还是决定放弃吸收这块仙源了。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="ZT_DD"  Parent="BaseFillingStory">
+		<DisplayName>页遮天</DisplayName>
+		<Desc>书中自有黄金屋，书中还有解锁地点。</Desc>
+		<Selections>
+			<li>
+				<Display>进去瞅瞅</Display> 
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]获得一本解锁新地点的秘籍，还有一些作者送的礼物和一波敌人");
+				me:DropRandomItem("Esoterica");me:DropRandomItem("FightFabao", 6, 12);
+				me:AddEnemy(3,1.5)
+				me:AddSchoolScore(1,50);
+				me:DropEsoteric("ZT_P");
+				
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="ZT_XXCTY"  Parent="BaseFillingStory">
+		<DisplayName>修行初体验</DisplayName>
+		<Desc>叶凡等人降临在了北斗的荒古禁地，该地是七大生命禁区之一，叶凡运气不错喜提圣果，和庞博几个好友成功冲出了荒古禁地，被赶来的几个洞天所收留。并经历了妖帝坟的出世。</Desc>
+		<Selections>
+			<li>
+				<Display>进去瞅瞅（可获得菩提子仅第一次食用有效、）</Display> 
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]获得一本解锁新地点的秘籍，还有作者送的礼物和一波敌人");
+				me:AddEnemy(3,1.5)
+				me:AddSchoolScore(1,50);
+				me:DropEsoteric("ZT_LXDT");
+				 if world:GetWorldFlag(555) == 0 then
+				 me:AddMsg("[NAME]在叶凡等人降临的地方，还摸到了一颗菩提子！");
+				  world:SetWorldFlag(555,1);me:DropAwardItem("Item_PTZ",1);me:DropAwardItem("Item_Fruit",50);
+				  end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+
+	<Story Name="ZT_GWSTSFYX"  Parent="BaseFillingStory">
+		<DisplayName>敢问上天是否有仙</DisplayName>
+		<Desc>叶凡在经历了一系列的生与死的遭遇以后，也算是看清了修仙者与凡人无异，一样是有贪念。在获得妖帝圣心被妖族所挟持，而后遇到了东荒神体姬皓月，在混乱中逃脱，而后被姬紫月所俘虏，阴差阳错之下反制住了姬紫月。</Desc>
+		<Selections>
+			<li>
+				<Display>进去瞅瞅（获得青铜仙殿地点解锁）</Display> 
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]获得一本解锁新地点的秘籍，还有作者送的礼物和一波敌人");
+				me:AddEnemy(6,1.5)
+				me:AddSchoolScore(1,50);
+				me:DropEsoteric("ZT_GWSTSFYX");me:DropAwardItem("Item_ZaoHuaYuLu",4);
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+
+	<Story Name="ZT_TXM"  Parent="BaseFillingStory">
+		<DisplayName>太玄门</DisplayName>
+		<Desc>敢问上天是否有仙，修行一世究竟为了什么。叶凡和姬紫月两人带着重重心思来到了太玄峰，一百零八座仙山错落有致，两人为得到九秘而拜入门下。。</Desc>
+		<Selections>
+			<li>
+				<Display>再进去瞅瞅</Display> 
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]获得一本解锁新地点的秘籍，还有作者送的礼物和一波敌人");
+				me:AddEnemy(6,1.5)
+				me:AddSchoolScore(1,50);
+				me:DropEsoteric("ZT_TXM");me:DropAwardItem("Item_WSXY",1);
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="ZT_HYD"  Parent="BaseFillingStory">
+		<DisplayName>火域</DisplayName>
+		<Desc>叶凡在与姬紫月逃亡途中，因习得姬紫月传授的虚空大手印而受到姬家追杀。被各大势力追杀至火域。。</Desc>
+		<Selections>
+			<li>
+				<Display>进去瞅瞅</Display> 
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]获得一本解锁新地点的秘籍，还有作者送的礼物和一波敌人");
+				me:AddEnemy(6,1.5)
+				me:AddSchoolScore(1,50);
+				me:DropEsoteric("ZT_HY");me:DropAwardItem("Item_JSXY",1);me:DropAwardItem("Item_MSXY",1);me:DropAwardItem("Item_SSXY",1);me:DropAwardItem("Item_HSXY",1);me:DropAwardItem("Item_TSXY",1);
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="ZT_ZJCD"  Parent="BaseFillingStory">
+		<DisplayName>张家村</DisplayName>
+		<Desc>叶凡在火域修行了一段时间后，趁着世人逐渐忘记他的存在以后，叶凡来到了北域，来到了北域的张家村，因周围流寇而与张家村村民结缘。。</Desc>
+		<Selections>
+			<li>
+				<Display>进去瞅瞅</Display> 
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]获得一本解锁新地点的秘籍，还有作者送的礼物和一波敌人");
+				me:AddEnemy(9,1.5)
+				me:AddSchoolScore(1,50);
+				me:DropEsoteric("ZT_ZJC");me:DropAwardItem("Item_YS3",3);
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="ZT_TCGKD"  Parent="BaseFillingStory">
+		<DisplayName>太初古矿</DisplayName>
+		<Desc>叶凡在从紫山出来后，为了突破而四处劫掠流寇收获了不少的源，也因此尝到甜头，企图到太初古矿寻找机缘。</Desc>
+		<Selections>
+			<li>
+				<Display>进去瞅瞅</Display> 
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]获得一本解锁新地点的秘籍，还有作者送的礼物和一波敌人");
+				me:AddEnemy(12,1.5)
+				me:AddSchoolScore(1,50);
+				me:DropEsoteric("ZT_TCGK");
+				me:DropAwardItem("Item_ST",10);me:DropAwardItem("Item_ZJST",10);
+				me:DropAwardItem("Item_DLYJ",10);me:DropAwardItem("Item_XZ",10);
+				me:DropAwardItem("Item_ZYW",10);me:DropAwardItem("Item_YYSY",10);
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="ZT_YCSD"  Parent="BaseFillingStory">
+		<DisplayName>瑶池圣地</DisplayName>
+		<Desc>叶凡在张家村喜提一只大黑狗，在黑皇的带领下寻得西皇经，来到了瑶池圣地。</Desc>
+		<Selections>
+			<li>
+				<Display>进去瞅瞅</Display> 
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]获得一本解锁新地点的秘籍，还有作者送的礼物和一波敌人");
+				me:AddEnemy(14,1.5)
+				me:AddSchoolScore(1,50);
+				me:DropEsoteric("ZT_YCSD");
+				me:DropAwardItem("Item_ZYSY",10);me:DropAwardItem("Item_JTCYW",10);
+				me:DropAwardItem("Item_JTBYB",10);me:DropAwardItem("Item_YZBYB",10);
+				me:DropAwardItem("Item_WSTJ",10);me:DropAwardItem("Item_JTBLSY",10);
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="ZT_YZZ"  Parent="BaseFillingStory">
+		<DisplayName>云泽州</DisplayName>
+		<Desc>叶凡当着曲州年轻修士的面，击杀瑶光与姬家八名真传弟子，逼得叶凡不得不向青蛟王的洞府避难，顺带看看拯救一下自己的兄弟。</Desc>
+		<Selections>
+			<li>
+				<Display>进去瞅瞅</Display> 
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]获得一本解锁新地点的秘籍，还有作者送的礼物和一波敌人");
+				me:AddEnemy(18,1.5)
+				me:AddSchoolScore(1,550);
+				me:DropEsoteric("ZT_YZZ");me:DropAwardItem("HUO_CH",2);me:DropAwardItem("HUO_LH",2);me:DropAwardItem("HUO_BH",2);
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="ZT_LCJM"  Parent="BaseFillingStory">
+		<DisplayName>丽城九秘风云起</DisplayName>
+		<Desc>叶凡收到消息，丽城有九秘的踪迹，不过这条消息似乎是有人故意放出的？不管了先去看看吧。</Desc>
+		<Selections>
+			<li>
+				<Display>进去瞅瞅</Display> 
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]获得一本解锁新地点的秘籍，还有作者送的礼物和一波敌人");
+				me:AddEnemy(18,1.5)
+				me:AddSchoolScore(1,50);
+				me:DropEsoteric("ZT_DDLQ");me:DropAwardItem("HUO_WH",2);me:DropAwardItem("HUO_JH",2);me:DropAwardItem("HUO_ZH",2);
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="ZT_WLC"  Parent="BaseFillingStory">
+		<DisplayName>冰雪宫</DisplayName>
+		<Desc>叶凡突破道宫后，第一次行走北域，在神王的庇护下，总算能够抛头露面，寻得一些消息，来到了冰雪宫。</Desc>
+		<Selections>
+			<li>
+				<Display>进去瞅瞅</Display> 
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]获得一本解锁新地点的秘籍，还有作者送的礼物和一波敌人");
+				me:AddEnemy(24,0.5)
+				me:AddSchoolScore(1,2550);
+				me:DropEsoteric("ZT_WLC");me:DropAwardItem("Item_HST",200);me:DropAwardItem("Item_HG",200);
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="ZT_DD1"  Parent="BaseFillingStory">
+		<DisplayName>地点解锁</DisplayName>
+		<Desc>适用与老存档没赶上剧情的。</Desc>
+		<Selections>
+			<li>
+				<Display>进去瞅瞅</Display> 
+				<OKResult>
+				<![CDATA[	
+				me:AddMsg("[NAME]获得一本解锁新地点的秘籍");
+				me:AddSchoolScore(1,50);
+				me:DropEsoteric("ZT_P");
+				if world:GetWorldFlag(556) == 0 then
+				 me:AddMsg("[NAME]在叶凡等人降临的地方，还摸到了一颗菩提子！");
+				  world:SetWorldFlag(556,1);me:DropAwardItem("Item_PTZ",1);
+				  end
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="ZT_SC"  Parent="BaseFillingStory">
+		<DisplayName>圣城</DisplayName>
+		<Desc>叶凡习得源天书后，来到圣城为了解决自己突破的问题，在圣城一番惊世豪赌。</Desc>
+		<Selections>
+			<li>
+				<Display>进去瞅瞅</Display> 
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]获得一本解锁新地点的秘籍，还有作者送的礼物和一波敌人");
+				me:AddEnemy(16,1.5)
+				me:AddSchoolScore(1,50);
+				me:DropEsoteric("ZT_SC");me:DropAwardItem("Item_YS3",10);me:DropAwardItem("Item_YS2",10);me:DropAwardItem("Item_YS1",10);
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="STYH"  Parent="BaseFillingStory">
+		<DisplayName>圣体遗骸</DisplayName>
+		<Desc>干枯的血肉、强健的骨髅。拥有一股不朽的力量,仿佛跨越时空传来。</Desc>
+		<Selections>
+			<li>
+				<Display>建立联系</Display> 
+				<OKResult>
+				<![CDATA[	
+				
+				if me:CheckFeature("GodBody") == true then
+				me:AddMsg("[NAME]的部分心神像是离体而去。进入青莲中,沉在这具尸骨内,他仿佛灵魂出窍了。/n“怎么会这样。我来到了对方的体内……，……”/n[NAME]不知道为什么会发生这种情况,这让他相当的震惊。/n自古以来。人们不知两个圣体相见会发生什么。因为这种体质太稀少了,漫长的岁月过去后。对其了解更是有限。/n很难想象。[NAME]与一具圣体骸骨相遇,会发生这种莫名的状况。");
+				me:AddSchoolScore(1,50);
+				me:DropEsoteric("ZT_STYH");story:RemoveBindItem();
+				else
+				me:AddMsg("[NAME]又不是圣体，过来瞎搞啥？");
+				end
+				story:FinishSecret();
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="ZT_DF"  Parent="BaseFillingStory">
+		<DisplayName>天義丹方</DisplayName>
+		<Desc>可习得所有丹方。</Desc>
+		<Selections>
+			<li>
+				<Display>想要解锁所有的丹方，没问题但是没有不劳而获的。（挑战真仙敌人）</Display> 
+				<OKResult>
+				<![CDATA[	
+				if World.DayCount <= 99 then
+					me:AddMsg("[NAME]获得一本解锁所有的丹方，在回门派的路上太过嚣张，四处招摇，引来一波强盗。");
+					me:DropEsoteric("ZTDF");
+					me:AddEnemy(16,0)me:AddEnemy(16,0)
+					story:FinishSecret();
+				
+				elseif World.DayCount <= 1000 then
+				me:AddMsg("[NAME]获得一本解锁所有的丹方，和以为强大的真仙");
+				GameMain:GetMod("XG"):YSTZ();
+				me:DropEsoteric("ZTDF");
+				story:FinishSecret();
+				end
+				
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>放弃参悟</Display>
+				<OKResult>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+	<Story Name="Story_Item_FXLJZhenTu" Parent="BaseFillingStory">
+		<DisplayName>参悟</DisplayName>
+		<Desc>[NAME]试图参悟这张玄奥的阵图。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>参悟阵图</Display>
+				<OKResult>
+				<![CDATA[	
+					
+					if me:GetSkillLevel("Zhen") >= 20 then
+						me:AddMsg(XT("[NAME]一番参悟下，从阵图中悟出了什么！"));
+						me:LearnEsoteric("Esoterica_ZhenFa_Suit12", true);
+					else
+						me:AddMsg(XT("以[NAME]的阵法造诣，完全不能解读这张阵图。"));
+					end
+				]]>		
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="ZT_LZ" Parent="BaseFillingStory">
+		<DisplayName>炼化龙珠</DisplayName>
+		<Desc>[NAME]准备炼化龙珠，但是[NAME]有没有化龙期和三十级的护盾技能等级呢？</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>炼化龙珠</Display>
+				<OKResult>
+				<![CDATA[	
+					if me:GetGLevel() >= 11 and me:GetSkillLevel("Barrier") >= 30 then
+						me:AddMsg(XT("[NAME]吸收了龙珠中所有的精华，感觉自己又胖了一圈"));
+						me:ModifierProperty("NpcFight_ShieldConversionRate",10);me:ModifierProperty("NpcFight_ShieldConversionRateAddP",-0.1);
+					else
+						me:AddMsg(XT("以[NAME]的实力不足，反被龙珠中真龙之气所伤。"));
+						me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("真龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("真龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",1,XT("真龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Liver",1,XT("真龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Brain",1,XT("真龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Lung",1,XT("真龙反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("真龙反噬"));
+					end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我就看看条件</Display>
+				<OKResult>
+				me:AddMsg(XT("[NAME]还是决定放弃炼化这颗龙珠了。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="ZT_SFND" Parent="BaseFillingStory">
+		<DisplayName>炼化内丹</DisplayName>
+		<Desc>[NAME]准备炼化神凤内丹，但是[NAME]有没有化龙期和三十级的术法技能等级呢？</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>炼化内丹</Display>
+				<OKResult>
+				<![CDATA[
+					story:RemoveBindItem();				
+					if me:GetGLevel() >= 11 and me:GetSkillLevel("FightSkill") >= 30 then
+						me:AddMsg(XT("[NAME]吸收了内丹中所有的精华，感觉自己又胖了一圈"));
+						me:ModifierProperty("NpcFight_SpellPowerAddP",1);me:ModifierProperty("NpcFight_SpellLingCostAddP",0.2);
+						me:ModifierProperty("NpcFight_SpellCastTimeAddP",0.2);
+					else
+						me:AddMsg(XT("以[NAME]的实力不足，反被龙珠中真龙之气所伤。"));
+						me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("神凰反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("神凰反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",1,XT("神凰反噬"));
+							me:AddDamage("Huo_VisceralBurn","Liver",1,XT("神凰反噬"));
+							me:AddDamage("Huo_VisceralBurn","Brain",1,XT("神凰反噬"));
+							me:AddDamage("Huo_VisceralBurn","Lung",1,XT("神凰反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神凰反噬"));
+					end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我就看看条件</Display>
+				<OKResult>
+				me:AddMsg(XT("[NAME]还是决定放弃炼化这颗龙珠了。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="ZT_HLND" Parent="BaseFillingStory">
+		<DisplayName>炼化内丹</DisplayName>
+		<Desc>[NAME]准备炼化黄龙内丹，但是[NAME]有没有化龙期和三十级的阵法技能等级呢？</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>炼化内丹</Display>
+				<OKResult>
+				<![CDATA[	
+					story:RemoveBindItem();
+					if me:GetGLevel() >= 11 and me:GetSkillLevel("Zhen") >= 30 then
+						me:AddMsg(XT("[NAME]吸收了内丹中所有的精华，感觉自己又胖了一圈"));
+						me:ModifierProperty("MaxAccumulativeLingAddV",1000);me:ModifierProperty("DeepPracticeSpeedSpecialCoefficient",-0.2);
+						
+					else
+						me:AddMsg(XT("以[NAME]的实力不足，反被龙珠中真龙之气所伤。"));
+						me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("黄龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("黄龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",1,XT("黄龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Liver",1,XT("黄龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Brain",1,XT("黄龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Lung",1,XT("黄龙反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("黄龙反噬"));
+							
+					end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我就看看条件</Display>
+				<OKResult>
+				me:AddMsg(XT("[NAME]还是决定放弃炼化这颗内丹了。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="ZT_XWND" Parent="BaseFillingStory">
+		<DisplayName>炼化内丹</DisplayName>
+		<Desc>[NAME]准备炼化玄武内丹，但是[NAME]有没有化龙期和三十级的气感技能等级呢？</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>炼化内丹</Display>
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+					if me:GetGLevel() >= 11 and me:GetSkillLevel("Qi") >= 30 then
+						me:AddMsg(XT("[NAME]吸收了内丹中所有的精华，感觉自己又胖了一圈"));
+						me:ModifierProperty("LingAbsorbSpeed",1.5);me:ModifierProperty("NpcFight_FabaoLingRecoverAddP",-0.1);
+						
+					else
+						me:AddMsg(XT("以[NAME]的实力不足，反被龙珠中玄武之气所伤。"));
+						me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("王霸反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("王霸反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",1,XT("王霸反噬"));
+							me:AddDamage("Huo_VisceralBurn","Liver",1,XT("王霸反噬"));
+							me:AddDamage("Huo_VisceralBurn","Brain",1,XT("王霸反噬"));
+							me:AddDamage("Huo_VisceralBurn","Lung",1,XT("王霸反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("王霸反噬"));
+					end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我就看看条件</Display>
+				<OKResult>
+				me:AddMsg(XT("[NAME]还是决定放弃炼化这颗内丹了。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="ZT_BHND" Parent="BaseFillingStory">
+		<DisplayName>炼化内丹</DisplayName>
+		<Desc>[NAME]准备炼化白虎内丹，但是[NAME]有没有化龙期和三十级的御器技能等级呢？</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>炼化内丹</Display>
+				<OKResult>
+				<![CDATA[	
+					story:RemoveBindItem();
+					if me:GetGLevel() >= 11 and me:GetSkillLevel("Fabao") >= 30 then
+						me:AddMsg(XT("[NAME]吸收了内丹中所有的精华，感觉自己又胖了一圈"));
+						me:ModifierProperty("NpcFight_FabaoLingRecoverK",1);me:ModifierProperty("NpcFight_FabaoCoolDownAddP",0.1);
+						
+					else
+						me:AddMsg(XT("以[NAME]的实力不足，反被内丹中白虎之气所伤。"));
+						me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("庚金反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("庚金反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",1,XT("庚金反噬"));
+							me:AddDamage("Huo_VisceralBurn","Liver",1,XT("庚金反噬"));
+							me:AddDamage("Huo_VisceralBurn","Brain",1,XT("庚金反噬"));
+							me:AddDamage("Huo_VisceralBurn","Lung",1,XT("庚金反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("庚金反噬"));
+					end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我就看看条件</Display>
+				<OKResult>
+				me:AddMsg(XT("[NAME]还是决定放弃炼化这颗内丹了。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="ZT_TZW" Parent="BaseFillingStory">
+		<DisplayName>炼化体质丸</DisplayName>
+		<Desc>[NAME]准备炼化这枚体质丸</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>炼化焚仙战体体质丸</Display>
+				<OKResult>
+				<![CDATA[	
+						local npcmgr = me.npcObj.PropertyMgr;
+						me:AddMsg(XT("[NAME]吸收了体质丸的所有精华，终于获得了焚仙战体的能力"));
+						npcmgr:AddFeature("FSfBody");
+						story:RemoveBindItem();
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我就看看</Display>
+				<OKResult>
+				me:AddMsg(XT("[NAME]还是决定放弃炼化这颗体质丸，留给更适合的人。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+	
+	
+	
+	
+	<Story Name="ZT_HGSJ" Parent="BaseFillingStory">
+		<DisplayName>荒古世家</DisplayName>
+		<Desc>[NAME]拾起了一本神奇的书，上面写有一些奇闻轶事。（最好有实力再开）</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>荒古姬家</Display>
+				<OKResult>
+				<![CDATA[	
+				
+						if me:GetSchoolScore(0) >= 1 then
+						me:AddMsg(XT("古世家，位于南域。族中古经为《虚空经》，内有绝技大虚空术、虚空大手印、截天指、先天太虚罡气等"));
+						me:DropAwardItem("Item_WDCY",1);me:DropAwardItem("Item_WSSS",250);me:DropAwardItem("Item_ShuiEssence",2);me:DropAwardItem("Item_HuoEssence",2);me:DropAwardItem("Item_TuEssence",2);
+						me:DropAwardItem("Item_JinEssence",2);me:DropAwardItem("Item_MuEssence",2);me:DropAwardItem("Item_Dan_PracticeRate",9);me:DropAwardItem("Item_LingStone",1000);me:DropAwardItem("Item_YHLJ",2);
+						me:DropAwardItem("Item_LQ",15);me:AddSchoolScore(1,5000);
+						me:DropAwardItem("Item_WSXY",10);
+						me:DropAwardItem("Item_JSXY",10);
+						me:DropAwardItem("Item_MSXY",10);
+						me:DropAwardItem("Item_SSXY",10);
+						me:DropAwardItem("Item_HSXY",15);
+						me:DropAwardItem("Item_TSXY",10);
+						me:DropAwardItem("Item_WSXXY",1);
+						me:DropAwardItem("Item_JSXXY",1);
+						me:DropAwardItem("Item_MSXXY",1);
+						me:DropAwardItem("Item_SSXXY",1);
+						me:DropAwardItem("Item_TSXXY",1);
+						me:DropAwardItem("Item_HSXXY",1);
+						me:UnLockGong("Gong_XKJ");me:AddEnemy(3,0)story:RemoveBindItem();
+						else
+						me:AddMsg(XT("门派建立后，且至少大于1点的声望"));
+						end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>荒古姜家</Display>
+				<OKResult>
+				<![CDATA[	
+					
+					if me:GetSchoolScore(0) >= 1 then
+						me:AddMsg(XT("古世家，位于北域，与圣皇神农氏关系巨大，族中古经为《恒宇经》"));
+						me:DropAwardItem("Item_WDCY",1);me:DropAwardItem("Item_WSSS",450);me:DropAwardItem("Item_ShuiEssence",3);me:DropAwardItem("Item_HuoEssence",3);me:DropAwardItem("Item_TuEssence",3);
+						me:DropAwardItem("Item_JinEssence",3);me:DropAwardItem("Item_MuEssence",3);me:DropAwardItem("Item_Dan_PracticeRate",9);me:DropAwardItem("Item_LingStone",1000);me:DropAwardItem("Item_HXCJ",3);
+						me:DropAwardItem("Item_LQ",25);me:AddSchoolScore(1,6000);
+						me:DropAwardItem("Item_WSXY",10);
+						me:DropAwardItem("Item_JSXY",10);
+						me:DropAwardItem("Item_MSXY",10);
+						me:DropAwardItem("Item_SSXY",10);
+						me:DropAwardItem("Item_HSXY",15);
+						me:DropAwardItem("Item_TSXY",10);
+						me:DropAwardItem("Item_HSXXY",2);
+						me:UnLockGong("Gong_HYJ");me:AddEnemy(3,0)story:RemoveBindItem();
+						else
+						me:AddMsg(XT("门派建立后，且至少大于1点的声望"));
+						end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>瑶池圣地</Display>
+				<OKResult>
+				<![CDATA[	
+				if me:GetSchoolScore(0) >= 1 then
+					story:RemoveBindItem();
+						me:AddMsg(XT("圣地，位于北域，门中古经为《西皇经》。弟子多为女子，向来与世无争"));
+						me:DropAwardItem("Item_WDCY",1);me:DropAwardItem("Item_WSSS",350);me:DropAwardItem("Item_ShuiEssence",4);me:DropAwardItem("Item_HuoEssence",4);me:DropAwardItem("Item_TuEssence",4);me:DropAwardItem("Item_XLLJ",3);
+						me:DropAwardItem("Item_JinEssence",4);me:DropAwardItem("Item_MuEssence",4);me:DropAwardItem("Item_Dan_PracticeRate",9);me:DropAwardItem("Item_LingStone",1000);
+						me:DropAwardItem("Item_LQ",25);me:AddSchoolScore(1,6500);
+						me:DropAwardItem("Item_WSXY",10);
+						me:DropAwardItem("Item_JSXY",10);
+						me:DropAwardItem("Item_MSXY",10);
+						me:DropAwardItem("Item_SSXY",15);
+						me:DropAwardItem("Item_HSXY",10);
+						me:DropAwardItem("Item_TSXY",10);
+						me:DropAwardItem("Item_SSXXY",2);
+						me:UnLockGong("Gong_XHJ");me:AddEnemy(3,0)
+						else
+						me:AddMsg(XT("门派建立后，且至少大于1点的声望"));
+						end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>中州皇朝</Display>
+				<OKResult>
+				<![CDATA[	
+				if me:GetSchoolScore(0) >= 1 then
+					story:RemoveBindItem();
+					
+						me:AddMsg(XT("大夏皇朝四大不朽皇朝之一，皇族古经为《太皇经》，以皇道龙气闻世"));
+						me:DropAwardItem("Item_WDCY",1);me:DropAwardItem("Item_WSSS",350);me:DropAwardItem("Item_ShuiEssence",2);me:DropAwardItem("Item_HuoEssence",2);me:DropAwardItem("Item_TuEssence",2);
+						me:DropAwardItem("Item_JinEssence",2);me:DropAwardItem("Item_MuEssence",2);me:DropAwardItem("Item_Dan_PracticeRate",9);me:DropAwardItem("Item_LingStone",1500);me:DropAwardItem("Item_LingCrystal",100);
+						me:DropAwardItem("Item_LQ",55);me:AddSchoolScore(1,4500);
+						me:DropAwardItem("Item_WSXY",10);
+						me:DropAwardItem("Item_JSXY",10);
+						me:DropAwardItem("Item_MSXY",10);
+						me:DropAwardItem("Item_SSXY",10);
+						me:DropAwardItem("Item_HSXY",10);
+						me:DropAwardItem("Item_TSXY",10);
+						me:UnLockGong("Gong_THJ");me:AddEnemy(3,0)
+						else
+						me:AddMsg(XT("门派建立后，且至少大于1点的声望"));
+						end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>重立天庭</Display>
+				<OKResult>
+				<![CDATA[	
+				if me:GetSchoolScore(0) >= 1 then
+					story:RemoveBindItem();
+					
+						me:AddMsg(XT("远古时期的三大杀手神朝之首，与帝尊所建上古天庭同名，门派绝技有行字诀、天轮眼、虚实神术、破妄术、斗转星移等。由于人世间、地狱的陷害、出卖，十几万年前被诸圣地联手剿灭，但仍有后人隐于天之村。现为叶凡重建"));
+						me:DropAwardItem("Item_WDCY",2);me:DropAwardItem("Item_WSSS",500);me:DropAwardItem("Item_ShuiEssence",5);me:DropAwardItem("Item_HuoEssence",5);me:DropAwardItem("Item_TuEssence",5);
+						me:DropAwardItem("Item_JinEssence",5);me:DropAwardItem("Item_MuEssence",5);me:DropAwardItem("Item_Dan_PracticeRate",9);me:DropAwardItem("Item_LingStone",3000);me:DropAwardItem("Item_Dan_HundredRefine",9);
+						me:DropAwardItem("Item_LQ",10);me:DropAwardItem("Item_XZ",99);me:DropAwardItem("Item_YYSY",99);me:DropAwardItem("Item_DLYJ",99);me:DropAwardItem("Item_ZJST",99);me:DropAwardItem("Item_ST",99);
+						me:DropAwardItem("Item_ZYW",99);me:DropAwardItem("Item_ZYSY",99);me:DropAwardItem("Item_JTCYW",99);me:AddSchoolScore(1,9999);me:DropAwardItem("Item_SkyStone",40);
+						me:DropAwardItem("Item_WSXY",15);
+						me:DropAwardItem("Item_JSXY",15);
+						me:DropAwardItem("Item_MSXY",15);
+						me:DropAwardItem("Item_SSXY",15);
+						me:DropAwardItem("Item_HSXY",15);
+						me:DropAwardItem("Item_TSXY",15);
+						me:DropAwardItem("Item_WSXSY",2);
+						me:DropAwardItem("Item_JSXSY",2);
+						me:DropAwardItem("Item_MSXSY",2);
+						me:DropAwardItem("Item_SSXSY",2);
+						me:DropAwardItem("Item_HSXSY",2);
+						me:DropAwardItem("Item_TSXSY",2);
+						me:UnLockGong("Gong_TDJ");story:FinishSecret();me:AddEnemy(12,0)
+						else
+						me:AddMsg(XT("门派建立后，且至少大于1点的声望"));
+						end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>芸芸众生</Display>
+				<OKResult>
+				<![CDATA[	
+				if me:GetSchoolScore(0) >= 1 then
+					story:RemoveBindItem();
+					
+						me:AddMsg(XT("修行界中流传最为广泛的经文，是最基础的经文适合所有人。"));
+						me:DropAwardItem("Item_WDCY",1);me:DropAwardItem("Item_WSSS",100);me:DropAwardItem("Item_ShuiEssence",1);me:DropAwardItem("Item_HuoEssence",1);me:DropAwardItem("Item_TuEssence",1);
+						me:DropAwardItem("Item_JinEssence",1);me:DropAwardItem("Item_MuEssence",1);me:DropAwardItem("Item_Dan_PracticeRate",9);me:DropAwardItem("Item_LingStone",100);
+						me:DropAwardItem("Item_LQ",15);me:AddSchoolScore(1,1500);
+						me:DropAwardItem("Item_WSXY",2);
+						me:DropAwardItem("Item_JSXY",2);
+						me:DropAwardItem("Item_MSXY",2);
+						me:DropAwardItem("Item_SSXY",2);
+						me:DropAwardItem("Item_HSXY",2);
+						me:DropAwardItem("Item_TSXY",2);
+						me:UnLockGong("Gong_DJ");me:AddEnemy(3,0)
+						else
+						me:AddMsg(XT("门派建立后，且至少大于1点的声望"));
+						end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>道经神国</Display>
+				<OKResult>
+				<![CDATA[	
+				if me:GetSchoolScore(0) >= 1 then
+					story:RemoveBindItem();
+					
+						me:AddMsg(XT("修行界中刚刚出现的曾经被遗忘的神道功法。"));
+						me:DropAwardItem("Item_WDCY",1);me:DropAwardItem("Item_WSSS",100);me:DropAwardItem("Item_ShuiEssence",1);me:DropAwardItem("Item_HuoEssence",1);me:DropAwardItem("Item_TuEssence",1);
+						me:DropAwardItem("Item_JinEssence",1);me:DropAwardItem("Item_MuEssence",1);me:DropAwardItem("Item_Dan_PracticeRate",9);me:DropAwardItem("Item_LingStone",100);
+						me:DropAwardItem("Item_LQ",15);me:AddSchoolScore(1,1000);
+						me:DropAwardItem("Item_WSXY",2);
+						me:DropAwardItem("Item_JSXY",2);
+						me:DropAwardItem("Item_MSXY",2);
+						me:DropAwardItem("Item_SSXY",2);
+						me:DropAwardItem("Item_HSXY",2);
+						me:DropAwardItem("Item_TSXY",2);
+						me:UnLockGong("Gong_DJG");me:AddEnemy(3,0)
+						else
+						me:AddMsg(XT("门派建立后，且至少大于1点的声望"));
+						end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>盗墓开局</Display>
+				<OKResult>
+				<![CDATA[	
+				if me:GetSchoolScore(0) >= 1 then
+					story:RemoveBindItem();
+					
+						me:AddMsg(XT("段德的开局，那当然就是挖挖挖了。"));
+						me:DropAwardItem("Item_ShuiEssence",2);me:DropAwardItem("Item_HuoEssence",2);me:DropAwardItem("Item_TuEssence",2);
+						me:DropAwardItem("Item_JinEssence",2);me:DropAwardItem("Item_MuEssence",2);me:DropAwardItem("Item_Dan_PracticeRate",9);me:DropAwardItem("Item_LingStone",500);
+						me:DropAwardItem("Item_LQ",20);me:AddSchoolScore(1,3000);
+						me:DropAwardItem("Item_WSXY",5);
+						me:DropAwardItem("Item_JSXY",5);
+						me:DropAwardItem("Item_MSXY",5);
+						me:DropAwardItem("Item_SSXY",5);
+						me:DropAwardItem("Item_HSXY",5);
+						me:DropAwardItem("Item_TSXY",5);
+						me:UnLockGong("Gong_DJTG");me:AddEnemy(3,0)
+						else
+						me:AddMsg(XT("门派建立后，且至少大于1点的声望"));
+						end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>无始无终</Display>
+				<OKResult>
+				<![CDATA[	
+				if me:GetSchoolScore(0) >= 1 then
+					story:RemoveBindItem();
+					
+						me:AddMsg(XT("仙路尽头谁为峰，一见无始道成空。"));
+						me:DropAwardItem("Item_ShuiEssence",3);me:DropAwardItem("Item_HuoEssence",3);me:DropAwardItem("Item_TuEssence",3);me:DropAwardItem("Item_WSSS",200);
+						me:DropAwardItem("Item_JinEssence",3);me:DropAwardItem("Item_MuEssence",3);me:DropAwardItem("Item_Dan_PracticeRate",9);me:DropAwardItem("Item_SHZJ",2);me:DropAwardItem("Item_LingStone",1500);
+						me:DropAwardItem("Item_LQ",30);me:AddSchoolScore(1,6000);
+						me:DropAwardItem("Item_WSXY",8);
+						me:DropAwardItem("Item_JSXY",8);
+						me:DropAwardItem("Item_MSXY",8);
+						me:DropAwardItem("Item_SSXY",8);
+						me:DropAwardItem("Item_HSXY",8);
+						me:DropAwardItem("Item_TSXY",8);
+						me:UnLockGong("Gong_WSJ");me:AddEnemy(3,0)
+						else
+						me:AddMsg(XT("门派建立后，且至少大于1点的声望"));
+						end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我再看看</Display>
+				<OKResult>
+				me:AddMsg(XT("[NAME]决定在隐忍一段时间。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+</List></Stories>

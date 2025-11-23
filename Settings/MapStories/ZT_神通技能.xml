@@ -1,0 +1,209 @@
+<Stories><List>
+	
+	<Story Name="YTS_LY"  Parent="BaseFillingStory">
+		<DisplayName>聚灵成源</DisplayName>
+		<Desc>万灵凝结为精华，[NAME]准备向其中输入属性决定最后的结果</Desc>
+		<Selections>
+			<li>
+			<Display>无属性源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_WSXY",1);me:ModifierProperty("MaxAge",-300);
+			</OKResult>
+			</li>
+			<li>
+			<Display>金属性源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_JSXY",1);me:ModifierProperty("MaxAge",-300);
+			</OKResult>
+			</li>
+			<li>
+			<Display>木属性源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_MSXY",1);me:ModifierProperty("MaxAge",-300);
+			</OKResult>
+			</li>
+			<li>
+			<Display>水属性源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_SSXY",1);me:ModifierProperty("MaxAge",-300);
+			</OKResult>
+			</li>
+			<li>
+			<Display>火属性源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_HSXY",1);me:ModifierProperty("MaxAge",-300);
+			</OKResult>
+			</li>
+			<li>
+			<Display>土属性源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_TSXY",1);me:ModifierProperty("MaxAge",-300);
+			</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="YTS_LSY"  Parent="BaseFillingStory">
+		<DisplayName>万灵神源</DisplayName>
+		<Desc>万灵凝结为精华，[NAME]准备向其中输入属性决定最后的结果</Desc>
+		<Selections>
+			<li>
+			<Display>无属性神源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_WSXSY",1);me:ModifierProperty("MaxAge",-900);
+			</OKResult>
+			</li>
+			<li>
+			<Display>金属性神源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_JSXSY",1);me:ModifierProperty("MaxAge",-900);
+			</OKResult>
+			</li>
+			<li>
+			<Display>木属性神源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_MSXSY",1);me:ModifierProperty("MaxAge",-900);
+			</OKResult>
+			</li>
+			<li>
+			<Display>水属性神源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_SSXSY",1);me:ModifierProperty("MaxAge",-900);
+			</OKResult>
+			</li>
+			<li>
+			<Display>火属性神源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_HSXSY",1);me:ModifierProperty("MaxAge",-900);
+			</OKResult>
+			</li>
+			<li>
+			<Display>土属性神源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_TSXSY",1);me:ModifierProperty("MaxAge",-900);
+			</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="YTS_LXY"  Parent="BaseFillingStory">
+		<DisplayName>天造仙源</DisplayName>
+		<Desc>万灵凝结为精华，[NAME]准备向其中输入属性决定最后的结果</Desc>
+		<Selections>
+			<li>
+			<Display>无属性仙源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_WSXXY",1);me:ModifierProperty("MaxAge",-3000);
+			</OKResult>
+			</li>
+			<li>
+			<Display>金属性仙源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_JSXXY",1);me:ModifierProperty("MaxAge",-3000);
+			</OKResult>
+			</li>
+			<li>
+			<Display>木属性仙源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_MSXXY",1);me:ModifierProperty("MaxAge",-3000);
+			</OKResult>
+			</li>
+			<li>
+			<Display>水属性仙源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_SSXXY",1);me:ModifierProperty("MaxAge",-3000);
+			</OKResult>
+			</li>
+			<li>
+			<Display>火属性仙源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_HSXXY",1);me:ModifierProperty("MaxAge",-3000);
+			</OKResult>
+			</li>
+			<li>
+			<Display>土属性仙源</Display> 
+			<OKResult>
+			me:DropAwardItem("Item_TSXXY",1);me:ModifierProperty("MaxAge",-3000);
+			</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+	<Story Name="ZT_xzm" Parent="BaseFillingStory">
+		<DisplayName>行遍世间</DisplayName>
+		<Desc>[NAME]准备施展行字秘，施展后所有真仙获得历练能力。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>行</Display>
+				<OKResult>
+				<![CDATA[	
+					for i=0,CS.XiaWorld.PracticeMgr.Instance:GetAllGongName().Count-1,1 do
+
+				local count1 = CS.XiaWorld.PracticeMgr.Instance:GetGongDef(CS.XiaWorld.PracticeMgr.Instance:GetAllGongName()[i]).Stages.Count
+
+				local count2 = CS.XiaWorld.PracticeMgr.Instance:GetGongDef(CS.XiaWorld.PracticeMgr.Instance:GetAllGongName()[i]).Stages[count1 - 1].Necks.Count
+
+				CS.XiaWorld.PracticeMgr.Instance:GetGongDef(CS.XiaWorld.PracticeMgr.Instance:GetAllGongName()[i]).Stages[count1 - 1].Necks[count2 - 1].Kind = CS.XiaWorld.g_emGongBottleNeckType.God
+
+				CS.XiaWorld.PracticeMgr.Instance:GetGongDef(CS.XiaWorld.PracticeMgr.Instance:GetAllGongName()[i]).Stages[count1 - 1].Necks[count2 - 1].NeckCountdown = nil
+				end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我就看看</Display>
+				<OKResult>
+				me:AddMsg(XT("[NAME]觉得时机未到。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="ZT_xzm2" Parent="BaseFillingStory">
+		<DisplayName>反其道而行。</DisplayName>
+		<Desc>[NAME]准备施展行字秘反，施展后所有真仙恢复渡劫状态。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>解</Display>
+				<OKResult>
+				<![CDATA[	
+					for i=0,CS.XiaWorld.PracticeMgr.Instance:GetAllGongName().Count-1,1 do
+
+		local count1 = CS.XiaWorld.PracticeMgr.Instance:GetGongDef(CS.XiaWorld.PracticeMgr.Instance:GetAllGongName()[i]).Stages.Count
+
+		local count2 = CS.XiaWorld.PracticeMgr.Instance:GetGongDef(CS.XiaWorld.PracticeMgr.Instance:GetAllGongName()[i]).Stages[count1 - 1].Necks.Count
+
+		CS.XiaWorld.PracticeMgr.Instance:GetGongDef(CS.XiaWorld.PracticeMgr.Instance:GetAllGongName()[i]).Stages[count1 - 1].Necks[count2 - 1].Kind = CS.XiaWorld.g_emGongBottleNeckType.God
+
+		CS.XiaWorld.PracticeMgr.Instance:GetGongDef(CS.XiaWorld.PracticeMgr.Instance:GetAllGongName()[i]).Stages[count1 - 1].Necks[count2 - 1].NeckCountdown = 900
+		end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我就看看</Display>
+				<OKResult>
+				me:AddMsg(XT("[NAME]觉得时机还未到。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+	<Story Name="JT" Parent="BaseFillingStory">
+		<DisplayName>神源淬兵</DisplayName>
+		<Desc>[NAME]正在对这个法宝淬炼。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>淬炼极致。</Display>
+				<OKResult>
+				me:AddMsg(XT("[NAME]感到手中神兵已经无坚不摧，剑锋所指，无一物可幸免，不由得喜从心来。"))
+				me:AddTitle("天淬神匠","神淬到了极致之人方能获得此称号。", 4);
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+		
+</List></Stories>

@@ -1,0 +1,59 @@
+<Magics><List>
+	
+	
+	<Magic Name="CCXG1" Type="Class">
+		<DisplayName>铲草兴耕</DisplayName>
+		<Desc>消耗大量灵力，将地埋深处的矿产拔出地表。</Desc>
+		<Icon>Spr\Object\JN\ZT_HYJ\CCXG1.png</Icon>
+		<SelectMode>Single</SelectMode>
+		<TargetAni>dazuo</TargetAni>
+		<SelectTarget>NoBuilding|InLight|Walkable</SelectTarget>
+		<ClassName>Magic_BuildMine</ClassName>
+		<TargetDesc>请选择一块空地</TargetDesc>
+		<CostLing>100000</CostLing>
+	</Magic>
+	
+	
+	<Magic Name="BZM_LXCB" Type="Class">
+		<DisplayName>雷息神淬</DisplayName>
+		<Desc>消耗大量灵气将一件法宝渡劫一次，同时消耗250年寿元。</Desc>
+		<Icon>Spr\Object\JN\ZT_MJ\BZM_LXCB.png</Icon>
+		<Kind>None</Kind>
+		<Ani>shentong2</Ani>
+		<Param1>36</Param1>
+		<CostLing>90000000</CostLing>
+		<CostAge>250</CostAge>
+		<Penalty>0</Penalty>
+		<SelectMode>Single</SelectMode>
+		<ClassName>BZM_LXSC</ClassName>
+		<SelectTarget>Item</SelectTarget>
+		<TargetDesc>请选择一件法宝。</TargetDesc>
+		<ItemCost>
+			<li name="Item_ThunderAir" count="1"/>
+		</ItemCost>
+	</Magic>
+	<Magic Name="BZM_WXCB" Type="Class">
+		<DisplayName>神源淬兵</DisplayName>
+		<Desc>选择一样法宝，通过消耗五种属性神源，对其进行全属性强化。（牺牲施术者最大灵气值百分10）</Desc>
+		<Icon>Spr\Object\JN\ZT_MJ\BZMWXCB.png</Icon>
+		<Kind>None</Kind>
+		<Ani>shentong2</Ani>
+		<Param1>80</Param1>
+		<CostLing>1000000</CostLing>
+		<CostAge>1000</CostAge>
+		<Penalty>0</Penalty>
+		<SelectMode>Single</SelectMode>
+		<TargetAni>dazuo</TargetAni>
+		<ClassName>BZM_WXCB</ClassName>
+		<SelectTarget>Item</SelectTarget>
+		<TargetDesc>请选择一件法宝。</TargetDesc>
+		<ItemCost>
+			<li name="Item_WSXSY" count="25"/>
+			<li name="Item_JSXSY" count="25"/>
+			<li name="Item_MSXSY" count="25"/>
+			<li name="Item_SSXSY" count="25"/>
+			<li name="Item_HSXSY" count="25"/>
+			<li name="Item_TSXSY" count="25"/>
+		</ItemCost>
+	</Magic>
+</List></Magics>

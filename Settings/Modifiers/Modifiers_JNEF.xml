@@ -1,0 +1,163 @@
+<ModifierDefs><List> 
+  <Modifier Name="TDJ_SDSS" Type="Normal">
+		<DisplayName>杀念入体</DisplayName>
+		<Desc>天庭杀手惯用的一种手段，在于敌人交战是，注入腐蚀性的灵力，削弱对方的灵力护盾。</Desc>
+		<MaxStack>3</MaxStack>
+		<Duration>100</Duration>
+		<Display>1</Display>
+		<Properties>
+			<li Name="NpcFight_ShieldConversionRate" AddV="-3"/>
+		</Properties>
+	</Modifier>
+	<Modifier Name="TDJ_XKDSY" Type="Normal">
+		<DisplayName>虚空凝冻</DisplayName>
+		<Desc>以虚空之力，永久剥夺对手10000灵力上限</Desc>
+		<MaxStack>5</MaxStack>
+		<Duration>-1</Duration>
+		<Display>1</Display>
+		<Properties>
+			<li Name="NpcLingMaxValue" AddV="10000"/><!--灵气吸收速度5-->
+		</Properties>
+	</Modifier>
+	<Modifier Name="TDJ_SJ_SQ_TQ" Type="Normal">
+		<DisplayName>天感心清</DisplayName>
+		<Desc>短暂提高所有队友的灵力恢复速度5000持续35秒，和短暂的心境稳定。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>35</Duration>
+		<Display>1</Display>
+		<Properties>
+			<li Name="LingAbsorbSpeed" AddV="5000"/><!--灵气吸收速度5-->
+			<li Name="SpeedOfMindStateCoefficient" AddV="1000"/>
+		</Properties>
+	</Modifier>
+	
+	<Modifier Name="ZT_BZ" Type="Normal">
+		<DisplayName>阴阳紊乱</DisplayName>
+		<Desc>道经之秘术，可短暂使对手忘记自己要放秘术的事情持续30秒。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>30</Duration>
+		<Display>1</Display>
+		<Properties>
+			<li Name="NpcFight_SpellLingCostAddP" AddP="9999"/>
+			<li Name="NpcFight_SpellCoolDownAddP" AddV="9999"/>
+		</Properties>
+	</Modifier>
+	
+	<Modifier Name="TDJ_HL_ld" Type="Normal">
+		<DisplayName>六道轮回</DisplayName>
+		<Desc>以六道之力，催动对手的雷劫迫使对方渡劫，每次减低500秒渡劫时间，最高叠加5层</Desc>
+		<MaxStack>5</MaxStack>
+		<Duration>-1</Duration>
+		<Display>1</Display>
+		<Properties>
+			<li Name="NeckCountdownAddV" AddV="-500"/>
+		</Properties>
+	</Modifier>
+	
+	
+	<Modifier Name="DJTG_DD" Type="Normal">
+		<DisplayName>无德之人</DisplayName>
+		<Desc>使敌方全体在45秒内心魔大作，自相残杀。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>45</Duration>
+		<Display>1</Display>
+		<LuaClassName>DJTG_DD</LuaClassName>
+	</Modifier>
+	 <Modifier Name="DJTG_DSS" Type="Normal">
+		<DisplayName>第三杀阵</DisplayName>
+		<Desc>段德铭刻于血肉中的阵纹，激发是可使对方全体获得百分百自然恢复，内门伤势恢复能力，灵力恢复，术法威力，法宝威力负增益持续50秒。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>50</Duration>
+		<Display>1</Display>
+		<Properties>
+			<li Name="RecoveryPower" AddP="-1"/><!--自然恢复力10-->
+			<li Name="MagicDamageRecoveryPowerAddV" AddV="-5"/><!--内门伤自然恢复力5-->
+			<li Name="NpcFight_FabaoPowerAddP" AddP="-1"/><!--法宝威力加成3-->
+				<li Name="NpcFight_SpellPowerAddP" AddP="-1"/><!--术法伤害加成3-->
+		</Properties>
+	</Modifier>
+	
+	<Modifier Name="ZT_JTZ" Type="Normal">
+		<DisplayName>截断天道</DisplayName>
+		<Desc>一指截天，魂断三千。持续时间内降低对手百分15灵力上限</Desc>
+		<MaxStack>5</MaxStack>
+		<Duration>40</Duration>
+		<Display>1</Display>
+		<Properties>
+			<li Name="NpcLingMaxValue" AddP="-0.25"/>
+		</Properties>
+	</Modifier>
+	
+	<Modifier Name="ZT_KKRY" Type="Normal">
+		<DisplayName>空空如也</DisplayName>
+		<Desc>持续15秒内，造成的伤害百分10恢复自身灵力值</Desc>
+		<MaxStack>5</MaxStack>
+		<Duration>40</Duration>
+		<Display>1</Display>
+		<LuaClassName>ZT_KKRY</LuaClassName>
+	</Modifier>
+	
+	<Modifier Name="ZSZY" Type="Normal">
+		<DisplayName>只手镇压</DisplayName>
+		<Desc>对于无始而言，战斗中只需要一只手就能镇压对手45秒。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>45</Duration>
+		<Display>1</Display>
+		<LuaClassName>ZSZY</LuaClassName>
+	</Modifier>
+	
+	<Modifier Name="ZLGQ" Type="Normal">
+		<DisplayName>龙气不息</DisplayName>
+		<Desc>引动天地龙气，持续40秒法宝灵力恢复速度与倍率提升2倍</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>40</Duration>
+		<Display>1</Display>
+		<Properties>
+			<li Name="NpcFight_FabaoLingRecoverAddP" AddP="2"/><!--法宝灵气恢复速度加成3-->
+			<li Name="NpcFight_FabaoLingRecoverK" AddP="2"/><!--法宝灵气恢复速度加成3-->
+		</Properties>
+	</Modifier>
+	<Modifier Name="NXFX" Type="Normal">
+		<DisplayName>斩道斩天</DisplayName>
+		<Desc>天地中仅此一剑，心中唯有一剑，剑出，敌陨，持续时间60s内，已消耗的灵力将化为法宝威力增幅。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>60</Duration>
+		<Display>1</Display>
+		<LuaClassName>ZSZY</LuaClassName>
+	</Modifier>
+	
+	<Modifier Name="HYJ_Y" Type="Normal">
+		<DisplayName>焰</DisplayName>
+		
+		<MaxStack>1</MaxStack>
+		<Duration>300</Duration>
+		<Display>1</Display>
+		<LuaClassName>HYJ_Y</LuaClassName>
+	</Modifier>
+	<Modifier Name="HYJ_YY" Type="Normal">
+		<DisplayName>焰炎</DisplayName>
+		
+		<MaxStack>1</MaxStack>
+		<Duration>300</Duration>
+		<Display>1</Display>
+		<LuaClassName>HYJ_YY</LuaClassName>
+	</Modifier>
+	<Modifier Name="HYJ_YYY" Type="Normal">
+		<DisplayName>焰炎阎</DisplayName>
+		
+		<MaxStack>1</MaxStack>
+		<Duration>300</Duration>
+		<Display>1</Display>
+		<LuaClassName>HYJ_YYY</LuaClassName>
+	</Modifier>
+	<Modifier Name="HYJ_YYYY" Type="Normal">
+		<DisplayName>焰炎阎宴</DisplayName>
+		
+		<MaxStack>1</MaxStack>
+		<Duration>300</Duration>
+		<Display>1</Display>
+		<LuaClassName>HYJ_YYYY</LuaClassName>
+	</Modifier>
+	
+	
+</List></ModifierDefs>

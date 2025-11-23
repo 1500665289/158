@@ -1,0 +1,407 @@
+<SkillTree><List>
+	<Node Name="Gong_DJTG_LH_A1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_LH_A1</Esoterica>
+		<DisplayName>九世轮回</DisplayName>
+		<Level>Qi</Level>
+		<Index>3</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<Layers>
+			<li>Gong_DJTG_LH_A1_1</li>
+			<li>Gong_DJTG_LH_A1_2</li>
+		</Layers>
+		<PreUnit>
+			<!--	<li></li>-->
+		</PreUnit>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,0,0,0,0</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+	<Node Name="Gong_DJTG_LH_A1_1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_LH_A1_1</Esoterica>
+		<DisplayName>九世轮回</DisplayName>
+		<Level>None</Level>
+	</Node>
+	<Node Name="Gong_DJTG_LH_A1_2" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_LH_A1_2</Esoterica>
+		<DisplayName>九世轮回</DisplayName>
+		<Level>None</Level>
+	</Node>
+	
+	<Node Name="Gong_DJTG_LH_A2_WL" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_LH_A2_WL</Esoterica>
+		<DisplayName>无良</DisplayName>
+		<Level>Qi</Level>
+		<Index>6</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,0,0,0,0</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>1000</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+	<Node Name="Gong_DJTG_LH_A3" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_LH_A3</Esoterica>
+		<DisplayName>结善缘</DisplayName>
+		<Level>Qi</Level>
+		<Index>8</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<Layers>
+			<li>Gong_DJTG_LH_A3_1</li>
+			<li>Gong_DJTG_LH_A3_2</li>
+		</Layers>
+		<PreUnit>
+			<!--	<li></li>-->
+		</PreUnit>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,0,0,0,0</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+	<Node Name="Gong_DJTG_LH_A3_1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_LH_A3_1</Esoterica>
+		<DisplayName>结善缘</DisplayName>
+		<Level>None</Level>
+	</Node>
+	<Node Name="Gong_DJTG_LH_A3_2" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_LH_A3_2</Esoterica>
+		<DisplayName>结善缘</DisplayName>
+		<Level>None</Level>
+	</Node>
+	
+		<Node Name="Gong_DJTG_LH_B1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_LH_B1</Esoterica>
+		<DisplayName>九世轮回</DisplayName>
+		<Level>Dan1</Level>
+		<Index>3</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<Layers>
+			<li>Gong_DJTG_LH_B1_1</li>
+			<li>Gong_DJTG_LH_B1_2</li>
+		</Layers>
+		<PreUnit>
+			<!--	<li></li>-->
+		</PreUnit>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,0,0,0,0</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+	<Node Name="Gong_DJTG_LH_B1_1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_LH_B1_1</Esoterica>
+		<DisplayName>九世轮回</DisplayName>
+		<Level>None</Level>
+	</Node>
+	<Node Name="Gong_DJTG_LH_B1_2" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_LH_B1_2</Esoterica>
+		<DisplayName>九世轮回</DisplayName>
+		<Level>None</Level>
+	</Node>
+	
+	<Node Name="Gong_DJTG_LH_B3_DD" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_LH_B3_DD</Esoterica>
+		<DisplayName>断德</DisplayName>
+		<Level>Dan1</Level>
+		<Index>6</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,8,0,0,0</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+	
+	<Node Name="Gong_DJTG_DG_B1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_DG_B1</Esoterica>
+		<DisplayName>源道</DisplayName>
+		<Level>Dan1</Level>
+		<Index>8</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<Layers>
+			<li>Gong_DJTG_DG_B2</li>
+		</Layers>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,0,0,0,0</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+	<Node Name="Gong_DJTG_DG_B2" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_DG_B2</Esoterica>
+		<DisplayName>源道</DisplayName>
+		<Level>None</Level>
+	</Node>
+	
+	<Node Name="Gong_DJTG_SJ_C1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_SJ_C1</Esoterica>
+		<DisplayName>九世轮回</DisplayName>
+		<Level>Dan2</Level>
+		<Index>3</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<Layers>
+			<li>Gong_DJTG_SJ_C1_1</li>
+			<li>Gong_DJTG_SJ_C1_2</li>
+		</Layers>
+		<PreUnit>
+			<!--	<li></li>-->
+		</PreUnit>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,0,0,0,0</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+	<Node Name="Gong_DJTG_SJ_C1_1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_SJ_C1_1</Esoterica>
+		<DisplayName>九世轮回</DisplayName>
+		<Level>None</Level>
+	</Node>
+	<Node Name="Gong_DJTG_SJ_C1_2" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_SJ_C1_2</Esoterica>
+		<DisplayName>九世轮回</DisplayName>
+		<Level>None</Level>
+	</Node>
+	
+	
+	<Node Name="Gong_DJTG_SJ_C2_YQ" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_SJ_C2_YQ</Esoterica>
+		<DisplayName>乱古神道</DisplayName>
+		<Level>Dan2</Level>
+		<Index>6</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<Layers>
+			<li>Gong_DJTG_SJ_C2_YQ_1</li>
+			<li>Gong_DJTG_SJ_C2_YQ_2</li>
+		</Layers>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,0,0,9,0</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+	<Node Name="Gong_DJTG_SJ_C2_YQ_1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_SJ_C1_YQ_1</Esoterica>
+		<DisplayName>乱古神道</DisplayName>
+		<Level>None</Level>
+	</Node>
+	
+	<Node Name="Gong_DJTG_SJ_C2_YQ_2" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_SJ_C1_YQ_2</Esoterica>
+		<DisplayName>乱古神道</DisplayName>
+		<Level>None</Level>
+	</Node>
+	
+	<Node Name="Gong_DJTG_SJ_C3" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_SJ_C3</Esoterica>
+		<DisplayName>冥皇</DisplayName>
+		<Level>Dan2</Level>
+		<Index>8</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<Layers>
+			<li>Gong_DJTG_SJ_C3_1</li>
+		</Layers>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,9,0,9,0</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+	<Node Name="Gong_DJTG_SJ_C3_1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_SJ_C3_1</Esoterica>
+		<DisplayName>冥皇</DisplayName>
+		<Level>None</Level>
+	</Node>
+	
+	<Node Name="Gong_DJTG_HL_D1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_HL_D1</Esoterica>
+		<DisplayName>第三杀阵</DisplayName>
+		<Level>God</Level>
+		<Index>3</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<PreUnit>
+			<!--	<li></li>-->
+		</PreUnit>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,0,0,0,9</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+
+	
+	
+	<Node Name="Gong_DJTG_HL_D2" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_HL_D2</Esoterica>
+		<DisplayName>轮回印</DisplayName>
+		<Level>God</Level>
+		<Index>6</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<Layers>
+			<li>Gong_DJTG_HL_D2_1</li>
+		</Layers>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,0,0,0,0</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+	<Node Name="Gong_DJTG_HL_D2_1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_HL_D2_1</Esoterica>
+		<DisplayName>轮回印</DisplayName>
+		<Level>None</Level>
+	</Node>
+	
+	
+	<Node Name="Gong_DJTG_HL_ld" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_HL_ld</Esoterica>
+		<DisplayName>仙化不死药</DisplayName>
+		<Level>God</Level>
+		<Index>8</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>10,10,0,0,0</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+	
+	<Node Name="Gong_DJTG_XT_F1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_XT_F1</Esoterica>
+		<DisplayName>挖祖坟</DisplayName>
+		<Level>God2</Level>
+		<Index>3</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<Layers>
+			<li>Gong_DJTG_XT_F1_1</li>
+		</Layers>
+		<PreUnit>
+			<!--	<li></li>-->
+		</PreUnit>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,0,0,0,9</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+	<Node Name="Gong_DJTG_XT_F1_1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_XT_F1_1</Esoterica>
+		<DisplayName>掘陵墓</DisplayName>
+		<Level>None</Level>
+	</Node>
+	
+	<Node Name="Gong_DJTG_XT_F2" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_XT_F2</Esoterica>
+		<DisplayName>轮回因果</DisplayName>
+		<Level>God2</Level>
+		<Index>6</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<Layers>
+			<li>Gong_DJTG_XT_F2_1</li>
+		</Layers>
+		<PreUnit>
+			<!--	<li></li>-->
+		</PreUnit>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,0,0,0,9</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+	<Node Name="Gong_DJTG_XT_F2_1" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_XT_F2_1</Esoterica>
+		<DisplayName>轮回因果</DisplayName>
+		<Level>None</Level>
+	</Node>
+	
+	<Node Name="Gong_DJTG_XT_ZD" Gong="Gong_DJTG">
+		<Esoterica>Gong_DJTG_XT_ZD</Esoterica>
+		<DisplayName>红尘仙</DisplayName>
+		<Level>God2</Level>
+		<Index>8</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,0,0,0,0</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+
+</List></SkillTree> 

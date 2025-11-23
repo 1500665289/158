@@ -1,0 +1,205 @@
+<Stories><List>
+	
+	<Story Name="ZT_TCGK"  Parent="BaseFillingStory">
+		<DisplayName>太初古矿</DisplayName>
+		<Desc>[PLACE]，最近似乎有些异宝现世了，赶紧去看看说不定还能遇上野生的大帝。</Desc>
+		<Selections>
+			<li>
+				<Display>太初古矿，想要进去，还得靠老刀把子带着。</Display>
+
+				<Tip>你至少得有四极境和一点好的运气。</Tip>
+				<OKResult>
+				<![CDATA[	
+				local nR = me:GetPhysique(1,9) 
+				local nX = me:GetPerception(1,9)
+				local nb = me:GetCharisma(1,9)
+				local na = me:GetIntelligence(1,9)
+				local nd = me:GetLuck(1,9)
+				if nR <= 8 then
+					me:AddMsg("随着老刀把子来到了太古矿的边缘，就在这时刮起了一阵黑毛旋风，[NAME]在旋风中感受到了强大而恐怖的气息，奈何体质太差，受了点伤，只得逃之夭夭。");me:AddDamageRandomPart(5,"LingSpillsInjury",me:RandomFloat(0,4),XT("走火入魔"));story:FinishSecret();
+				elseif world:GetWorldFlag(501) + 20 < world.DayCount then
+					me:AddMsg("[NAME]的体质还不错，小身板挺结实的，扛着黑色旋风，伸手一抓，居然摸到了一块道劫黄金，溜了溜了。");
+					world:SetWorldFlag(501,world.DayCount);me:DropAwardItem("Item_DJHJ",1);story:FinishSecret();
+				else 
+					me:AddMsg("[NAME]我记得二十天前你刚来过，你怎么又来了？");me:TriggerStory("ZT_TCGK");
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>火龙坟。</Display>
+
+				<Tip>很危险，容易死，同样收获很高。</Tip>
+				<OKResult>
+				<![CDATA[	
+				local nR = me:GetPhysique(1,9) 
+				local nX = me:GetPerception(1,9)
+				local nb = me:GetCharisma(1,9)
+				local na = me:GetIntelligence(1,9)
+				local nd = me:GetLuck(1,9)
+				if nX <= 8 then
+					me:AddMsg("火龙坟内必有神源！，但是[NAME]的感知能力着实感人。什么都没感受到不说还被火龙坟的龙气所伤。");me:AddDamage("VisceralRupture","Heart",6,XT("法术轰击"));story:FinishSecret();
+				elseif world:GetWorldFlag(502) + 20 < world.DayCount then
+					me:AddMsg("[NAME]在火龙坟附件，不断观望，凭借着实力与超强的感知，居然发现了一块神痕紫金。");
+					world:SetWorldFlag(502,world.DayCount);me:DropAwardItem("Item_SHZJ",1);me:DropAwardItem("Item_HSXSY",1);story:FinishSecret();
+				else
+					me:AddMsg("[NAME]我记得二十天前你刚来过，你怎么又来了？");me:TriggerStory("ZT_TCGK");
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>龙喋血.</Display>
+				<Tip>很危险，容易死，同样收获很高。</Tip>
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				local nR = me:GetPhysique(1,9) 
+				local nX = me:GetPerception(1,9)
+				local nb = me:GetCharisma(1,9)
+				local na = me:GetIntelligence(1,9)
+				local nd = me:GetLuck(1,9)
+				if nb <= 8 then
+					me:AddMsg("[NAME]一路平安的来到了，龙喋血的附件，登上小土坡才发现，这龙喋血居然和火龙坟抢夺天工的合在了一起，霎时间，一股巨大的威能向[NAME]冲来，[NAME]顿时走火入魔，命危已。");me:AddDamageRandomPart(5,"LingSpillsInjury",me:RandomFloat(0,6),XT("走火入魔"));story:FinishSecret();
+				elseif world:GetWorldFlag(503) + 20 < world.DayCount then
+					me:AddMsg("[NAME]在来到龙喋血之时，恰好赶在了日夜交替时最为凶险的时间。不过还好[NAME]凭着长得帅，躲过了一劫，还被一块龙纹黑金绊倒了脚，此行不虚。");
+					world:SetWorldFlag(503,world.DayCount);me:DropAwardItem("Item_LWHJ",1);story:FinishSecret();
+				else
+					me:AddMsg("[NAME]我记得二十天前你刚来过，你怎么又来了？");me:TriggerStory("ZT_TCGK");
+				end
+				]]>
+				</OKResult>
+			</li>
+			
+			<li>
+				<Display>堕日岭.</Display>
+				<Tip>很危险，容易死，同样收获很高。</Tip>
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				local nR = me:GetPhysique(1,9) 
+				local nX = me:GetPerception(1,9)
+				local nb = me:GetCharisma(1,9)
+				local na = me:GetIntelligence(1,9)
+				local nd = me:GetLuck(1,9)
+				if na <= 8 and me:GetSkillLevel("FightSkill") <= 15 then
+					me:AddMsg("[NAME]来到了传说中天日之子坠地而成的落日岭，至阳至刚气势磅礴，[NAME]被一道神秘的仙乐所吸引，不自觉地向前走去，惊醒之时，堕日岭仅余百米，[NAME]慌忙跑路，但是还是受到了伤害。");me:AddDamageRandomPart(5,"LingSpillsInjury",me:RandomFloat(0,6),XT("走火入魔"));story:FinishSecret();
+				elseif world:GetWorldFlag(504) + 20 < world.DayCount then
+					me:AddMsg("[NAME]在堕日岭附近，感叹着禁区的可怕时，发现一块石头的表面，闪烁着一股至阳至刚的气息，不由得信念一动，飞身上前，居然是昔日大帝剩余的一块凰血赤金。");
+					world:SetWorldFlag(504,world.DayCount);me:DropAwardItem("Item_HXCJ",1);story:FinishSecret();
+				else
+					me:AddMsg("[NAME]我记得二十天前你刚来过，你怎么又来了？");me:TriggerStory("ZT_TCGK");
+				end
+				]]>
+				</OKResult>
+			</li>
+				<li>
+				<Display>赤月窟.</Display>
+				<Tip>很危险，容易死，同样收获很高。</Tip>
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				local nR = me:GetPhysique(1,9) 
+				local nX = me:GetPerception(1,9)
+				local nb = me:GetCharisma(1,9)
+				local na = me:GetIntelligence(1,9)
+				local nd = me:GetLuck(1,9)
+				if na <= 8 and me:GetSkillLevel("Barrier") <= 15 then
+					me:AddMsg("[NAME]在堕日岭隔壁，发现了赤月窟，[NAME]不知道发什么疯，居然想去看看，世界那么大不作不会死，所以[NAME]差点死了。");me:AddDamageRandomPart(5,"LingSpillsInjury",me:RandomFloat(0,6),XT("走火入魔"));story:FinishSecret();
+				elseif world:GetWorldFlag(507) + 20 < world.DayCount then
+					me:AddMsg("[NAME]算着赤月窟，灵气爆发的时机，在爆发结束的那一刻，冲进赤月窟，居然侥幸获得了一块羽化青金，差点人都羽化了。");
+					world:SetWorldFlag(507,world.DayCount);me:DropAwardItem("Item_YHQJ",1);story:FinishSecret();
+				else
+					me:AddMsg("[NAME]我记得二十天前你刚来过，你怎么又来了？");me:TriggerStory("ZT_TCGK");
+				end
+				]]>
+				</OKResult>
+			</li>
+			
+			
+			
+			<li>
+				<Display>太初秘雾。</Display>
+				<Tip>很危险，容易死，同样收获很高。</Tip>
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				local nR = me:GetPhysique(1,9) 
+				local nX = me:GetPerception(1,9)
+				local nb = me:GetCharisma(1,9)
+				local na = me:GetIntelligence(1,9)
+				local nd = me:GetLuck(1,9)
+				if na <= 8 and me:GetSkillLevel("Zhen") <= 15 then
+					me:AddMsg("[NAME]从另外一条路来到了太初古矿，走着走着，一边赞叹大自然的鬼斧神工，一边心惊胆颤，[NAME]突然发觉自己已经深陷迷雾之中，慌乱之下没能稳住心神，被迷雾中的怪物袭击，受了一身的伤，怏怏而逃。");me:AddSchoolRelation(story.School,-500);me:AddSchoolScore(1,-200);me:AddDamage("Destroy", "RightEye", 1, XT("酷刑"));me:AddDamage("Destroy","LeftEye", 1, XT("酷刑"));me:AddDamage("Fabao_CutOff","LeftScapula", 1, XT("法宝重击"));me:AddDamage("Fabao_CutOff","RightScapula", 1, XT("法宝重击"));me:AddDamage("Fabao_CutOff","LeftThighbone", 1, XT("法宝重击"));me:AddDamage("Fabao_CutOff","RightThighbone", 1, XT("法宝重击"));story:FinishSecret();
+					
+				elseif world:GetWorldFlag(505) + 20 < world.DayCount and me:GetSkillLevel("Zhen") >= 16 then
+					me:AddMsg("[NAME]迷雾中，不慌不忙，抄起身边的石子，便开始摆连掌门都不知道的阵，说时迟那时快，[NAME]通过改天换地的源术，成功冲出了迷雾，并获得了一块永恒蓝金。");
+					world:SetWorldFlag(505,world.DayCount);me:DropAwardItem("Item_YHLJ",1);story:FinishSecret();
+				else
+					me:AddMsg("[NAME]我记得二十天前你刚来过，你怎么又来了？");me:TriggerStory("ZT_TCGK");
+				end
+				]]>
+				</OKResult>
+			</li>
+			
+			
+			
+			<li>
+				<Display>血色平原.</Display>
+				<Tip>很危险，容易死，同样收获很高。</Tip>
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				local nR = me:GetPhysique(1,9) 
+				local nX = me:GetPerception(1,9)
+				local nb = me:GetCharisma(1,9)
+				local na = me:GetIntelligence(1,9)
+				local nd = me:GetLuck(1,9)
+				if na <= 8 and me:GetSkillLevel("Fabao") <= 15 then
+					me:AddMsg("[NAME]一路曲折，遇到不少凶险，但所幸至今仍然毫发无损，就在前方的血色平原度过即可离开这片禁地，[NAME]远远望去居然看到一具尸骸，兴冲冲想要舔包时。尸骸内爆发出一股骇人气息");me:AddDamageRandomPart(5,"LingSpillsInjury",me:RandomFloat(0,6),XT("走火入魔"));story:FinishSecret();
+				elseif world:GetWorldFlag(506) + 20 < world.DayCount then
+					me:AddMsg("[NAME]走进血色平原，远远看到一具尸骸，不过[NAME]并没有急于舔包，观察了以下四周，居然是传说中的"物极必反"[NAME]在尸骸出发现一道闪光，施展出妙手空空后，掏出一看居然是仙泪绿金，然而[NAME]来不及定晴再看，急忙离开。");
+					world:SetWorldFlag(507,world.DayCount);me:DropAwardItem("Item_XLLJ",1);story:FinishSecret();
+				else7
+					me:AddMsg("[NAME]我记得二十天前你刚来过，你怎么又来了？");me:TriggerStory("ZT_TCGK");
+				end
+				
+				]]>
+				
+				</OKResult>
+			</li>
+			<li>
+				<Display>神源瀑布。</Display>
+				<Tip>很危险，容易死，同样收获很高。</Tip>
+				<OKResult>
+				<![CDATA[	
+				story:RemoveBindItem();
+				local nR = me:GetPhysique(1,9) 
+				local nX = me:GetPerception(1,9)
+				local nb = me:GetCharisma(1,9)
+				local na = me:GetIntelligence(1,9)
+				local nd = me:GetLuck(1,9)
+				if nd <= 8 and nR <= 8 and nX <= 8 and nb <= 8 and na <= 8 and nb <=8 then
+					me:AddMsg("[NAME]一路上生生死死，躲过了不少的难关，终于是来到了神源瀑布，就在前方不到百米之处，但是就在这时，后方冲出来一片红毛生物，每一只都堪比圣人的威能，把[NAME]当做皮球一样踢了起来。");me:AddSchoolRelation(story.School,-500);me:AddSchoolScore(1,-200);me:AddDamage("Destroy", "RightEye", 1, XT("酷刑"));me:AddDamage("Destroy","LeftEye", 1, XT("酷刑"));me:AddDamage("Fabao_CutOff","LeftScapula", 1, XT("法宝重击"));me:AddDamage("Fabao_CutOff","RightScapula", 1, XT("法宝重击"));me:AddDamage("Fabao_CutOff","LeftThighbone", 1, XT("法宝重击"));me:AddDamage("Fabao_CutOff","RightThighbone", 1, XT("法宝重击"));
+					
+				elseif world:GetWorldFlag(508) + 20 < world.DayCount and me:GetSkillLevel("Medicine") >= 16 then
+					me:AddMsg("[NAME]这次的运气可谓是，惊为天人啊，一路上没有任何危险来到了神源瀑布，[NAME]从瀑布中获得了10块无属性神源。");
+					me:DropAwardItem("Item_WSXSY",10);story:FinishSecret();
+				else
+					me:AddMsg("[NAME]我记得二十天前你刚来过，你怎么又来了？");me:TriggerStory("ZT_TCGK");
+				end
+				]]>
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我不想称为源的一部分。</Display>
+				<OKResult><![CDATA[	
+				me:AddMsg("[NAME]仰头长啸，所以有什么用呢，该走还得走。");
+				]]>
+				</OKResult>
+			</li>
+			
+		</Selections>
+	</Story>
+	
+</List></Stories>

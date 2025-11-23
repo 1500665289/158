@@ -1,0 +1,1801 @@
+<ThingDefs><List>
+
+	<ThingDef Type="Item" Name="ZT_BHGXR" Parent="WeaponBase">
+	<ThingName>庚辛白虎刃</ThingName>
+	<TexPath>Spr\Object\WP\BHGXJ.png</TexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>9</Rate> 
+	<ElementKind>Jin</ElementKind>
+	<Desc>天地之金化为的利刃。</Desc>
+	<Item Lable="Weapon">
+		<NotRandom>2</NotRandom>
+		<FabaoSuffix>斩,刃,刀</FabaoSuffix>
+		<PhysicalLables>
+			<li>Sharp</li>
+			<li>Heavy1</li>
+			<li>Hard1</li>
+		</PhysicalLables>
+		<BeMade>
+			<WorkToMake>900</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc>2</ArtDesc>
+			<CostItems>
+					<Item name = "Item_Water" count = "500"/>
+					<Item name = "Item_JSXY" count = "15"/>
+			</CostItems>
+		</BeMade> 		
+	<!--	<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>220</Damage>
+			<AttackSpeed>1</AttackSpeed>
+			<AttackRange>1.5</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.4"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.5"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.3"/>
+				<li PartKind="Bone" Name="Fracture1" Rate="0.4"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.2"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="LJpugong1" HitPoint="22"/>
+				<li Name="LJpugong2" HitPoint="14"/>
+				<li Name="LJpugong3" HitPoint="22"/>
+				<li Name="LJpugong4" HitPoint="14"/>
+			</AtkAnis>
+			<WeaponKind>Sword</WeaponKind>
+			<ModPath>Spr\Object\WP\GX.FBX</ModPath>
+		</Equip>
+	</Item>
+	</ThingDef>
+
+	<ThingDef Type="Item" Name="ZT_YMJ" Parent="WeaponBase">
+	<ThingName>阎魔百魂刀</ThingName>
+	<TexPath>Spr\Object\WP\YMJ.png</TexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>9</Rate> 
+	<ElementKind>Huo</ElementKind>
+	<Desc>杀气极重的一把魔刀。</Desc>
+	<Item Lable="Weapon">
+		<NotRandom>2</NotRandom>
+		<FabaoSuffix>阎刃,刹魔,刀</FabaoSuffix>
+		<PhysicalLables>
+			<li>Sharp</li>
+			<li>GreatThing_Attack</li>
+			<li>Heavy1</li>
+		</PhysicalLables>
+		<BeMade>
+			<WorkToMake>900</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc>2</ArtDesc>
+			<CostItems>
+					<Item name = "Item_CopperBlock1" count = "20"/>
+					
+					<Item name = "Item_Water" count = "100"/>
+			</CostItems>
+		</BeMade> 		
+	<!--	<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>250</Damage>
+			<AttackSpeed>1</AttackSpeed>
+			<AttackRange>4</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.4"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.5"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.3"/>
+				<li PartKind="Bone" Name="Fracture1" Rate="0.4"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.2"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="LJpugong1" HitPoint="22"/>
+				<li Name="LJpugong2" HitPoint="14"/>
+				<li Name="LJpugong3" HitPoint="22"/>
+				<li Name="LJpugong4" HitPoint="14"/>
+			</AtkAnis>
+			<WeaponKind>Sword</WeaponKind>
+			<ModPath>Spr\Object\WP\YM.FBX</ModPath>
+		</Equip>
+	</Item>
+	</ThingDef>
+
+	
+	<ThingDef Type="Item" Name="ZT_BJJ" Parent="WeaponBase">
+	<ThingName>月刃</ThingName>
+	<TexPath>Spr\Object\WP\BJJ.png</TexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>9</Rate> 
+	<ElementKind>Shui</ElementKind>
+	<Desc>陈风的法宝，宛若月牙，银辉灿烂。被叶凡击辉。。</Desc>
+	<Item Lable="Weapon">
+		<NotRandom>2</NotRandom>
+		<FabaoSuffix>剑,冰凌,月刃</FabaoSuffix>
+		<PhysicalLables>
+			<li>Sharp</li>
+			<li>Rough2</li>
+		</PhysicalLables>
+		<BeMade>
+			<WorkToMake>900</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc>2</ArtDesc>
+			<CostItems>
+					<Item name = "Item_SilverBlock" count = "30"/>
+					<Item name = "Item_Water" count = "100"/>
+			</CostItems>
+		</BeMade> 		
+	<!--	<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>250</Damage>
+			<AttackSpeed>1</AttackSpeed>
+			<AttackRange>3</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.4"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.5"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.3"/>
+				<li PartKind="Bone" Name="Fracture1" Rate="0.4"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.2"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="LJpugong1" HitPoint="22"/>
+				<li Name="LJpugong2" HitPoint="14"/>
+				<li Name="LJpugong3" HitPoint="22"/>
+				<li Name="LJpugong4" HitPoint="14"/>
+			</AtkAnis>
+			<WeaponKind>Sword</WeaponKind>
+			<ModPath>Spr\Object\WP\YR.FBX</ModPath>
+		</Equip>
+	</Item>
+	</ThingDef>
+
+
+	<ThingDef Type="Item" Name="ZT_HP" Parent="WeaponBase">
+	<ThingName>虎魄</ThingName>
+	<TexPath>Spr\Object\WP\HP.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\HP.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate> 
+	<ElementKind>Jin</ElementKind>
+	<Desc>因沾染圣人轩辕之血升华为魔道至宝。。by哎哟我去！！</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>虎魄</FabaoSuffix>
+		<PhysicalLables>
+			<li>Sharp</li>
+			<li>Sharp</li>
+			<li>Sharp</li>
+			<li>GreatThing_Attack</li>
+		</PhysicalLables>
+		<BeMade>
+			<WorkToMake>1900</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc>2</ArtDesc>
+			<CostItems>
+					<Item name = "Item_JTBYB" count = "66"/>
+					<Item name = "Item_XZ" count = "69"/>
+					<Item name = "Item_StarEssence" count = "100"/>
+					<Item name = "Item_JSXXY" count = "1"/>
+					<Item name = "Item_XianDaoXieNian" count = "1"/>
+					<Item name = "Item_Water" count = "100"/>
+			</CostItems>
+		</BeMade> 		
+	<!--	<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>108</Damage>
+			<AttackSpeed>1</AttackSpeed>
+			<AttackRange>2.5</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.7"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.7"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.4"/>
+				<li PartKind="Bone" Name="Fracture1" Rate="0.5"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.4"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="LJpugong1" HitPoint="32"/>
+				<li Name="LJpugong2" HitPoint="24"/>
+				<li Name="LJpugong3" HitPoint="32"/>
+				<li Name="LJpugong4" HitPoint="24"/>
+			</AtkAnis>
+			<WeaponKind>Sword</WeaponKind>
+			<ModPath>Spr\Object\WP\HP.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "KillCount" des = "携带胚胎击杀66个元神生灵" needcount = "56" lParam = "God"/>
+				 <Condition eventid = "BrokenNeck" des = "携带宝物度过3次飞升天劫" needcount = "3" lParam = "God2" />
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="MultiKillAddPowerUp" nParam1="200" fParam1="0.1" Desc="每击杀一个生灵威力提高一成，最高200层。如果1日未饮血就会效果清零。"/>
+			</SpecialAbility>
+		</Fabao>
+	</Item>
+	</ThingDef>
+
+
+	<ThingDef Type="Item" Name="ZT_BLHQRJY" Parent="WeaponBase">
+	<ThingName>碧落黄泉入九幽</ThingName>
+	<TexPath>Spr\Object\WP\BLHQRJY.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\BLHQRJY.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Tu</ElementKind>
+	<Desc>在世真仙陨落之时，其魂分离，一丝仙识邪念遁入黄泉，在黄泉之中凝聚地煞之力而成。。by哎呦我去！！</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>碧落剑,黄泉刃,九幽诀</FabaoSuffix>
+		<PhysicalLables>
+			<li>Sharp2</li>
+		</PhysicalLables>
+		<BeMade>
+			<WorkToMake>6900</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc>2</ArtDesc>
+			<CostItems>
+					<Item name = "Item_SkyStone" count = "200"/>
+					<Item name = "Item_TSXXY" count = "39"/>
+					<Item name = "Item_JTBLSY" count = "69"/>
+					<Item name = "Item_XianDaoXieNian" count = "1"/>
+			</CostItems>
+		</BeMade> 		
+	<!--	<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>720</Damage>
+			<AttackSpeed>10</AttackSpeed>
+			<AttackRange>20</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.7"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.7"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.4"/>
+				<li PartKind="Bone" Name="Fracture1" Rate="0.5"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.4"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="LJpugong1" HitPoint="32"/>
+				<li Name="LJpugong2" HitPoint="24"/>
+				<li Name="LJpugong3" HitPoint="32"/>
+				<li Name="LJpugong4" HitPoint="24"/>
+			</AtkAnis>
+			<WeaponKind>Sword</WeaponKind>
+			<ModPath>Spr\Object\WP\BLHQRJY.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过9次飞升天劫" needcount = "9" lParam = "God2" />
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="HitCountAddMirror" nParam1="5" fParam1="9" Desc="每攻击5次，产生1道剑光分化，持续9秒"/>
+			</SpecialAbility>
+		</Fabao>
+	</Item>
+	</ThingDef>
+
+
+	<ThingDef Type="Item" Name="ZT_WSLHJ" Parent="WeaponBase">
+	<ThingName>往生轮回剑</ThingName>
+	<TexPath>Spr\Object\WP\WSLHJ.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\WSLHJ.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>None</ElementKind>
+	<Desc>轮回尽头死而复生,便是往生!这是一把逆天之剑,永生之间。。by许天邪</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>往生刃,轮回剑</FabaoSuffix>
+		<PhysicalLables>
+			<li>Sharp3</li>
+			<li>GreatThing_Attack</li>
+			<li>Light1</li>
+			<li>Smooth1</li>
+		</PhysicalLables>
+		<BeMade>
+			<WorkToMake>4900</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc>2</ArtDesc>
+			<CostItems>
+					<Item name = "Item_XieHunLu" count = "60"/>
+					<Item name = "Item_WSTJ" count = "99"/>
+					<Item name = "Item_LWHJ" count = "1"/>
+					<Item name = "Item_XianDaoXieNian" count = "1"/>
+			</CostItems>
+		</BeMade> 		
+	<!--	<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>555</Damage>
+			<AttackSpeed>0.5</AttackSpeed>
+			<AttackRange>2.5</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.7"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.7"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.4"/>
+				<li PartKind="Bone" Name="Fracture1" Rate="0.5"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.4"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="LJpugong1" HitPoint="32"/>
+				<li Name="LJpugong2" HitPoint="24"/>
+				<li Name="LJpugong3" HitPoint="32"/>
+				<li Name="LJpugong4" HitPoint="24"/>
+			</AtkAnis>
+			<WeaponKind>Sword</WeaponKind>
+			<ModPath>Spr\Object\WP\WSLHJ.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "SoulCrystalYou" des = "将宝物成功幽粹11次。" needcount = "11" fParam = "1" />
+				<Condition eventid = "BrokenNeck" des = "携带宝物度过金属性的天劫" needcount = "1" lParam = "God2" eParam = "Jin" />
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过木属性的天劫" needcount = "1" lParam = "God2" eParam = "Mu" />
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过水属性的天劫" needcount = "1" lParam = "God2" eParam = "Shui" />
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过火属性的天劫" needcount = "1" lParam = "God2" eParam = "Huo" />
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过土属性的天劫" needcount = "1" lParam = "God2" eParam = "Tu" />
+			</ActiveCondition>
+			<SpecialAbility>
+			    <Ability Kind="AgeAddPowerUp" fParam1="9" fParam2="0.9" Desc="使用者越接近寿命极限法宝威力大" />
+			</SpecialAbility>
+		</Fabao>
+	</Item>
+	</ThingDef>
+
+
+	<ThingDef Type="Item" Name="ZT_NGZQS" Parent="WeaponBase">
+	<ThingName>南宫朱雀扇</ThingName>
+	<TexPath>Spr\Object\WP\NGZQS.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\NGZQS.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Huo</ElementKind>
+	<Desc>以五块五色铁精打造扇骨，一根乌凰木削至纸薄以为扇面，又以大神通将一块九天白玉壁日夜淬炼七七四十九天作为扇钉，而后取南宫星宿之精。。。。我去哪里给你变，夜夜淬炼，直至九九八十一天之后才可绽放神威。。by斯文眼镜狗</Desc>
+	<Item Lable="Weapon">
+	
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>南宫扇,朱雀羽,扇</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>Sharp</li>
+			<li>Light1</li>
+			<li>Light1</li>
+			<li>GreatThing_Ling</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>8100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_ParasolWood" count = "70"/>
+					<Item name = "Item_WSXSY" count = "25"/>
+					<Item name = "Item_JTCYW" count = "55"/>
+					<Item name = "Item_ZYSY" count = "68"/>
+					<Item name = "Item_Water" count = "1000"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>999</Damage>
+			<AttackSpeed>1</AttackSpeed>
+			<AttackRange>20</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.3"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.4"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.4"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="43"/>
+				<li Name="kszdpugong2" HitPoint="41"/>
+				<li Name="kszdpugong3" HitPoint="45"/>
+				<li Name="kszdpugong4" HitPoint="45"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\NGZQYS.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "BrokenNeck" des = "携带胚胎结火1品金丹" needcount = "1" lParam = "Dan2" eParam = "Huo" fParam = "1"/>
+				 <Condition eventid = "RefiningDan" des = "携带胚胎炼制36炉丹药" needcount = "36" fParam = "1"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="AtkRateDamageAddp" fParam1="2.5" fParam2="2.5" nParam1="0" sParam1="Mu" Desc="对木属性目标伤害加深250%"/>
+			</SpecialAbility>
+		</Fabao>
+	</Item>
+	</ThingDef>	
+	
+	<ThingDef Type="Item" Name="ZT_ZHYD" Parent="WeaponBase">
+	<ThingName>造化玉碟</ThingName>
+	<TexPath>Spr\Object\WP\ZHYD.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\ZHYD.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>None</ElementKind>
+	<Desc>蕴藏三千大道奥义的无上宝物，因受盘古开天辟地的压力而破损，为鸿钧老祖所得，造化玉碟记录下了大道三千天道至理。鸿钧为无上大道，有诗云：高卧九重云，蒲团了道真，天地玄黄外，吾当掌教尊，盘古生太极，两仪四象循，以道传三友，二教阐截分，玄门都领袖，一气化鸿钧。。by徐也</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>玉碟,鸿蒙道碟</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>Sharp</li>
+			<li>GreatThing_Attack</li>
+			<li>GreatThing_Attack_TianLang</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_WSXY" count = "50"/>
+					<Item name = "Item_JSXY" count = "50"/>
+					<Item name = "Item_MSXY" count = "50"/>
+					<Item name = "Item_SSXY" count = "50"/>
+					<Item name = "Item_HSXY" count = "50"/>
+					<Item name = "Item_TSXY" count = "50"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>666</Damage>
+			<AttackSpeed>19</AttackSpeed>
+			<AttackRange>9</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.3"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.4"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.4"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="43"/>
+				<li Name="kszdpugong2" HitPoint="41"/>
+				<li Name="kszdpugong3" HitPoint="45"/>
+				<li Name="kszdpugong4" HitPoint="45"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\ZHYD.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			   <Condition eventid = "Other" des = "连续吸收7天的北斗星光" needday = "7" continuity = "1"/>
+				<Condition eventid = "SoulCrystal" des = "在正午或者午夜幽粹成功且持续9天" needday = "9" fParam = "1" continuity = "1" tParam = "0,1"  tParam2 = "11,13" tParam3 = "23,24"/>
+
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="AtkRateDamageAddp" fParam1="1" fParam2="1.5" nParam1="2" Desc="与法宝拼斗时，造成2.5倍伤害。"/>
+				 <Ability Kind="Sync_AddFlag" sParam1="FLAG_ITEM_RESURRECTION" nParam1 = "1" Desc="以破碎为代价，抵挡一次死亡并恢复所有伤害。" />
+			</SpecialAbility>
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FabaoActiveBeiDou()</UseLua>
+		
+	</Item>
+	</ThingDef>	
+	
+		
+	<ThingDef Type="Item" Name="ZT_ZXSLJ" Parent="WeaponBase">
+	<ThingName>紫霄神雷剑</ThingName>
+	<TexPath>Spr\Object\WP\ZXSLJ.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\ZXSLJ.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>None</ElementKind>
+	<Desc>蕴含上天神雷之力，据说是剑成时，九道紫色雷球冲天穹破空而来，为了阻止其铸成。。by笑脸</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>神雷剑,紫霄剑</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>Sharp</li>
+			<li>GreatThing_Attack</li>
+			<li>GreatThing_Attack</li>
+			<li>GreatThing_Attack</li>
+			<li>GreatThing_Attack_TianLang</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_JSXSY" count = "40"/>
+					<Item name = "Item_ZYSY" count = "79"/>
+					<Item name = "Item_YYSY" count = "69"/>
+					<Item name = "Item_Water" count = "600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>369</Damage>
+			<AttackSpeed>12</AttackSpeed>
+			<AttackRange>3</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.7"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.9"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.4"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="63"/>
+				<li Name="kszdpugong2" HitPoint="41"/>
+				<li Name="kszdpugong3" HitPoint="75"/>
+				<li Name="kszdpugong4" HitPoint="45"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\ZXSLJ.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "Other" des = "连续吸收7天的北斗星光" needday = "7" continuity = "1"/>
+				<Condition eventid = "BrokenNeck" des = "携带宝物度过6次飞升天劫" needcount = "6" lParam = "God2" />
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="Sync_AddEquptData" sParam1="NpcFight_FabaoPowerAddP" fParam2="0.9" nParam1="1" Desc="从根本上提高自身法宝威力加成90%。"/>
+			</SpecialAbility>
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FabaoActiveBeiDou()</UseLua>
+	</Item>
+	</ThingDef>	
+	
+			
+	<ThingDef Type="Item" Name="ZT_LY" Parent="WeaponBase">
+	<ThingName>蓝焰</ThingName>
+	<TexPath>Spr\Object\WP\LY.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\LY.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>None</ElementKind>
+	<Desc>弓内刻有火域中，第六层五彩神火中蓝色火焰的威能，虽是火属性，却带着强烈的水属性。。by笑脸</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>蓝焰</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>Sharp</li>
+			<li>GreatThing_Attack</li>
+			<li>HighDensity2</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_HSXY" count = "10"/>
+					<Item name = "Item_YYSY" count = "99"/>
+					<Item name = "Item_XZ" count = "69"/>
+					<Item name = "Item_Water" count = "600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>569</Damage>
+			<AttackSpeed>-5</AttackSpeed>
+			<AttackRange>30</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.7"/>
+				<li PartKind="Flesh" Name="Puncture" Rate="0.5"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.5"/>
+			</AtkDamage>
+			<AttackSkill>NormalAttackMissile</AttackSkill>
+			<WeaponKind>Bow</WeaponKind>
+			<AtkAnis>
+				<li Name="GGpgong1" HitPoint="63" Bip="Bip001 L Hand"/>
+			</AtkAnis>
+			<ModPath>Spr\Object\WP\LY.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "SoulCrystalLing" des = "对胚胎灵粹9次" needcount = "9" fParam = "1"/>
+				 <Condition eventid = "KillCount" des = "携带宝物胚胎击杀30男性生灵" needcount = "30" sex = "1"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="HitCountCostSkill" nParam1="3"  sParam1="DamageSkill_4" Desc="每3次攻击会对目标敌人发动一次法术"/>
+			</SpecialAbility>
+		</Fabao>
+	</Item>
+	</ThingDef>	
+
+		
+	<ThingDef Type="Item" Name="ZT_JL" Parent="WeaponBase">
+	<ThingName>剑李</ThingName>
+	<TexPath>Spr\Object\WP\JL.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\JL.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>None</ElementKind>
+	<Desc>据传是曾经的一个东荒大姓，李家的老祖留下的一把神兵。。by笑脸</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>剑李</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>Sharp</li>
+			<li>Sharp</li>
+			<li>GreatThing_Attack</li>
+			<li>HighDensity2</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_WSXY" count = "50"/>
+					<Item name = "Item_DLYJ" count = "77"/>
+					<Item name = "Item_ZJST" count = "36"/>
+					<Item name = "Item_Water" count = "900"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>269</Damage>
+			<AttackSpeed>3</AttackSpeed>
+			<AttackRange>30</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.7"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.9"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.4"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="63"/>
+				<li Name="kszdpugong2" HitPoint="41"/>
+				<li Name="kszdpugong3" HitPoint="75"/>
+				<li Name="kszdpugong4" HitPoint="45"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\JL.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition> 
+			    <Condition eventid = "KillCount" des = "携带胚胎击杀12名元神生灵" needcount = "12" lParam = "God"/>
+				<Condition eventid = "UseNpcLing" des = "携带胚胎总计消耗600000000点灵气" needcount = "1000000000" />
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="HitSameFabaoAndEffect" nParam1="6" nParam2="1" Desc="每攻击同一个法宝6次，可使其失效，持续时间与其品阶有关。"/>
+			</SpecialAbility>
+		</Fabao>
+	</Item>
+	</ThingDef>	
+	
+	
+	
+	<ThingDef Type="Item" Name="ZT_JD_TQ" Parent="WeaponBase">
+	<ThingName>禁断——天清</ThingName>
+	<TexPath>Spr\Object\WP\JD_TQ.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\JD_TQ.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>None</ElementKind>
+	<Desc>禁断之器，不闻其名，不见其身，也不曾出世。。。by许天邪</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>禁断罡,天清刀</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>Sharp</li>
+			<li>Sharp</li>
+			<li>PhysicalLables_XiongFeng_HuoYu</li>
+			<li>PhysicalLables_None</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_ZJST" count = "82"/>
+					<Item name = "Item_ZYW" count = "55"/>
+					<Item name = "Item_JTCYW" count = "69"/>
+					<Item name = "Item_Water" count = "1600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>435</Damage>
+			<AttackSpeed>2</AttackSpeed>
+			<AttackRange>3</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.7"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.9"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.4"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="63"/>
+				<li Name="kszdpugong2" HitPoint="121"/>
+				<li Name="kszdpugong3" HitPoint="75"/>
+				<li Name="kszdpugong4" HitPoint="45"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\JD_TQ.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition> 
+			    <Condition eventid = "KillCount" des = "携带胚胎击杀32名元神生灵" needcount = "32" lParam = "God"/>
+				<Condition eventid = "UseNpcLing" des = "携带胚胎总计消耗1000000000点灵气" needcount = "1000000000" />
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="HitSameFabaoAndEffect" nParam1="4" nParam2="1" Desc="每攻击同一个法宝4次，可使其失效，持续时间与其品阶有关。"/>
+			</SpecialAbility>
+		</Fabao>
+	</Item>
+	</ThingDef>	
+
+
+	
+	<ThingDef Type="Item" Name="ZT_MJ_JY" Parent="WeaponBase">
+	<ThingName>魔剑——九幽</ThingName>
+	<TexPath>Spr\Object\WP\MJ_JY.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\MJ_JY.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>None</ElementKind>
+	<Desc>太初魔帝神兵，魔气冲天，祭出镇压天地。。。by许天邪</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>魔剑,九幽刃</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>Hard2</li>
+			<li>Sharp</li>
+			<li>GreatThing_Knock</li>
+			<li>GreatThing_Attack</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_YYSY" count = "91"/>
+					<Item name = "Item_ZYW" count = "66"/>
+					<Item name = "Item_XZ" count = "66"/>
+					<Item name = "Item_Water" count = "600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>769</Damage>
+			<AttackSpeed>3</AttackSpeed>
+			<AttackRange>2</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.7"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.9"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.4"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="33"/>
+				<li Name="kszdpugong2" HitPoint="31"/>
+				<li Name="kszdpugong3" HitPoint="115"/>
+				<li Name="kszdpugong4" HitPoint="45"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\MJ_JY.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过7次飞升天劫" needcount = "7" lParam = "God2" />
+				<Condition eventid = "SoulCrystalYou" des = "将宝物成功幽粹11次。" needcount = "11" fParam = "1" />
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="HitCountAddMirror" nParam1="9" fParam1="22" Desc="每攻击9次，产生1道剑光分化，持续22秒"/>
+			</SpecialAbility>
+		</Fabao>
+		
+		
+	</Item>
+	</ThingDef>	
+
+
+	
+	<ThingDef Type="Item" Name="ZT_XY_CM" Parent="WeaponBase">
+	<ThingName>血渊——苍闵</ThingName>
+	<TexPath>Spr\Object\WP\XY_CM.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\XY_CM.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>None</ElementKind>
+	<Desc>血界老祖以万亿修士之精血配合血界核心而炼化的帝兵。。。by许天邪</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>血渊剑,苍闵剑</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>HighDensity2</li>
+			<li>Sharp</li>
+			<li>Liquid</li>
+			<li>GreatThing_Attack</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_LWHJ" count = "1"/>
+					<Item name = "Item_XZ" count = "198"/>
+					<Item name = "Item_MonsterBlood" count = "590"/>
+					<Item name = "Item_Water" count = "600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>369</Damage>
+			<AttackSpeed>9</AttackSpeed>
+			<AttackRange>10</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.7"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.9"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.4"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="73"/>
+				<li Name="kszdpugong2" HitPoint="41"/>
+				<li Name="kszdpugong3" HitPoint="75"/>
+				<li Name="kszdpugong4" HitPoint="95"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\XY_CM.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "Other" des = "以精血喂养宝物99次" needcount = "99"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="HitCountAddMirror" nParam1="1" nParam2="12" fParam1="1" Desc="每攻击1次，产生12道蚊须分形，持续1秒。"/>
+			</SpecialAbility>
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FeedSelf()</UseLua>
+	</Item>
+	</ThingDef>	
+
+
+	<ThingDef Type="Item" Name="ZT_ZTXLJ" Parent="WeaponBase">
+	<ThingName>葬天修罗剑</ThingName>
+	<TexPath>Spr\Object\WP\ZTXLJ.png</TexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>None</ElementKind>
+	<Desc>地狱之剑，修罗鬼帝成道前的配件，集合地府之本源炼化而成。。。by许天邪</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>葬天剑,修罗斩</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>HighDensity2</li>
+			<li>Blunt</li>
+			<li>Gravel</li>
+			<li>GreatThing_Attack</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_LWHJ" count = "1"/>
+					<Item name = "Item_SoulPearl" count = "79"/>
+					<Item name = "Item_XieHunLu" count = "79"/>	
+					<Item name = "Item_Water" count = "600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>469</Damage>
+			<AttackSpeed>5</AttackSpeed>
+			<AttackRange>7</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.7"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.9"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.4"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="33"/>
+				<li Name="kszdpugong2" HitPoint="41"/>
+				<li Name="kszdpugong3" HitPoint="95"/>
+				<li Name="kszdpugong4" HitPoint="45"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\ZTXLJ.FBX</ModPath>
+		</Equip>
+		
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "Other" des = "吸收瘴气天气29次" needcount = "29"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="AtkRateDamageAddp" fParam1="1" fParam2="0.3" nParam1="1" nParam2="1" Desc="攻击敌方本体时有10%几率额外造成目标当前灵气30%的附加伤害。"/>
+			</SpecialAbility>
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FabaoActiveWeather({'Miasma'})</UseLua>
+	</Item>
+	</ThingDef>	
+
+
+	<ThingDef Type="Item" Name="ZT_BXLRJ" Parent="WeaponBase">
+	<ThingName>碧心玲珑剑</ThingName>
+	<TexPath>Spr\Object\WP\BXLRJ.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\BXLRJ.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Mu</ElementKind>
+	<Desc>此剑生生不息，曾一剑之威大战四方圣地，后剑主全身而退，丝毫无损。。。by许天邪</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>碧心,玲珑剑</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>Smooth2</li>
+			<li>Precise</li>
+			<li>GreatThing_Rot</li>
+			<li>GreatThing_Attack_TianLang</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_YZBYB" count = "73"/>
+					<Item name = "Item_JTBLSY" count = "86"/>
+					<Item name = "Item_YanDaoGuo" count = "3"/>
+					<Item name = "Item_Water" count = "600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>469</Damage>
+			<AttackSpeed>5</AttackSpeed>
+			<AttackRange>7</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.5"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.4"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.3"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.8"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="73"/>
+				<li Name="kszdpugong2" HitPoint="31"/>
+				<li Name="kszdpugong3" HitPoint="45"/>
+				<li Name="kszdpugong4" HitPoint="65"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\BXLRJ.FBX</ModPath>
+		</Equip>
+		
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "Other" des = "吸收18天的北斗星光" needcount = "18"/>
+				<Condition eventid = "UseNpcLing" des = "携带胚胎总计消耗900000000点灵气" needcount = "900000000" />
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="Sync_AddEquptData" sParam1="NpcFight_FabaoMaxLingAddP" fParam2="1" nParam1="1" Desc="从根本上提高自身法宝灵气加成100%。"/>
+			</SpecialAbility>			
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FabaoActiveBeiDou()</UseLua>
+	</Item>
+	</ThingDef>	
+
+	<ThingDef Type="Item" Name="ZT_DYCHJ" Parent="WeaponBase">
+	<ThingName>帝渊苍皇剑</ThingName>
+	<TexPath>Spr\Object\WP\DYCHJ.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\DYCHJ.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Mu</ElementKind>
+	<Desc>帝道之韵融于此剑，万古轩辕黄帝都没资格获得的帝剑，剑出帝王临！万古众生皆臣服。。by许天邪</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>帝渊剑,苍皇剑</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>CYHDJ</li>
+
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_DJHJ" count = "1"/>
+					<Item name = "Item_LWHJ" count = "1"/>
+					<Item name = "Item_XHEQ" count = "31"/>
+					<Item name = "Item_Water" count = "600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>869</Damage>
+			<AttackSpeed>5</AttackSpeed>
+			<AttackRange>7</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.9"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.7"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.4"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="1"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="73"/>
+				<li Name="kszdpugong2" HitPoint="431"/>
+				<li Name="kszdpugong3" HitPoint="45"/>
+				<li Name="kszdpugong4" HitPoint="65"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\DYCHJ.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "UseNpcLing" des = "携带胚胎总计消耗10000000000点灵气" needcount = "10000000000" />
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="LastLingCostPowerUp" nParam1="5000" fParam1="0.1" fParam2="10"  Desc="每消耗10000点灵气，伤害提高10%，最高提高5000%。法宝补充灵气时重置。"/>
+			</SpecialAbility>
+		</Fabao>
+	</Item>
+	</ThingDef>	
+
+	<ThingDef Type="Item" Name="ZT_JXFJ" Parent="WeaponBase">
+	<ThingName>机械飞剑</ThingName>
+	<TexPath>Spr\Object\WP\JXFJ.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\JXFJ.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Jin</ElementKind>
+	<Desc>凝聚了人类科技结晶的一把飞剑，即使是普通人也可以御剑杀敌于百米外的敌人。。by斯文眼镜狗</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>机械飞剑</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>JXFJ</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_DJHJ" count = "1"/>
+					<Item name = "Item_ST" count = "49"/>
+					<Item name = "Item_DLYJ" count = "66"/>
+					<Item name = "Item_YZBYB" count = "69"/>
+					<Item name = "Item_Water" count = "600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>222</Damage>
+			<AttackSpeed>1</AttackSpeed>
+			<AttackRange>20</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.9"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.7"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.4"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="1"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="73"/>
+				<li Name="kszdpugong2" HitPoint="431"/>
+				<li Name="kszdpugong3" HitPoint="45"/>
+				<li Name="kszdpugong4" HitPoint="65"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\JXFJ.FBX</ModPath>
+		</Equip>
+		<Fabao>
+			<ActiveCondition>
+			    <Condition eventid = "KillCount" des = "携带此物并击杀元神蛇妖9只" needcount = "9" lParam = "God" oParam = "JYSnake"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="FlyDamageAddP" fParam1="0.05" Desc="飞剑每飞行1秒，基础威力就提高5%，返回后清空。"/>
+			</SpecialAbility>
+		</Fabao>
+	</Item>
+	</ThingDef>	
+
+	<ThingDef Type="Item" Name="ZT_WFWTJ" Parent="WeaponBase">
+	<ThingName>无法无天刀</ThingName>
+	<TexPath>Spr\Object\WP\WFWTJ.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\WFWTJ.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>None</ElementKind>
+	<Desc>以五种属性源石和749瓶妖灵血凝练而成，传说刀成之时，降下神雷阻其成型。。by妖妖妖秀</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>无法无天刀</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>WFWTD</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_XZ" count = "99"/>
+					<Item name = "Item_JTBYB" count = "68"/>
+					<Item name = "Item_JTCYW" count = "100"/>
+					<Item name = "Item_Water" count = "666"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>1000</Damage>
+			<AttackSpeed>-1</AttackSpeed>
+			<AttackRange>1</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.9"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.7"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.4"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="1"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="73"/>
+				<li Name="kszdpugong2" HitPoint="431"/>
+				<li Name="kszdpugong3" HitPoint="45"/>
+				<li Name="kszdpugong4" HitPoint="65"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\WFWTJ.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "Other" des = "连续吸收7天的北斗星光" needday = "7" continuity = "1"/>
+				<Condition eventid = "Other" des = "吸收焚风天气28次" needcount = "28"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="Sync_AddEquptData" sParam1="NpcFight_FabaoRepelDistanceAddV" fParam2="0.9" nParam1="1" Desc="从根本上提高自身法宝击退距离90%。"/>
+			</SpecialAbility>
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FabaoActiveBeiDou(),GameMain:GetMod('_FabaoHelper'):FabaoActiveWeather({'FohnNoFeng','Fohn'})</UseLua>
+	</Item>
+	</ThingDef>	
+	
+	
+	<ThingDef Type="Item" Name="ZT_ZTQ" Parent="WeaponBase">
+	<ThingName>诛天枪</ThingName>
+	<TexPath>Spr\Object\WP\ZTQ.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\ZTQ.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>None</ElementKind>
+	<Desc>玄黄时期，天圣宫宫主，玄瑤大帝的神兵，此枪一出则为黎明，玄瑤大帝一生只为求得长生之道，用此枪贯彻长空。。by狠人的尿不湿</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>诛天枪</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>ZTQ</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_DJHJ" count = "1"/>
+					<Item name = "Item_YHLJ" count = "1"/>
+					<Item name = "Item_Water" count = "600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>1000</Damage>
+			<AttackSpeed>-1</AttackSpeed>
+			<AttackRange>1</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.9"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.7"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.4"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="1"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="73"/>
+				<li Name="kszdpugong2" HitPoint="431"/>
+				<li Name="kszdpugong3" HitPoint="45"/>
+				<li Name="kszdpugong4" HitPoint="65"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\ZTQ.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "Other" des = "吸收焚风天气29次" needcount = "29"/>
+				 <Condition eventid = "MapStay" des = "携带胚胎于天极峰驻扎36天" needday = "36" sParam = "Place_TianJi"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="AtkRateDamageAddp" fParam1="0.05" fParam2="19" nParam1="0" Desc="造成伤害时，有5%的几率造成20倍伤害。"/>
+			</SpecialAbility>
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FabaoActiveWeather({'FohnNoFeng','Fohn'})</UseLua>
+	</Item>
+	</ThingDef>	
+
+	<ThingDef Type="Item" Name="ZT_TLD" Parent="WeaponBase">
+	<ThingName>屠龙刀</ThingName>
+	<TexPath>Spr\Object\WP\ZTTLD.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\ZTTLD.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Jin</ElementKind>
+	<Desc>专为屠龙而设计的大刀，威力极大，传闻曾一道劈死九条龙。。by妖妖妖秀</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>屠龙刀</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>ZTTLD</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_LWHJ" count = "3"/>
+					<Item name = "Item_LQ" count = "36"/>
+					<Item name = "Item_XHEQ" count = "6"/>
+					<Item name = "Item_BossLong_Jiao" count = "24"/>
+					<Item name = "Item_Water" count = "1600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>300</Damage>
+			<AttackSpeed>-1</AttackSpeed>
+			<AttackRange>1</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.6"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.6"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.6"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="100"/>
+				<li Name="kszdpugong2" HitPoint="100"/>
+				<li Name="kszdpugong3" HitPoint="100"/>
+				<li Name="kszdpugong4" HitPoint="100"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\ZTTLD.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "Other" des = "吸收焚风天气36次" needcount = "36"/>
+				<Condition eventid = "KillCount" des = "携带此物并击杀九次蛟龙" needcount = "9" oParam = "Boss_Long"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="AtkRateDamageAddp" fParam1="0.5" fParam2="9" nParam1="0" Desc="造成伤害时，有50%的几率造成10倍伤害。"/>
+			</SpecialAbility>
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FabaoActiveWeather({'FohnNoFeng','Fohn'})</UseLua>
+	</Item>
+	</ThingDef>	
+
+	<ThingDef Type="Item" Name="ZT_YJJ" Parent="WeaponBase">
+	<ThingName>玉劫剑</ThingName>
+	<TexPath>Spr\Object\WP\ZTYJJ.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\ZTYJJ.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Mu</ElementKind>
+	<Desc>上古纪元，有一男子的道侣天赋异禀，留玉远走争天命，身死道消。男子炼玉为剑，败一代天骄，红尘成仙。。by华云飞</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>玉劫剑</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>ZTYJJ</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_HXCJ" count = "3"/>
+					<Item name = "HUO_QCSH" count = "6"/>
+					<Item name = "Item_JTBYB" count = "66"/>
+					<Item name = "Item_JTBLSY" count = "66"/>
+					<Item name = "Item_Water" count = "1600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>300</Damage>
+			<AttackSpeed>-1</AttackSpeed>
+			<AttackRange>1</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.6"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.6"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.6"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="100"/>
+				<li Name="kszdpugong2" HitPoint="100"/>
+				<li Name="kszdpugong3" HitPoint="100"/>
+				<li Name="kszdpugong4" HitPoint="100"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\ZTYJJ.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "KillCount" des = "携带此物并击杀元神蛇妖5只" needcount = "5" lParam = "God" oParam = "JYSnake"/>
+				<Condition eventid = "KillCount" des = "携带此物并击杀元神兔妖5只" needcount = "5" lParam = "God" oParam = "JYRabbit"/>
+				<Condition eventid = "KillCount" des = "携带此物并击杀元神狼妖5只" needcount = "5" lParam = "God" oParam = "JYWolf"/>
+				<Condition eventid = "KillCount" des = "携带此物并击杀元神熊妖5只" needcount = "5" lParam = "God" oParam = "JYBear"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="FunctionEffectPower" nParam1="-1" fParam1="0.25" nParam2="1" Desc="健康值每低1%，法宝威力增加25%。"/>
+			</SpecialAbility>
+		</Fabao>
+		
+	</Item>
+	</ThingDef>	
+
+	<ThingDef Type="Item" Name="ZT_ZFJ" Parent="WeaponBase">
+	<ThingName>斩凤剑</ThingName>
+	<TexPath>Spr\Object\WP\ZTZFJ.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\ZTZFJ.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Mu</ElementKind>
+	<Desc>沐浴神凤之血，用神凤精华炼制而成，吸收99天火属性天气方能成剑。。by妖妖妖秀</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>斩凤剑</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>ZTZFJ</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_HXCJ" count = "6"/>
+					<Item name = "Item_BossFeng_Meat" count = "36"/>
+					<Item name = "Item_BossFeng_HongYu" count = "2"/>
+					<Item name = "Item_WSTJ" count = "36"/>
+					<Item name = "Item_Water" count = "1600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>300</Damage>
+			<AttackSpeed>-1</AttackSpeed>
+			<AttackRange>1</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.6"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.6"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.6"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="100"/>
+				<li Name="kszdpugong2" HitPoint="100"/>
+				<li Name="kszdpugong3" HitPoint="100"/>
+				<li Name="kszdpugong4" HitPoint="100"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\ZTYJJ.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "Other" des = "吸收焚风天气99次" needcount = "99"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="Sync_AddFlag" sParam1="FLAG_ITEM_RESURRECTION" nParam1 = "1" Desc="以破碎为代价，抵挡一次死亡并恢复所有伤害。" />
+				 <Ability Kind="HitAddRecovery" fParam1="0.5"  Desc="造成伤害的50%会补充为法宝自身的灵气。"/>
+			</SpecialAbility>
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FabaoActiveWeather({'FohnNoFeng','Fohn'})</UseLua>
+	</Item>
+	</ThingDef>	
+	
+	
+	<ThingDef Type="Item" Name="ZT_LYFQ" Parent="WeaponBase">
+	<ThingName>烈焰焚情</ThingName>
+	<TexPath>Spr\Object\WP\ZTLYFQ.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\ZTLYFQ.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Huo</ElementKind>
+	<Desc>石昊年少时随身宝剑，知道成就仙帝后留在仙界。。by石昊</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>烈焰焚情</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>ZTLYFQ</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_HXCJ" count = "1"/>
+					<Item name = "Item_HSXXY" count = "3"/>
+					<Item name = "Item_WSXSY" count = "5"/>
+					<Item name = "Item_JSXSY" count = "5"/>
+					<Item name = "Item_MSXSY" count = "5"/>
+					<Item name = "Item_SSXSY" count = "5"/>
+					<Item name = "Item_HSXSY" count = "5"/>
+					<Item name = "Item_TSXSY" count = "5"/>
+					<Item name = "Item_WSTJ" count = "66"/>
+					<Item name = "Item_Water" count = "1600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>300</Damage>
+			<AttackSpeed>-1</AttackSpeed>
+			<AttackRange>1</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.6"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.6"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.6"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="100"/>
+				<li Name="kszdpugong2" HitPoint="100"/>
+				<li Name="kszdpugong3" HitPoint="100"/>
+				<li Name="kszdpugong4" HitPoint="100"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\ZTYMZD.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过18次飞升天劫" needcount = "18" lParam = "God2" />
+			</ActiveCondition>
+			<SpecialAbility>
+			      <Ability Kind="AtkRateDamageAddp" fParam1="1" fParam2="1.5" nParam1="0" sParam1="Mu" Desc="对木属性目标伤害加深150%"/>			 
+				 <Ability Kind="AtkRateDamageAddp" fParam1="1" fParam2="1.3" nParam1="0" sParam1="Tu" Desc="对土属性目标伤害加深130%"/>
+				 <Ability Kind="AtkRateDamageAddp" fParam1="1" fParam2="1.4" nParam1="0" sParam1="Huo" Desc="对火属性目标伤害加深140%"/>
+				 <Ability Kind="AtkRateDamageAddp" fParam1="1" fParam2="1.2" nParam1="0" sParam1="Jin" Desc="对金属性目标伤害加深120%"/>
+				 <Ability Kind="AtkRateDamageAddp" fParam1="1" fParam2="1" nParam1="0" sParam1="Shui" Desc="对水属性目标伤害加深100%"/>
+			</SpecialAbility>
+		</Fabao>
+	</Item>
+	</ThingDef>	
+
+	<ThingDef Type="Item" Name="ZT_ZTD" Parent="WeaponBase">
+	<ThingName>斩天道</ThingName>
+	<TexPath>Spr\Object\WP\ZTZTD.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\ZTZTD.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>Huo</ElementKind>
+	<Desc>世上无仙，那我便斩天成仙。。by徐也</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>斩天道</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>ZTZTD</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_YHLJ" count = "1"/>
+					<Item name = "Item_HSXXY" count = "15"/>
+					<Item name = "Item_WSXXY" count = "15"/>
+					<Item name = "Item_JSXXY" count = "15"/>
+					<Item name = "Item_MSXXY" count = "15"/>
+					<Item name = "Item_SSXXY" count = "15"/>
+					<Item name = "Item_BossZhuLong_LongYu" count = "5"/>
+					<Item name = "Item_TSXXY" count = "15"/>
+					<Item name = "Item_XZ" count = "99"/>
+					<Item name = "Item_Water" count = "1600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>300</Damage>
+			<AttackSpeed>-1</AttackSpeed>
+			<AttackRange>1</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.6"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.6"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.6"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="100"/>
+				<li Name="kszdpugong2" HitPoint="100"/>
+				<li Name="kszdpugong3" HitPoint="100"/>
+				<li Name="kszdpugong4" HitPoint="100"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\ZTZTD.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			    <Condition eventid = "KillCount" des = "携带此物并击杀六次蛟龙" needcount = "6" oParam = "Boss_Long"/>
+				<Condition eventid = "KillCount" des = "携带此物并击杀六次凶凤" needcount = "6" oParam = "Boss_Feng"/>
+				<Condition eventid = "KillCount" des = "携带此物并击杀五次烛龙" needcount = "5" oParam = "Boss_Zhulong"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			     <Ability Kind="FristHitPowerUp" fParam1="15" Desc="第一剑威力增加1500%，法宝补充灵气重置。"/>
+			</SpecialAbility>
+		</Fabao>
+	</Item>
+	</ThingDef>	
+
+	
+	<ThingDef Type="Item" Name="ZT_XHKT" Parent="WeaponBase">
+	<ThingName>玄黄开天</ThingName>
+	<TexPath>Spr\Object\WP\ZTXHKT.png</TexPath>
+	<FabaoTexPath>Spr\Object\WP\ZTXHKT.png</FabaoTexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>None</ElementKind>
+	<Desc>宇宙洪荒初开时，成天道之旨，由天铸造而成，与幽冥镇地同生。。by清弦</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>玄黄开天</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>ZTXHKT</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_XHEQ" count = "99"/>
+					<Item name = "Item_XHJC" count = "4"/>
+					<Item name = "Item_WSXXY" count = "99"/>
+					<Item name = "Item_WSSS" count = "300"/>
+					<Item name = "Item_ThunderAir" count = "5"/>
+					<Item name = "Item_YYSY" count = "99"/>
+					<Item name = "Item_Water" count = "1600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>300</Damage>
+			<AttackSpeed>-1</AttackSpeed>
+			<AttackRange>1</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.6"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.6"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.6"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="100"/>
+				<li Name="kszdpugong2" HitPoint="100"/>
+				<li Name="kszdpugong3" HitPoint="100"/>
+				<li Name="kszdpugong4" HitPoint="100"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\ZTXHKT.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			  <Condition eventid = "Other" des = "吸收36次永夜的气息" needcount = "36"/>
+			</ActiveCondition>
+			<SpecialAbility>
+			      <Ability Kind="HitSameFabaoAndEffect" nParam1="9" nParam2="1" Desc="每攻击同一个法宝9次，可使其失效，持续时间与其品阶有关。"/>
+				  <Ability Kind="FristHitPowerUp" fParam1="5" Desc="第一剑威力增加500%，法宝补充灵气重置。"/>
+			</SpecialAbility>
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FabaoActiveWeather({'PermanentNight'})</UseLua>
+	</Item>
+	</ThingDef>	
+
+	
+	<ThingDef Type="Item" Name="ZT_HMYYJ" Parent="WeaponBase">
+	<ThingName>鸿蒙阴阳剑</ThingName>
+	<TexPath>Spr\Object\WP\ZTHMYYJ.png</TexPath>
+	<MaxStack>1</MaxStack>
+	<Rate>12</Rate>
+	<ElementKind>None</ElementKind>
+	<Desc>混沌之初，天地所孕育，天地开辟后烛龙身死，其身由此剑吸收，至今无人得见。。by梦</Desc>
+	<Item Lable="Weapon">
+	<NotRandom>2</NotRandom>
+		<FabaoSuffix>鸿蒙阴阳剑</FabaoSuffix>
+		
+		<PhysicalLables>
+			<li>ZTHMYYJ</li>
+		</PhysicalLables>
+		
+		<BeMade>
+			<WorkToMake>2100</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<CostItems>
+					<Item name = "Item_BossZhuLong_Eye" count = "15"/>
+					<Item name = "Item_BossZhuLong_LongYu" count = "6"/>
+					<Item name = "Item_BossZhuLong_Meat" count = "30"/>
+					<Item name = "Item_WSSS" count = "300"/>
+					<Item name = "Item_DLYJ" count = "68"/>
+					<Item name = "Item_ZJST" count = "99"/>
+					<Item name = "Item_Water" count = "1600"/>
+			</CostItems>
+		</BeMade> 		
+		<!--<Rot>
+			<RotSpeed>0.0005</RotSpeed>
+			<DaysToRotStart>0</DaysToRotStart>
+			<TempMin>10</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>-->
+		<Equip>
+			<Damage>300</Damage>
+			<AttackSpeed>-1</AttackSpeed>
+			<AttackRange>1</AttackRange>
+			<AtkDamage>
+				<li PartKind="Flesh" Name="Cut2" Rate="0.6"/>
+				<li PartKind="Flesh" Name="Cut3" Rate="0.6"/>
+				<li PartKind="Organ" Name="VisceralCut" Rate="0.6"/>
+				<li PartKind="Bone" Name="Fracture2" Rate="0.6"/>
+			</AtkDamage>
+			<AtkAnis>
+				<li Name="kszdpugong1" HitPoint="100"/>
+				<li Name="kszdpugong2" HitPoint="100"/>
+				<li Name="kszdpugong3" HitPoint="100"/>
+				<li Name="kszdpugong4" HitPoint="100"/>
+			</AtkAnis>
+			<WeaponKind>Glove</WeaponKind>
+			<ModPath>Spr\Object\WP\ZTHMYYJ.FBX</ModPath>
+		</Equip>
+		<Fabao>
+		    <ActiveCondition>
+			  <Condition eventid = "Other" des = "吸收36次永夜的气息" needcount = "36"/>
+			   <Condition eventid = "BrokenNeck" des = "携带宝物度过金属性的天劫" needcount = "2" lParam = "God2" eParam = "Jin" />
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过木属性的天劫" needcount = "2" lParam = "God2" eParam = "Mu" />
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过水属性的天劫" needcount = "2" lParam = "God2" eParam = "Shui" />
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过火属性的天劫" needcount = "2" lParam = "God2" eParam = "Huo" />
+			    <Condition eventid = "BrokenNeck" des = "携带宝物度过土属性的天劫" needcount = "2" lParam = "God2" eParam = "Tu" />
+			</ActiveCondition>
+			<SpecialAbility>
+			      <Ability Kind="HitSameFabaoAndEffect" nParam1="3" nParam2="1" Desc="每攻击同一个法宝3次，可使其失效，持续时间与其品阶有关。"/>
+				  <Ability Kind="HitCountAddMirror" nParam1="3" fParam1="2" Desc="每攻击3次，产生1道剑光分化，持续2秒"/>
+			</SpecialAbility>
+		</Fabao>
+		<UseLua>GameMain:GetMod('_FabaoHelper'):FabaoActiveWeather({'PermanentNight'})</UseLua>
+	</Item>
+	</ThingDef>	
+</List></ThingDefs>

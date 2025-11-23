@@ -1,0 +1,282 @@
+<ModifierDefs><List>
+	<Modifier Name="ZT_BHZ" Type="Normal">
+		<DisplayName>避寒珠</DisplayName>
+		<Desc></Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>-1</Duration>
+		<Sync>1</Sync>
+		<Display>0</Display>
+		<Properties>
+			<li Name="ToleranceTMin" AddV="-2000"/><!--最低极限温度-->
+		</Properties>
+	</Modifier> 
+	
+	
+	<Modifier Name="ZT_LQ" Type="Normal">
+		<DisplayName>真龙气息</DisplayName>
+		<Desc></Desc>
+		<MaxStack>3</MaxStack>
+		<Duration>-1</Duration>
+		<Sync>1</Sync>
+		<Display>0</Display>
+		<Properties>
+			<li Name="NpcFight_FabaoPowerAddP" AddP="0.5"/><!--法宝威力加成-->
+			<li Name="NpcFight_FabaoLingRecoverAddP" AddP="0.5"/><!--法宝灵气恢复速度加成-->
+				<li Name="NpcFight_FabaoCoolDownAddP" AddP="-0.5"/><!--法宝攻击间隔加成-->
+				<li Name="NpcFight_FabaoMaxLingAddP" AddP="0.25"/><!--法宝灵气最大值加成-->
+		</Properties>
+	</Modifier> 
+	
+	<Modifier Name="ZT_LZ" Type="Normal">
+		<DisplayName>真龙戏珠</DisplayName>
+		<Desc></Desc>
+		<MaxStack>2</MaxStack>
+		<Duration>-1</Duration>
+		<Sync>1</Sync>
+		<Display>0</Display>
+		<Properties>
+			<li Name="MagicDamageRecoveryPowerAddV" AddV="2"/>
+			<li Name="MindStateBaseValue" AddV="50"/><!--心情基础值50-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="ZT_SF" Type="Normal">
+		<DisplayName>神凤内丹</DisplayName>
+		<Desc></Desc>
+		<MaxStack>2</MaxStack>
+		<Duration>-1</Duration>
+		<Sync>1</Sync>
+		<Display>0</Display>
+		<Properties>
+			<li Name="NpcFight_SpellPowerAddP" AddP="0.5"/><!--术法伤害加成3-->
+			<li Name="MindStateBaseValue" AddV="50"/><!--心情基础值50-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="ZT_HL" Type="Normal">
+		<DisplayName>黄龙凶威</DisplayName>
+		<Desc></Desc>
+		<MaxStack>2</MaxStack>
+		<Duration>-1</Duration>
+		<Sync>1</Sync>
+		<Display>0</Display>
+		<Properties>
+			<li Name="NpcFight_ZhenEnginePower" AddV="25"/><!--术法伤害加成3-->
+			<li Name="MindStateBaseValue" AddV="50"/><!--心情基础值50-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="ZT_XW" Type="Normal">
+		<DisplayName>灵力波涛</DisplayName>
+		<Desc></Desc>
+		<MaxStack>2</MaxStack>
+		<Duration>-1</Duration>
+		<Sync>1</Sync>
+		<Display>0</Display>
+		<Properties>
+			<li Name="LingAbsorbSpeed" AddP="0.5"/><!--灵气吸收速度5-->
+			<li Name="MindStateBaseValue" AddV="50"/><!--心情基础值50-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="ZT_BH" Type="Normal">
+		<DisplayName>白虎咆哮</DisplayName>
+		<Desc></Desc>
+		<MaxStack>2</MaxStack>
+		<Duration>-1</Duration>
+		<Sync>1</Sync>
+		<Display>0</Display>
+		<Properties>
+			<li Name="NpcFight_FabaoPowerAddP" AddP="1"/><!--灵气吸收速度5-->
+			<li Name="MindStateBaseValue" AddV="50"/><!--心情基础值50-->
+		</Properties>
+	</Modifier> 
+	
+	
+	<Modifier Name="ZT_ZTF" Type="Normal">
+		<DisplayName>遮天符</DisplayName>
+		<Desc></Desc>
+		<MaxStack>3</MaxStack>
+		<Duration>-1</Duration>
+		<Sync>1</Sync>
+		<Display>0</Display>
+		<BaseFive>0,0,4,0,0</BaseFive>
+		<Properties>
+			<li Name="MindStateBaseValue" AddV="50"/><!--心情基础值50-->
+		
+		</Properties>
+	</Modifier> 
+	
+	<Modifier Name="ZT_BHW" Type="Normal">
+		<DisplayName>避火真丹</DisplayName>
+		<Desc>短暂提高最高温度极限。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>1200</Duration>
+		<Display>0</Display>
+		<Sync>1</Sync>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+			<li Name="ToleranceTMax" AddV="7500"/><!--最高极限温度-->
+		</Properties>
+	</Modifier> 
+	
+	<Modifier Name="ZTHSZD" Type="Normal">
+		<DisplayName>护生之道</DisplayName>
+		<Desc>佩戴时可增强百分五十护盾强度。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<Sync>1</Sync>
+		<Properties>
+			<li Name="NpcFight_ShieldConversionRateAddP" AddV="10"/><!--最高极限温度-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="ZTTZY" Type="Normal">
+		<DisplayName>天之印</DisplayName>
+		<Desc>佩戴时减低二十点阵法符荷。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<Sync>1</Sync>
+		<Properties>
+			<li Name="NpcFight_ZhenEnginePower" AddV="-80"/><!--阵法负荷能力-20-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="ZTDZY" Type="Normal">
+		<DisplayName>地之玺</DisplayName>
+		<Desc>佩戴时增强百分五十术法伤害。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<Sync>1</Sync>
+		<Properties>
+			<li Name="NpcFight_SpellPowerAddP" AddP="0.5"/><!--术法伤害加成3-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="ZTYMZD" Type="Normal">
+		<DisplayName>幽冥镇地</DisplayName>
+		<Desc>佩戴时增强提高心境五十。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<Sync>1</Sync>
+		<Properties>
+			<li Name="MindStateBaseValue" AddV="150"/><!--心情基础值50-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="ZTFHJ" Type="Normal">
+		<DisplayName>凤凰劫</DisplayName>
+		<Desc>佩戴时增强提高心境五十和五点魅力。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<Sync>1</Sync>
+		<BaseFive>0,0,5,0,0</BaseFive>
+		<Properties>
+			<li Name="MindStateBaseValue" AddV="150"/><!--心情基础值50-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="LGSF" Type="Normal">
+		<DisplayName>乱古神符</DisplayName>
+		<Desc>佩戴时降低佩戴者两百天谴值。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<Sync>1</Sync>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+			<li Name="GodPenaltyAddV" AddV="-200"/>
+		</Properties>
+	</Modifier> 
+	<Modifier Name="HDS" Type="Normal">
+		<DisplayName>混沌太初</DisplayName>
+		<Desc>佩戴时提高佩戴者百分五十修行速度，降低20点天谴值。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<Sync>1</Sync>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+			<li Name="GodPenaltyAddV" AddV="-20"/>
+			<li Name="DeepPracticeSpeedSpecialCoefficient" AddP="0.5"/>
+		</Properties>
+	</Modifier> 
+	<Modifier Name="ZT_tc" Type="Normal">
+		<DisplayName>太初古息</DisplayName>
+		<Desc>切多了石头，沾染上了诅咒之息。</Desc>
+		<MaxStack>9999</MaxStack>
+		<Duration>1000</Duration>
+		<Display>1</Display>
+		<Properties>
+			<li Name="NeckCountdownAddV" AddV="-100"/>
+			<li Name="GodPenaltyAddV" AddV="5"/>
+		</Properties>
+		<Moods>
+				<li>TCHM</li>
+			</Moods>
+	</Modifier>
+	<Modifier Name="Gan" Type="Normal">
+		<DisplayName>氪金狗眼</DisplayName>
+		<Desc>选了个垃圾石头切出了垃圾东西。越想越气。。</Desc>
+		<MaxStack>9999</MaxStack>
+		<Duration>100</Duration>
+		<Display>1</Display>
+		<Properties>
+			<li Name="SpeedOfMindStateCoefficient" AddV="-0.75"/>
+			<li Name="SpeedOfMindStateCoefficientByMoods" AddV="2"/>
+		</Properties>
+		<Moods>
+				<li>Gan</li>
+			</Moods>
+	</Modifier>
+	<Modifier Name="ZT_Q" Type="Normal">
+		<DisplayName>气煞我也</DisplayName>
+		<Desc>被其他人抢先一步切开了石头。。吐血。。与九秘失之交臂。</Desc>
+		<MaxStack>9999</MaxStack>
+		<Duration>100</Duration>
+		<Display>1</Display>
+		<Properties>
+			<li Name="SpeedOfMindStateCoefficient" AddV="-0.55"/>
+			<li Name="SpeedOfMindStateCoefficientByMoods" AddV="1"/>
+		</Properties>
+		<Moods>
+				<li>ZT_Q</li>
+			</Moods>
+	</Modifier>
+	<Modifier Name="JMDB" Type="Normal">
+		<DisplayName>盗版书籍</DisplayName>
+		<Desc>。。没想到修炼了半天盗版的。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>-1</Duration>
+		<Display>1</Display>
+		<Properties>
+			<li Name="DeepPracticeSpeedSpecialCoefficient" AddP="-0.5"/>
+		</Properties>
+		<Moods>
+				<li>DB</li>
+		</Moods>
+	</Modifier>
+	<Modifier Name="TWEH" Type="Normal">
+		<DisplayName>肾虚噩耗</DisplayName>
+		<Desc>我辈修仙究竟为何？</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>6000</Duration>
+		<Display>1</Display>
+		<Properties>
+			<li Name="DeepPracticeSpeedSpecialCoefficient" AddP="-1.5"/>
+		</Properties>
+		<Moods>
+				<li>TWEH</li>
+		</Moods>
+	</Modifier>
+	<Modifier Name="ZT_XJ" Type="Normal">
+		<DisplayName>仙界有感</DisplayName>
+		<Desc>修仙！我要入仙界</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>9000</Duration>
+		<Display>1</Display>
+		<Properties>
+			<li Name="DeepPracticeSpeedSpecialCoefficient" AddP="1.5"/>
+			<li Name="NpcFight_ShieldConversionRate" AddV="2"/>
+		</Properties>
+		<Moods>
+				<li>XJ</li>
+		</Moods>
+	</Modifier>
+</List></ModifierDefs>

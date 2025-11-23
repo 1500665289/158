@@ -1,0 +1,1946 @@
+<ThingDefs><List>
+	
+		<ThingDef Type="Item" Name="Item_WDCY" Parent="DanBase">
+		<ThingName>悟道茶叶</ThingName>
+		<TexPath>Spr\Object\ZW\WDCY.PNG</TexPath>
+		<Desc>悟道茶叶，一万年一轮回，每次轮回产出三千叶。</Desc>	
+		<Rate>12</Rate>
+		<Beauty>300</Beauty>
+		<MaxStack>999</MaxStack>
+		<ElementKind>Mu</ElementKind>
+		<Item>
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="3600"/>
+					<SalePrice Value="2000" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="3600" />
+					<SalePrice Value="2000" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="3600" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>叶,片,茶</FabaoSuffix>
+			<PhysicalLables>
+				<li>Smallting</li>
+				<li>Sharp</li>
+				<li>GreatThing_Ling</li>
+			</PhysicalLables>
+			<BeMade>
+				<WorkToMake>600000</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+					<Item name = "Item_WSSS" count = "50"/>
+					<Item name = "Item_Water" count = "6000000"/>
+				</CostItems>
+			</BeMade>
+			
+			<Elixir>
+				<Fesistance>0.6</Fesistance>
+				<TreeExp>2000000</TreeExp>
+				<Modifier>ZT_WDCY1</Modifier>
+			</Elixir>
+			
+		</Item>
+		
+		<Ling>
+			<AddionLing>20</AddionLing>
+			<AddionRadius>3</AddionRadius>
+			<AddionFailing>1</AddionFailing>
+			<AddionFailRadius>1</AddionFailRadius>
+			
+			<Attenuation>0</Attenuation>
+			<Absorption>0</Absorption>
+			<Accommodate>0</Accommodate>
+		</Ling>
+		<Element>
+			<Kind>Mu</Kind>
+			<Value>5</Value>         
+			<Radius>2</Radius>
+			<Failing>0.8</Failing>
+			<FailRadius>1</FailRadius>
+		</Element>
+		<Light>
+			<Value>15</Value>
+			<Failing>0.8</Failing>
+			<FailRadius>1</FailRadius>
+			<Radius>1</Radius>
+			<Color>#28FF28</Color>
+		</Light>	
+	</ThingDef>
+	
+	
+	<ThingDef Type="Item" Name="Item_WSSS" Parent="MaterialBase">
+	<ThingName>五色神石</ThingName>
+	<TexPath>Spr\Object\CL\WSS.PNG</TexPath>
+	<Desc>用来搭建五色祭坛的石块，其中蕴含着五行的能力，是很好的灵力载体。</Desc>
+	<Rate>9</Rate>
+	<Beauty>16</Beauty>
+		<MaxStack>9999</MaxStack>
+	<ElementKind>Chaos</ElementKind>
+	<!--	<Color>8C6F14FF</Color>	-->
+	<Flammability>
+		<Flammability>0</Flammability>
+		<BurningPoint>1500</BurningPoint>
+	</Flammability>
+	<Item>
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>100</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="3000"/>
+					<SalePrice Value="300" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="3000" />
+					<SalePrice Value="300" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="3000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+		<NotFengshuiItem>0</NotFengshuiItem>
+		<PhysicalLables>
+			<li>Smooth2</li>
+			<li>Hard2</li>
+		</PhysicalLables>
+		<FuelMultiplier>4</FuelMultiplier>
+		<BeMaterial>
+			<NamePrefix>五色石</NamePrefix>
+			<CostMultiplier>1</CostMultiplier>
+			
+			<RateWhenBeMain>7</RateWhenBeMain>
+			<WorkSpeedCoefficientWhenBeMain>3</WorkSpeedCoefficientWhenBeMain>
+			<AttackSpeedWhenBeMain>0</AttackSpeedWhenBeMain>
+		
+			<ColdInsulationMultiplier>1</ColdInsulationMultiplier>
+			<HeatInsulationMultiplier>1</HeatInsulationMultiplier>
+			
+			<MaxHitPointsPerNum>6</MaxHitPointsPerNum>
+			<LingNumberRate>0.9</LingNumberRate>
+			
+			
+		</BeMaterial>
+			<Elixir>	
+				<Modifier>ZT_WSSS</Modifier>
+			</Elixir>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>-50</Nutrition>
+				<FunAddion>-30</FunAddion>
+				<PracticeNutrition>9000</PracticeNutrition>
+				<Moods><li>wsss</li></Moods>
+			</Food>
+		
+	</Item>
+	
+	<Ling>
+		<AddionLing>0</AddionLing>
+		<AddionRadius>0</AddionRadius>
+		<AddionFailing>0</AddionFailing>
+		<AddionFailRadius>0</AddionFailRadius>
+		
+		<Attenuation>0.06</Attenuation>
+		<Absorption>0.8</Absorption>
+		<Accommodate>50000</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Chaos</Kind>
+		<Value>9</Value>         
+		<Radius>3</Radius>
+		<Failing>0.8</Failing>
+		<FailRadius>2</FailRadius>
+	</Element>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Item_MY" Parent="MaterialBase">
+	<ThingName>命元</ThingName>
+	<TexPath>Spr\Object\CL\MY.PNG</TexPath>
+	<Desc>用500神石置换出来的，补充寿命货币的绝佳物品。</Desc>
+	<Rate>12</Rate>
+	<Beauty>36</Beauty>
+		<MaxStack>9999</MaxStack>
+	<ElementKind>Chaos</ElementKind>
+	<!--	<Color>8C6F14FF</Color>	-->
+	<Flammability>
+		<Flammability>0</Flammability>
+		<BurningPoint>1500</BurningPoint>
+	</Flammability>
+	<Item>
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>10</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="4000"/>
+					<SalePrice Value="400" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="4000" />
+					<SalePrice Value="400" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="6000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+		<NotFengshuiItem>0</NotFengshuiItem>
+		<PhysicalLables>
+			<li>Smooth2</li>
+			<li>Hard2</li>
+		</PhysicalLables>
+		<FuelMultiplier>4</FuelMultiplier>
+		<BeMaterial>
+			<NamePrefix>命元</NamePrefix>
+			<CostMultiplier>1</CostMultiplier>
+			
+			<RateWhenBeMain>7</RateWhenBeMain>
+			<WorkSpeedCoefficientWhenBeMain>3</WorkSpeedCoefficientWhenBeMain>
+			<AttackSpeedWhenBeMain>0</AttackSpeedWhenBeMain>
+		
+			<ColdInsulationMultiplier>1</ColdInsulationMultiplier>
+			<HeatInsulationMultiplier>1</HeatInsulationMultiplier>
+			
+			<MaxHitPointsPerNum>6</MaxHitPointsPerNum>
+			<LingNumberRate>0.9</LingNumberRate>
+			
+			
+		</BeMaterial>
+		<BeMade>
+			<CostItems>
+				<Item name = "Item_WSSS" count = "500"/>
+				
+			</CostItems>
+		</BeMade>
+			<Elixir>	
+				<Modifier>ZT_MY</Modifier>
+			</Elixir>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>-50</Nutrition>
+				<FunAddion>-30</FunAddion>
+				<PracticeNutrition>10000</PracticeNutrition>
+				
+			</Food>
+		
+	</Item>
+	
+	<Ling>
+		<AddionLing>0</AddionLing>
+		<AddionRadius>0</AddionRadius>
+		<AddionFailing>0</AddionFailing>
+		<AddionFailRadius>0</AddionFailRadius>
+		
+		<Attenuation>0.06</Attenuation>
+		<Absorption>0.8</Absorption>
+		<Accommodate>50000</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Chaos</Kind>
+		<Value>9</Value>         
+		<Radius>3</Radius>
+		<Failing>0.8</Failing>
+		<FailRadius>2</FailRadius>
+	</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_SHQ" Parent="DanBase">
+		<ThingName>圣泉</ThingName>
+		<TexPath>Spr\Object\HGJD\SQ.PNG</TexPath>
+		<Desc>荒古禁地独产的泉水，永久增强一定的属性值。</Desc>	
+		<Rate>12</Rate>
+		<Beauty>300</Beauty>
+		<MaxStack>999</MaxStack>
+	
+		<ElementKind>Shui</ElementKind>
+		<Item>
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="8600"/>
+					<SalePrice Value="2000" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="8600" />
+					<SalePrice Value="2000" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="8600" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>流,泉,液</FabaoSuffix>
+			<PhysicalLables>
+				<li>Liquid</li>
+				<li>Liquid</li>
+				<li>Liquid</li>
+				<li>GreatThing_Ling</li>
+				
+			</PhysicalLables>
+			<Elixir>
+				<Fesistance>0.6</Fesistance>
+				<Modifier>ZT_HGJD_SHQ</Modifier>
+			</Elixir>
+		</Item>
+
+		<Element>
+			<Kind>Shui</Kind>
+			<Value>5</Value>         
+			<Radius>2</Radius>
+			<Failing>0.8</Failing>
+			<FailRadius>1</FailRadius>
+		</Element>
+		<Light>
+			<Value>15</Value>
+			<Failing>0.8</Failing>
+			<FailRadius>1</FailRadius>
+			<Radius>1</Radius>
+			<Color>#84C1FF</Color>
+		</Light>	
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_SG" Parent="DanBase">
+		<ThingName>圣果</ThingName>
+		<TexPath>Spr\Object\HGJD\SG.PNG</TexPath>
+		<Desc>出产自荒古禁地，服用有能够增强技能的等级与上限。</Desc>	
+		<Rate>12</Rate>
+		<Beauty>300</Beauty>
+		<MaxStack>999</MaxStack>
+	
+		<ElementKind>Mu</ElementKind>
+		<Item>
+			<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="8600"/>
+					<SalePrice Value="2000" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="8600" />
+					<SalePrice Value="2000" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="8600" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>果,籽,粒</FabaoSuffix>
+			<PhysicalLables>
+				<li>Smooth1</li>
+				<li>Hard1</li>
+				<li>Light1</li>
+				<li>GreatThing_Ling</li>
+			</PhysicalLables>
+			<Elixir>
+				<Modifier>ZT_HGJD_SG</Modifier>
+			</Elixir>
+			
+		</Item>
+		<Element>
+			<Kind>Mu</Kind>
+			<Value>5</Value>         
+			<Radius>2</Radius>
+			<Failing>0.8</Failing>
+			<FailRadius>1</FailRadius>
+		</Element>
+		<Light>
+			<Value>15</Value>
+			<Failing>0.8</Failing>
+			<FailRadius>1</FailRadius>
+			<Radius>1</Radius>
+			<Color>#808040</Color>
+		</Light>	
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_Dan_JQLLD" Parent="DanBase">
+		<MaxStack>1</MaxStack>
+		<ThingName>九窍玲珑丹</ThingName>
+		<TexPath>Spr\Object\JN\ZT_XHJ_DJ\JQ.png</TexPath>
+		<Desc>以悟道茶叶凝练而出的灵丹，服用可将其炼化为九道道分神。</Desc>	
+		<Rate>12</Rate>	
+		<Beauty>25</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Shui</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="1600"/>
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="1600" />
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="1600" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<NotFengshuiItem>0</NotFengshuiItem>
+			<PhysicalLables>
+				<li>Smooth1</li>
+				<li>Hard1</li>
+				<li>Light1</li>
+			</PhysicalLables>
+			<Elixir>
+				<GodSoulCount>18</GodSoulCount>
+				<Fesistance>0.9</Fesistance>
+			</Elixir>
+			<BeMade>
+				<WorkToMake>6400</WorkToMake>
+				<CostItems>
+					<Item name = "Item_WDCY" count = "9"/>
+					
+				</CostItems>
+			</BeMade> 
+		</Item>
+		<Element>
+			<Kind>Shui</Kind>
+			<Value>25</Value> 
+		</Element>
+	</ThingDef>
+	
+	
+	<ThingDef Type="Item" Name="Item_Dan_1" Parent="DanBase">
+		<ThingName>地命丹</ThingName>
+		<TexPath>Spr\Object\DAN\R.PNG</TexPath>
+		<Desc>补充少量精元。</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>6</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>None</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="2600"/>
+					<SalePrice Value="960" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="2600" />
+					<SalePrice Value="960" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="2600" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>地命</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_None</li>
+				<li>GreatThing_Ling</li>
+			</PhysicalLables>
+			
+			<BeMade>
+				<WorkToMake>100</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+
+					<Item name = "Item_MagicHerb" count = "10"/>
+					<Item name = "Item_LingMuXueJie" count = "2"/>
+					<Item name = "Item_EarthEssence1" count = "2"/>
+				</CostItems>
+			</BeMade>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>0</Nutrition>
+				<FunAddion>0</FunAddion>
+				<PracticeNutrition>1000</PracticeNutrition>
+			</Food>
+		</Item>
+		
+		<Element>
+			<Kind>None</Kind>
+			<Value>12</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_Dan_2" Parent="DanBase">
+		<ThingName>人元丹</ThingName>
+		<TexPath>Spr\Object\DAN\D.PNG</TexPath>
+		<Desc>补充足量精元。</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>None</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="3600"/>
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="3600" />
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="3600" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>人元</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_None</li>
+				<li>GreatThing_Ling</li>
+			</PhysicalLables>
+			
+			<BeMade>
+				<WorkToMake>100</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+
+					<Item name = "Item_MagicHerb" count = "25"/>
+					<Item name = "Item_LingMuXueJie" count = "4"/>
+					<Item name = "Item_EarthEssence1" count = "4"/>
+				</CostItems>
+			</BeMade>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>0</Nutrition>
+				<FunAddion>0</FunAddion>
+				<PracticeNutrition>3000</PracticeNutrition>
+			</Food>
+		</Item>
+		
+		<Element>
+			<Kind>None</Kind>
+			<Value>12</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_Dan_3" Parent="DanBase">
+		<ThingName>天格丹</ThingName>
+		<TexPath>Spr\Object\DAN\T.PNG</TexPath>
+		<Desc>补充大量精元。</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>12</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>None</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="5600"/>
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="5600" />
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="5600" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>天格</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_None</li>
+				<li>GreatThing_Ling</li>
+			</PhysicalLables>
+	
+			<BeMade>
+				<WorkToMake>100</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+
+					<Item name = "Item_MagicHerb" count = "40"/>
+					<Item name = "Item_LingMuXueJie" count = "9"/>
+					<Item name = "Item_EarthEssence1" count = "9"/>
+				</CostItems>
+			</BeMade>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>0</Nutrition>
+				<FunAddion>0</FunAddion>
+				<PracticeNutrition>9000</PracticeNutrition>
+			</Food>
+		</Item>
+		
+		<Element>
+			<Kind>None</Kind>
+			<Value>12</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_Dan_BCY" Parent="DanBase">
+		<ThingName>百草液</ThingName>
+		<TexPath>Spr\Object\DAN\BCY.PNG</TexPath>
+		<Desc>从百种草药中提炼出来的精华，等若人体生命之轮内蕴藏的精气.</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>6</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Mu</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>10</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="3600"/>
+					<SalePrice Value="260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="3600" />
+					<SalePrice Value="260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="5600" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>百草</FabaoSuffix>
+			<PhysicalLables>
+				<li>Elastic</li>
+				<li>GreatThing_Ling</li>
+				<li>Liquid</li>
+			</PhysicalLables>
+			<Elixir>
+				<ZhuJi>5000</ZhuJi>
+				<Modifier>Dan_BCY</Modifier>
+				<Fesistance>0.4</Fesistance>
+			</Elixir>
+			<BeMade>
+				<WorkToMake>1200</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+
+					<Item name = "Item_Fruit" count = "40"/>
+					<Item name = "Item_LingWater" count = "9"/>
+					<Item name = "Item_GanodermaLucidum" count = "9"/>
+					<Item name = "Item_Ginseng" count = "9"/>
+					<Item name = "Item_MagicHerb" count = "19"/>
+				</CostItems>
+			</BeMade>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>0</Nutrition>
+				<FunAddion>0</FunAddion>
+				<PracticeNutrition>2000</PracticeNutrition>
+			</Food>
+		</Item>
+		
+		<Element>
+			<Kind>None</Kind>
+			<Value>12</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_Dan_PTMY" Parent="DanBase">
+		<ThingName>蟠桃秘药</ThingName>
+		<TexPath>Spr\Object\DAN\PTMY.PNG</TexPath>
+		<Desc>炼化能修复修行者道基的丹药.食用能够提高修炼速度与寿元</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>12</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Mu</ElementKind>
+		<Item Lable="Dan">
+			<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="6000"/>
+					<SalePrice Value="1200" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="6000" />
+					<SalePrice Value="1200" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="9000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>桃儿</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Mu</li>
+				<li>GreatThing_Rot</li>
+			</PhysicalLables>
+			<Elixir>
+				<Modifier>Dan_PTMY</Modifier>
+				
+			</Elixir>
+			<BeMade>
+				<WorkToMake>1200</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+
+					<Item name = "Item_Dan_WuLingSan" count = "9"/>
+					<Item name = "Item_Dan_DredgeQi1" count = "9"/>
+					<Item name = "Item_Dan_ExtremeLofty" count = "6"/>
+					<Item name = "Item_Dan_IncreaseLife5" count = "3"/>
+					<Item name = "Item_Dan_PT" count = "9"/>
+				</CostItems>
+			</BeMade>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>0</Nutrition>
+				<FunAddion>0</FunAddion>
+				
+				<Moods><li>Dan_PTMY</li></Moods>
+			</Food>
+		</Item>
+		<StoryBnts>
+			<li Name="炼化" Desc="炼化秘药，吸收其精华，重铸仙路。"  Appoint="2" Story="Story_Item_Dan_PTMY" Cost="5" Icon="res/Sprs/ui/icon_hand"/>
+		</StoryBnts>
+		
+		
+		<Element>
+			<Kind>Mu</Kind>
+			<Value>12</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_Dan_PT" Parent="DanBase">
+		<ThingName>蟠桃</ThingName>
+		<TexPath>Spr\Object\DAN\PT.PNG</TexPath>
+		<Desc>瑶池出产的神物，能够延年益寿，滋精养颜.</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Mu</ElementKind>
+		<Item Lable="Dan">
+			<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="4000"/>
+					<SalePrice Value="900" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="4000" />
+					<SalePrice Value="900" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="4000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>小桃儿</FabaoSuffix>
+			<PhysicalLables>
+				<li>GreatThing_Knock</li>
+				<li>GreatThing_Rot</li>
+			</PhysicalLables>
+			<Elixir>
+				
+				<Modifier>Dan_PT</Modifier>
+				
+			</Elixir>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>30</Nutrition>
+				<FunAddion>50</FunAddion>
+				<PracticeNutrition>9500</PracticeNutrition>
+			</Food>
+		</Item>
+		
+		<Element>
+			<Kind>Mu</Kind>
+			<Value>12</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	
+	<ThingDef Type="Item" Name="Item_Dan_HYD" Parent="DanBase">
+		<ThingName>还阳丹</ThingName>
+		<TexPath>Spr\Object\DAN\HYD.PNG</TexPath>
+		<Desc>能增加修行者寿元的丹药.</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>6</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Mu</ElementKind>
+		<Item Lable="Dan">
+			<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="2800"/>
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="2800" />
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="2800" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>百草</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_None</li>
+				<li>GreatThing_Ling</li>
+			</PhysicalLables>
+			<Elixir>
+				
+				<Modifier>Dan_HYD</Modifier>
+				
+			</Elixir>
+			<BeMade>
+				<WorkToMake>1200</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+
+					<Item name = "Item_LifeStream" count = "2"/>
+					<Item name = "Item_RedGinseng" count = "9"/>
+					<Item name = "Item_PurpleGanodermaLucidum" count = "29"/>
+					<Item name = "Item_MonsterBlood" count = "99"/>
+					<Item name = "Item_MagicHerb" count = "99"/>
+				</CostItems>
+			</BeMade>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>0</Nutrition>
+				<FunAddion>0</FunAddion>
+				<PracticeNutrition>0</PracticeNutrition>
+			</Food>
+		</Item>
+		
+		<Element>
+			<Kind>None</Kind>
+			<Value>12</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Dan_XZSZ" Parent="DanBase">
+		<ThingName>宫心丸</ThingName>
+		<TexPath>Spr\Object\DAN\XD.PNG</TexPath>
+		<Desc>服用后三天内提高百分百术法威力.每次扣除300年寿元上限。</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Huo</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="3200"/>
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="3200" />
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="3200" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>宫心</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Huo</li>
+				<li>GreatThing_Ling</li>
+				<li>GreatThing_Attack</li>
+			</PhysicalLables>
+			<Elixir>		
+				<Modifier>Dan_XZSZ</Modifier>
+			</Elixir>
+			<BeMade>
+				<WorkToMake>1200</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+					<Item name = "Item_HSXY" count = "5"/>
+					<Item name = "Item_CopperGrit" count = "29"/>
+					<Item name = "Item_HuoEssence" count = "1"/>
+					<Item name = "Item_MonsterBlood" count = "99"/>
+					<Item name = "Item_GanodermaLucidum" count = "20"/>
+				</CostItems>
+			</BeMade>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>0</Nutrition>
+				<FunAddion>0</FunAddion>
+				<PracticeNutrition>0</PracticeNutrition>
+			</Food>
+		</Item>
+		<Heat>
+		<Value>70</Value>
+		<Radius>5</Radius>
+		<RoomValue>50</RoomValue>
+		<Failing>0.6</Failing>
+		<FailRadius>1</FailRadius>
+	</Heat>
+		<Element>
+			<Kind>Huo</Kind>
+			<Value>6</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Dan_FZSZ" Parent="DanBase">
+		<ThingName>宫肺丸</ThingName>
+		<TexPath>Spr\Object\DAN\FD.PNG</TexPath>
+		<Desc>服用后三天内提高百分百法宝威力.每次扣除300年寿元上限。</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Jin</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="3200"/>
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="3200" />
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="3200" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>宫肺</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Jin</li>
+				<li>GreatThing_Ling</li>
+				<li>SmallThing</li>
+			</PhysicalLables>
+			<Elixir>		
+				<Modifier>Dan_FZSZ</Modifier>
+			</Elixir>
+			<BeMade>
+				<WorkToMake>1200</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+					<Item name = "Item_JSXY" count = "5"/>
+					<Item name = "Item_GanodermaLucidum" count = "49"/>
+					<Item name = "Item_JinEssence" count = "1"/>
+					<Item name = "Item_MonsterBlood" count = "99"/>
+				</CostItems>
+			</BeMade>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>0</Nutrition>
+				<FunAddion>0</FunAddion>
+				<PracticeNutrition>0</PracticeNutrition>
+			</Food>
+		</Item>
+		<Heat>
+		<Value>20</Value>
+		<Radius>5</Radius>
+		<RoomValue>10</RoomValue>
+		<Failing>0.6</Failing>
+		<FailRadius>1</FailRadius>
+	</Heat>
+		<Element>
+			<Kind>Jin</Kind>
+			<Value>6</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Dan_PZSZ" Parent="DanBase">
+		<ThingName>宫脾丸</ThingName>
+		<TexPath>Spr\Object\DAN\PD.PNG</TexPath>
+		<Desc>服用后三天内提高百分百护盾值.每次扣除300年寿元上限。</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Tu</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="3200"/>
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="3200" />
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="3200" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>宫脾</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Tu</li>
+				<li>GreatThing_Ling</li>
+				<li>Hard2</li>
+			</PhysicalLables>
+			<Elixir>		
+				<Modifier>Dan_PZSZ</Modifier>
+			</Elixir>
+			<BeMade>
+				<WorkToMake>1200</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+					<Item name = "Item_TSXY" count = "5"/>
+					<Item name = "Item_GanodermaLucidum" count = "49"/>
+					<Item name = "Item_TuEssence" count = "1"/>
+					<Item name = "Item_Hemostatics" count = "99"/>
+					<Item name = "Item_SnakeGallbladder" count = "99"/>
+				</CostItems>
+			</BeMade>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>0</Nutrition>
+				<FunAddion>0</FunAddion>
+				<PracticeNutrition>0</PracticeNutrition>
+			</Food>
+		</Item>
+		<Heat>
+		<Value>10</Value>
+		<Radius>5</Radius>
+		<RoomValue>10</RoomValue>
+		<Failing>0.6</Failing>
+		<FailRadius>1</FailRadius>
+	</Heat>
+		<Element>
+			<Kind>Tu</Kind>
+			<Value>6</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Dan_SZSZ" Parent="DanBase">
+		<ThingName>宫肾丸</ThingName>
+		<TexPath>Spr\Object\DAN\SD.PNG</TexPath>
+		<Desc>服用后三天内提高百分百法宝灵力恢复.每次扣除300年寿元上限。</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Shui</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="3200"/>
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="3200" />
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="3200" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>宫肾</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Shui</li>
+				<li>GreatThing_Ling</li>
+				<li>Smooth2</li>
+			</PhysicalLables>
+			<Elixir>		
+				<Modifier>Dan_SZSZ</Modifier>
+			</Elixir>
+			<BeMade>
+				<WorkToMake>1200</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+					<Item name = "Item_SSXY" count = "5"/>
+					<Item name = "Item_Fruit" count = "59"/>
+					<Item name = "Item_ShuiEssence" count = "1"/>
+					<Item name = "Item_ZaoHuaYuLu" count = "9"/>
+					<Item name = "Item_SilverGrit" count = "99"/>
+				</CostItems>
+			</BeMade>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>0</Nutrition>
+				<FunAddion>0</FunAddion>
+				<PracticeNutrition>0</PracticeNutrition>
+			</Food>
+		</Item>
+		<Heat>
+		<Value>-20</Value>
+		<Radius>5</Radius>
+		<RoomValue>-10</RoomValue>
+		<Failing>0.6</Failing>
+		<FailRadius>1</FailRadius>
+	</Heat>
+		<Element>
+			<Kind>Shui</Kind>
+			<Value>6</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Dan_GZSZ" Parent="DanBase">
+		<ThingName>宫肝丸</ThingName>
+		<TexPath>Spr\Object\DAN\GD.PNG</TexPath>
+		<Desc>服用后三天内提高百分百法宝灵力恢复.每次扣除300年寿元上限。</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Mu</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="3200"/>
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="3200" />
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="3200" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>宫肝</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Mu</li>
+				<li>GreatThing_Ling</li>
+				<li>Smooth2</li>
+			</PhysicalLables>
+			<Elixir>		
+				<Modifier>Dan_GZSZ</Modifier>
+			</Elixir>
+			<BeMade>
+				<WorkToMake>1200</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+					<Item name = "Item_MSXY" count = "5"/>
+					<Item name = "Item_Fruit" count = "59"/>
+					<Item name = "Item_MuEssence" count = "1"/>
+					<Item name = "Item_PurpleGanodermaLucidum" count = "69"/>
+					<Item name = "Item_Mint" count = "99"/>
+				</CostItems>
+			</BeMade>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>0</Nutrition>
+				<FunAddion>0</FunAddion>
+				<PracticeNutrition>0</PracticeNutrition>
+			</Food>
+		</Item>
+		<Heat>
+		<Value>-20</Value>
+		<Radius>5</Radius>
+		<RoomValue>-10</RoomValue>
+		<Failing>0.6</Failing>
+		<FailRadius>1</FailRadius>
+	</Heat>
+		<Element>
+			<Kind>Mu</Kind>
+			<Value>6</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_Dan_BHW1" Parent="DanBase">
+		<ThingName>辟火丹</ThingName>
+		<TexPath>Spr\Object\DAN\BHW1.PNG</TexPath>
+		<Desc>两天内提高使用者300最高耐热属性.</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>6</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Shui</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="2700"/>
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="2700" />
+					<SalePrice Value="560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="2700" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>辟火丹</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Shui</li>
+				<li>GreatThing_Ling</li>
+			</PhysicalLables>
+			<Elixir>
+				
+				<Modifier>Dan_BHW1</Modifier>
+			
+			</Elixir>
+			<BeMade>
+				<WorkToMake>1200</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+
+					<Item name = "Item_SSXY" count = "5"/>
+					<Item name = "Item_SilverGrit" count = "35"/>
+					<Item name = "Item_SoulPearl" count = "3"/>
+					<Item name = "Item_Mint" count = "30"/>
+					<Item name = "Item_MagicHerb" count = "16"/>
+				</CostItems>
+			</BeMade>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>0</Nutrition>
+				<FunAddion>0</FunAddion>
+				<PracticeNutrition>0</PracticeNutrition>
+			</Food>
+		</Item>
+		
+		<Element>
+			<Kind>Shui</Kind>
+			<Value>6</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_Dan_BHW2" Parent="DanBase">
+		<ThingName>葵水辟火丹</ThingName>
+		<TexPath>Spr\Object\DAN\BHW2.PNG</TexPath>
+		<Desc>两天内提高使用者1000最高耐热属性.</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Shui</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="3600"/>
+					<SalePrice Value="360" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="3600" />
+					<SalePrice Value="360" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="3600" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>辟火丹</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Shui</li>
+				<li>GreatThing_Ling</li>
+			</PhysicalLables>
+			<Elixir>
+				
+				<Modifier>Dan_BHW2</Modifier>
+			
+			</Elixir>
+			<BeMade>
+				<WorkToMake>1200</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+
+					<Item name = "Item_SSXSY" count = "5"/>
+					<Item name = "Item_SilverGrit" count = "65"/>
+					<Item name = "Item_SoulPearl" count = "12"/>
+					<Item name = "Item_Mint" count = "30"/>
+					<Item name = "Item_MagicHerb" count = "36"/>
+				</CostItems>
+			</BeMade>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>0</Nutrition>
+				<FunAddion>0</FunAddion>
+				<PracticeNutrition>0</PracticeNutrition>
+			</Food>
+		</Item>
+		
+		<Element>
+			<Kind>Shui</Kind>
+			<Value>9</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	
+	<ThingDef Type="Item" Name="Item_Dan_BHW3" Parent="DanBase">
+		<ThingName>天水辟火丹</ThingName>
+		<TexPath>Spr\Object\DAN\BHW3.PNG</TexPath>
+		<Desc>两天内提高使用者1500最高耐热属性.</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>9</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Shui</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="6200"/>
+					<SalePrice Value="1560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="6200" />
+					<SalePrice Value="1560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="6200" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>辟火丹</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Shui</li>
+				<li>GreatThing_Ling</li>
+			</PhysicalLables>
+			<Elixir>
+				
+				<Modifier>Dan_BHW3</Modifier>
+			</Elixir>
+			<BeMade>
+				<WorkToMake>1200</WorkToMake>
+				<Quality>0</Quality>
+				<CostItems>
+
+					<Item name = "Item_SSXXY" count = "2"/>
+					<Item name = "Item_SilverGrit" count = "200"/>
+					<Item name = "Item_SoulPearl" count = "66"/>
+					<Item name = "Item_Mint" count = "300"/>
+					<Item name = "Item_SilverRock" count = "66"/>
+				</CostItems>
+			</BeMade>
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>0</Nutrition>
+				<FunAddion>0</FunAddion>
+				<PracticeNutrition>0</PracticeNutrition>
+			</Food>
+		</Item>
+		
+		<Element>
+			<Kind>Shui</Kind>
+			<Value>9</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	
+	
+	<ThingDef Type="Item" Name="Item_ZLBSY" Parent="DrugBase">
+	
+	<ThingName>青龙不死药</ThingName>
+	<TexPath>Spr\Object\DAN\ZLBSY.PNG</TexPath>	
+	<Desc>天地自然孕育的九种神药之一，形似神龙，虽是草药但却有活性，神药通灵，只愿栖息于大帝身侧，天地亿万年仅此一株。</Desc>
+	<MaxStack>1</MaxStack>
+	<MaxHitPoints>500</MaxHitPoints>
+	<Rate>20</Rate>
+	<Beauty>10</Beauty>
+	<ElementKind>Mu</ElementKind>
+	<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="320000"/>
+					<SalePrice Value="1560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="320000" />
+					<SalePrice Value="1560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="320000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+		<NotFengshuiItem>0</NotFengshuiItem>
+		<FabaoSuffix>不死药</FabaoSuffix>
+		<PhysicalLables>
+			<li>GreatThing_Attack</li>
+			<li>GreatThing_Attack</li>
+			<li>HighDensity2</li>
+			<li>GreatThing_Ling</li>
+			<li>GreatThing_Ling</li>
+		</PhysicalLables>
+		<Elixir>
+			<Ling>5000000</Ling>
+		</Elixir>
+		<BeMaterial>
+			<FlammabilityWhenBeMain>0</FlammabilityWhenBeMain>
+			<BeautyWhenBeMain>8</BeautyWhenBeMain>
+			<ElementPowerWhenBeMain>12</ElementPowerWhenBeMain>
+			<LingNumberRate>0.45</LingNumberRate>
+		</BeMaterial>
+	</Item>
+	<StoryBnts>
+			<li Name="种植" Desc="种植以生成灵植。" Script="GameUlt.BuildLingPlant(bind, 'ZTLingZhi_ZLBSY')" Icon="res/Sprs/ui/icon_hand"/>
+			<li Name="食用" Desc="服用不死药。" Appoint="2" Story="ZT_ZLBSY" Cost="5" Icon="Spr\Object\DAN\ZLBSY.PNG"/>
+	</StoryBnts>
+	<Ling>
+		<AddionLing>75</AddionLing>
+		<AddionRadius>2</AddionRadius>
+		<AddionFailing>0.9</AddionFailing>
+		<AddionFailRadius>1</AddionFailRadius>
+		
+		<Attenuation>0.1</Attenuation>
+		<Absorption>0.8</Absorption>
+		<Accommodate>40</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Mu</Kind>
+		<Value>12</Value>         
+		<Radius>5</Radius>
+		<Failing>0.9</Failing>
+		<FailRadius>1</FailRadius>
+	</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_BSSHY" Parent="DrugBase">
+	
+	<ThingName>不死神凰药</ThingName>
+	<TexPath>Spr\Object\DAN\ZQBSY.PNG</TexPath>	
+	<Desc>天地自然孕育的九种神药之一，形似朱雀这种传说的生灵，虽是草药但却有活性，神药通灵，经手不死天皇，后至无始大帝手中，最终被叶黑收集，天地亿万年仅此一株。</Desc>
+	<MaxStack>1</MaxStack>
+	<MaxHitPoints>500</MaxHitPoints>
+	<Rate>20</Rate>
+	<Beauty>10</Beauty>
+	<ElementKind>Huo</ElementKind>
+	<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="320000"/>
+					<SalePrice Value="1560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="320000" />
+					<SalePrice Value="1560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="320000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+		<NotFengshuiItem>0</NotFengshuiItem>
+		<FabaoSuffix>不死药</FabaoSuffix>
+		<PhysicalLables>
+			<li>GreatThing_Attack</li>
+			<li>GreatThing_Attack</li>
+			<li>HighDensity2</li>
+			<li>GreatThing_Ling</li>
+			<li>GreatThing_Ling</li>
+		</PhysicalLables>
+		<Elixir>
+			<Ling>5000000</Ling>
+		</Elixir>
+		<BeMaterial>
+			<FlammabilityWhenBeMain>0</FlammabilityWhenBeMain>
+			<BeautyWhenBeMain>8</BeautyWhenBeMain>
+			<ElementPowerWhenBeMain>12</ElementPowerWhenBeMain>
+			<LingNumberRate>0.45</LingNumberRate>
+		</BeMaterial>
+	</Item>
+	<StoryBnts>
+			<li Name="种植" Desc="种植以生成灵植。" Script="GameUlt.BuildLingPlant(bind, 'ZTLingZhi_BSSHY')" Icon="res/Sprs/ui/icon_hand"/>
+			<li Name="食用" Desc="服用不死药。" Appoint="2" Story="ZT_BSSHY" Cost="5" Icon="Spr\Object\DAN\ZQBSY.PNG"/>
+	</StoryBnts>
+	<Ling>
+		<AddionLing>75</AddionLing>
+		<AddionRadius>2</AddionRadius>
+		<AddionFailing>0.9</AddionFailing>
+		<AddionFailRadius>1</AddionFailRadius>
+		
+		<Attenuation>0.1</Attenuation>
+		<Absorption>0.8</Absorption>
+		<Accommodate>40</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Huo</Kind>
+		<Value>12</Value>         
+		<Radius>5</Radius>
+		<Failing>0.9</Failing>
+		<FailRadius>1</FailRadius>
+	</Element>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Item_BSHLY" Parent="DrugBase">
+	
+	<ThingName>不死黄龙药</ThingName>
+	<TexPath>Spr\Object\DAN\BSHLY.PNG</TexPath>	
+	<Desc>天地自然孕育的九种神药之一，形似黄龙这种传说的生灵，虽是草药但却有活性，神药通灵，唯有大帝才有资格拥有，天地亿万年仅此一株。</Desc>
+	<MaxStack>1</MaxStack>
+	<MaxHitPoints>500</MaxHitPoints>
+	<Rate>20</Rate>
+	<Beauty>10</Beauty>
+	<ElementKind>Tu</ElementKind>
+	<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="320000"/>
+					<SalePrice Value="1560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="320000" />
+					<SalePrice Value="1560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="320000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+		<NotFengshuiItem>0</NotFengshuiItem>
+		<FabaoSuffix>黄龙</FabaoSuffix>
+		<PhysicalLables>
+			<li>GreatThing_Attack</li>
+			<li>GreatThing_Attack</li>
+			<li>HighDensity2</li>
+			<li>GreatThing_Ling</li>
+			<li>GreatThing_Ling</li>
+		</PhysicalLables>
+		<Elixir>
+			<Ling>5000000</Ling>
+		</Elixir>
+		<BeMaterial>
+			<FlammabilityWhenBeMain>0</FlammabilityWhenBeMain>
+			<BeautyWhenBeMain>8</BeautyWhenBeMain>
+			<ElementPowerWhenBeMain>12</ElementPowerWhenBeMain>
+			<LingNumberRate>0.45</LingNumberRate>
+		</BeMaterial>
+	</Item>
+	<StoryBnts>
+			<li Name="种植" Desc="种植以生成灵植。" Script="GameUlt.BuildLingPlant(bind, 'ZTLingZhi_BSHLY')" Icon="res/Sprs/ui/icon_hand"/>
+			<li Name="食用" Desc="服用不死药。" Appoint="2" Story="ZT_BSHLY" Cost="5" Icon="Spr\Object\DAN\BSHLY.PNG"/>
+	</StoryBnts>
+	<Ling>
+		<AddionLing>75</AddionLing>
+		<AddionRadius>2</AddionRadius>
+		<AddionFailing>0.9</AddionFailing>
+		<AddionFailRadius>1</AddionFailRadius>
+		
+		<Attenuation>0.1</Attenuation>
+		<Absorption>0.8</Absorption>
+		<Accommodate>40</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Tu</Kind>
+		<Value>12</Value>         
+		<Radius>5</Radius>
+		<Failing>0.9</Failing>
+		<FailRadius>1</FailRadius>
+	</Element>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Item_BSXWY" Parent="DrugBase">
+	
+	<ThingName>不死玄武药</ThingName>
+	<TexPath>Spr\Object\DAN\XWBSY.PNG</TexPath>	
+	<Desc>天地自然孕育的九种神药之一，形似黄龙这种传说的生灵，虽是草药但却有活性，神药通灵，唯有大帝才有资格拥有，天地亿万年仅此一株。</Desc>
+	<MaxStack>1</MaxStack>
+	<MaxHitPoints>500</MaxHitPoints>
+	<Rate>20</Rate>
+	<Beauty>10</Beauty>
+	<ElementKind>Shui</ElementKind>
+	<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="320000"/>
+					<SalePrice Value="1560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="320000" />
+					<SalePrice Value="1560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="320000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+		<NotFengshuiItem>0</NotFengshuiItem>
+		<FabaoSuffix>玄武</FabaoSuffix>
+		<PhysicalLables>
+			<li>GreatThing_Attack</li>
+			<li>GreatThing_Attack</li>
+			<li>HighDensity2</li>
+			<li>GreatThing_Ling</li>
+			<li>GreatThing_Ling</li>
+		</PhysicalLables>
+		<Elixir>
+			<Ling>5000000</Ling>
+		</Elixir>
+		<BeMaterial>
+			<FlammabilityWhenBeMain>0</FlammabilityWhenBeMain>
+			<BeautyWhenBeMain>8</BeautyWhenBeMain>
+			<ElementPowerWhenBeMain>12</ElementPowerWhenBeMain>
+			<LingNumberRate>0.45</LingNumberRate>
+		</BeMaterial>
+	</Item>
+	<StoryBnts>
+			<li Name="种植" Desc="种植以生成灵植。" Script="GameUlt.BuildLingPlant(bind, 'ZTLingZhi_BSXWY')" Icon="res/Sprs/ui/icon_hand"/>
+			<li Name="食用" Desc="服用不死药。" Appoint="2" Story="ZT_BSXWY" Cost="5" Icon="Spr\Object\DAN\XWBSY.PNG"/>
+	</StoryBnts>
+	<Ling>
+		<AddionLing>75</AddionLing>
+		<AddionRadius>2</AddionRadius>
+		<AddionFailing>0.9</AddionFailing>
+		<AddionFailRadius>1</AddionFailRadius>
+		
+		<Attenuation>0.1</Attenuation>
+		<Absorption>0.8</Absorption>
+		<Accommodate>40</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Shui</Kind>
+		<Value>12</Value>         
+		<Radius>5</Radius>
+		<Failing>0.9</Failing>
+		<FailRadius>1</FailRadius>
+	</Element>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Item_BSBHY" Parent="DrugBase">
+	
+	<ThingName>不死白虎药</ThingName>
+	<TexPath>Spr\Object\DAN\BHBSY.PNG</TexPath>	
+	<Desc>白虎是中国古代神话中的天之四灵之一，源于远古星宿崇拜，是代表少昊与西方七宿的西方之神，于八卦为乾、兑、于五行主金， 象征四象中的少阴，四季中的秋季。天地亿万年仅此一株。</Desc>
+	<MaxStack>1</MaxStack>
+	<MaxHitPoints>500</MaxHitPoints>
+	<Rate>20</Rate>
+	<Beauty>10</Beauty>
+	<ElementKind>Jin</ElementKind>
+	<Item Lable="Dan">
+	<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="320000"/>
+					<SalePrice Value="1560" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="320000" />
+					<SalePrice Value="1560" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="320000" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+		<NotFengshuiItem>0</NotFengshuiItem>
+		<FabaoSuffix>白虎</FabaoSuffix>
+		<PhysicalLables>
+			<li>GreatThing_Attack</li>
+			<li>GreatThing_Attack</li>
+			<li>HighDensity2</li>
+			<li>GreatThing_Ling</li>
+			<li>GreatThing_Ling</li>
+		</PhysicalLables>
+		<Elixir>
+			<Ling>5000000</Ling>
+		</Elixir>
+		<BeMaterial>
+			<FlammabilityWhenBeMain>0</FlammabilityWhenBeMain>
+			<BeautyWhenBeMain>8</BeautyWhenBeMain>
+			<ElementPowerWhenBeMain>12</ElementPowerWhenBeMain>
+			<LingNumberRate>0.45</LingNumberRate>
+		</BeMaterial>
+	</Item>
+	<StoryBnts>
+			<li Name="种植" Desc="种植以生成灵植。" Script="GameUlt.BuildLingPlant(bind, 'ZTLingZhi_BSBHY')" Icon="res/Sprs/ui/icon_hand"/>
+			<li Name="食用" Desc="服用不死药。" Appoint="2" Story="ZT_BSBHY" Cost="5" Icon="Spr\Object\DAN\BHBSY.PNG"/>
+	</StoryBnts>
+	<Ling>
+		<AddionLing>75</AddionLing>
+		<AddionRadius>2</AddionRadius>
+		<AddionFailing>0.9</AddionFailing>
+		<AddionFailRadius>1</AddionFailRadius>
+		
+		<Attenuation>0.1</Attenuation>
+		<Absorption>0.8</Absorption>
+		<Accommodate>40</Accommodate>
+	</Ling>
+	<Element>
+		<Kind>Jin</Kind>
+		<Value>12</Value>         
+		<Radius>5</Radius>
+		<Failing>0.9</Failing>
+		<FailRadius>1</FailRadius>
+	</Element>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_ZLJX" Parent="DanBase">
+		<ThingName>青龙精血</ThingName>
+		<TexPath>Spr\Object\DAN\ZLJX.PNG</TexPath>
+		<Desc>食用后提高二十五点护盾值，降低四十五天谴值，提高50道行，增加1200寿元上限.</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>12</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Mu</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="19200"/>
+					<SalePrice Value="1260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="19200" />
+					<SalePrice Value="1260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="19200" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>精血</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Mu</li>
+				<li>GreatThing_Ling</li>
+			</PhysicalLables>
+			<Elixir>
+				<Modifier>ZT_ZLJX</Modifier>
+				<Fesistance>0</Fesistance>
+				<TreeExp>600000</TreeExp>
+			</Elixir>
+			
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>100</Nutrition>
+				<FunAddion>100</FunAddion>
+				<PracticeNutrition>20000</PracticeNutrition>
+			</Food>
+		</Item>
+		
+		<Element>
+			<Kind>Mu</Kind>
+			<Value>9</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Item_SHJX" Parent="DanBase">
+		<ThingName>神凰精血</ThingName>
+		<TexPath>Spr\Object\DAN\SHJX.PNG</TexPath>
+		<Desc>食用后提高百分一百五术法伤害，降低四十五天谴值，提高40道行，增加1500寿元上限.</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>12</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Huo</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="19200"/>
+					<SalePrice Value="1260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="19200" />
+					<SalePrice Value="1260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="19200" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>精血</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Huo</li>
+				<li>GreatThing_Ling</li>
+			</PhysicalLables>
+			<Elixir>
+				<Modifier>ZT_ZLJX</Modifier>
+				<Fesistance>0</Fesistance>
+				<TreeExp>600000</TreeExp>
+			</Elixir>
+			
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>100</Nutrition>
+				<FunAddion>100</FunAddion>
+				<PracticeNutrition>20000</PracticeNutrition>
+			</Food>
+		</Item>
+		
+		<Element>
+			<Kind>Huo</Kind>
+			<Value>9</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Item_HLJX" Parent="DanBase">
+		<ThingName>黄龙精血</ThingName>
+		<TexPath>Spr\Object\DAN\HLJX.PNG</TexPath>
+		<Desc>食用后提高两千炉鼎上限，降低四十五天谴值，提高40道行，增加1000寿元上限.</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>12</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Huo</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="19200"/>
+					<SalePrice Value="1260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="19200" />
+					<SalePrice Value="1260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="19200" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>精血</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Tu</li>
+				<li>GreatThing_Ling</li>
+			</PhysicalLables>
+			<Elixir>
+				<Modifier>ZT_HLJX</Modifier>
+				<Fesistance>0</Fesistance>
+				<TreeExp>600000</TreeExp>
+			</Elixir>
+			
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>100</Nutrition>
+				<FunAddion>100</FunAddion>
+				<PracticeNutrition>20000</PracticeNutrition>
+			</Food>
+		</Item>
+		
+		<Element>
+			<Kind>Tu</Kind>
+			<Value>9</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Item_XWJX" Parent="DanBase">
+		<ThingName>玄武精血</ThingName>
+		<TexPath>Spr\Object\DAN\XWJX.PNG</TexPath>
+		<Desc>食用后提高百分一百五灵气恢复速度，降低四十五天谴值，提高40道行，增加1800寿元上限.</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>12</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Shui</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="19200"/>
+					<SalePrice Value="1260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="19200" />
+					<SalePrice Value="1260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="19200" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>精血</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Tu</li>
+				<li>GreatThing_Ling</li>
+			</PhysicalLables>
+			<Elixir>
+				<Modifier>ZT_XWJX</Modifier>
+				<Fesistance>0</Fesistance>
+				<TreeExp>600000</TreeExp>
+			</Elixir>
+			
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>100</Nutrition>
+				<FunAddion>100</FunAddion>
+				<PracticeNutrition>20000</PracticeNutrition>
+			</Food>
+		</Item>
+		
+		<Element>
+			<Kind>Shui</Kind>
+			<Value>9</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+	<ThingDef Type="Item" Name="Item_BHJX" Parent="DanBase">
+		<ThingName>白虎精血</ThingName>
+		<TexPath>Spr\Object\DAN\BHJX.PNG</TexPath>
+		<Desc>食用后提高百分两百法宝威力，降低四十五天谴值，提高40道行，增加900寿元上限.</Desc>
+		<MaxHitPoints>100</MaxHitPoints>
+		<Rate>12</Rate>
+		<Beauty>100</Beauty>
+		<MaxStack>9999</MaxStack>
+		<ElementKind>Jin</ElementKind>
+		<Item Lable="Dan">
+		<Prices>
+				<TalkType>2</TalkType>
+				<BaseCount>1</BaseCount>
+				<li PriceTag="School">
+					<BuyPrice Value="19200"/>
+					<SalePrice Value="1260" />
+				</li>
+				<li PriceTag="Trade">
+					<BuyPrice Value="19200" />
+					<SalePrice Value="1260" />
+				</li>
+				<li PriceTag="Auction">
+					<BuyPrice Value="19200" />
+					<SalePrice Value="0" />
+				</li>
+			</Prices>
+			<FabaoSuffix>精血</FabaoSuffix>
+			<PhysicalLables>
+				<li>PhysicalLables_Jin</li>
+				<li>GreatThing_Ling</li>
+			</PhysicalLables>
+			<Elixir>
+				<Modifier>ZT_BHJX</Modifier>
+				<Fesistance>0</Fesistance>
+				<TreeExp>600000</TreeExp>
+			</Elixir>
+			
+			<Food>
+				<EatDirectable>1</EatDirectable>
+				<Nutrition>100</Nutrition>
+				<FunAddion>100</FunAddion>
+				<PracticeNutrition>20000</PracticeNutrition>
+			</Food>
+		</Item>
+		
+		<Element>
+			<Kind>Jin</Kind>
+			<Value>9</Value>
+			<Radius>2</Radius>
+		</Element>
+	</ThingDef>
+</List></ThingDefs>

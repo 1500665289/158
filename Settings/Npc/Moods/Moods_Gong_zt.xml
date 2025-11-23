@@ -1,0 +1,14 @@
+<MoodDefs><List>
+
+	<Mood Name="Dan_PTMY" Group="BottleNeck">
+		<DisplayName>重铸仙路</DisplayName>
+		<Desc>受到秘药的治疗效果，仙路得以重铸 修行有望。</Desc>
+		<StoryDesc>正沉浸在重回修仙路的喜悦中</StoryDesc>
+		<Sync>1</Sync>
+		<MaxStack>2</MaxStack>
+		<StackRatio>1.4</StackRatio>
+		<Value>90</Value>
+		<Duration>12</Duration>
+	</Mood>
+	
+</List></MoodDefs>

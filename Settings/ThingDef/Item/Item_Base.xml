@@ -1,0 +1,29 @@
+<ThingDefs><List>
+	
+	<ThingDef Type="Item" Name="HuoBase" Parent="ItemBase">   Name=模板代码
+
+
+	<MaxStack>99</MaxStack>  最大堆叠
+
+	<Beauty>36</Beauty>   美观
+	<MaxHitPoints>6200</MaxHitPoints>  生命值
+	<ElementKind>Huo</ElementKind>   五行属性
+	<Flammability>   燃烧性
+		<Flammability>0</Flammability>   易燃几率
+		<FlameSpawnThingDef></FlameSpawnThingDef>
+		<FlameSpawnChance>0</FlameSpawnChance>
+		<BurningPoint>0</BurningPoint>   燃点
+	</Flammability>
+	
+	
+	<Element>
+		<Kind>Huo</Kind>   五行属性
+		<Value>12</Value>         五行强度
+		<Radius>3</Radius>    影响范围
+		<Failing>0.8</Failing>
+		<FailRadius>2</FailRadius>
+	</Element>
+	
+	</ThingDef>
+
+</List></ThingDefs>

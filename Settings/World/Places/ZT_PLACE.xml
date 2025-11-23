@@ -1,0 +1,729 @@
+<Places><List>
+	
+
+	<Place Name="Place_HGJD_1" Parent="Place_Level2Base">
+		<Location X="1166" Y="670"/>
+		<Scale>0.19</Scale>
+		<Icon>Spr\Building\HGJD.png</Icon>
+		<DisplayName>荒古禁地</DisplayName>
+		<Desc>荒古禁地，是遮天世界里的生命禁区，里面栖息着荒主，时不时会苏醒，一旦苏醒便是血沃千里。另外一个危险就是荒古禁地里，每分每刻都在不断流失的寿元。</Desc>
+		
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>DustPlace</Weather>
+			<PowerLevel>25</PowerLevel>
+		<Events><!-- 嗯-->
+
+			<li Name="Story" Rate="0.8"/>
+			<li Name="Treasure" Rate="0.5"/>
+			<li Name="Find" Rate="2.5"/>
+
+
+		</Events>
+		<Secret>
+			<li Name="Story" Rate="1"/>
+			<li Name="Secret" Rate="1"/>
+		</Secret>
+		<Produce>
+			<li>
+				<ThingDef>Item_SHQ</ThingDef>
+				<Count>1</Count>
+				<Rate>0.2</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_SG</ThingDef>
+				<Count>1</Count>
+				<Rate>0.2</Rate>
+			</li>
+			
+		</Produce>
+	</Place>
+	
+	<Place Name="Place_TCGK" Parent="Place_Level2Base">
+		<Location X="185" Y="326"/>
+		<Scale>0.19</Scale>
+		<Icon>Spr\Building\TCGK.png</Icon>
+		<DisplayName>太初古矿</DisplayName>
+		<Desc>以太初为名，足以说明其古老，无法推测其存在多少岁月了。据说，在无尽岁月前，太初古矿是东荒最出名的一座，源，矿，后来挖出了不祥的东西，结果成为了七大生命禁区之一。</Desc>
+			<Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>LingUpWave_Big</Weather>
+			<PowerLevel>25</PowerLevel>
+		<Events><!-- 嗯-->
+			<li Name="Visit" Rate="5"/>
+			<li Name="Story" Rate="0.8"/>
+			<li Name="Treasure" Rate="0.5"/>
+			<li Name="Find" Rate="3"/>
+		</Events>
+		
+		<Secret>
+	
+			<li Name="Secret" Rate="1"/>
+			<li Name="Story" Rate="1"/>
+		</Secret>
+		<Produce>
+			
+			<li>
+				<ThingDef>Item_YZBYB</ThingDef>
+				<Count>3</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_JTBYB</ThingDef>
+				<Count>3</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_JTCYW</ThingDef>
+				<Count>3</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_ZYSY</ThingDef>
+				<Count>3</Count>
+				<Rate>1</Rate>
+			</li>
+				<li>
+				<ThingDef>Item_YYSY</ThingDef>
+				<Count>3</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_ZYW</ThingDef>
+				<Count>3</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_XZ</ThingDef>
+				<Count>3</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_DLYJ</ThingDef>
+				<Count>3</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_ST</ThingDef>
+				<Count>3</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_ZJST</ThingDef>
+				<Count>3</Count>
+				<Rate>1</Rate>
+			</li>
+		</Produce>
+	</Place>
+	
+	<Place Name="Place_HY" Parent="Place_Level2Base">
+		<Location X="885" Y="756"/>
+		<Scale>0.17</Scale>
+		<Icon>Spr\Building\HY.png</Icon>
+		<DisplayName>火域</DisplayName>
+		<Desc>火域，一般的修士根本不敢靠近，但绝顶修士炼器时，必然会将这里作为首选，此地的火焰具有神秘的力量，可助器成型，烙印下道与理。当然，也可以淬体。</Desc>
+			<Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>Weather_Magic_ZhenHuoJieJie</Weather>
+			<PowerLevel>12</PowerLevel>
+		<Events><!-- 嗯-->
+			<li Name="Story" Rate="0.8"/>
+			<li Name="Treasure" Rate="1.5"/>
+
+		</Events>
+		
+		<Secret>
+	
+			<li Name="Secret" Rate="1"/>
+			<li Name="Story" Rate="1"/>
+		</Secret>
+		<Produce>
+			<li>
+				<ThingDef>Item_HSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.6</Rate>
+			</li>
+			
+		</Produce>
+	</Place>
+	
+	
+	<Place Name="Place_YC" Parent="Place_Level2Base">
+		<Location X="275" Y="666"/>
+		<Scale>0.19</Scale>
+		<Icon>Spr\Building\YC.png</Icon>
+		<DisplayName>瑶池圣地</DisplayName>
+		<Desc>西皇母创立的修行圣地，大多以女修为主，其内门人多以静修为主，不参与俗世纷争。</Desc>
+		<School>102</School>
+			<Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>LingUpWave_Sp</Weather>
+			<PowerLevel>21</PowerLevel>
+		<Events><!-- 嗯-->
+			<li Name="Visit" Rate="5"/>
+			<li Name="Story" Rate="0.8"/>
+			<li Name="Treasure" Rate="0.5"/>
+			<li Name="Find" Rate="2.5"/>
+			<li Name="BadFight" Rate="0.8"/>
+			<li Name="Secret" Rate="2"/>
+
+		</Events>
+		
+		
+		<Secret>
+		
+			<li Name="Secret" Rate="1"/>
+	
+			<li Name="Story" Rate="5"/>
+	
+		</Secret>
+		<Produce>
+			<li>
+				<ThingDef>Item_SSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.6</Rate>
+			</li>
+			
+			<li>
+				<ThingDef>Item_Dan_PT</ThingDef>
+				<Count>1</Count>
+				<Rate>0.8</Rate>
+			</li>
+			
+			<li>
+				<ThingDef>Item_SSXSY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.3</Rate>
+			</li>
+		</Produce>
+	</Place>
+	
+	<Place Name="Place_SC" Parent="Place_Level1Base">
+		<Location X="170" Y="495"/>
+		<Scale>0.21</Scale>
+		<Icon>Spr\Building\SC.png</Icon>
+		<DisplayName>圣城</DisplayName>
+		<Desc>北域圣城，绝对的中心，在这片赤色的大地上，它与太初古矿一样有名，北域居民将之奉为神地。</Desc>
+		<ExploreNum>12</ExploreNum>
+			<Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>SunnyDay</Weather>
+			<PowerLevel>16</PowerLevel>
+		<Events><!-- 嗯-->
+			<li Name="Story" Rate="1"/>
+			<li Name="Join" Rate="1"/>
+			<li Name="GoodFight" Rate="1"/>
+			<li Name="BadFight" Rate="0.8"/>
+			<li Name="Find" Rate="2"/>
+			<li Name="Secret" Rate="2"/>
+			
+			<li Name="Treasure" Rate="0.5"/>
+		</Events>
+		<ExploreNum>35</ExploreNum>
+		<Secret>
+			<li Name="Secret" Rate="1"/>
+			<li Name="Find" Rate="5"/>
+			<li Name="Story" Rate="25"/>
+		</Secret>
+		<Produce>
+			<li>
+				<ThingDef>Item_WSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			
+			<li>
+				<ThingDef>Item_JSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+	
+			<li>
+				<ThingDef>Item_MSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+
+			<li>
+				<ThingDef>Item_SSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+		
+			<li>
+				<ThingDef>Item_HSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			
+			<li>
+				<ThingDef>Item_TSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			
+		</Produce>
+		<Children>
+			<li>Place_HLC</li>
+			</Children>
+	</Place>
+	
+	<Place Name="Place_HLC" Parent="Place_Level2Base">
+		<Location X="210" Y="485"/>
+		<Scale>0.125</Scale>
+		<Icon>Spr\Building\HLC.png</Icon>
+		<DisplayName>化龙池</DisplayName>
+		<Desc>地宫中云雾缭绕，圣洁气息扑面，大地下龙气汹涌，圣洁的力量流转，当然更有一股摄人心魄的威压。</Desc>
+		<Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>DenseFog</Weather>
+			<PowerLevel>12</PowerLevel>
+		<Events><!-- 嗯-->
+			<li Name="GoodFight" Rate="1"/>
+			<li Name="BadFight" Rate="0.8"/>
+			<li Name="Find" Rate="2"/>
+			<li Name="Story" Rate="1"/>
+		</Events>
+		<ExploreNum>15</ExploreNum>
+		<Produce>
+			<li>
+				<ThingDef>Item_LQ</ThingDef>
+				<Count>1</Count>
+				<Rate>1</Rate>
+			</li>
+			
+			
+		</Produce>
+
+	</Place>
+	
+	
+	<Place Name="Place_TXM" Parent="Place_Level2Base">
+		<Location X="1105" Y="379"/>
+		<Scale>0.15</Scale>
+		<Icon>Spr\Building\TXM.png</Icon>
+		<DisplayName>太玄峰</DisplayName>
+		<Desc>无尽仙山中，一百零八座主峰，代表着一百零八种传承。。。作者表示太多了。</Desc>
+		<School>103</School>
+		<Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>Rainstorm</Weather>
+			<PowerLevel>18</PowerLevel>
+		<Events><!-- 嗯-->
+			<li Name="Visit" Rate="5"/>
+			<li Name="Story" Rate="0.8"/>
+			<li Name="Treasure" Rate="0.5"/>
+			<li Name="BadFight" Rate="0.8"/>
+			<li Name="Find" Rate="1"/>
+			<li Name="Secret" Rate="2"/>
+		</Events>
+		
+		
+		<Secret>
+		
+			<li Name="Secret" Rate="1"/>
+			<li Name="Story" Rate="5"/>
+	
+		</Secret>
+		<Produce>
+			
+			<li>
+				<ThingDef>Item_LingCrystal</ThingDef>
+				<Count>10</Count>
+				<Rate>1</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_LingStone</ThingDef>
+				<Count>50</Count>
+				<Rate>1</Rate>
+			</li>
+			
+			
+		</Produce>
+	</Place>
+	
+	
+	
+	<Place Name="Place_LXDT" Parent="Place_Level2Base">
+		<Location X="1189" Y="580"/>
+		<Scale>0.2</Scale>
+		<Icon>Spr\Building\LXDT.png</Icon>
+		<DisplayName>灵墟洞天</DisplayName>
+		<Desc>燕地，南北长两千里，东西长三千里。燕之境六洞天之一，灵墟洞天，也是叶凡和庞博两人修行的开始。</Desc>
+		<School>101</School>
+		<Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>ColdWaveInSummer</Weather>
+			<PowerLevel>14</PowerLevel>
+		<Events><!-- 嗯-->
+		
+			<li Name="Visit" Rate="5"/>
+			<li Name="Story" Rate="0.8"/>
+			<li Name="Treasure" Rate="0.5"/>
+			<li Name="BadFight" Rate="0.8"/>
+			<li Name="Find" Rate="2"/>
+			<li Name="Secret" Rate="2"/>
+
+		</Events>
+		
+		<ExploreNum>25</ExploreNum>
+		<Secret>
+		
+			<li Name="Secret" Rate="1"/>
+
+			<li Name="Story" Rate="5"/>
+	
+		</Secret>
+		<Produce>
+			<li>
+				<ThingDef>Item_Dan_BCY</ThingDef>
+				<Count>1</Count>
+				<Rate>1</Rate>
+			</li>
+			
+		</Produce>
+		<Children>
+			<li>Place_YDF</li>
+		</Children>
+	</Place>
+	<Place Name="Place_YDF" Parent="Place_Level2Base">  <!--隐居的高人-->
+		<Location X="1029" Y="600"/>
+		<Scale>0.2</Scale>
+		<Icon>Spr\Building\YDF.png</Icon>
+		<DisplayName>妖帝坟</DisplayName>
+		<Desc>东荒妖族最后一位大帝的埋骨处，暗藏杀机。</Desc>
+			<Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>PermanentNight</Weather>
+			<PowerLevel>12</PowerLevel>
+		<Events><!-- 嗯-->
+		
+			
+			<li Name="Story" Rate="0.8"/>
+			<li Name="Treasure" Rate="0.5"/>
+			<li Name="BadFight" Rate="0.8"/>
+			<li Name="Find" Rate="2"/>
+			<li Name="Secret" Rate="2"/>
+
+		</Events>
+		<Produce>
+			<li>
+				<ThingDef>Item_ExtremeJade</ThingDef>
+				<Count>4</Count>
+				<Rate>1</Rate>
+			</li>
+			
+		</Produce>
+		<ExploreNum>25</ExploreNum>
+	</Place>
+	
+	
+	
+	<Place Name="Place_QTXD" Parent="Place_Level2Base">
+		<Location X="766" Y="800"/>
+		<Scale>0.3</Scale>
+		<Icon>Spr\Building\QTXD.png</Icon>
+		<DisplayName>青铜仙殿</DisplayName>
+		<Desc>一座巨大的铜殿，宕伟无比，简直快比得上一座小城了，气势磅礴，它并没有坍塌，保存的还算完整，上面绿锈斑驳，看起来古朴而又大气，给人以极其苍凉的感觉。。</Desc>
+		<Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>LightningStorm</Weather>
+			<PowerLevel>16</PowerLevel>
+		<Events><!-- 嗯-->
+
+			<li Name="Story" Rate="0.8"/>
+			<li Name="Treasure" Rate="0.5"/>
+			<li Name="Find" Rate="2.5"/>
+
+
+		</Events>
+		<ExploreNum>36</ExploreNum>
+		<Secret>
+			<li Name="Secret" Rate="1"/>
+			<li Name="Find" Rate="5"/>
+			<li Name="Story" Rate="25"/>
+		</Secret>
+		<Produce>
+			<li>
+				<ThingDef>Item_XHEQ</ThingDef>
+				<Count>1</Count>
+				<Rate>0.8</Rate>
+			</li>
+		
+		</Produce>
+		<Children>
+			<li>Place_XH</li>
+		</Children>
+	</Place>
+	
+	
+	<Place Name="Place_XH" Parent="Place_Level2Base">  <!--隐居的高人-->
+		<Location X="766" Y="850"/>
+		<Scale>0.15</Scale>
+		<Icon>Spr\Building\XH.png</Icon>
+		<DisplayName>“黄”河</DisplayName>
+		<Desc>叶凡与姬紫月从青铜仙殿逃脱后找到玄黄母气的那条河水。</Desc>
+		<Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>Rainstorm_Long</Weather>
+			<PowerLevel>6</PowerLevel>
+		 <Events>
+			
+			<li Name="Find" Rate="0.9"/>
+          </Events>
+		  <ExploreNum>15</ExploreNum>
+		<Produce>
+			<li>
+				<ThingDef>Item_XHJC</ThingDef>
+				<Count>1</Count>
+				<Rate>0.4</Rate>
+			</li>
+		
+		</Produce>
+	</Place>
+	
+	
+	<Place Name="Place_WSST" Parent="Place_Level1Base">
+		<Location X="1211" Y="480"/>
+		<Scale>0.13</Scale>
+		<Icon>Spr\Building\WSST.png</Icon>
+		<DisplayName>五色祭坛</DisplayName>
+		<Desc>一切开始也是结尾的地点，是整个遮天世界中最为神秘的建筑。</Desc>
+
+		 <Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>HeavySnow</Weather>
+			<PowerLevel>9</PowerLevel>
+		 <Events>
+			<li Name="Story" Rate="0.8"/>
+			<li Name="Treasure" Rate="0.5"/>
+			<li Name="Find" Rate="5"/>
+          </Events>
+		<Secret>
+			<li Name="Story" Rate="1"/>
+			<li Name="Secret" Rate="1"/>
+			<li Name="Find" Rate="1"/>
+		</Secret>
+		<Produce>
+			<li>
+				<ThingDef>Item_WSTJ</ThingDef>
+				<Count>3</Count>
+				<Rate>0.8</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_PTZ</ThingDef>
+				<Count>1</Count>
+				<Rate>0.2</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_WSSS</ThingDef>
+				<Count>15</Count>
+				<Rate>1</Rate>
+			</li>
+		</Produce>
+	</Place>
+	
+	<Place Name="Place_ZJC" Parent="Place_Level2Base">
+		<Location X="545" Y="550"/>
+		<Scale>0.2</Scale>
+		<Icon>Spr\Building\ZJC.png</Icon>
+		<DisplayName>张家村</DisplayName>
+		<Desc>上古源天师一脉的遗孤。</Desc>
+		<Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>HeavyRain</Weather>
+			<PowerLevel>6</PowerLevel>
+		
+		 <Events>
+			<li Name="Story" Rate="0.8"/>
+			<li Name="Treasure" Rate="0.5"/>
+			<li Name="Find" Rate="2"/>
+          </Events>
+		  <ExploreNum>23</ExploreNum>
+		<Secret>
+			<li Name="Story" Rate="1"/>
+			<li Name="Secret" Rate="1"/>
+			<li Name="Find" Rate="10"/>
+		</Secret>
+		<Children>
+			<li>Place_ZS</li>
+		</Children>
+		<Produce>
+			<li>
+				<ThingDef>Item_YS1</ThingDef>
+				<Count>5</Count>
+				<Rate>0.8</Rate>
+			</li>
+			
+		</Produce>
+	</Place>
+	<Place Name="Place_ZS" Parent="Place_Level2Base">
+		<Location X="505" Y="539"/>
+		<Scale>0.4</Scale>
+		<Icon>Spr\Building\ZS.png</Icon>
+		<DisplayName>紫山</DisplayName>
+		<Desc>无始大帝晚年居所，虽然他还没死。</Desc>
+			<Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>HeavyRain</Weather>
+			<PowerLevel>19</PowerLevel>
+		
+		 <Events>
+			<li Name="Story" Rate="0.8"/>
+			<li Name="Treasure" Rate="0.5"/>
+			<li Name="Find" Rate="2"/>
+          </Events>
+		  <ExploreNum>23</ExploreNum>
+		<Secret>
+			<li Name="Story" Rate="1"/>
+			<li Name="Secret" Rate="1"/>
+			<li Name="Find" Rate="10"/>
+		</Secret>
+		<Produce>
+			<li>
+				<ThingDef>Item_HST</ThingDef>
+				<Count>15</Count>
+				<Rate>0.8</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_TSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_JSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.5</Rate>
+			</li>
+		</Produce>
+	</Place>
+
+	<Place Name="Place_YZZ" Parent="Place_Level2Base">
+		<Location X="701" Y="680"/>
+		<Scale>0.1</Scale>
+		<Icon>Spr\Building\YZZ.png</Icon>
+		<DisplayName>云泽州</DisplayName>
+		<Desc>云泽州地如其名，到处都是大泽，水雾迷蒙，像是来到了水乡。</Desc>
+		 <Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>Overcast</Weather>
+			<PowerLevel>18</PowerLevel>
+		 
+		 <Events>
+			<li Name="Story" Rate="0.8"/>
+			<li Name="Treasure" Rate="0.5"/>
+			<li Name="Find" Rate="5"/>
+          </Events>
+		<Secret>
+			<li Name="Story" Rate="1"/>
+			<li Name="Secret" Rate="1"/>
+			<li Name="Find" Rate="1"/>
+		</Secret>
+		<Produce>
+			<li>
+				<ThingDef>Item_MSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.6</Rate>
+			</li>
+			
+			<li>
+				<ThingDef>Item_YYSY</ThingDef>
+				<Count>2</Count>
+				<Rate>0.8</Rate>
+			</li>
+		</Produce>
+	</Place>
+	
+	<Place Name="Place_DDLQ" Parent="Place_Level2Base">
+		<Location X="1381" Y="640"/>
+		<Scale>0.13</Scale>
+		<Icon>Spr\Building\DDLQ.png</Icon>
+		<DisplayName>大帝陵寝</DisplayName>
+		<Desc>这片楼宇以金玉为材，晶莹闪烁，黄光灿灿，剔透如水晶，亦真亦幻。</Desc>
+		 <Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>Overcast</Weather>
+			<PowerLevel>15</PowerLevel>
+		 <Events>
+			<li Name="Treasure" Rate="0.5"/>
+			<li Name="Find" Rate="5"/>
+          </Events>
+		<Secret>
+			<li Name="Story" Rate="1"/>
+			<li Name="Secret" Rate="1"/>
+			<li Name="Find" Rate="1"/>
+		</Secret>
+		<Produce>
+			<li>
+				<ThingDef>Item_WSTJ</ThingDef>
+				<Count>2</Count>
+				<Rate>0.8</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_StarEssence</ThingDef>
+				<Count>4</Count>
+				<Rate>1</Rate>
+			</li>
+			
+			<li>
+				<ThingDef>Item_JSXY</ThingDef>
+				<Count>1</Count>
+				<Rate>0.6</Rate>
+			</li>
+			
+		</Produce>
+	</Place>
+
+	<Place Name="Place_WLC" Parent="Place_Level2Base">
+		<Location X="1021" Y="80"/>
+		<Scale>0.13</Scale>
+		<Icon>Spr\Building\WLC.png</Icon>
+		<DisplayName>万龙巢</DisplayName>
+		<Desc>极北冰原的深处，绵绵无尽的雪山之中，暗藏着百万年前便已沉眠的太古一族。</Desc>
+		<School>11116</School>
+		<Class></Class>
+			<Biome></Biome>
+			<Snow>0</Snow>
+			<Weather>ColdWave</Weather>
+			<PowerLevel>25</PowerLevel>		
+		<Events>
+		 <li Name="Visit" Rate="5"/>
+			<li Name="Story" Rate="0.8"/>
+			<li Name="Treasure" Rate="0.5"/>
+			<li Name="Find" Rate="5"/>
+          </Events>
+		<Secret>
+			<li Name="Story" Rate="1"/>
+			<li Name="Secret" Rate="1"/>
+			<li Name="Find" Rate="1"/>
+		</Secret>
+		<Produce>
+			<li>
+				<ThingDef>Item_JTBYB</ThingDef>
+				<Count>5</Count>
+				<Rate>0.8</Rate>
+			</li>
+			<li>
+				<ThingDef>Item_YHLJ</ThingDef>
+				<Count>1</Count>
+				<Rate>0.2</Rate>
+			</li>
+		</Produce>
+	</Place>
+	
+</List></Places>

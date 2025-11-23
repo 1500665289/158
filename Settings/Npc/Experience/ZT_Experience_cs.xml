@@ -1,0 +1,51 @@
+﻿<Experiences><List>
+	<Experience Name="ZT_Experiences_cs">
+		<DisplayName>初临北域</DisplayName>
+		<Desc>遮天世界的开始，没带功法只送资源，遮天世界秘闻60天左右开始。</Desc>
+		<Point>4</Point>
+		<NpcSlot>1</NpcSlot>
+		<ModifierDef>
+			<BaseFive>3,3,3,3,3</BaseFive>
+		</ModifierDef>	
+		<Esoterics>
+			<li>ZT_CLBY</li>
+			<li>ZT_FL</li>
+		</Esoterics>
+		<Items>
+			<li Name= "Item_WDCY" Count="1"/>
+			<li Name= "Item_SHQ" Count="1"/>
+			<li Name= "Item_SG" Count="1"/>
+			<li Name= "Item_YS1" Count="5"/>
+			<li Name= "Item_LQ" Count="3"/>
+			<li Name= "Item_IronRock" Count="200"/>
+			<li Name= "Item_Dan_TreeEXP" Count="2"/>
+			<li Name= "Item_LingStoneBlock" Count="2500"/>
+			<li Name= "Item_HST" Count="30"/>
+			<li Name= "Item_HG" Count="20"/>
+		</Items>	
+	</Experience>	
+	
+	<Experience Name="ZT_Experiences_cs1">
+		<DisplayName>遮天世家</DisplayName>
+		<Desc>遮天世界中有诸多实力与门派，自立其中一门并获得其中传承。</Desc>
+		<Point>5</Point>
+		<NpcSlot>3</NpcSlot>
+		<ModifierDef>
+			<BaseFive>6,6,6,6,6</BaseFive>
+		</ModifierDef>	
+		<Esoterics>
+			<li>ZT_CLBY</li>
+			<li>ZTDF</li>
+			<li>ZT_FL</li>
+		</Esoterics>
+		<Items>
+			<li Name= "Item_yyzt" Count="1"/>
+			<li Name= "Item_SJL" Count="1"/>
+			<li Name= "Item_IronRock" Count="200"/>
+			<li Name= "Item_Dan_TreeEXP" Count="2"/>
+			<li Name= "Item_LingStoneBlock" Count="2500"/>
+			<li Name= "Item_HST" Count="30"/>
+			<li Name= "Item_HG" Count="20"/>
+		</Items>	
+	</Experience>	
+</List></Experiences>

@@ -1,0 +1,295 @@
+﻿<Properties><List>
+
+<!--	<Property Name="TestGongProperty1">
+		<BaseValueS>MoveSpeed</BaseValueS>
+		<LuckWeight>0</LuckWeight>
+		<MinValue>0</MinValue> 
+		<MaxValue>0.999</MaxValue>
+		
+		<Skills>
+			<li Name="Fight" Weight="1" Base="0.5" Addion="0.05"/>
+			<li Name="Qi" Weight="0.5">0.1,0.2,0.3,0.5,0.6,0.7,0.9,1,1,1,1,1,1,1,1,1,1,1,1,1</li>
+		</Skills>
+		
+		<Functions>
+			<li Name="Feeling" Weight="0.3"/>
+		</Functions>
+		
+		<FiveBase>
+			<li Name="FightSkill" Weight="1" Base="0.5" Addion="0.05"/>
+			<li Name="Physique" Weight="0.5">0.1,0.2,0.3,0.5,0.6,0.7,0.8,0.9,1</li>
+		</FiveBase>
+		
+		<Properties>
+			<li Name="TestProperty1" Weight="1"/>
+		</Properties>
+		
+	</Property>-->
+	<!--功法瓶颈基础概率-->
+	
+	
+	<!--五维概率-->
+	<!--术法正比-->
+	<Property Name="FightSkill_1_1_3">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>	
+		
+		<Skills>
+			<li Name="FightSkill" Weight="1" Base="0.01" Addion="0.02"/>
+		</Skills>
+	</Property>
+	<Property Name="FightSkill_1_1_10">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="FightSkill" Weight="1" Base="0.01" Addion="0.05"/>
+			</Skills>
+	</Property>
+	<Property Name="FightSkill_1_5_25">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="FightSkill" Weight="1" Base="0.05" Addion="0.08"/>
+		</Skills>
+	</Property>
+	<Property Name="FightSkill_1_5_75">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="FightSkill" Weight="1" Base="0.05" Addion="0.1"/>
+		</Skills>
+	</Property>
+	<!--术法反比-->
+	<Property Name="FightSkill_2_3_1">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="FightSkill" Weight="1" Base="0.3" Addion="-0.2"/>
+	</Skills>
+	</Property>
+	<Property Name="FightSkill_2_10_1">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+			
+		<Skills>
+			<li Name="FightSkill" Weight="1" Base="1.1" Addion="-0.5"/>
+		</Skills>
+	</Property>
+	<Property Name="FightSkill_2_25_5">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="FightSkill" Weight="1" Base="2.5" Addion="-1"/>
+		</Skills>
+	</Property>
+	<!--御器正比-->
+	<Property Name="Fabao_1_1_3">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>	
+		
+		<Skills>
+			<li Name="Fabao" Weight="1" Base="0.01" Addion="0.02"/>
+		</Skills>
+	</Property>
+	<Property Name="Fabao_1_1_10">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="Fabao" Weight="1" Base="0.01" Addion="0.05"/>
+			</Skills>
+	</Property>
+	<Property Name="Fabao_1_5_25">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="Fabao" Weight="1" Base="0.05" Addion="0.08"/>
+		</Skills>
+	</Property>
+	<Property Name="Fabao_1_5_75">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="Fabao" Weight="1" Base="0.05" Addion="0.1"/>
+		</Skills>
+	</Property>
+	<!--御器反比-->
+	<Property Name="Fabao_2_3_1">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="Fabao" Weight="1" Base="0.03" Addion="-0.2"/>
+	</Skills>
+	</Property>
+	<Property Name="Fabao_2_10_1">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+			
+		<Skills>
+			<li Name="Fabao" Weight="1" Base="0.1" Addion="-0.5"/>
+		</Skills>
+	</Property>
+	<Property Name="Fabao_2_25_5">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="Fabao" Weight="1" Base="1.5" Addion="-1"/>
+		</Skills>
+	</Property>
+	
+	
+	<!--气动瓶颈概率正比-->
+	<Property Name="Qi_1_1_3">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>	
+		
+		<Skills>
+			<li Name="Qi" Weight="1" Base="0.01" Addion="0.02"/>
+		</Skills>
+	</Property>
+	<Property Name="Qi_1_1_10">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="Qi" Weight="1" Base="0.01" Addion="0.05"/>
+			</Skills>
+	</Property>
+	<Property Name="Qi_1_5_26">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="Qi" Weight="1" Base="0.05" Addion="0.08"/>
+		</Skills>
+	</Property>
+	<Property Name="Qi_1_5_75">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="Qi" Weight="1" Base="0.05" Addion="0.1"/>
+		</Skills>
+	</Property>
+	<!--气感反比-->
+	<Property Name="Qi_2_3_1">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="Qi" Weight="1" Base="0.03" Addion="-0.5"/>
+	</Skills>
+	</Property>
+	<Property Name="Qi_2_10_1">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+			
+		<Skills>
+			<li Name="Qi" Weight="1" Base="0.1" Addion="-0.75"/>
+		</Skills>
+	</Property>
+	<Property Name="Qi_2_25_5">
+		<BaseValue>0.01</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="Qi" Weight="1" Base="1.5" Addion="-1"/>
+		</Skills>
+	</Property>
+	<!--术法正比-->
+	<Property Name="MindStateBaseValue_1_1_3">
+		<BaseValue>0.1</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>	
+		
+		<Skills>
+			<li Name="MindStateBaseValue" Weight="1" Base="0.01" Addion="0.02"/>
+		</Skills>
+	</Property>
+	<Property Name="MindStateBaseValue_1_1_10">
+		<BaseValue>0.1</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="MindStateBaseValue" Weight="1" Base="0.01" Addion="0.05"/>
+			</Skills>
+	</Property>
+	<Property Name="MindStateBaseValue_1_5_25">
+		<BaseValue>0.1</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="MindStateBaseValue" Weight="1" Base="0.05" Addion="0.08"/>
+		</Skills>
+	</Property>
+	<Property Name="MindStateBaseValue_1_5_75">
+		<BaseValue>0.1</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="MindStateBaseValue" Weight="1" Base="0.05" Addion="0.1"/>
+		</Skills>
+	</Property>
+	<!--术法反比-->
+	<Property Name="MindStateBaseValue_2_3_1">
+		<BaseValue>0.1</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="MindStateBaseValue" Weight="1" Base="0.3" Addion="-0.2"/>
+	</Skills>
+	</Property>
+	<Property Name="MindStateBaseValue_2_10_1">
+		<BaseValue>0.1</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+			
+		<Skills>
+			<li Name="MindStateBaseValue" Weight="1" Base="1.1" Addion="-0.5"/>
+		</Skills>
+	</Property>
+	<Property Name="MindStateBaseValue_2_25_5">
+		<BaseValue>0.1</BaseValue>
+		<MinValue>0</MinValue> 
+		<MaxValue>1</MaxValue>
+		
+		<Skills>
+			<li Name="MindStateBaseValue" Weight="1" Base="2.5" Addion="-1"/>
+		</Skills>
+	</Property>
+</List></Properties>
+

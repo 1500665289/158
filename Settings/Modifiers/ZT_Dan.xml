@@ -1,0 +1,408 @@
+<ModifierDefs><List>
+	<Modifier Name="Dan_BCY" Type="Normal">
+		<DisplayName>百草液</DisplayName>
+		<Desc>激活身体之潜力，暂时提高两天修行速度。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>1200</Duration>
+		<Display>1</Display>
+		<Sync>1</Sync>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+			<li Name="DeepPracticeSpeedSpecialCoefficient" AddV="200"/>
+		</Properties>
+	</Modifier>
+	<Modifier Name="Dan_XZSZ" Type="Normal">
+		<DisplayName>宫心丸</DisplayName>
+		<Desc>激活身体之潜力，提高三天时间的术法威力，之后燃烧三百年的寿元。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>1800</Duration>
+		<Display>1</Display>
+		<Sync>1</Sync>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<EndModifier>Dan_XZSZ_D</EndModifier>
+		<Properties>
+			<li Name="NpcFight_SpellPowerAddP" AddP="2"/>
+		</Properties>
+	</Modifier>	
+	<Modifier Name="Dan_XZSZ_D" Type="Normal">
+		<DisplayName>宫心丸负面</DisplayName>
+		<Desc></Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+			<li Name="MaxAge" AddV="-300"/>
+		</Properties>
+	</Modifier>
+	
+	<Modifier Name="Dan_FZSZ" Type="Normal">
+		<DisplayName>宫肺丸</DisplayName>
+		<Desc>激活身体之潜力，提高三天时间的法宝威力，之后燃烧三百年的寿元。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>1800</Duration>
+		<Display>1</Display>
+		<Sync>1</Sync>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<EndModifier>Dan_FZSZ_D</EndModifier>
+		<Properties>
+			<li Name="NpcFight_FabaoPowerAddP" AddP="2"/>
+		</Properties>
+	</Modifier>	
+	<Modifier Name="Dan_FZSZ_D" Type="Normal">
+		<DisplayName>宫肺丸负面</DisplayName>
+		<Desc></Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+			<li Name="MaxAge" AddV="-300"/>
+		</Properties>
+	</Modifier>
+	
+	<Modifier Name="Dan_PZSZ" Type="Normal">
+		<DisplayName>宫脾丸</DisplayName>
+		<Desc>激活身体之潜力，提高三天时间的护盾强度，之后燃烧三百年的寿元。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>1800</Duration>
+		<Display>1</Display>
+		<Sync>1</Sync>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<EndModifier>Dan_PZSZ_D</EndModifier>
+		<Properties>
+			<li Name="NpcFight_ShieldConversionRateAddP" AddP="2"/>
+		</Properties>
+	</Modifier>	
+	<Modifier Name="Dan_PZSZ_D" Type="Normal">
+		<DisplayName>宫脾丸负面</DisplayName>
+		<Desc></Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+			<li Name="MaxAge" AddV="-300"/>
+		</Properties>
+	</Modifier>
+	
+	<Modifier Name="Dan_SZSZ" Type="Normal">
+		<DisplayName>宫肾丸</DisplayName>
+		<Desc>激活身体之潜力，提高三天时间的护盾强度，之后燃烧三百年的寿元。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>1800</Duration>
+		<Display>1</Display>
+		<Sync>1</Sync>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<EndModifier>Dan_SZSZ_D</EndModifier>
+		<Properties>
+			<li Name="NpcFight_FabaoLingRecoverAddP" AddP="2"/>
+		</Properties>
+	</Modifier>	
+	<Modifier Name="Dan_SZSZ_D" Type="Normal">
+		<DisplayName>宫肾丸负面</DisplayName>
+		<Desc></Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+			<li Name="MaxAge" AddV="-300"/>
+		</Properties>
+	</Modifier>
+	<Modifier Name="Dan_GZSZ" Type="Normal">
+		<DisplayName>宫肝丸</DisplayName>
+		<Desc>激活身体之潜力，减低三天时间的阵法负荷，之后燃烧三百年的寿元。</Desc>
+		<MaxStack>1</MaxStack>
+		<Duration>1800</Duration>
+		<Display>1</Display>
+		<Sync>1</Sync>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<EndModifier>Dan_GZSZ_D</EndModifier>
+		<Properties>
+			<li Name="NpcFight_ZhenEnginePower" AddP="-2"/>
+		</Properties>
+	</Modifier>	
+	<Modifier Name="Dan_GZSZ_D" Type="Normal">
+		<DisplayName>宫肝丸负面</DisplayName>
+		<Desc></Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+			<li Name="MaxAge" AddV="-300"/>
+		</Properties>
+	</Modifier>
+	
+	
+	<Modifier Name="ZT_WDCY1" Type="Normal">
+		<DisplayName>悟道茶叶</DisplayName>
+		<Desc>降低20道行与30点天谴值。并永久提高修炼速度</Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+			<li Name="DeepPracticeSpeedSpecialCoefficient" AddV="200"/>
+			<li Name="GodPenaltyAddV" AddV="-30"/>
+			<li Name="AbilityLvAddV" AddV="-20"/>
+
+		</Properties>
+	</Modifier> 
+	
+	
+	
+	<Modifier Name="Dan_HYD" Type="Normal">
+		<DisplayName>还阳丹</DisplayName>
+		<Desc>增加千年寿元</Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<Properties>
+			<li Name="MaxAge" AddV="1000"/>
+		</Properties>
+	</Modifier> 
+	
+	<Modifier Name="Dan_PTMY" Type="Normal">
+		<DisplayName>蟠桃秘药</DisplayName>
+		<Desc>增加一千五百年寿元</Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<Properties>
+			<li Name="MaxAge" AddV="1500"/>
+		</Properties>
+		
+	</Modifier> 
+	
+	<Modifier Name="Dan_PT" Type="Normal">
+		<DisplayName>蟠桃</DisplayName>
+		<Desc>增加两千年寿元</Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<Properties>
+			<li Name="MaxAge" AddV="2000"/>
+		</Properties>
+
+	</Modifier> 
+	
+	<Modifier Name="ZT_WSSS" Type="Normal">
+		<DisplayName>五色神石</DisplayName>
+		<Desc>增加一年寿命，增加精元转换，减地两倍修行速度，减低十五点道行，减一点天谴值</Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<Properties>
+			<li Name="MaxAge" AddV="1"/>
+			<li Name="NutritionWaterAutoRecover" AddV="5"/>
+			<li Name="NutritionToJingYuanK" AddV="1.5"/>
+			<li Name="DeepPracticeSpeedSpecialCoefficient" AddV="-2"/>
+			<li Name="AbilityLvAddV" AddV="-30"/>
+			<li Name="GodPenaltyAddV" AddV="-15"/><!--天谴，正的加天谴的。-->
+
+		</Properties>
+
+	</Modifier>
+	<Modifier Name="ZT_MY" Type="Normal">
+		<DisplayName>命元</DisplayName>
+		<Desc>增加四百年寿元</Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>0</Display>
+		<Properties>
+			<li Name="MaxAge" AddV="400"/>
+			
+		</Properties>
+
+	</Modifier>
+
+	<Modifier Name="Dan_YDX" Type="Normal">
+		<DisplayName>妖帝心</DisplayName>
+		<Desc>这东西你都下的去口，虽然加全属性。</Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>1</Display>
+
+		<BaseFive>2,2,2,2,2</BaseFive>
+		<Properties>
+				<li Name="MaxAge" AddV="3000"/><!--寿元-->
+				<li Name="MindStateBaseValue" AddV="10"/><!--心情基础值-->
+				<li Name="IntelligenceSkillEXPConstant" AddP="0.3"/><!--学习速度-->
+				<li Name="VisionRadius" AddP="0.3"/><!--感知范围-->
+				<li Name="MoveSpeed" AddP="0.3"/><!--移动速度-->
+				<li Name="RecoveryPower" AddP="0.3"/><!--自然恢复力-->
+				<li Name="MagicDamageRecoveryPowerAddV" AddV="0.6"/><!--内门伤自然恢复力-->
+				<li Name="FatigueConsumeConstant" AddP="-0.2"/><!--精力消耗速度加成-->
+				<li Name="NutritionConsumeConstant" AddP="-0.2"/><!--食物消耗速度加成-->
+				<li Name="WaterConsumeConstant" AddP="-0.2"/><!--饮水消耗速度加成-->
+				<li Name="HappyConsumeConstant" AddP="-0.2"/><!--娱乐消耗速度加成-->
+				<li Name="ToleranceTMin" AddV="-10"/><!--最低极限温度-->
+				<li Name="ToleranceTMax" AddV="10"/><!--最高极限温度-->
+				<li Name="ComfyTMin" AddV="-10"/><!--最低舒适温度-->
+				<li Name="ComfyTMax" AddV="10"/><!--最高舒适温度-->
+				<li Name="PainTolerance" AddV="2"/><!--疼痛忍受极限-->
+				<li Name="IntelligenceSkillEXPConstant" AddP="0.1"/><!--学习速度加成-->
+				<li Name="PracticeFoodConsumeConstant" AddP="0.5"/><!--精元消耗速度-->
+				<li Name="FatigueConsumeConstant" AddP="-0.25"/><!--精力消耗速度-->
+				
+				战斗
+				<li Name="NpcFight_BaseHitChance" AddV="0.5"/><!--战斗命中-->
+				<li Name="NpcFight_BaseDodgeChance" AddV="0.5"/><!--战斗闪避-->
+				<li Name="NpcFight_FabaoPowerAddP" AddP="0.25"/><!--法宝威力加成-->
+				<li Name="NpcFight_FabaoLingRecoverAddP" AddP="0.25"/><!--法宝灵气恢复速度加成-->
+				<li Name="NpcFight_FabaoMaxLingAddP" AddP="0.25"/><!--法宝灵气最大值加成-->
+				<li Name="NpcFight_FabaoRepelDistanceAddV" AddV="0.25"/><!--法宝击退距离加成-->
+				<li Name="NpcFight_FabaoFlySpeedAddP" AddP="0.25"/><!--法宝飞行速度加成-->
+				<li Name="NpcFight_FabaoTurnSpeedAddP" AddP="0.25"/><!--法宝转向速度加成-->
+				<li Name="NpcFight_FabaoRepelResistanceAddV" AddP="0.25"/><!--法宝击退距离抗性-->
+				<li Name="NpcFight_FabaoTrailingLengthAddP" AddP="0.5"/><!--法宝拖尾长度加成-->
+				<li Name="NpcFight_SpellLingCostAddP" AddP="-0.1"/><!--术法灵气消耗加成-->
+				<li Name="NpcFight_SpellCastTimeAddP" AddP="-0.1"/><!--术法吟唱时间加成-->
+				<li Name="NpcFight_SpellPowerAddP" AddP="0.5"/><!--术法伤害加成-->
+				<li Name="NpcFight_SpellCoolDownAddP" AddP="-0.1"/><!--术法冷却时间加成-->
+				<li Name="NpcFight_ShieldConversionRate" AddP="0.5"/><!--护盾强度加值-->
+				<li Name="NpcFight_ShieldConversionRateAddP" AddV="1"/><!--护盾强度加成-->
+				<li Name="NpcFight_ZhenKeyPointNum" AddV="1"/><!--阵法规模-->
+				<li Name="NpcFight_ZhenEnginePower" AddV="1"/><!--阵法负荷能力-->
+				<li Name="NpcFight_FabaoNum" AddV="1"/><!--法宝数量-->
+				
+				
+				修行
+				<li Name="PracticeRateAddPFromDan" AddP="0.2"/><!--瓶颈突破概率加成系数-->
+				<li Name="ExperienceNeckTimeCostCoefficient" AddP="-0.5"/><!--历练型瓶颈时间放大系数-->
+				<li Name="PotentialOfBasepracticeAddValue" AddV="0.5"/><!--潜力值-->
+				<li Name="GodPenaltyAddV" AddV="20"/><!--天谴，正的加天谴的。-->
+				<li Name="MaxAccumulativeLingAddV" AddV="100"/><!--炉鼎值-->
+				<li Name="DeepPracticeSpeedSpecialCoefficient" AddP="0.5"/><!--瓶颈突破概率加成系数-->
+				<li Name="InspirationCoefficient" AddP="0.5"/><!--领悟悟性-->
+				<li Name="LingAbsorbSpeed" AddP="1"/><!--灵气吸收速度-->
+				<li Name="NpcLingMaxValue" AddV="10000"/><!--基础灵气最大值-->
+				<li Name="WorldMapFlySpeed" AddP="0.5"/><!--历练飞行速度-->
+				<li Name="WorldMapFlySpeedAddP" AddP="-0.5"/><!--历练飞行速度加成-->
+				<li Name="ExperiencePrestigeAddP" AddP="0.5"/><!--历练型声望放大系数-->
+				<li Name="EsotericaNum" AddV="99"/><!--秘籍数量限制-->
+				<li Name="AbilityLvAddV" AddV="90"/><!--道行加值-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="ZT_ZLJX" Type="Normal">
+		<DisplayName>青龙精血</DisplayName>
+		<Desc>龙誕又名龙口水。</Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>1</Display>
+
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+				<li Name="MaxAge" AddV="1200"/><!--寿元-->
+				<li Name="NpcFight_ShieldConversionRate" AddV="5"/><!--护盾强度加值-->
+				<li Name="GodPenaltyAddV" AddV="-45"/><!--天谴，正的加天谴的。-->
+				
+				<li Name="AbilityLvAddV" AddV="50"/><!--道行加值-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="ZT_SHJX" Type="Normal">
+		<DisplayName>神凰精血</DisplayName>
+		<Desc>凤誕又名凤口水。</Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>1</Display>
+
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+				<li Name="MaxAge" AddV="1500"/><!--寿元-->
+				<li Name="NpcFight_SpellPowerAddP" AddP="1.5"/><!--护盾强度加值-->
+				<li Name="GodPenaltyAddV" AddV="-45"/><!--天谴，正的加天谴的。-->
+				
+				<li Name="AbilityLvAddV" AddV="50"/><!--道行加值-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="ZT_HLJX" Type="Normal">
+		<DisplayName>黄龙精血</DisplayName>
+		<Desc>龙誕又名龙口水。</Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>1</Display>
+
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+				<li Name="MaxAge" AddV="1000"/><!--寿元-->
+				<li Name="MaxAccumulativeLingAddV" AddV="5000"/><!--护盾强度加值-->
+				<li Name="GodPenaltyAddV" AddV="-45"/><!--天谴，正的加天谴的。-->
+				
+				<li Name="AbilityLvAddV" AddV="50"/><!--道行加值-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="ZT_XWJX" Type="Normal">
+		<DisplayName>玄武精血</DisplayName>
+		<Desc>龟誕又名龟口水。</Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>1</Display>
+
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+				<li Name="MaxAge" AddV="1800"/><!--寿元-->
+				<li Name="LingAbsorbSpeed" AddP="1.5"/><!--灵气吸收速度5-->
+				<li Name="GodPenaltyAddV" AddV="-45"/><!--天谴，正的加天谴的。-->
+				
+				<li Name="AbilityLvAddV" AddV="50"/><!--道行加值-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="ZT_BHJX" Type="Normal">
+		<DisplayName>白虎精血</DisplayName>
+		<Desc>虎誕又名虎口水。</Desc>
+		<MaxStack>0</MaxStack>
+		<Duration>-1</Duration>
+		<Display>1</Display>
+
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+				<li Name="MaxAge" AddV="900"/><!--寿元-->
+				<li Name="NpcFight_FabaoPowerAddP" AddP="2"/><!--法宝威力加成3-->
+				<li Name="GodPenaltyAddV" AddV="-45"/><!--天谴，正的加天谴的。-->
+				
+				<li Name="AbilityLvAddV" AddV="50"/><!--道行加值-->
+		</Properties>
+	</Modifier> 
+	<Modifier Name="Dan_BHW1" Type="Normal">
+		<DisplayName>避火丹</DisplayName>
+		<Desc>短暂提高最高温度极限。</Desc>
+		<MaxStack>3</MaxStack>
+		<Duration>1200</Duration>
+		<Display>1</Display>
+		<Sync>1</Sync>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+			<li Name="ToleranceTMax" AddV="300"/><!--最高极限温度-->
+		</Properties>
+	</Modifier> 
+	
+	<Modifier Name="Dan_BHW2" Type="Normal">
+		<DisplayName>葵水避火丹</DisplayName>
+		<Desc>短暂提高最高温度极限。</Desc>
+		<MaxStack>3</MaxStack>
+		<Duration>1200</Duration>
+		<Display>1</Display>
+		<Sync>1</Sync>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+			<li Name="ToleranceTMax" AddV="1000"/><!--最高极限温度-->
+		</Properties>
+	</Modifier> 
+	
+	<Modifier Name="Dan_BHW3" Type="Normal">
+		<DisplayName>真水避火丹</DisplayName>
+		<Desc>短暂提高最高温度极限。</Desc>
+		<MaxStack>3</MaxStack>
+		<Duration>1200</Duration>
+		<Display>1</Display>
+		<Sync>1</Sync>
+		<BaseFive>0,0,0,0,0</BaseFive>
+		<Properties>
+			<li Name="ToleranceTMax" AddV="1500"/><!--最高极限温度-->
+		</Properties>
+	</Modifier> 
+	
+</List></ModifierDefs>

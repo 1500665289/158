@@ -1,0 +1,824 @@
+<Stories><List>
+	
+	
+	<Story Name="Treasure_HY"  Parent="BaseFillingStory">
+		<DisplayName>火域</DisplayName>
+		<Desc>[NAME]深知火域可不是什么祥和之地，传言中第九层火域焚死过真仙。</Desc>
+		<Kind>Treasure</Kind>
+		<Selections>
+			<li>
+				<Display>进去看看</Display>
+				<Condition>
+				<![CDATA[	
+				story.Place == "Place_HY"
+				]]>
+				</Condition>
+				<Tip>在火域探索到才能进去，不然都是假的。</Tip>
+				<OKResult><![CDATA[	
+				me:TriggerStory("ZT_HY");
+				]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]刚刚想靠近，却发现火域越离越远，才意识到，这就是老人常说的幻觉。");
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>没兴趣。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得这不是火域，是幻觉。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="ZT_HY"  Parent="BaseFillingStory">
+		<DisplayName>火域</DisplayName>
+		<Desc>[NAME]站在火域前，闻到了一股烤自己的味道。</Desc>
+		<Selections>
+			<li>
+				<Display>赤火域（500度高温，携带菩提子可获得物品或闪避能力大于百分三百）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 500
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetGLevel() >= 3 then
+				me:AddMsg("[NAME]凭借自身修为对于赤火已经无所畏惧了，说着[NAME]偷偷烧了在路上吃的丹药的包装。");
+					if me:CheckItemEquptCount("Item_PTZ") == 1 or me:GetProperty("NpcFight_BaseDodgeChance") >= 3 then
+						me:AddMsg("[NAME]在一重火域一边静修一边刷手机？不是，看秘籍。突然福如心至，一挥手居然获得了一团赤火");
+						me:DropAwardItem("HUO_CH",1);me.npcObj.PropertyMgr:AddAge(10);
+					else 
+					 me:AddMsg("[NAME]在一重火域静修除了把自己烤了一分熟，什么也没得到。");story:FinishSecret();
+					end
+				end
+				]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]刚刚想靠近，就感到一阵炽热。。实在受不了，匆忙离开了。");
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>蓝火域（650度高温，携带菩提子可获得物品或闪避能力大于百分六百）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 650
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetGLevel() >= 3 then
+				me:AddMsg("[NAME]凭借自身修为对于蓝火已经无所畏惧了，说着[NAME]偷偷烧了在路上吃的两颗丹药的包装。");
+					if me:CheckItemEquptCount("Item_PTZ") == 1 or me:GetProperty("NpcFight_BaseDodgeChance") >= 6 then
+						me:AddMsg("[NAME]在二重火域一边静修一边烤鸡翅？不是，看秘籍。突然福如心至，一挥手居然获得了一团蓝火");
+						me:DropAwardItem("HUO_LH",1);me.npcObj.PropertyMgr:AddAge(20);
+					else 
+					 me:AddMsg("[NAME]在二重火域静修除了把自己烤两成熟，什么也没得到。");story:FinishSecret();
+					end
+				end
+				]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]刚刚想靠近，就感到一阵炽热。。实在受不了，匆忙离开了。");
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>三层火域（1000度高温，携带菩提子可获得物品或道行大于90）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 1000
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetGLevel() >= 6 then
+				me:AddMsg("[NAME]凭借自身修为对于三层火域的火已经无所畏惧了，说着[NAME]偷偷烧了在路上吃的三颗丹药的包装。");
+					if me:CheckItemEquptCount("Item_PTZ") == 1 or me:GetDaoHang() > 90 then
+						me:AddMsg("[NAME]在三重火域静修三十年，就在感觉自己很香的时候，突然感到屁股烧着了，居然是三层火域的乳白之火想和[NAME]回家。");
+						me:DropAwardItem("HUO_BH",1);me.npcObj.PropertyMgr:AddAge(30);
+					else 
+					 me:AddMsg("[NAME]在三重火域静修除了把自己烤三分熟，什么也没得到。");story:FinishSecret();
+					 me:AddDamage("Huo_MarrowDry","Spine",0.5,XT("火域反噬"));
+					 me:AddDamage("Huo_MarrowDry","RightRibs4",0.5,XT("火域反噬"));
+					 me:AddDamage("Huo_MarrowDry","LeftRibs4",0.5,XT("火域反噬"));
+					 me:AddDamage("Huo_MarrowDry","RightRibs3",0.5,XT("火域反噬"));
+					 me:AddDamage("Huo_MarrowDry","LeftRibs3",0.5,XT("火域反噬"));
+					 me:AddDamage("Huo_MarrowDry","RightRibs2",0.5,XT("火域反噬"));
+					end
+				end
+				]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]刚刚想靠近，就感到一阵炽热。。实在受不了，匆忙离开了。");me:AddDamage("Huo_MarrowDry","Spine",0.1,XT("火域反噬"));
+					 me:AddDamage("Huo_MarrowDry","RightRibs4",0.15,XT("火域反噬"));
+					 me:AddDamage("Huo_MarrowDry","LeftRibs4",0.15,XT("火域反噬"));
+					 me:AddDamage("Huo_MarrowDry","RightRibs3",0.15,XT("火域反噬"));
+					 me:AddDamage("Huo_MarrowDry","LeftRibs3",0.15,XT("火域反噬"));
+					 me:AddDamage("Huo_MarrowDry","RightRibs2",0.15,XT("火域反噬"));
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>四层火域（1700度高温，携带菩提子可获得物品或道行大于150）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 1700
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetGLevel() >= 6 then
+				me:AddMsg("[NAME]凭借自身修为已经可以把四层火域的火拿来洗澡了，[NAME]纵身跃入火中，只听见一阵阵呻吟。");
+					if me:CheckItemEquptCount("Item_PTZ") == 1 or me:GetDaoHang() > 150 then
+						me:AddMsg("[NAME]在四重火域静修四十年，[NAME]突然想起了夕阳下的那个她，不由得哆嗦了一阵，四十年如一日，乌光神火也看不下去。");
+						me:DropAwardItem("HUO_WH",1);me.npcObj.PropertyMgr:AddAge(40);
+					else 
+					 me:AddMsg("[NAME]在四重火域静修除了把自己烤四分熟，什么也没得到。");
+					 me:AddDamage("Huo_VisceralBurn","Kidney",0.9,XT("火域反噬"));
+					 me:AddDamage("Huo_VisceralBurn","Spleen",0.9,XT("火域反噬"));
+					 me:AddDamage("Huo_VisceralBurn","Lung",0.9,XT("火域反噬"));
+					 me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("火域反噬"));
+
+					 story:FinishSecret();
+					end
+				end
+				]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]刚刚想靠近，就感到一阵炽热。。实在受不了，匆忙离开了。");
+					me:AddDamage("Huo_VisceralBurn","Kidney",0.6,XT("火域反噬"));
+					 me:AddDamage("Huo_VisceralBurn","Spleen",0.6,XT("火域反噬"));
+					 me:AddDamage("Huo_VisceralBurn","Lung",0.6,XT("火域反噬"));
+					 me:AddDamage("Huo_VisceralBurn","Genitals",0.5,XT("火域反噬"));
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>五层火域（2100度高温，携带菩提子可获得物品或灵力上限大于二百五十万）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 2100
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetGLevel() >= 6 then
+				me:AddMsg("[NAME]个人感觉，第五层火域的火不过是挠痒的程度而已，[NAME]想也不想就冲入了其中。只听到断断续续的救命传出");
+					if me:CheckItemEquptCount("Item_PTZ") == 1 or me:GetProperty("NpcLingMaxValue") >= 2500000 then
+						me:AddMsg("[NAME]在五重火域烧烤五十年，突然有所感悟，抖了抖身上的炭灰，伸手一探，一团金色火焰被[NAME]拿走。");
+						me:DropAwardItem("HUO_JH",1);me.npcObj.PropertyMgr:AddAge(50);
+					else 
+					 me:AddMsg("[NAME]在五重火域静修除了把自己烤五分熟，什么也没得到。");
+					 me:AddDamage("Huo_BurnOfPain","Hips",1,XT("火域反噬"));
+					 me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","Hips",1,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftThigh",1,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftFoot",1,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","Throat",1,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","Face",1,XT("火域反噬"));
+					 story:FinishSecret();
+					end
+				end
+				]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				 me:AddMsg("[NAME]刚刚想靠近，就感到一阵炽热。。实在受不了，匆忙离开了。");
+				 me:AddDamage("Huo_BurnOfPain","Hips",1,XT("火域反噬"));
+				 me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("火域反噬"));
+				 me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("火域反噬"));
+				 me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("火域反噬"));
+				 me:AddDamage("Huo_BurnOfPain","LeftThigh",1,XT("火域反噬"));
+				 me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("火域反噬"));
+				story:FinishSecret();
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>六层火域（3100度高温，携带菩提子可获得物品或灵力上限大于五百万）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 3100
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetGLevel() >= 9 then
+				me:AddMsg("[NAME]看着这一团基佬紫，就跃跃欲试，可惜没带肥皂。");
+					if me:CheckItemEquptCount("Item_PTZ") == 1 or me:GetProperty("NpcLingMaxValue") >= 50000000 then
+						me:AddMsg("[NAME]在六重火域找了六十年的肥皂，不是，是六十年的紫火，终于在今天被[NAME]找到了一团肥皂模样的紫火。");
+						me:DropAwardItem("HUO_ZH",1);me.npcObj.PropertyMgr:AddAge(60);
+					else 
+					 me:AddMsg("[NAME]在六重火域静修除了把自己烤六分熟，什么也没得到。");me:AddDamage("DiffEnergyInvade","UpperElixirField",6,XT("火域反噬"));
+					 me:AddDamage("DiffEnergyInvade","LowerElixirField",6,XT("火域反噬"));
+					 me:AddDamage("DiffEnergyInvade","RenChannel",6,XT("火域反噬"));
+					 me:AddDamage("DiffEnergyInvade","DuChannel",6,XT("火域反噬"));
+					 me:AddDamage("DiffEnergyInvade","YinHeelChannel",6,XT("火域反噬"));
+					 me:AddDamage("DiffEnergyInvade","YangWeiChannel",6,XT("火域反噬"));
+					 me:AddDamage("DiffEnergyInvade","ChongChannel",6,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","Hips",4,XT("火域反噬"));
+					 me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("火域反噬"));
+					 me:AddDamage("Huo_VisceralBurn","Genitals",4,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","Hips",4,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftShoulder",4,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",4,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftForearm",4,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftThigh",4,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftFoot",4,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftForearm",4,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","Throat",4,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","Face",4,XT("火域反噬"));story:FinishSecret();
+					end
+				end
+				]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]刚刚想靠近，就感到一阵炽热。。实在受不了，匆忙离开了。");
+				me:AddDamage("DiffEnergyInvade","UpperElixirField",6,XT("火域反噬"));
+				me:AddDamage("DiffEnergyInvade","LowerElixirField",6,XT("火域反噬"));
+				me:AddDamage("DiffEnergyInvade","RenChannel",6,XT("火域反噬"));
+				me:AddDamage("DiffEnergyInvade","DuChannel",6,XT("火域反噬"));
+				me:AddDamage("DiffEnergyInvade","YinHeelChannel",6,XT("火域反噬"));
+				me:AddDamage("DiffEnergyInvade","YangWeiChannel",6,XT("火域反噬"));
+				me:AddDamage("DiffEnergyInvade","ChongChannel",6,XT("火域反噬"));
+				me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("火域反噬"));
+				story:FinishSecret();
+				]]></NOResult>
+			</li>
+			
+			<li>
+				<Display>七层火域（4800度高温，携带菩提子可获得物品或炉鼎上限大于五千）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 4800
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetGLevel() >= 9 then
+				me:AddMsg("[NAME]被七层火域，炫目的火焰所吓到，不由得想起这片火域曾经练死过仙。");
+					if me:CheckItemEquptCount("Item_PTZ") == 1 or me:GetProperty("MaxAccumulativeLingAddV") >= 5000 then
+						me:AddMsg("[NAME]在五彩神火中体悟静修百年，除了获得了五色神火，更是提高了自身的内门伤势恢复能力。");
+						me:DropAwardItem("HUO_WSSH",1);me.npcObj.PropertyMgr:AddAge(100);me:ModifierProperty("MagicDamageRecoveryPowerAddV",5);
+					else 
+					 me:AddMsg("[NAME]在五彩神火里装13失败，险些道陨，什么也没得到。");me:AddDamage("Huo_HeartBurn","Heart",9,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","Hips",1,XT("火域反噬"));
+					 me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","Hips",1,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("火域反噬"));
+					 me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("火域反噬"));
+					 story:FinishSecret();
+					end
+				end
+				]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]刚刚想靠近，就感到一阵炽热。。实在受不了，匆忙离开了。");me:AddDamgeFromCache(story.DamageCache,4,6);
+				me:AddDamage("DiffEnergyInvade","UpperElixirField",6,XT("火域反噬"));
+				me:AddDamage("DiffEnergyInvade","LowerElixirField",6,XT("火域反噬"));
+				me:AddDamage("DiffEnergyInvade","RenChannel",6,XT("火域反噬"));
+				me:AddDamage("DiffEnergyInvade","LowerElixirField",6,XT("火域反噬"));
+				me:AddDamage("DiffEnergyInvade","RenChannel",6,XT("火域反噬"));
+				me:AddDamage("DiffEnergyInvade","DuChannel",6,XT("火域反噬"));
+				me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("火域反噬"));story:FinishSecret();
+				]]></NOResult>
+			</li>
+			
+			<li>
+				<Display>八层火域（6500度高温，携带菩提子可获得物品或护盾值大于百分八百）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 6500
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetGLevel() >= 11 then
+				me:AddMsg("[NAME]被七层火域，炫目的火焰所吓到，不由得想起这片火域曾经练死过仙。");
+					if me:CheckItemEquptCount("Item_PTZ") == 1 or me:GetProperty("NpcFight_ShieldConversionRate") >= 8 then
+						me:AddMsg("[NAME]在七彩神火中体悟静修百年有余，除了获得了七色神火，更是提高了自身的法宝威能一倍。");
+						me:DropAwardItem("HUO_QCSH",1);me.npcObj.PropertyMgr:AddAge(160);me:ModifierProperty("NpcFight_FabaoPowerAddP",1);
+					else 
+					 me:AddMsg("[NAME]在七彩神火里企图游泳，险些道陨，什么也没得到。");
+						me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("火域反噬"));
+						me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("火域反噬"));
+						me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("火域反噬"));
+						me:AddDamage("Huo_BurnOfPain","LeftThigh",1,XT("火域反噬"));
+						me:AddDamage("Huo_HeartBurn","Heart",9,XT("火域反噬"));story:FinishSecret();
+					end
+				end
+				]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]刚刚想靠近，就感到一阵炽热。。实在受不了，匆忙离开了。");
+					me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("火域反噬"));
+					me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("火域反噬"));
+					me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("火域反噬"));
+					me:AddDamage("Huo_BurnOfPain","LeftThigh",1,XT("火域反噬"));
+					me:AddDamage("Huo_BurnOfPain","LeftFoot",1,XT("火域反噬"));
+					me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("火域反噬"));
+					me:AddDamage("Huo_BurnOfPain","Throat",1,XT("火域反噬"));
+					me:AddDamage("Huo_BurnOfPain","Face",1,XT("火域反噬"));
+				    me:AddDamage("Huo_MarrowDry","Spine",0.1,XT("火域反噬"));
+				    me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("火域反噬"));
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>九层火域（未实装，进去就死，真的）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 9500
+				]]>
+				</Condition>
+				<OKResult><![CDATA[	
+				if me:GetGLevel() >= 11 then
+				me:AddMsg("[NAME]被七层火域，炫目的火焰所吓到，不由得想起这片火域曾经练死过仙。");
+					if me:RandomInt(1, 2) == 1 then
+						me:AddMsg("[NAME]不信邪，还好作者给他留了一线，所以为了奖励[NAME]的不信邪，作者决定火葬了他。");
+						me:AddDamage("Huo_HeartBurn","Heart",9,XT("火域反噬"));story:FinishSecret();
+					else 
+					 me:AddMsg("[NAME]真的不信邪，居然还是进来了，没办法，作者表示奖励[NAME]的无所畏惧，所以提高了[NAME]法宝灵力最大值一倍。");
+					 me:ModifierProperty("NpcFight_FabaoMaxLingAddP",1);story:FinishSecret();
+					end
+				end
+				]]>
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]刚刚想靠近，就感到一阵炽热。。实在受不了，就被烧死了。");me:AddDamage("Huo_HeartBurn","Heart",9,XT("火域反噬"));story:FinishSecret();
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>没兴趣。</Display> 
+				<OKResult><![CDATA[	
+					me:AddMsg("[NAME]觉得这不是火域，是幻觉。");
+
+				]]>
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+		<Story Name="HUO_CH">
+		<DisplayName>神火淬体</DisplayName>
+		<Desc>将火域之火炼化，每种火焰都将得到不同程度的提升，可淬体，可强化法宝。若境界不足则会受到反噬。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>来吧，反正都是要死的。（三百道行）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 500
+				]]>
+				</Condition>
+				<OKResult>
+				<![CDATA[	
+				local itemobj = story:GetBindThing()
+					if me:GetGLevel() >= 3 and me:GetDaoHang() > 300 then
+							me:AddMsg(XT("[NAME]端坐原地开始炼化赤火，一道道高热的火焰融入[NAME]的身躯。"));
+							me:ModifierProperty("NpcFight_FabaoPowerAddP",0.01);me:ModifierProperty("NpcFight_SpellPowerAddP",0.01);
+						else
+							me:AddMsg(XT("[NAME]在炼化赤火之时，似乎忘记了赤火的高温，结果阳根被烧坏了。")); me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("神火反噬"));
+							end
+				story:RemoveBindItem();
+				]]>	
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]刚刚想炼化赤火，但是却没这个能力，瞬间被烧成渣渣。");
+				me:AddDamage("Huo_BurnOfPain","Hips",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightHand",1,XT("神火反噬"));
+				story:FinishSecret();story:RemoveBindItem();
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>放弃</Display>
+				<OKResult>	
+				me:AddMsg(XT("[NAME]觉得自己皮不够厚，怕煮不熟。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+		<Story Name="HUO_LH">
+		<DisplayName>神火淬体</DisplayName>
+		<Desc>将火域之火炼化，每种火焰都将得到不同程度的提升，可淬体，可强化法宝。若境界不足则会受到反噬。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>来吧，反正都是要死的。（四百道行）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 650
+				]]>
+				</Condition>
+				<OKResult>
+				<![CDATA[	
+				local itemobj = story:GetBindThing()
+					if me:GetGLevel() >= 3 and me:GetDaoHang() > 400 then
+							me:AddMsg(XT("[NAME]端坐原地开始炼化蓝火，一道道高热的火焰融入[NAME]的身躯。"));
+							me:ModifierProperty("NpcLingMaxValue",0.02);me:ModifierProperty("NpcFight_FabaoMaxLingAddP",0.02);
+						else
+							me:AddMsg(XT("[NAME]在炼化蓝火之时，似乎忘记了蓝火的高温，结果阳根被烧坏了。"));me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("神火反噬"));
+							end
+				story:RemoveBindItem();
+				]]>	
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]刚刚想炼化蓝火，但是却没这个能力，瞬间被烧成渣渣。");
+				me:AddDamage("Huo_BurnOfPain","Hips",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightHand",1,XT("神火反噬"));
+				story:FinishSecret();story:RemoveBindItem();
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>放弃</Display>
+				<OKResult>	
+				me:AddMsg(XT("[NAME]觉得自己皮不够厚，怕煮不熟。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+		<Story Name="HUO_BH">
+		<DisplayName>神火淬体</DisplayName>
+		<Desc>将火域之火炼化，每种火焰都将得到不同程度的提升，可淬体，可强化法宝。若境界不足则会受到反噬。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>来吧，反正都是要死的。（五百道行）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 1000
+				]]>
+				</Condition>
+				<OKResult>
+				<![CDATA[	
+				local itemobj = story:GetBindThing()
+					if me:GetGLevel() >= 3 and me:GetDaoHang() > 500 then
+							me:AddMsg(XT("[NAME]端坐原地开始炼化乳白火炎，一道道高热的火焰融入[NAME]的身躯。"));
+							me:ModifierProperty("NpcFight_FabaoLingRecoverAddP",0.03);me:ModifierProperty("NpcFight_ShieldConversionRate",0.03);
+						else
+							me:AddMsg(XT("[NAME]在炼化乳白火炎之时，似乎忘记了乳白火炎的高温，结果阳根被烧坏了。"));me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("神火反噬"));
+						end
+				story:RemoveBindItem();
+				]]>	
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]刚刚想炼化乳白火炎，但是却没这个能力，瞬间被烧成渣渣。");
+				me:AddDamage("Huo_BurnOfPain","Hips",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightHand",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftThigh",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftFoot",1,XT("神火反噬"));
+				story:FinishSecret();story:RemoveBindItem();
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>放弃</Display>
+				<OKResult>	
+				me:AddMsg(XT("[NAME]觉得自己皮不够厚，怕煮不熟。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+		<Story Name="HUO_WH">
+		<DisplayName>神火淬体</DisplayName>
+		<Desc>将火域之火炼化，每种火焰都将得到不同程度的提升，可淬体，可强化法宝。若境界不足则会受到反噬。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>来吧，反正都是要死的。（六百道行，结丹以上）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 1600
+				]]>
+				</Condition>
+				<OKResult>
+				<![CDATA[	
+				local itemobj = story:GetBindThing()
+					if me:GetGLevel() >= 6 and me:GetDaoHang() > 600 then
+							me:AddMsg(XT("[NAME]在吸收乌光之火时，突然想起了面筋哥。不由得虎躯一震，完成了吸收。"));
+							me:ModifierProperty("NpcFight_SpellLingCostAddP",-0.04);me:ModifierProperty("NpcFight_FabaoRepelDistanceAddV",0.04);
+						else
+							me:AddMsg(XT("[NAME]在吸收乌光之火时，感觉有些燥热难耐，想必是药效过了，惨了。"));
+							me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",0.8,XT("神火反噬"));
+						end
+				story:RemoveBindItem();
+				]]>	
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]刚刚想炼化乌光神火，但是却被烧作碳灰。");
+				me:AddDamage("Huo_VisceralBurn","Head",2,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","Face",3,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightHand",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftThigh",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftFoot",1,XT("神火反噬"));
+				story:FinishSecret();story:RemoveBindItem();
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>放弃</Display>
+				<OKResult>	
+				me:AddMsg(XT("[NAME]觉得自己皮不够厚，怕煮不熟。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+		<Story Name="HUO_JH">
+		<DisplayName>神火淬体</DisplayName>
+		<Desc>将火域之火炼化，每种火焰都将得到不同程度的提升，可淬体，可强化法宝。若境界不足则会受到反噬。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>来吧，反正都是要死的。（一千道行，结丹以上）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 2300
+				]]>
+				</Condition>
+				<OKResult>
+				<![CDATA[	
+				local itemobj = story:GetBindThing()
+					if me:GetGLevel() >= 6 and me:GetDaoHang() > 1000 then
+							me:AddMsg(XT("[NAME]淡定地看着眼前的金色神火，突然很想吃鸡翅，不知道楼下那家开门没有。"));
+							me:ModifierProperty("AbilityLvAddV",-30);me:ModifierProperty("NpcFight_FabaoRepelDistanceAddV",0.05);
+						else
+							me:AddMsg(XT("[NAME]吸收金色神火时，想起了叶天帝传道时曾说过，至少要有一百五十的道行才能吸收，回忆起时已晚。"));
+							me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",0.8,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Liver",0.8,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Brain",0.8,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Lung",0.8,XT("神火反噬"));
+						end
+				story:RemoveBindItem();
+				]]>	
+				</OKResult>
+				<NOResult><![CDATA[	
+				me:AddMsg("[NAME]刚刚想炼化金色神火时，但是却被烧作碳灰。");
+				me:AddDamage("Huo_VisceralBurn","Head",2,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","Face",3,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightHand",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftThigh",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftFoot",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Head",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Liver",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Brain",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Lung",1,XT("神火反噬"));
+				story:FinishSecret();story:RemoveBindItem();
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>放弃</Display>
+				<OKResult>	
+				me:AddMsg(XT("[NAME]觉得自己皮不够厚，怕煮不熟。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+		<Story Name="HUO_ZH">
+		<DisplayName>神火淬体</DisplayName>
+		<Desc>将火域之火炼化，每种火焰都将得到不同程度的提升，可淬体，可强化法宝。若境界不足则会受到反噬。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>来吧，反正都是要死的。（一千九道行，金丹以上，带一颗菩提子）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 3300
+				]]>
+				</Condition>
+				<OKResult>
+				<![CDATA[	
+				local itemobj = story:GetBindThing()
+					if me:GetGLevel() >= 9 and me:GetDaoHang() > 1900 and me:CheckItemEquptCount("Item_PTZ") == 1 then
+							me:AddMsg(XT("[NAME]看着眼前的一团紫火，突然想起昨夜和邻居的一些事儿，不由得一笑。"));
+							me:ModifierProperty("MaxAccumulativeLingAddV",90);me:ModifierProperty("GodPenaltyAddV",-30);
+						else
+							me:AddMsg(XT("[NAME]吸收紫气东来的时候，想起了一些过完，想当初天帝可是凭着菩提子才抗住的，我没有啊。"));
+							me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Liver",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Brain",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Lung",1,XT("神火反噬"));
+						end
+				story:RemoveBindItem();
+				]]>	
+				</OKResult>
+				<NOResult><![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]刚刚想炼化紫色神火时，但是却被烧作碳灰。");
+				me:AddDamage("Huo_VisceralBurn","Head",2,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","Face",3,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightHand",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftThigh",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftFoot",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Head",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Liver",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Brain",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Lung",1,XT("神火反噬"));
+				story:FinishSecret();
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>放弃</Display>
+				<OKResult>	
+				me:AddMsg(XT("[NAME]觉得自己皮不够厚，怕煮不熟。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+		<Story Name="HUO_WCSH">
+		<DisplayName>神火淬体</DisplayName>
+		<Desc>将火域之火炼化，每种火焰都将得到不同程度的提升，可淬体，可强化法宝。若境界不足则会受到反噬。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>来吧，反正都是要死的。（两千五道行，金丹以上，带一颗菩提子）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 4800
+				]]>
+				</Condition>
+				<OKResult>
+				<![CDATA[	
+				local itemobj = story:GetBindThing()
+					if me:GetGLevel() >= 9 and me:GetDaoHang() > 2500 and me:CheckItemEquptCount("Item_PTZ") == 1 then
+							me:AddMsg(XT("[NAME]看着这团五彩神火，感觉一阵发憷，但是风险即机遇，拼了！。"));
+							me:ModifierProperty("NpcFight_FabaoLingRecoverAddP",0.07);me:ModifierProperty("NpcFight_SpellLingCostAddP",-0.05);
+							me:ModifierProperty("NpcFight_SpellCastTimeAddP",-0.05);me:ModifierProperty("NpcFight_SpellCoolDownAddP",-0.05);me:ModifierProperty("NpcFight_SpellPowerAddP",0.05);
+							
+						else
+							me:AddMsg(XT("[NAME]看着这团五彩神火，感觉一阵发憷，但是风险即机遇，拼了！啊，死了。"));
+							me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Liver",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Brain",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Lung",1,XT("神火反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("神火反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftThigh",1,XT("神火反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftFoot",1,XT("神火反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("神火反噬"));
+							me:AddDamage("Huo_BurnOfPain","Throat",1,XT("神火反噬"));
+							me:AddDamage("Huo_MarrowDry","Spine",1,XT("神火反噬"));
+				
+						end
+				story:RemoveBindItem();
+				]]>	
+				</OKResult>
+				<NOResult><![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]刚刚想炼化五彩神火时，但是却被烧作碳灰。");
+				me:AddDamage("Huo_VisceralBurn","Head",2,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","Face",3,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightHand",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftThigh",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftFoot",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Head",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Liver",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Brain",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Lung",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","Throat",1,XT("神火反噬"));
+				me:AddDamage("Huo_MarrowDry","Spine",1,XT("神火反噬"));
+				story:FinishSecret();
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>放弃</Display>
+				<OKResult>	
+				me:AddMsg(XT("[NAME]觉得自己皮不够厚，怕煮不熟。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+		<Story Name="HUO_QCSH">
+		<DisplayName>神火淬体</DisplayName>
+		<Desc>将火域之火炼化，每种火焰都将得到不同程度的提升，可淬体，可强化法宝。若境界不足则会受到反噬。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>来吧，反正都是要死的。（三千道行，化龙以上，带一颗菩提子）</Display>
+				<Condition>
+				<![CDATA[	
+				me:GetProperty("ToleranceTMax") >= 7000
+				]]>
+				</Condition>
+				<OKResult>
+				<![CDATA[	
+				local itemobj = story:GetBindThing()
+					if me:GetGLevel() >= 11 and me:GetDaoHang() > 3000 and me:CheckItemEquptCount("Item_PTZ") == 1 then
+							me:AddMsg(XT("[NAME]看着这团七彩神火，感觉一阵发憷，但是风险即机遇，拼了！。"));
+							me:ModifierProperty("NpcFight_FabaoPowerAddP",0.08);me:ModifierProperty("NpcFight_FabaoLingRecoverAddP",0.08);
+							me:ModifierProperty("NpcFight_FabaoLingRecoverK",0.08);me:ModifierProperty("NpcFight_FabaoMaxLingAddP",0.08);
+							me:ModifierProperty("NpcFight_FabaoRepelDistanceAddV",0.08);me:ModifierProperty("NpcFight_FabaoFlySpeedAddP",0.08);
+							me:ModifierProperty("NpcFight_FabaoTurnSpeedAddP",0.08);me:ModifierProperty("NpcFight_FabaoRepelResistanceAddV",0.08);
+							
+							
+						else
+							me:AddMsg(XT("[NAME]看着这团七彩神火，感觉一阵发憷，但是风险即机遇，拼了！啊，死了。"));
+							me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Liver",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Brain",1,XT("神火反噬"));
+							me:AddDamage("Huo_VisceralBurn","Lung",1,XT("神火反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("神火反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftThigh",1,XT("神火反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftFoot",1,XT("神火反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("神火反噬"));
+							me:AddDamage("Huo_BurnOfPain","Throat",1,XT("神火反噬"));
+							me:AddDamage("Huo_MarrowDry","Spine",1,XT("神火反噬"));
+				
+						end
+				story:RemoveBindItem();
+				]]>	
+				</OKResult>
+				<NOResult><![CDATA[	
+				story:RemoveBindItem();
+				me:AddMsg("[NAME]刚刚想炼化七彩神火时，但是却被烧作碳灰。");
+				me:AddDamage("Huo_VisceralBurn","Head",2,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","Face",3,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","RightHand",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftPostbrachium",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftForearm",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftThigh",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","LeftFoot",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Head",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Liver",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Brain",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Lung",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("神火反噬"));
+				me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("神火反噬"));
+				me:AddDamage("Huo_BurnOfPain","Throat",1,XT("神火反噬"));
+				me:AddDamage("Huo_MarrowDry","Spine",1,XT("神火反噬"));
+				story:FinishSecret();
+				]]></NOResult>
+			</li>
+			<li>
+				<Display>放弃</Display>
+				<OKResult>	
+				me:AddMsg(XT("[NAME]觉得自己皮不够厚，怕煮不熟。"))
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	
+</List></Stories>

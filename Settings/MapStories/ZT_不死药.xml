@@ -1,0 +1,244 @@
+<Stories><List>
+	
+	<Story Name="ZT_ZLBSY" Parent="BaseFillingStory">
+		<DisplayName>服用青龙不死药</DisplayName>
+		<Desc>[NAME]一把擒住青龙不死药，真龙不死药瑟瑟发抖，祈求[NAME]放过自己，甚至给与了[NAME]一颗龙珠。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>服用不死药（九千岁以上方可食用,护盾技能四十级以上）</Display>
+				<OKResult>
+				<![CDATA[	
+					local NL = me.npcObj.Age
+					story:RemoveBindItem();
+					if me:GetGLevel() >= 11 and me:GetSkillLevel("Barrier") >= 40 and NL >=9003 then
+						me:AddMsg(XT("[NAME]服下了青龙不死药，年轻了9000岁，增加100道行，降低150天谴值。增强百分六十全属性"));
+							me:ModifierProperty("NpcFight_FabaoPowerAddP",0.6);me:ModifierProperty("NpcFight_FabaoLingRecoverAddP",0.6);me:ModifierProperty("NpcFight_FabaoMaxLingAddP",0.6);
+							me:ModifierProperty("DeepPracticeSpeedSpecialCoefficient",0.6);me:ModifierProperty("LingAbsorbSpeed",0.6);me:ModifierProperty("NpcLingMaxValue",0.6);
+							me:ModifierProperty("NpcFight_FabaoRepelDistanceAddV",0.6);me:ModifierProperty("NpcFight_FabaoFlySpeedAddP",0.6);
+							me:ModifierProperty("NpcFight_FabaoTurnSpeedAddP",0.6);me:ModifierProperty("NpcFight_FabaoRepelResistanceAddV",0.6);
+							me:ModifierProperty("NpcFight_SpellPowerAddP",0.6);me:ModifierProperty("NpcFight_SpellLingCostAddP",-0.6);
+							me:ModifierProperty("NpcFight_FabaoLingRecoverK",0.6);me:ModifierProperty("NpcFight_ShieldConversionRate",0.6);
+							me:ModifierProperty("NpcFight_ShieldConversionRateAddP",0.6);me:ModifierProperty("NpcFight_ZhenEnginePower",-12);
+							me.npcObj.PropertyMgr:AddAge(-9000);me:ModifierProperty("AbilityLvAddV",100);me:ModifierProperty("GodPenaltyAddV",-150);
+							
+							
+					else
+						me:AddMsg(XT("以[NAME]的条件不足，反被真龙不死药过剩的真龙之气所伤。"));
+						me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("真龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("真龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",1,XT("真龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Liver",1,XT("真龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Brain",1,XT("真龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Lung",1,XT("真龙反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("真龙反噬"));
+					end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我考虑考虑，下次吃你。</Display>
+				<OKResult>
+					<![CDATA[	
+				if world:GetWorldFlag(555) + 120 < world.DayCount then
+				me:AddMsg(XT("[NAME]还是决定放弃食用这株青龙不死药了。"))
+				world:SetWorldFlag(555,world.DayCount);me:DropAwardItem("Item_LZ",1);
+				story:FinishSecret();
+				]]>	
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="ZT_BSSHY" Parent="BaseFillingStory">
+		<DisplayName>服用不死神凰药</DisplayName>
+		<Desc>[NAME]一把擒住不死神凰药，不死神凰药瑟瑟发抖，祈求[NAME]放过自己，甚至给与了[NAME]一颗内丹。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>食用不死药（九千岁以上方可食用,术法技能四十级以上）</Display>
+				<OKResult>
+				<![CDATA[	
+					local NL = me.npcObj.Age
+					story:RemoveBindItem();
+					if me:GetGLevel() >= 11 and me:GetSkillLevel("FightSkill") >= 40 and NL >=9003 then
+						me:AddMsg(XT("[NAME]服下了不死神凰药，年轻了9000岁，增加100道行，降低150天谴值。增强百分六十全属性"));
+							me:ModifierProperty("NpcFight_FabaoPowerAddP",0.6);me:ModifierProperty("NpcFight_FabaoLingRecoverAddP",0.6);me:ModifierProperty("NpcFight_FabaoMaxLingAddP",0.6);
+							me:ModifierProperty("DeepPracticeSpeedSpecialCoefficient",0.6);me:ModifierProperty("LingAbsorbSpeed",0.6);me:ModifierProperty("NpcLingMaxValue",0.6);
+							me:ModifierProperty("NpcFight_FabaoRepelDistanceAddV",0.6);me:ModifierProperty("NpcFight_FabaoFlySpeedAddP",0.6);
+							me:ModifierProperty("NpcFight_FabaoTurnSpeedAddP",0.6);me:ModifierProperty("NpcFight_FabaoRepelResistanceAddV",0.6);
+							me:ModifierProperty("NpcFight_SpellPowerAddP",0.6);me:ModifierProperty("NpcFight_SpellLingCostAddP",-0.6);
+							me:ModifierProperty("NpcFight_FabaoLingRecoverK",0.6);me:ModifierProperty("NpcFight_ShieldConversionRate",0.6);
+							me:ModifierProperty("NpcFight_ShieldConversionRateAddP",0.6);me:ModifierProperty("NpcFight_ZhenEnginePower",-12);
+							me.npcObj.PropertyMgr:AddAge(-9000);me:ModifierProperty("AbilityLvAddV",100);me:ModifierProperty("GodPenaltyAddV",-150);
+					else
+						me:AddMsg(XT("以[NAME]的条件不足，反被不死神凰药过剩的神凰之气所伤。"));
+						me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("神凰反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("神凰反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",1,XT("神凰反噬"));
+							me:AddDamage("Huo_VisceralBurn","Liver",1,XT("神凰反噬"));
+							me:AddDamage("Huo_VisceralBurn","Brain",1,XT("神凰反噬"));
+							me:AddDamage("Huo_VisceralBurn","Lung",1,XT("神凰反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("神凰反噬"));
+					end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我考虑考虑，下次吃你。</Display>
+				<OKResult>
+					<![CDATA[	
+				if world:GetWorldFlag(556) + 120 < world.DayCount then
+				me:AddMsg(XT("[NAME]还是决定放弃食用这株不死神凰药了。"))
+				world:SetWorldFlag(556,world.DayCount);me:DropAwardItem("Item_SFND",1);
+				story:FinishSecret();
+				]]>	
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	
+	<Story Name="ZT_BSHLY" Parent="BaseFillingStory">
+		<DisplayName>服用不死黄龙药</DisplayName>
+		<Desc>[NAME]一把擒住不死黄龙药，不死黄龙药瑟瑟发抖，祈求[NAME]放过自己，甚至给与了[NAME]一颗内丹。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>食用不死药（九千岁以上方可食用,阵法技能四十级以上）</Display>
+				<OKResult>
+				<![CDATA[	
+					local NL = me.npcObj.Age
+					story:RemoveBindItem();
+					if me:GetGLevel() >= 11 and me:GetSkillLevel("Zhen") >= 40 and NL >=9003 then
+						me:AddMsg(XT("[NAME]服下了不死黄龙药，年轻了9000岁，增加100道行，降低150天谴值。增强百分六十全属性"));
+							me:ModifierProperty("NpcFight_FabaoPowerAddP",0.6);me:ModifierProperty("NpcFight_FabaoLingRecoverAddP",0.6);me:ModifierProperty("NpcFight_FabaoMaxLingAddP",0.6);
+							me:ModifierProperty("DeepPracticeSpeedSpecialCoefficient",0.6);me:ModifierProperty("LingAbsorbSpeed",0.6);me:ModifierProperty("NpcLingMaxValue",0.6);
+							me:ModifierProperty("NpcFight_FabaoRepelDistanceAddV",0.6);me:ModifierProperty("NpcFight_FabaoFlySpeedAddP",0.6);
+							me:ModifierProperty("NpcFight_FabaoTurnSpeedAddP",0.6);me:ModifierProperty("NpcFight_FabaoRepelResistanceAddV",0.6);
+							me:ModifierProperty("NpcFight_SpellPowerAddP",0.6);me:ModifierProperty("NpcFight_SpellLingCostAddP",-0.6);
+							me:ModifierProperty("NpcFight_FabaoLingRecoverK",0.6);me:ModifierProperty("NpcFight_ShieldConversionRate",0.6);
+							me:ModifierProperty("NpcFight_ShieldConversionRateAddP",0.6);me:ModifierProperty("NpcFight_ZhenEnginePower",-12);
+							me.npcObj.PropertyMgr:AddAge(-9000);me:ModifierProperty("AbilityLvAddV",100);me:ModifierProperty("GodPenaltyAddV",-150);
+					else
+						me:AddMsg(XT("以[NAME]的条件不足，反被不死黄龙药过剩的黄龙之气所伤。"));
+						me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("黄龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("黄龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",1,XT("黄龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Liver",1,XT("黄龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Brain",1,XT("黄龙反噬"));
+							me:AddDamage("Huo_VisceralBurn","Lung",1,XT("黄龙反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("黄龙反噬"));
+					end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我考虑考虑，下次吃你。</Display>
+				<OKResult>
+					<![CDATA[	
+				if world:GetWorldFlag(557) + 120 < world.DayCount then
+				me:AddMsg(XT("[NAME]还是决定放弃食用这株不死黄龙药了。"))
+				world:SetWorldFlag(557,world.DayCount);me:DropAwardItem("Item_HLND",1);
+				story:FinishSecret();
+				]]>	
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+		
+	<Story Name="ZT_BSXWY" Parent="BaseFillingStory">
+		<DisplayName>服用不死玄武药</DisplayName>
+		<Desc>[NAME]一把擒住不死玄武药，不死玄武药瑟瑟发抖，祈求[NAME]放过自己，甚至给与了[NAME]一颗内丹。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>食用不死药（九千岁以上方可食用,气感技能四十级以上）</Display>
+				<OKResult>
+				<![CDATA[	
+					local NL = me.npcObj.Age
+					story:RemoveBindItem();
+					if me:GetGLevel() >= 11 and me:GetSkillLevel("Qi") >= 40 and NL >=9003 then
+						me:AddMsg(XT("[NAME]服下了不死玄武药，年轻了9000岁，增加100道行，降低150天谴值。增强百分六十全属性"));
+							me:ModifierProperty("NpcFight_FabaoPowerAddP",0.6);me:ModifierProperty("NpcFight_FabaoLingRecoverAddP",0.6);me:ModifierProperty("NpcFight_FabaoMaxLingAddP",0.6);
+							me:ModifierProperty("DeepPracticeSpeedSpecialCoefficient",0.6);me:ModifierProperty("LingAbsorbSpeed",0.6);me:ModifierProperty("NpcLingMaxValue",0.6);
+							me:ModifierProperty("NpcFight_FabaoRepelDistanceAddV",0.6);me:ModifierProperty("NpcFight_FabaoFlySpeedAddP",0.6);
+							me:ModifierProperty("NpcFight_FabaoTurnSpeedAddP",0.6);me:ModifierProperty("NpcFight_FabaoRepelResistanceAddV",0.6);
+							me:ModifierProperty("NpcFight_SpellPowerAddP",0.6);me:ModifierProperty("NpcFight_SpellLingCostAddP",-0.6);
+							me:ModifierProperty("NpcFight_FabaoLingRecoverK",0.6);me:ModifierProperty("NpcFight_ShieldConversionRate",0.6);
+							me:ModifierProperty("NpcFight_ShieldConversionRateAddP",0.6);me:ModifierProperty("NpcFight_ZhenEnginePower",-12);
+							me.npcObj.PropertyMgr:AddAge(-9000);me:ModifierProperty("AbilityLvAddV",100);me:ModifierProperty("GodPenaltyAddV",-150);
+					else
+						me:AddMsg(XT("以[NAME]的条件不足，反被不死玄武药过剩的玄武之气所伤。"));
+						me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("王霸反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("王霸反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",1,XT("王霸反噬"));
+							me:AddDamage("Huo_VisceralBurn","Liver",1,XT("王霸反噬"));
+							me:AddDamage("Huo_VisceralBurn","Brain",1,XT("王霸反噬"));
+							me:AddDamage("Huo_VisceralBurn","Lung",1,XT("王霸反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("王霸反噬"));
+					end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我考虑考虑，下次吃你。</Display>
+				<OKResult>
+					<![CDATA[	
+				if world:GetWorldFlag(558) + 120 < world.DayCount then
+				me:AddMsg(XT("[NAME]还是决定放弃食用这株不死玄武药了。"))
+				world:SetWorldFlag(558,world.DayCount);me:DropAwardItem("Item_XWND",1);
+				story:FinishSecret();
+				]]>	
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+	<Story Name="ZT_BSBHY" Parent="BaseFillingStory">
+		<DisplayName>服用不死白虎药</DisplayName>
+		<Desc>[NAME]一把擒住不死白虎药，不死白虎药瑟瑟发抖，祈求[NAME]放过自己，甚至给与了[NAME]一颗内丹。</Desc>
+		<Kind>None</Kind>
+		<Selections>
+			<li>
+				<Display>食用不死药（九千岁以上方可食用,御器技能四十级以上）</Display>
+				<OKResult>
+				<![CDATA[	
+					local NL = me.npcObj.Age
+					story:RemoveBindItem();
+					if me:GetGLevel() >= 11 and me:GetSkillLevel("Fabao") >= 40 and NL >=9003 then
+						me:AddMsg(XT("[NAME]服下了不死白虎药，年轻了9000岁，增加100道行，降低150天谴值。增强百分六十全属性"));
+							me:ModifierProperty("NpcFight_FabaoPowerAddP",0.6);me:ModifierProperty("NpcFight_FabaoLingRecoverAddP",0.6);me:ModifierProperty("NpcFight_FabaoMaxLingAddP",0.6);
+							me:ModifierProperty("DeepPracticeSpeedSpecialCoefficient",0.6);me:ModifierProperty("LingAbsorbSpeed",0.6);me:ModifierProperty("NpcLingMaxValue",0.6);
+							me:ModifierProperty("NpcFight_FabaoRepelDistanceAddV",0.6);me:ModifierProperty("NpcFight_FabaoFlySpeedAddP",0.6);
+							me:ModifierProperty("NpcFight_FabaoTurnSpeedAddP",0.6);me:ModifierProperty("NpcFight_FabaoRepelResistanceAddV",0.6);
+							me:ModifierProperty("NpcFight_SpellPowerAddP",0.6);me:ModifierProperty("NpcFight_SpellLingCostAddP",-0.6);
+							me:ModifierProperty("NpcFight_FabaoLingRecoverK",0.6);me:ModifierProperty("NpcFight_ShieldConversionRate",0.6);
+							me:ModifierProperty("NpcFight_ShieldConversionRateAddP",0.6);me:ModifierProperty("NpcFight_ZhenEnginePower",-12);
+							me.npcObj.PropertyMgr:AddAge(-9000);me:ModifierProperty("AbilityLvAddV",100);me:ModifierProperty("GodPenaltyAddV",-150);
+					else
+						me:AddMsg(XT("以[NAME]的条件不足，反被不死白虎药过剩的白虎之气所伤。"));
+						me:AddDamage("Huo_VisceralBurn","Kidney",1,XT("庚金反噬"));
+							me:AddDamage("Huo_VisceralBurn","Genitals",1,XT("庚金反噬"));
+							me:AddDamage("Huo_VisceralBurn","Head",1,XT("庚金反噬"));
+							me:AddDamage("Huo_VisceralBurn","Liver",1,XT("庚金反噬"));
+							me:AddDamage("Huo_VisceralBurn","Brain",1,XT("庚金反噬"));
+							me:AddDamage("Huo_VisceralBurn","Lung",1,XT("庚金反噬"));
+							me:AddDamage("Huo_BurnOfPain","LeftShoulder",1,XT("庚金反噬"));
+					end
+				]]>		
+				</OKResult>
+			</li>
+			<li>
+				<Display>算了，我考虑考虑，下次吃你。</Display>
+				<OKResult>
+					<![CDATA[	
+				if world:GetWorldFlag(559) + 120 < world.DayCount then
+				me:AddMsg(XT("[NAME]还是决定放弃食用这株不死白虎药了。"))
+				world:SetWorldFlag(559,world.DayCount);me:DropAwardItem("Item_BHND",1);
+				story:FinishSecret();
+				]]>	
+				</OKResult>
+			</li>
+		</Selections>
+	</Story>
+		
+</List></Stories>

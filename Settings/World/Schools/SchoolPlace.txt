@@ -1,0 +1,5 @@
+Place	School
+Place_LXDT	101
+Place_YDF	101
+Place_YC	102
+Place_TXM	103

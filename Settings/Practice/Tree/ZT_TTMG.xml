@@ -1,0 +1,38 @@
+<SkillTree><List>
+	<Node Name="Gong_TTMG_1" Gong="Gong_TTMG">
+		<Esoterica>Gong_TTMG_1</Esoterica>
+		<DisplayName>吞天魔功</DisplayName>
+		<Level>Qi</Level>
+		<Index>3</Index>
+		<Line>0,0,0,0,0,0,0,0</Line>
+		<Layers>
+			<li>Gong_TTMG_1_1</li>
+			<li>Gong_TTMG_1_2</li>
+		</Layers>
+		<PreUnit>
+			<!--	<li></li>-->
+		</PreUnit>
+		<MutexUnit>
+			<!--	<li></li>-->
+		</MutexUnit>
+		<FiveBase>0,0,0,0,0</FiveBase>
+		<Skills>
+			<!--	<li></li>-->
+		</Skills>
+		<LingMax>0</LingMax>
+		<GoldLevel>0</GoldLevel>
+		<GodCount>0</GodCount>
+	</Node>
+	<Node Name="Gong_TTMG_1_1" Gong="Gong_TDJ">
+		<Esoterica>Gong_TTMG_1_1</Esoterica>
+		<DisplayName>吞天魔功</DisplayName>
+		<Level>None</Level>
+	</Node>
+	<Node Name="Gong_TTMG_1_2" Gong="Gong_TDJ">
+		<Esoterica>Gong_TTMG_1_2</Esoterica>
+		<DisplayName>吞天魔功</DisplayName>
+		<Level>None</Level>
+	</Node>
+	
+
+</List></SkillTree> 

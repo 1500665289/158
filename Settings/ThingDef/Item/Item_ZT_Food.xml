@@ -1,0 +1,117 @@
+<ThingDefs><List>
+	
+	<ThingDef Type="Item" Name="Item_HST" Parent="SimpleFoodBase">
+	<ThingName>遮天花生汤</ThingName>
+	<TexPath>Spr\Object\SW\HST.PNG</TexPath>	
+	<Desc>清甜可口，喝完遮天。</Desc>
+	<Rate>6</Rate>
+	<Beauty>12</Beauty>
+	<Tags>
+		<Tag Name="Food" Level="10"/>
+		<Tag Name="Tame" Level="15"/>
+		<Tag Name="TameVeg" Level="1"/>
+		<Tag Name="DiscipleFood" Level="4"/>
+	</Tags>	
+	<MaxStack>100</MaxStack>
+	<Item>
+		<FabaoSuffix>花生,汤</FabaoSuffix>
+		<Food>
+			<EatDirectable>1</EatDirectable>
+			<Nutrition>80</Nutrition>
+			<Moods>
+				<li>Eat6</li>
+			</Moods>
+			<Modifier>SysEndureHunger</Modifier>
+		</Food>
+		<BeMade>
+			<WorkToMake>20</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<Condition>
+					<Skills>
+						<!--<Skill name = "sss" level="1"/>-->
+					</Skills>
+					<Researchs>
+						<!--<Research name = "sss" level="1"/>-->
+					</Researchs>
+			</Condition>
+			<StuffCategories></StuffCategories>
+			<CostStuffCount>0</CostStuffCount>
+			<CostItems>
+					<Item name = "Item_Flour" count = "5"/>
+					<Item name = "Item_Water" count = "1"/>
+			</CostItems>
+		</BeMade> 
+		<Rot>
+			<RotSpeed>0.001</RotSpeed>
+			<DaysToRotStart>50</DaysToRotStart>
+			<TempMin>0</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>
+	</Item>
+	</ThingDef>
+	
+	<ThingDef Type="Item" Name="Item_HG" Parent="SimpleFoodBase">
+	<ThingName>遮天大火锅</ThingName>
+	<TexPath>Spr\Object\SW\HG.PNG</TexPath>	
+	<Desc>热气腾腾，为你解决冬日的寒冷。</Desc>
+	<Rate>9</Rate>
+	<Beauty>12</Beauty>
+	<Tags>
+		<Tag Name="Food" Level="10"/>
+		<Tag Name="Tame" Level="15"/>
+		<Tag Name="TameVeg" Level="1"/>
+		<Tag Name="DiscipleFood" Level="4"/>
+	</Tags>	
+	<MaxStack>100</MaxStack>
+	<Item>
+		<FabaoSuffix>火锅</FabaoSuffix>
+		<Food>
+			<EatDirectable>1</EatDirectable>
+			<Nutrition>80</Nutrition>
+			
+			<FunAddion>30</FunAddion>
+		
+			<PracticeNutrition>3000</PracticeNutrition>
+			<Moods>
+				<li>Eat6</li>
+			</Moods>
+			<Modifier>SysEndureHunger</Modifier>
+		</Food>
+		<BeMade>
+			<WorkToMake>20</WorkToMake>
+			<Quality>0</Quality>
+			<ArtDesc></ArtDesc>
+			<Condition>
+					<Skills>
+						<!--<Skill name = "sss" level="1"/>-->
+					</Skills>
+					<Researchs>
+						<!--<Research name = "sss" level="1"/>-->
+					</Researchs>
+			</Condition>
+			<StuffCategories></StuffCategories>
+			<CostStuffCount>0</CostStuffCount>
+			<CostItems>
+					<Item name = "Item_Flour" count = "5"/>
+					<Item name = "Item_Water" count = "1"/>
+			</CostItems>
+		</BeMade> 
+		<Rot>
+			<RotSpeed>0.001</RotSpeed>
+			<DaysToRotStart>50</DaysToRotStart>
+			<TempMin>0</TempMin>
+			<LingMax>0</LingMax>
+		</Rot>
+	</Item>
+	<Heat>
+		<Value>50</Value>
+		<Radius>5</Radius>
+		<RoomValue>30</RoomValue>
+		<Failing>0.6</Failing>
+		<FailRadius>1</FailRadius>
+	</Heat>
+	</ThingDef>
+	
+	
+</List></ThingDefs>
